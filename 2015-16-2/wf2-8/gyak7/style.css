@@ -1,0 +1,13 @@
+canvas {
+    border: solid 5px black;
+    width: 500px;
+    height: 500px;
+}
+
+.playing {
+    background: skyblue;
+}
+
+.theend {
+    background: rosybrown;
+}

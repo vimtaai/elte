@@ -1,0 +1,35 @@
+
+    <div class="col-md-8">
+        <div class="container-fluid team1">
+        {{#each current.team1 as |player|}}
+            <div class="row">
+                <img src="assets/images/{{player.race}}.PNG" 
+                     alt="profile" class="pull-left" width="55" height="55">
+                 <div alt="{{player.league}}" class="league {{player.league}} small ach1"></div>
+                <h2 class="pull-left">{{player.name}}</h2>
+            </div>
+        {{/each}}
+        </div>
+        <div class="container-fluid team2">
+        {{#each current.team2 as |player|}}
+            <div class="row">
+                <img src="assets/images/{{player.race}}.PNG" 
+                     alt="profile" class="pull-left" width="55" height="55">
+                 <div alt="{{player.league}}" class="league {{player.league}} small ach1"></div>
+                <h2 class="pull-left">{{player.name}}</h2>
+            </div>
+        {{/each}}
+        </div>
+    </div>
+    <div class="col-md-4">
+        <strong>{{current.type}}</strong>
+        <br>
+        <em>{{current.map}}</em>
+        <br>
+        {{#if current.team1win}}
+            <h2 class="text-success">VICTORY</h2>
+        {{else}}
+            <h2 class="text-danger">DEFEAT</h2>
+        {{/if}}
+    </div>
+    <div class="delete" {{action "onClick" current.id}}>×</div>

@@ -1,0 +1,17 @@
+<legend>Look what I found!</legend>
+<form method="post">
+    <label>Type: </label>
+    <select name="type">
+        <option>misc</option>
+        <option>aid</option>
+        <option>weapon</option>
+    </select>
+    <br>
+    <label>Name: </label>
+    <input type="text" name="name">
+    <br>
+    <label>Count: </label>
+    <input type="number" name="count" min="1" max="9999" value="1">
+    <button {{action "newItem"}}>Gotta pick it up!</button>
+</form>
+{{outlet}}

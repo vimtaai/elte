@@ -1,0 +1,30 @@
+<h1>Hiba beküldése</h1>
+<form class="form-horizontal col-lg-8 col-lg-offset-2"
+      method="post" action="/add">
+    <div class="form-group">
+      <label for="leiras" class="col-lg-2 control-label">Hiba leírása: </label>
+      <div class="col-lg-10">
+        <textarea class="form-control" 
+               name="leiras" id="leiras" 
+               placeholder="Írja le, hogy milyen hibát tapasztalt..."></textarea>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="leiras" class="col-lg-2 control-label">Terem: </label>
+      <div class="col-lg-10">
+        <select class="form-control" name="terem" id="terem">
+            <option>PC 1</option>
+            <option>PC 2</option>
+            <option>PC 3</option>
+            <option>PC 4</option>
+            <option>PC 5</option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-lg-10 col-lg-offset-2">
+        <button type="reset" class="btn btn-default pull-left">Mégse</button>
+        <button type="submit" id="addbutton" class="btn btn-success pull-right">Hozzáadás</button>
+      </div>
+    </div>
+</form>

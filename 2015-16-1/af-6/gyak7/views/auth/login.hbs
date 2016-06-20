@@ -1,0 +1,32 @@
+<div class="page-header">
+    <h1>Bejelentkezés</h1>
+</div>
+
+<form class="form-horizontal" method="post" action="/auth/login">
+    <fieldset>
+        <div class="form-group">
+            <label for="neptun" class="col-lg-2 control-label">Neptun</label>
+            <div class="col-lg-10">
+                <input class="form-control" id="neptun" name="neptun" type="text" value="{{data.neptun}}">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="password" class="col-lg-2 control-label">Jelszó</label>
+            <div class="col-lg-10">
+                <input class="form-control" type="password" id="password" name="password">
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
+                <button type="reset" class="btn btn-default">Cancel</button>
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </fieldset>
+</form>
+
+<div class="list-group">
+  <a href="/auth/signup" class="list-group-item">
+    Regisztráció
+  </a>
+</div>

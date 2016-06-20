@@ -1,0 +1,292 @@
+{
+  "data": {
+    "error": [
+      {
+        "terem": "PC 2",
+        "leiras": "For Adun!",
+        "datum": "2015-11-03T15:57:06.825Z",
+        "kesz": true,
+        "createdAt": "2015-11-03T15:57:06.825Z",
+        "updatedAt": "2015-11-03T15:57:09.437Z",
+        "id": 479
+      },
+      {
+        "terem": "PC 4",
+        "leiras": "Just for Fun!",
+        "datum": "2015-11-03T16:24:07.508Z",
+        "kesz": true,
+        "createdAt": "2015-11-03T16:24:07.512Z",
+        "updatedAt": "2015-11-03T16:31:30.369Z",
+        "id": 480
+      },
+      {
+        "terem": "PC 1",
+        "leiras": "Blood for the Blood God",
+        "datum": "2015-11-03T16:30:11.728Z",
+        "kesz": false,
+        "createdAt": "2015-11-03T16:30:11.728Z",
+        "updatedAt": "2015-11-03T16:30:11.728Z",
+        "id": 481
+      }
+    ],
+    "user": [
+      {
+        "surname": "Test ",
+        "forename": "User",
+        "neptun": "almakorte",
+        "password": "almakorte",
+        "avatar": "",
+        "role": "riporter",
+        "createdAt": "2015-10-13T14:59:09.094Z",
+        "updatedAt": "2015-10-13T14:59:09.094Z",
+        "id": 1
+      },
+      {
+        "surname": "heló",
+        "forename": "szia",
+        "neptun": "asdf",
+        "password": "asdf",
+        "avatar": "",
+        "role": "riporter",
+        "createdAt": "2015-10-13T15:05:56.183Z",
+        "updatedAt": "2015-10-13T15:05:56.183Z",
+        "id": 2
+      },
+      {
+        "surname": "alma",
+        "forename": "korte",
+        "neptun": "kortealma",
+        "password": "kortealma",
+        "avatar": "",
+        "role": "riporter",
+        "createdAt": "2015-10-13T15:28:01.837Z",
+        "updatedAt": "2015-10-13T15:28:01.837Z",
+        "id": 3
+      },
+      {
+        "surname": "heló",
+        "forename": "szia",
+        "neptun": "asdfasdf",
+        "password": "asdf",
+        "avatar": "",
+        "role": "riporter",
+        "createdAt": "2015-10-13T15:28:25.425Z",
+        "updatedAt": "2015-10-13T15:28:25.425Z",
+        "id": 4
+      },
+      {
+        "surname": "swbf",
+        "forename": "swbf",
+        "neptun": "swbf",
+        "password": "swbf",
+        "avatar": "",
+        "role": "riporter",
+        "createdAt": "2015-10-13T15:28:32.405Z",
+        "updatedAt": "2015-10-13T15:28:32.405Z",
+        "id": 5
+      },
+      {
+        "surname": "a",
+        "forename": "a",
+        "neptun": "a",
+        "password": "a",
+        "avatar": "",
+        "role": "riporter",
+        "createdAt": "2015-10-13T15:35:41.761Z",
+        "updatedAt": "2015-10-13T15:35:41.761Z",
+        "id": 6
+      },
+      {
+        "surname": "e",
+        "forename": "e",
+        "neptun": "e",
+        "password": "e",
+        "avatar": "",
+        "role": "riporter",
+        "createdAt": "2015-10-13T15:38:56.120Z",
+        "updatedAt": "2015-10-13T15:38:56.120Z",
+        "id": 7
+      },
+      {
+        "surname": "t",
+        "forename": "t",
+        "neptun": "t",
+        "password": "$2a$10$4EvfR6sRi/X1k37mm6Zysu7beyJ//gIv3orMI5s1b8xdi6Z4DlEby",
+        "avatar": "",
+        "role": "riporter",
+        "createdAt": "2015-10-13T15:41:19.132Z",
+        "updatedAt": "2015-10-13T15:41:19.132Z",
+        "id": 8
+      },
+      {
+        "neptun": "abcdef",
+        "password": "$2a$10$QjvTHjEK.ZKIZ1X5XR7E4uhky619zsn9bryBqNYxrdYAW0drDxsRa",
+        "surname": "Gipsz",
+        "forename": "Jakab",
+        "avatar": "",
+        "role": "riporter",
+        "createdAt": "2015-10-20T14:30:36.695Z",
+        "updatedAt": "2015-10-20T14:30:36.695Z",
+        "id": 16
+      },
+      {
+        "surname": "z",
+        "forename": "z",
+        "neptun": "z",
+        "password": "$2a$10$R5OcvpwPPx94VgwH060j6.vkgNxoQQxB3cWp33ih2J50EMFdzYcL.",
+        "avatar": "",
+        "role": "riporter",
+        "createdAt": "2015-10-20T14:41:53.243Z",
+        "updatedAt": "2015-10-20T14:41:53.243Z",
+        "id": 17
+      },
+      {
+        "surname": "o",
+        "forename": "o",
+        "neptun": "o",
+        "password": "$2a$10$QuZVXKdH75FqrwXL91QBiuE7ONTyqChn144GX5.rRH2DZgEWWiVfS",
+        "avatar": "",
+        "role": "riporter",
+        "createdAt": "2015-10-20T14:49:25.076Z",
+        "updatedAt": "2015-10-20T14:49:25.076Z",
+        "id": 18
+      },
+      {
+        "surname": "Katatiki",
+        "forename": "Tomóceusz",
+        "neptun": "gyugyu",
+        "password": "$2a$10$YUCdbGJLD2qpYzWkpWToQO44EN4fJxlWXFEec8A6pSpKdsvfa/KGO",
+        "avatar": "",
+        "role": "riporter",
+        "createdAt": "2015-10-20T15:21:11.727Z",
+        "updatedAt": "2015-10-20T15:21:11.727Z",
+        "id": 19
+      },
+      {
+        "surname": "aa",
+        "forename": "aa",
+        "neptun": "aa",
+        "password": "$2a$10$IlCCiskr6T.pjIrzALT2N.vGwK/J3i1TB0nGGrkeC34bmj3IXH3ya",
+        "avatar": "",
+        "role": "riporter",
+        "createdAt": "2015-11-03T15:02:41.527Z",
+        "updatedAt": "2015-11-03T15:02:41.527Z",
+        "id": 20
+      },
+      {
+        "surname": "Protoss",
+        "forename": "Zealot",
+        "neptun": "ForAdun",
+        "password": "$2a$10$pRPiUeOiXxV5l.2kDNdY3.n1hw3S0dHPfB8xYW/p3amOUgshGzjNm",
+        "avatar": "",
+        "role": "riporter",
+        "createdAt": "2015-11-03T15:06:47.815Z",
+        "updatedAt": "2015-11-03T15:06:47.815Z",
+        "id": 21
+      },
+      {
+        "surname": "tt",
+        "forename": "tt",
+        "neptun": "tt",
+        "password": "$2a$10$F1brRZEYrOyO5MPYEakUqefjM3qPPLl/qq0jtcWIC3VOOH.wTVW.q",
+        "avatar": "",
+        "role": "riporter",
+        "createdAt": "2015-11-03T15:23:36.545Z",
+        "updatedAt": "2015-11-03T15:23:36.545Z",
+        "id": 22
+      },
+      {
+        "surname": "erkel",
+        "forename": "ferenc",
+        "neptun": "ERKELF",
+        "password": "$2a$10$wpc/hrCFga6Pfp8nWgZTa.Tj1fxB9X.v4uBAMmldyeYpCLDcYYBMu",
+        "avatar": "",
+        "role": "riporter",
+        "createdAt": "2015-11-03T15:49:17.619Z",
+        "updatedAt": "2015-11-03T15:49:17.619Z",
+        "id": 23
+      }
+    ]
+  },
+  "schema": {
+    "error": {
+      "datum": {
+        "type": "date"
+      },
+      "terem": {
+        "type": "string"
+      },
+      "leiras": {
+        "type": "string"
+      },
+      "kesz": {
+        "type": "boolean",
+        "defaultsTo": false
+      },
+      "user": {
+        "type": "integer",
+        "model": "user",
+        "foreignKey": true,
+        "alias": "user"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "user": {
+      "neptun": {
+        "type": "string",
+        "unique": true
+      },
+      "password": {
+        "type": "string"
+      },
+      "surname": {
+        "type": "string"
+      },
+      "forename": {
+        "type": "string"
+      },
+      "avatar": {
+        "type": "string"
+      },
+      "role": {
+        "type": "string",
+        "enum": [
+          "riporter",
+          "operator"
+        ],
+        "defaultsTo": "riporter"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    }
+  },
+  "counters": {
+    "error": {
+      "id": 481
+    },
+    "user": {
+      "id": 23
+    }
+  }
+}

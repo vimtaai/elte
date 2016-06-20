@@ -1,0 +1,44 @@
+<h1>Hibák listája</h1>
+<form class="form-horizontal col-lg-8 col-lg-offset-2"
+      method="get" action="/list">
+    <div class="form-group">
+      <div class="col-lg-10">
+        <input type="search" class="form-control" 
+               name="kereses" id="kereses" value="{{kereses}}"
+               placeholder="Írja le, hogy milyen hibát keres..."></textarea>
+      </div>
+      <div class="col-lg-2">
+            <button type="submit" class="btn btn-info pull-left">
+                <span class="glyphicon glyphicon-search"></span>
+            </button>
+      </div>
+    </div>
+</form>
+<table class="table table-striped">
+    <tr>
+        <th>Beküldés ideje</th>
+        <th>Hiba helye</th>
+        <th>Hiba leírása</th>
+        <th class="text-right">Műveletek</th>
+    </tr>
+    {{#each hibak as |hiba|}}
+    <tr class="text-{{#if hiba.kesz}}success{{else}}warning{{/if}}">
+        <td>{{hiba.datum}}</td>
+        <td>{{hiba.terem}}</td>
+        <td>{{hiba.leiras}}</td>
+        <td class="text-right">
+            {{#unless hiba.kesz}}
+            <a class="btn btn-sm btn-success" href="/ready/{{hiba.id}}">
+                <span class="glyphicon glyphicon-ok"></span>
+            </a>
+            {{/unless}}
+            <a class="btn btn-sm btn-info" href="/error/{{hiba.id}}">
+                <span class="glyphicon glyphicon-eye-open"></span>
+            </a>
+            <a class="btn btn-sm btn-danger" href="/delete/{{hiba.id}}">
+                <span class="glyphicon glyphicon-remove"></span>
+            </a>
+        </td>
+    </tr>
+    {{/each}}
+</table> 

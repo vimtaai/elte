@@ -1,0 +1,133 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+header {
+    height: 50px;
+    background: #424242;
+    color: #FFFFFF;
+    font-size: 1.2em;
+}
+
+header h1 {
+    float: left;
+    font-size: 1em;
+}
+
+header h1 span {
+    text-transform: uppercase;
+}
+
+header h1,
+header ul li {
+    display: inline-block;
+}
+
+header ul ul {
+    display: none;
+    width: 200px;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    border-top: solid 10px white;
+    background: #323232;
+}
+
+header ul ul:before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border: solid 10px transparent;
+    border-bottom-color: #323232;
+    position: absolute;
+    top: -20px;
+    right: 10px;
+}
+
+header nav > ul > li:last-child {
+    float: right;
+}
+
+header h1,
+header nav > ul > li {
+    box-sizing: border-box;
+    height: 50px;
+    padding: 12px;
+    position: relative;
+}
+
+header a {
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+header a:hover {
+    color: darkturquoise;
+}
+
+header nav > ul > li:hover {
+    background: #323232
+}
+
+header nav > ul > li:hover ul {
+    display: block;
+}
+
+header nav > ul > li ul li {
+    display: block;
+    padding: 10px 15px;
+    text-align: left;
+}
+
+header input[type=checkbox] {
+    display: none;
+}
+
+header input[type=checkbox]:checked + ul {
+    display: block;
+}
+
+
+
+
+
+
+
+/*Oldalsó sáv*/
+body > div {
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap-reverse;
+}
+
+aside {
+    width: 300px;
+    background: #a0a0a0;
+}
+
+main {
+    width: 0;
+    min-width: 400px;
+    flex-grow: 1;
+    background: #DEDEDE;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main section {
+    width: 0;
+    min-width: 400px;
+    flex-grow: 1;
+}
+
+main section:first-child {
+    flex-grow: 2;
+}

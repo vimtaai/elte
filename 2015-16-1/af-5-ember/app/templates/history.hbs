@@ -1,0 +1,13 @@
+<div class="container">
+    {{#each model.matches as |match|}}
+        {{sc2-match current=match CurrentPlayer=model.CurrentPlayer onDel=(action "deleteMatch")}}
+    {{/each}}
+    {{outlet}}
+    {{#link-to "new-match"}}
+    <button class="btn btn-info pull-left">
+        <strong><span class="glyphicon glyphicon-plus"></span></strong>
+        &nbsp;&nbsp;
+        New Match
+    </button>
+    {{/link-to}}
+</div>

@@ -1,0 +1,125 @@
+.logo {
+    float: left;
+}
+
+.logo img {
+    height: 80px;
+}
+
+.nav-pills {
+    float: left;
+    margin: 20px 40px;
+}
+
+.well {
+    margin-top: 30px;
+}
+
+.avatar {
+    background: url('/assets/images/border.png');
+    padding: 10px;
+    margin: 20px;
+}
+
+h1,
+h2 {
+    display: inline-block;
+}
+
+h2 {
+    font-size: 1.3em;
+}
+
+.league {
+    display: inline-block;
+}
+
+.match {
+    overflow: auto;
+    width: 800px;
+    margin: 20px auto;
+    border-width: 5px;
+    background-color: rgba(0,0,0,0.5);
+    box-sizing: border-box;
+    padding: 10px 0;
+    text-align: center;
+    position: relative;
+}
+
+.match div.delete {
+    display: none;
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    width: 30px;
+    height: 30px;
+    color: #FF3333;
+    font-size: 1.5em;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.match:hover div.delete {
+    display: block;
+}
+
+.match div.delete:hover {
+    color: #FF8888;
+}
+
+.match strong,
+.match em {
+    display: inline-block;
+    font-size: 1.2em;
+    padding-top: 6px;
+}
+
+.match h2 {
+    font-size: 1.35em;
+    padding: 0 10px;
+    margin-top: 12px;
+}
+
+.match .league {
+    float: left;
+    margin: 10px 0 0 5px;
+}
+
+.bronze {
+    background-image: url('/assets/images/bronze.png');
+}
+
+.medium {
+    width: 40px;
+    height: 45px;
+    background-position: -103px 0;
+}
+
+.small {
+    width: 20px;
+    height: 25px;
+    background-position: -148px 0;
+}
+
+.team1,
+.team2 {
+    border: solid black 1px;
+}
+
+.team1 {
+    background: #500000 ;
+}
+
+.team2 {
+    background: #000050 ;
+}
+
+.form-control {
+    box-sizing: border-box;
+    margin: 0;
+    width: 90%;
+    color: black;
+    padding: 5px 10px;
+    display: block;
+    margin: 10px 15px;
+}

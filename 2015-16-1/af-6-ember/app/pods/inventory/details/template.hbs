@@ -1,0 +1,15 @@
+<h1>{{model.name}}</h1>
+<table>
+    <tr>
+        <td>Category</td>
+        <td>{{model.type}}</td>
+    </tr>
+</table>
+{{#if model.equipable}}
+    {{#if model.equipped}}
+    <button {{action "equipItem" model.id}}>Unequip</button>
+    {{else}}
+    <button {{action "equipItem" model.id}}>Equip</button>
+    {{/if}}
+{{/if}}
+{{outlet}}

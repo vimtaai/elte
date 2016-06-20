@@ -1,0 +1,8 @@
+#blokkok {
+    position: absolute;
+    left: -9999999px;
+}
+
+#blokkok:focus {
+    left: 0;
+}

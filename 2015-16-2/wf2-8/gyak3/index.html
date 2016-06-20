@@ -1,0 +1,21 @@
+<button id="helloButton">Hello</button>
+<div id="output"></div>
+<script>    
+    function $(s) {
+        return document.querySelector(s);
+    }
+    
+    var helloButton = $("#helloButton");
+    var output = $("#output");
+    
+    helloButton.addEventListener("click", function (event) {
+        console.log(this);
+        console.log(event);
+        
+        var date = new Date(event.timeStamp);
+        
+        var months = ["January", "February"];
+        
+        output.innerHTML = `${date.getFullYear()}, ${months[date.getMonth()]}, ${date.getDate()}`;
+    }, false);
+</script>

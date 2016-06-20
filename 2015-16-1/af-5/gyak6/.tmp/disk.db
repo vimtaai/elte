@@ -1,0 +1,2013 @@
+{
+  "data": {
+    "error": [
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:26:54.904Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:26:54.904Z",
+        "updatedAt": "2015-10-06T15:26:54.904Z",
+        "id": 215
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:26:56.466Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:26:56.466Z",
+        "updatedAt": "2015-10-06T15:26:56.466Z",
+        "id": 216
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:26:57.067Z",
+        "kesz": true,
+        "createdAt": "2015-10-06T15:26:57.067Z",
+        "updatedAt": "2015-10-06T15:40:00.020Z",
+        "id": 217
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:26:57.262Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:26:57.262Z",
+        "updatedAt": "2015-10-06T15:26:57.262Z",
+        "id": 218
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:26:57.441Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:26:57.441Z",
+        "updatedAt": "2015-10-06T15:26:57.441Z",
+        "id": 219
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:26:57.622Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:26:57.622Z",
+        "updatedAt": "2015-10-06T15:26:57.622Z",
+        "id": 220
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:26:58.019Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:26:58.020Z",
+        "updatedAt": "2015-10-06T15:26:58.020Z",
+        "id": 221
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:26:58.422Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:26:58.422Z",
+        "updatedAt": "2015-10-06T15:26:58.422Z",
+        "id": 222
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:26:58.772Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:26:58.772Z",
+        "updatedAt": "2015-10-06T15:26:58.772Z",
+        "id": 223
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:26:58.999Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:26:59.000Z",
+        "updatedAt": "2015-10-06T15:26:59.000Z",
+        "id": 224
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:26:59.191Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:26:59.191Z",
+        "updatedAt": "2015-10-06T15:26:59.191Z",
+        "id": 225
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:26:59.406Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:26:59.406Z",
+        "updatedAt": "2015-10-06T15:26:59.406Z",
+        "id": 226
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:26:59.612Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:26:59.612Z",
+        "updatedAt": "2015-10-06T15:26:59.612Z",
+        "id": 227
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:27:00.289Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:27:00.289Z",
+        "updatedAt": "2015-10-06T15:27:00.289Z",
+        "id": 228
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:27:00.805Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:27:00.806Z",
+        "updatedAt": "2015-10-06T15:27:00.806Z",
+        "id": 229
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:27:01.013Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:27:01.014Z",
+        "updatedAt": "2015-10-06T15:27:01.014Z",
+        "id": 230
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:27:01.203Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:27:01.204Z",
+        "updatedAt": "2015-10-06T15:27:01.204Z",
+        "id": 231
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:27:01.407Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:27:01.408Z",
+        "updatedAt": "2015-10-06T15:27:01.408Z",
+        "id": 232
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:27:01.574Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:27:01.575Z",
+        "updatedAt": "2015-10-06T15:27:01.575Z",
+        "id": 233
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:27:02.148Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:27:02.149Z",
+        "updatedAt": "2015-10-06T15:27:02.149Z",
+        "id": 234
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:27:02.350Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:27:02.350Z",
+        "updatedAt": "2015-10-06T15:27:02.350Z",
+        "id": 235
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:27:02.549Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:27:02.549Z",
+        "updatedAt": "2015-10-06T15:27:02.549Z",
+        "id": 236
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:27:02.734Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:27:02.734Z",
+        "updatedAt": "2015-10-06T15:27:02.734Z",
+        "id": 237
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:27:02.918Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:27:02.919Z",
+        "updatedAt": "2015-10-06T15:27:02.919Z",
+        "id": 238
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:27:03.110Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:27:03.110Z",
+        "updatedAt": "2015-10-06T15:27:03.110Z",
+        "id": 239
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:27:03.361Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:27:03.364Z",
+        "updatedAt": "2015-10-06T15:27:03.364Z",
+        "id": 240
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:27:03.527Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:27:03.527Z",
+        "updatedAt": "2015-10-06T15:27:03.527Z",
+        "id": 241
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:27:03.897Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:27:03.897Z",
+        "updatedAt": "2015-10-06T15:27:03.897Z",
+        "id": 242
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:27:04.086Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:27:04.087Z",
+        "updatedAt": "2015-10-06T15:27:04.087Z",
+        "id": 243
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:27:04.276Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:27:04.276Z",
+        "updatedAt": "2015-10-06T15:27:04.276Z",
+        "id": 244
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:27:04.470Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:27:04.470Z",
+        "updatedAt": "2015-10-06T15:27:04.470Z",
+        "id": 245
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:27:04.686Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:27:04.686Z",
+        "updatedAt": "2015-10-06T15:27:04.686Z",
+        "id": 246
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:27:04.894Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:27:04.895Z",
+        "updatedAt": "2015-10-06T15:27:04.895Z",
+        "id": 247
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:27:05.118Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:27:05.118Z",
+        "updatedAt": "2015-10-06T15:27:05.118Z",
+        "id": 248
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:27:05.355Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:27:05.355Z",
+        "updatedAt": "2015-10-06T15:27:05.355Z",
+        "id": 249
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:27:05.602Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:27:05.602Z",
+        "updatedAt": "2015-10-06T15:27:05.602Z",
+        "id": 250
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:27:05.801Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:27:05.801Z",
+        "updatedAt": "2015-10-06T15:27:05.801Z",
+        "id": 251
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:27:05.994Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:27:05.995Z",
+        "updatedAt": "2015-10-06T15:27:05.995Z",
+        "id": 252
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:27:06.191Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:27:06.192Z",
+        "updatedAt": "2015-10-06T15:27:06.192Z",
+        "id": 253
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:27:06.423Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:27:06.424Z",
+        "updatedAt": "2015-10-06T15:27:06.424Z",
+        "id": 254
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:27:06.820Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:27:06.820Z",
+        "updatedAt": "2015-10-06T15:27:06.820Z",
+        "id": 255
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:27:07.035Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:27:07.036Z",
+        "updatedAt": "2015-10-06T15:27:07.036Z",
+        "id": 256
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:27:07.215Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:27:07.216Z",
+        "updatedAt": "2015-10-06T15:27:07.216Z",
+        "id": 257
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:27:07.424Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:27:07.425Z",
+        "updatedAt": "2015-10-06T15:27:07.425Z",
+        "id": 258
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:27:07.662Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:27:07.663Z",
+        "updatedAt": "2015-10-06T15:27:07.663Z",
+        "id": 259
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:27:08.326Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:27:08.326Z",
+        "updatedAt": "2015-10-06T15:27:08.326Z",
+        "id": 261
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:27:08.498Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:27:08.498Z",
+        "updatedAt": "2015-10-06T15:27:08.498Z",
+        "id": 262
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:27:08.701Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:27:08.701Z",
+        "updatedAt": "2015-10-06T15:27:08.701Z",
+        "id": 263
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:27:08.920Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:27:08.920Z",
+        "updatedAt": "2015-10-06T15:27:08.920Z",
+        "id": 264
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:27:09.481Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:27:09.481Z",
+        "updatedAt": "2015-10-06T15:27:09.481Z",
+        "id": 266
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:29:55.020Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:29:55.025Z",
+        "updatedAt": "2015-10-06T15:29:55.025Z",
+        "id": 267
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:29:55.753Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:29:55.754Z",
+        "updatedAt": "2015-10-06T15:29:55.754Z",
+        "id": 268
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:29:56.164Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:29:56.164Z",
+        "updatedAt": "2015-10-06T15:29:56.164Z",
+        "id": 269
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:29:56.411Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:29:56.411Z",
+        "updatedAt": "2015-10-06T15:29:56.411Z",
+        "id": 270
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:29:56.580Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:29:56.581Z",
+        "updatedAt": "2015-10-06T15:29:56.581Z",
+        "id": 271
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:29:56.679Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:29:56.679Z",
+        "updatedAt": "2015-10-06T15:29:56.679Z",
+        "id": 272
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:29:56.853Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:29:56.853Z",
+        "updatedAt": "2015-10-06T15:29:56.853Z",
+        "id": 273
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:29:57.012Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:29:57.013Z",
+        "updatedAt": "2015-10-06T15:29:57.013Z",
+        "id": 274
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:29:57.145Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:29:57.145Z",
+        "updatedAt": "2015-10-06T15:29:57.145Z",
+        "id": 275
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:29:57.290Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:29:57.291Z",
+        "updatedAt": "2015-10-06T15:29:57.291Z",
+        "id": 276
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:29:57.437Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:29:57.438Z",
+        "updatedAt": "2015-10-06T15:29:57.438Z",
+        "id": 277
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:29:57.574Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:29:57.574Z",
+        "updatedAt": "2015-10-06T15:29:57.574Z",
+        "id": 278
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:29:57.709Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:29:57.710Z",
+        "updatedAt": "2015-10-06T15:29:57.710Z",
+        "id": 279
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:29:58.194Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:29:58.195Z",
+        "updatedAt": "2015-10-06T15:29:58.195Z",
+        "id": 280
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:29:58.378Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:29:58.378Z",
+        "updatedAt": "2015-10-06T15:29:58.378Z",
+        "id": 281
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:29:58.562Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:29:58.562Z",
+        "updatedAt": "2015-10-06T15:29:58.562Z",
+        "id": 282
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:29:58.686Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:29:58.687Z",
+        "updatedAt": "2015-10-06T15:29:58.687Z",
+        "id": 283
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:29:58.840Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:29:58.841Z",
+        "updatedAt": "2015-10-06T15:29:58.841Z",
+        "id": 284
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:29:58.993Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:29:58.993Z",
+        "updatedAt": "2015-10-06T15:29:58.993Z",
+        "id": 285
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:29:59.145Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:29:59.145Z",
+        "updatedAt": "2015-10-06T15:29:59.145Z",
+        "id": 286
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:29:59.317Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:29:59.318Z",
+        "updatedAt": "2015-10-06T15:29:59.318Z",
+        "id": 287
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:29:59.458Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:29:59.459Z",
+        "updatedAt": "2015-10-06T15:29:59.459Z",
+        "id": 288
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:29:59.789Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:29:59.789Z",
+        "updatedAt": "2015-10-06T15:29:59.789Z",
+        "id": 290
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:29:59.951Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:29:59.951Z",
+        "updatedAt": "2015-10-06T15:29:59.951Z",
+        "id": 291
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:30:00.107Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:30:00.107Z",
+        "updatedAt": "2015-10-06T15:30:00.107Z",
+        "id": 292
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:30:00.243Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:30:00.244Z",
+        "updatedAt": "2015-10-06T15:30:00.244Z",
+        "id": 293
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:30:00.420Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:30:00.421Z",
+        "updatedAt": "2015-10-06T15:30:00.421Z",
+        "id": 294
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:30:00.589Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:30:00.589Z",
+        "updatedAt": "2015-10-06T15:30:00.589Z",
+        "id": 295
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:30:00.799Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:30:00.799Z",
+        "updatedAt": "2015-10-06T15:30:00.799Z",
+        "id": 296
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:30:00.959Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:30:00.960Z",
+        "updatedAt": "2015-10-06T15:30:00.960Z",
+        "id": 297
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:30:01.123Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:30:01.124Z",
+        "updatedAt": "2015-10-06T15:30:01.124Z",
+        "id": 298
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:30:01.287Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:30:01.288Z",
+        "updatedAt": "2015-10-06T15:30:01.288Z",
+        "id": 299
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:30:01.456Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:30:01.457Z",
+        "updatedAt": "2015-10-06T15:30:01.457Z",
+        "id": 300
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:30:01.620Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:30:01.621Z",
+        "updatedAt": "2015-10-06T15:30:01.621Z",
+        "id": 301
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:30:01.785Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:30:01.786Z",
+        "updatedAt": "2015-10-06T15:30:01.786Z",
+        "id": 302
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:30:01.893Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:30:01.894Z",
+        "updatedAt": "2015-10-06T15:30:01.894Z",
+        "id": 303
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:30:02.117Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:30:02.118Z",
+        "updatedAt": "2015-10-06T15:30:02.118Z",
+        "id": 304
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:30:02.209Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:30:02.210Z",
+        "updatedAt": "2015-10-06T15:30:02.210Z",
+        "id": 305
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:30:02.361Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:30:02.362Z",
+        "updatedAt": "2015-10-06T15:30:02.362Z",
+        "id": 306
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:30:02.511Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:30:02.511Z",
+        "updatedAt": "2015-10-06T15:30:02.511Z",
+        "id": 307
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:30:02.654Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:30:02.655Z",
+        "updatedAt": "2015-10-06T15:30:02.655Z",
+        "id": 308
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:30:02.821Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:30:02.821Z",
+        "updatedAt": "2015-10-06T15:30:02.821Z",
+        "id": 309
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:30:02.984Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:30:02.985Z",
+        "updatedAt": "2015-10-06T15:30:02.985Z",
+        "id": 310
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:30:03.142Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:30:03.142Z",
+        "updatedAt": "2015-10-06T15:30:03.142Z",
+        "id": 311
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:30:03.317Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:30:03.317Z",
+        "updatedAt": "2015-10-06T15:30:03.317Z",
+        "id": 312
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:30:03.485Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:30:03.485Z",
+        "updatedAt": "2015-10-06T15:30:03.485Z",
+        "id": 313
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:30:03.658Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:30:03.658Z",
+        "updatedAt": "2015-10-06T15:30:03.658Z",
+        "id": 314
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:30:03.821Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:30:03.821Z",
+        "updatedAt": "2015-10-06T15:30:03.821Z",
+        "id": 315
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:30:03.966Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:30:03.966Z",
+        "updatedAt": "2015-10-06T15:30:03.966Z",
+        "id": 316
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:30:04.141Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:30:04.142Z",
+        "updatedAt": "2015-10-06T15:30:04.142Z",
+        "id": 317
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:30:04.293Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:30:04.294Z",
+        "updatedAt": "2015-10-06T15:30:04.294Z",
+        "id": 318
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:30:04.449Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:30:04.449Z",
+        "updatedAt": "2015-10-06T15:30:04.449Z",
+        "id": 319
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:30:04.601Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:30:04.602Z",
+        "updatedAt": "2015-10-06T15:30:04.602Z",
+        "id": 320
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:30:04.755Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:30:04.755Z",
+        "updatedAt": "2015-10-06T15:30:04.755Z",
+        "id": 321
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:30:04.925Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:30:04.925Z",
+        "updatedAt": "2015-10-06T15:30:04.925Z",
+        "id": 322
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:30:05.091Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:30:05.092Z",
+        "updatedAt": "2015-10-06T15:30:05.092Z",
+        "id": 323
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:30:05.244Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:30:05.245Z",
+        "updatedAt": "2015-10-06T15:30:05.245Z",
+        "id": 324
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:30:05.405Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:30:05.406Z",
+        "updatedAt": "2015-10-06T15:30:05.406Z",
+        "id": 325
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:30:05.577Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:30:05.577Z",
+        "updatedAt": "2015-10-06T15:30:05.577Z",
+        "id": 326
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:30:05.775Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:30:05.775Z",
+        "updatedAt": "2015-10-06T15:30:05.775Z",
+        "id": 327
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:30:05.966Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:30:05.967Z",
+        "updatedAt": "2015-10-06T15:30:05.967Z",
+        "id": 328
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:30:06.076Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:30:06.077Z",
+        "updatedAt": "2015-10-06T15:30:06.077Z",
+        "id": 329
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:30:06.235Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:30:06.236Z",
+        "updatedAt": "2015-10-06T15:30:06.236Z",
+        "id": 330
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:30:06.392Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:30:06.392Z",
+        "updatedAt": "2015-10-06T15:30:06.392Z",
+        "id": 331
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:30:06.577Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:30:06.578Z",
+        "updatedAt": "2015-10-06T15:30:06.578Z",
+        "id": 332
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:30:06.756Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:30:06.757Z",
+        "updatedAt": "2015-10-06T15:30:06.757Z",
+        "id": 333
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:30:06.899Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:30:06.900Z",
+        "updatedAt": "2015-10-06T15:30:06.900Z",
+        "id": 334
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:30:07.069Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:30:07.069Z",
+        "updatedAt": "2015-10-06T15:30:07.069Z",
+        "id": 335
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:30:07.244Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:30:07.244Z",
+        "updatedAt": "2015-10-06T15:30:07.244Z",
+        "id": 336
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:30:07.411Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:30:07.412Z",
+        "updatedAt": "2015-10-06T15:30:07.412Z",
+        "id": 337
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:30:07.571Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:30:07.571Z",
+        "updatedAt": "2015-10-06T15:30:07.571Z",
+        "id": 338
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:30:07.765Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:30:07.765Z",
+        "updatedAt": "2015-10-06T15:30:07.765Z",
+        "id": 339
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:30:07.933Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:30:07.934Z",
+        "updatedAt": "2015-10-06T15:30:07.934Z",
+        "id": 340
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:30:08.101Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:30:08.102Z",
+        "updatedAt": "2015-10-06T15:30:08.102Z",
+        "id": 341
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:30:08.274Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:30:08.275Z",
+        "updatedAt": "2015-10-06T15:30:08.275Z",
+        "id": 342
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:30:08.410Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:30:08.410Z",
+        "updatedAt": "2015-10-06T15:30:08.410Z",
+        "id": 343
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:30:08.566Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:30:08.566Z",
+        "updatedAt": "2015-10-06T15:30:08.566Z",
+        "id": 344
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:30:08.915Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:30:08.916Z",
+        "updatedAt": "2015-10-06T15:30:08.916Z",
+        "id": 345
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:30:09.110Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:30:09.111Z",
+        "updatedAt": "2015-10-06T15:30:09.111Z",
+        "id": 346
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:30:09.281Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:30:09.281Z",
+        "updatedAt": "2015-10-06T15:30:09.281Z",
+        "id": 347
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:30:09.435Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:30:09.435Z",
+        "updatedAt": "2015-10-06T15:30:09.435Z",
+        "id": 348
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:30:09.587Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:30:09.587Z",
+        "updatedAt": "2015-10-06T15:30:09.587Z",
+        "id": 349
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:30:09.774Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:30:09.775Z",
+        "updatedAt": "2015-10-06T15:30:09.775Z",
+        "id": 350
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:30:09.953Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:30:09.954Z",
+        "updatedAt": "2015-10-06T15:30:09.954Z",
+        "id": 351
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:30:10.110Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:30:10.111Z",
+        "updatedAt": "2015-10-06T15:30:10.111Z",
+        "id": 352
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:30:10.249Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:30:10.250Z",
+        "updatedAt": "2015-10-06T15:30:10.250Z",
+        "id": 353
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:30:10.397Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:30:10.398Z",
+        "updatedAt": "2015-10-06T15:30:10.398Z",
+        "id": 354
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:30:10.557Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:30:10.557Z",
+        "updatedAt": "2015-10-06T15:30:10.557Z",
+        "id": 355
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:30:10.717Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:30:10.717Z",
+        "updatedAt": "2015-10-06T15:30:10.717Z",
+        "id": 356
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:30:10.900Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:30:10.901Z",
+        "updatedAt": "2015-10-06T15:30:10.901Z",
+        "id": 357
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:30:11.075Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:30:11.076Z",
+        "updatedAt": "2015-10-06T15:30:11.076Z",
+        "id": 358
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:30:11.231Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:30:11.232Z",
+        "updatedAt": "2015-10-06T15:30:11.232Z",
+        "id": 359
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:30:11.381Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:30:11.381Z",
+        "updatedAt": "2015-10-06T15:30:11.381Z",
+        "id": 360
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:30:11.523Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:30:11.523Z",
+        "updatedAt": "2015-10-06T15:30:11.523Z",
+        "id": 361
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:31:50.211Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:31:50.212Z",
+        "updatedAt": "2015-10-06T15:31:50.212Z",
+        "id": 362
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:31:51.574Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:31:51.574Z",
+        "updatedAt": "2015-10-06T15:31:51.574Z",
+        "id": 363
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:31:51.784Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:31:51.784Z",
+        "updatedAt": "2015-10-06T15:31:51.784Z",
+        "id": 364
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:31:51.935Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:31:51.941Z",
+        "updatedAt": "2015-10-06T15:31:51.941Z",
+        "id": 365
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:31:52.418Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:31:52.419Z",
+        "updatedAt": "2015-10-06T15:31:52.419Z",
+        "id": 366
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:31:52.460Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:31:52.460Z",
+        "updatedAt": "2015-10-06T15:31:52.460Z",
+        "id": 367
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:31:52.531Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:31:52.531Z",
+        "updatedAt": "2015-10-06T15:31:52.531Z",
+        "id": 368
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:31:52.539Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:31:52.539Z",
+        "updatedAt": "2015-10-06T15:31:52.539Z",
+        "id": 369
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:31:52.595Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:31:52.596Z",
+        "updatedAt": "2015-10-06T15:31:52.596Z",
+        "id": 370
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:31:52.692Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:31:52.693Z",
+        "updatedAt": "2015-10-06T15:31:52.693Z",
+        "id": 371
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:31:52.699Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:31:52.700Z",
+        "updatedAt": "2015-10-06T15:31:52.700Z",
+        "id": 372
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:31:52.710Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:31:52.710Z",
+        "updatedAt": "2015-10-06T15:31:52.710Z",
+        "id": 373
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:31:52.776Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:31:52.776Z",
+        "updatedAt": "2015-10-06T15:31:52.776Z",
+        "id": 374
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:31:52.787Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:31:52.787Z",
+        "updatedAt": "2015-10-06T15:31:52.787Z",
+        "id": 375
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:31:52.870Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:31:52.871Z",
+        "updatedAt": "2015-10-06T15:31:52.871Z",
+        "id": 376
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:31:53.178Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:31:53.178Z",
+        "updatedAt": "2015-10-06T15:31:53.178Z",
+        "id": 377
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:31:53.217Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:31:53.217Z",
+        "updatedAt": "2015-10-06T15:31:53.217Z",
+        "id": 378
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:31:53.350Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:31:53.350Z",
+        "updatedAt": "2015-10-06T15:31:53.350Z",
+        "id": 379
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:31:53.510Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:31:53.510Z",
+        "updatedAt": "2015-10-06T15:31:53.510Z",
+        "id": 380
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:31:59.594Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:31:59.594Z",
+        "updatedAt": "2015-10-06T15:31:59.594Z",
+        "id": 381
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:31:59.852Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:31:59.852Z",
+        "updatedAt": "2015-10-06T15:31:59.852Z",
+        "id": 382
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:32:00.275Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:32:00.275Z",
+        "updatedAt": "2015-10-06T15:32:00.275Z",
+        "id": 383
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:32:00.627Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:32:00.628Z",
+        "updatedAt": "2015-10-06T15:32:00.628Z",
+        "id": 384
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:32:00.901Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:32:00.901Z",
+        "updatedAt": "2015-10-06T15:32:00.901Z",
+        "id": 385
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:32:01.133Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:32:01.133Z",
+        "updatedAt": "2015-10-06T15:32:01.133Z",
+        "id": 386
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:32:01.349Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:32:01.349Z",
+        "updatedAt": "2015-10-06T15:32:01.349Z",
+        "id": 387
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:32:02.132Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:32:02.133Z",
+        "updatedAt": "2015-10-06T15:32:02.133Z",
+        "id": 388
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:32:02.300Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:32:02.301Z",
+        "updatedAt": "2015-10-06T15:32:02.301Z",
+        "id": 389
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:32:02.476Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:32:02.477Z",
+        "updatedAt": "2015-10-06T15:32:02.477Z",
+        "id": 390
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:32:02.675Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:32:02.675Z",
+        "updatedAt": "2015-10-06T15:32:02.675Z",
+        "id": 391
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:32:02.919Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:32:02.920Z",
+        "updatedAt": "2015-10-06T15:32:02.920Z",
+        "id": 392
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:32:03.084Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:32:03.084Z",
+        "updatedAt": "2015-10-06T15:32:03.084Z",
+        "id": 393
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:32:03.197Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:32:03.197Z",
+        "updatedAt": "2015-10-06T15:32:03.197Z",
+        "id": 394
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:32:03.349Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:32:03.349Z",
+        "updatedAt": "2015-10-06T15:32:03.349Z",
+        "id": 395
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:32:03.516Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:32:03.516Z",
+        "updatedAt": "2015-10-06T15:32:03.516Z",
+        "id": 396
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:32:03.666Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:32:03.667Z",
+        "updatedAt": "2015-10-06T15:32:03.667Z",
+        "id": 397
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:32:03.816Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:32:03.818Z",
+        "updatedAt": "2015-10-06T15:32:03.818Z",
+        "id": 398
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:32:03.953Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:32:03.954Z",
+        "updatedAt": "2015-10-06T15:32:03.954Z",
+        "id": 399
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:32:04.099Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:32:04.099Z",
+        "updatedAt": "2015-10-06T15:32:04.099Z",
+        "id": 400
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:32:04.246Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:32:04.247Z",
+        "updatedAt": "2015-10-06T15:32:04.247Z",
+        "id": 401
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:32:04.386Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:32:04.386Z",
+        "updatedAt": "2015-10-06T15:32:04.386Z",
+        "id": 402
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:32:04.690Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:32:04.691Z",
+        "updatedAt": "2015-10-06T15:32:04.691Z",
+        "id": 403
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:32:04.844Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:32:04.844Z",
+        "updatedAt": "2015-10-06T15:32:04.844Z",
+        "id": 404
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:32:05.363Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:32:05.363Z",
+        "updatedAt": "2015-10-06T15:32:05.363Z",
+        "id": 405
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:32:05.582Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:32:05.582Z",
+        "updatedAt": "2015-10-06T15:32:05.582Z",
+        "id": 406
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:32:05.770Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:32:05.771Z",
+        "updatedAt": "2015-10-06T15:32:05.771Z",
+        "id": 407
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:32:05.891Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:32:05.891Z",
+        "updatedAt": "2015-10-06T15:32:05.891Z",
+        "id": 408
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:32:06.025Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:32:06.025Z",
+        "updatedAt": "2015-10-06T15:32:06.025Z",
+        "id": 409
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:32:06.153Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:32:06.153Z",
+        "updatedAt": "2015-10-06T15:32:06.153Z",
+        "id": 410
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:32:06.297Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:32:06.298Z",
+        "updatedAt": "2015-10-06T15:32:06.298Z",
+        "id": 411
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:32:06.434Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:32:06.435Z",
+        "updatedAt": "2015-10-06T15:32:06.435Z",
+        "id": 412
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:32:06.586Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:32:06.586Z",
+        "updatedAt": "2015-10-06T15:32:06.586Z",
+        "id": 413
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:32:06.733Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:32:06.733Z",
+        "updatedAt": "2015-10-06T15:32:06.733Z",
+        "id": 414
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:32:06.907Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:32:06.907Z",
+        "updatedAt": "2015-10-06T15:32:06.907Z",
+        "id": 415
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:32:07.074Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:32:07.074Z",
+        "updatedAt": "2015-10-06T15:32:07.074Z",
+        "id": 416
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:32:07.231Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:32:07.231Z",
+        "updatedAt": "2015-10-06T15:32:07.231Z",
+        "id": 417
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:32:07.372Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:32:07.373Z",
+        "updatedAt": "2015-10-06T15:32:07.373Z",
+        "id": 418
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:32:07.530Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:32:07.531Z",
+        "updatedAt": "2015-10-06T15:32:07.531Z",
+        "id": 419
+      },
+      {
+        "terem": null,
+        "leiras": null,
+        "datum": "2015-10-06T15:32:07.681Z",
+        "kesz": false,
+        "createdAt": "2015-10-06T15:32:07.682Z",
+        "updatedAt": "2015-10-06T15:32:07.682Z",
+        "id": 420
+      },
+      {
+        "terem": "PC 1",
+        "leiras": "heló",
+        "datum": "2015-10-06T15:35:17.582Z",
+        "kesz": true,
+        "createdAt": "2015-10-06T15:35:17.586Z",
+        "updatedAt": "2015-10-13T15:29:01.482Z",
+        "id": 421
+      }
+    ],
+    "user": [
+      {
+        "surname": "Test ",
+        "forename": "User",
+        "neptun": "almakorte",
+        "password": "almakorte",
+        "avatar": "",
+        "role": "riporter",
+        "createdAt": "2015-10-13T14:59:09.094Z",
+        "updatedAt": "2015-10-13T14:59:09.094Z",
+        "id": 1
+      },
+      {
+        "surname": "heló",
+        "forename": "szia",
+        "neptun": "asdf",
+        "password": "asdf",
+        "avatar": "",
+        "role": "riporter",
+        "createdAt": "2015-10-13T15:05:56.183Z",
+        "updatedAt": "2015-10-13T15:05:56.183Z",
+        "id": 2
+      },
+      {
+        "surname": "alma",
+        "forename": "korte",
+        "neptun": "kortealma",
+        "password": "kortealma",
+        "avatar": "",
+        "role": "riporter",
+        "createdAt": "2015-10-13T15:28:01.837Z",
+        "updatedAt": "2015-10-13T15:28:01.837Z",
+        "id": 3
+      },
+      {
+        "surname": "heló",
+        "forename": "szia",
+        "neptun": "asdfasdf",
+        "password": "asdf",
+        "avatar": "",
+        "role": "riporter",
+        "createdAt": "2015-10-13T15:28:25.425Z",
+        "updatedAt": "2015-10-13T15:28:25.425Z",
+        "id": 4
+      },
+      {
+        "surname": "swbf",
+        "forename": "swbf",
+        "neptun": "swbf",
+        "password": "swbf",
+        "avatar": "",
+        "role": "riporter",
+        "createdAt": "2015-10-13T15:28:32.405Z",
+        "updatedAt": "2015-10-13T15:28:32.405Z",
+        "id": 5
+      },
+      {
+        "surname": "a",
+        "forename": "a",
+        "neptun": "a",
+        "password": "a",
+        "avatar": "",
+        "role": "riporter",
+        "createdAt": "2015-10-13T15:35:41.761Z",
+        "updatedAt": "2015-10-13T15:35:41.761Z",
+        "id": 6
+      },
+      {
+        "surname": "e",
+        "forename": "e",
+        "neptun": "e",
+        "password": "e",
+        "avatar": "",
+        "role": "riporter",
+        "createdAt": "2015-10-13T15:38:56.120Z",
+        "updatedAt": "2015-10-13T15:38:56.120Z",
+        "id": 7
+      },
+      {
+        "surname": "t",
+        "forename": "t",
+        "neptun": "t",
+        "password": "$2a$10$4EvfR6sRi/X1k37mm6Zysu7beyJ//gIv3orMI5s1b8xdi6Z4DlEby",
+        "avatar": "",
+        "role": "riporter",
+        "createdAt": "2015-10-13T15:41:19.132Z",
+        "updatedAt": "2015-10-13T15:41:19.132Z",
+        "id": 8
+      }
+    ]
+  },
+  "schema": {
+    "error": {
+      "datum": {
+        "type": "date"
+      },
+      "terem": {
+        "type": "string"
+      },
+      "leiras": {
+        "type": "string"
+      },
+      "kesz": {
+        "type": "boolean",
+        "defaultsTo": false
+      },
+      "user": {
+        "type": "integer",
+        "model": "user",
+        "foreignKey": true,
+        "alias": "user"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "user": {
+      "neptun": {
+        "type": "string",
+        "unique": true
+      },
+      "password": {
+        "type": "string"
+      },
+      "surname": {
+        "type": "string"
+      },
+      "forename": {
+        "type": "string"
+      },
+      "avatar": {
+        "type": "string"
+      },
+      "role": {
+        "type": "string",
+        "enum": [
+          "riporter",
+          "operator"
+        ],
+        "defaultsTo": "riporter"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    }
+  },
+  "counters": {
+    "error": {
+      "id": 421
+    },
+    "user": {
+      "id": 8
+    }
+  }
+}

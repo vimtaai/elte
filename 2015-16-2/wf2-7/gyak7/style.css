@@ -1,0 +1,51 @@
+table {
+    border-collapse: collapse;
+}
+
+td, button {
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    border: solid 1px black;
+    font-family: Courier New, Courier, monospace;
+    font-weight: bold;
+}
+
+#start {
+    width: auto;
+    font-family: inherit;
+}
+
+.n0 {
+    color: white;
+}
+
+.n1 {
+    color: blue;
+}
+
+.n2 {
+    color: green;
+}
+
+.n3 {
+    color: red;
+}
+
+.n4 {
+    color: purple;
+}
+
+.n5 {
+    color: maroon;
+}
+
+.n6 {
+    color: skyblue;
+}
+.n7 {
+    color: darkgreen;
+}
+.n8 {
+    color: magenta;
+}

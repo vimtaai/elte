@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>My App</title>
+        <link rel="stylesheet" type="text/css" href="/css/style.css">
+    </head>
+    <body>
+        <h1>{{title}}</h1>
+        <table>
+            <tr><th>Sender</th><th>Message</th></tr>
+            {{#each messages as |message|}}
+            <tr><td><a href="/{{message.user}}">{{message.user}}</a></td><td>{{message.text}}</td></tr>
+            {{/each}}
+        </table>
+        <a href="/">Back</a>
+        {{#unless all}}
+        <a href="/all">All messages</a>
+        {{/unless}}
+    </body>
+</html>

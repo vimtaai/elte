@@ -1,0 +1,203 @@
+{
+  "data": {
+    "birthday": [
+      {
+        "nev": "Kiss Elemér",
+        "datum": "2015-10-21T00:00:00.000Z",
+        "user": 1,
+        "createdAt": "2015-10-22T13:10:28.629Z",
+        "updatedAt": "2015-10-22T13:10:28.629Z",
+        "id": 1
+      },
+      {
+        "nev": "Minta Béla",
+        "datum": "2015-10-21T00:00:00.000Z",
+        "user": 1,
+        "createdAt": "2015-10-22T13:11:22.796Z",
+        "updatedAt": "2015-10-22T13:11:22.796Z",
+        "id": 2
+      },
+      {
+        "nev": "Minta Béla",
+        "datum": "2015-10-21T00:00:00.000Z",
+        "user": 1,
+        "createdAt": "2015-10-22T13:11:45.978Z",
+        "updatedAt": "2015-10-22T13:11:45.978Z",
+        "id": 3
+      },
+      {
+        "nev": "Minta Béla",
+        "datum": "2015-10-21T00:00:00.000Z",
+        "user": 1,
+        "createdAt": "2015-10-22T13:12:15.357Z",
+        "updatedAt": "2015-10-22T13:12:15.357Z",
+        "id": 4
+      },
+      {
+        "nev": "Minta Béla",
+        "datum": "2015-10-21T00:00:00.000Z",
+        "user": 1,
+        "createdAt": "2015-10-22T13:12:22.842Z",
+        "updatedAt": "2015-10-22T13:12:22.842Z",
+        "id": 5
+      },
+      {
+        "nev": "fgsgs",
+        "datum": "2015-11-14T00:00:00.000Z",
+        "user": 3,
+        "createdAt": "2015-11-05T13:43:54.694Z",
+        "updatedAt": "2015-11-05T13:43:54.694Z",
+        "id": 8
+      },
+      {
+        "nev": "c",
+        "datum": "2015-11-28T00:00:00.000Z",
+        "user": 2,
+        "createdAt": "2015-11-05T14:18:20.432Z",
+        "updatedAt": "2015-11-05T14:18:20.432Z",
+        "id": 23
+      },
+      {
+        "nev": "d",
+        "datum": "2015-11-08T00:00:00.000Z",
+        "user": 2,
+        "createdAt": "2015-11-05T14:18:23.462Z",
+        "updatedAt": "2015-11-05T14:18:23.462Z",
+        "id": 24
+      },
+      {
+        "nev": "asf",
+        "datum": "2015-11-20T00:00:00.000Z",
+        "user": 2,
+        "createdAt": "2015-11-05T14:29:47.543Z",
+        "updatedAt": "2015-11-05T14:29:47.543Z",
+        "id": 25
+      },
+      {
+        "nev": "asdasd",
+        "datum": "2015-11-13T00:00:00.000Z",
+        "user": 2,
+        "createdAt": "2015-11-05T14:40:23.300Z",
+        "updatedAt": "2015-11-05T14:40:23.300Z",
+        "id": 26
+      },
+      {
+        "nev": "asdasfgasddgasf",
+        "datum": "2015-10-30T00:00:00.000Z",
+        "user": 2,
+        "createdAt": "2015-11-05T14:43:47.159Z",
+        "updatedAt": "2015-11-05T14:43:47.159Z",
+        "id": 27
+      }
+    ],
+    "user": [
+      {
+        "surname": "w",
+        "forename": "w",
+        "neptun": "w",
+        "password": "$2a$10$76FCiUCXAp2YW5cVQ8KS5.MyUPPSuIxfN0BUzxbfK7bI5y9bbZoeq",
+        "avatar": "",
+        "role": "riporter",
+        "createdAt": "2015-10-22T13:10:28.369Z",
+        "updatedAt": "2015-10-22T13:10:28.369Z",
+        "id": 1
+      },
+      {
+        "surname": "a",
+        "forename": "a",
+        "neptun": "a",
+        "password": "$2a$10$1Sqe/6GlIycjJjKMpr.RlevMpoRceCvs8Dt5yWMYmr0pi9f.9Crti",
+        "avatar": "",
+        "role": "riporter",
+        "createdAt": "2015-11-05T13:11:52.232Z",
+        "updatedAt": "2015-11-05T13:11:52.232Z",
+        "id": 2
+      },
+      {
+        "surname": "abc",
+        "forename": "abc",
+        "neptun": "abc",
+        "password": "$2a$10$NM.WhZDN6ywEB.iAMc7inOUcENVMdZRRULm8RW8IXBMFRINkaL3KK",
+        "avatar": "",
+        "role": "riporter",
+        "createdAt": "2015-11-05T13:43:39.631Z",
+        "updatedAt": "2015-11-05T13:43:39.631Z",
+        "id": 3
+      }
+    ]
+  },
+  "schema": {
+    "birthday": {
+      "nev": {
+        "type": "string"
+      },
+      "datum": {
+        "type": "date"
+      },
+      "user": {
+        "type": "integer",
+        "model": "user",
+        "foreignKey": true,
+        "alias": "user"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "user": {
+      "neptun": {
+        "type": "string",
+        "unique": true
+      },
+      "password": {
+        "type": "string"
+      },
+      "surname": {
+        "type": "string"
+      },
+      "forename": {
+        "type": "string"
+      },
+      "avatar": {
+        "type": "string"
+      },
+      "role": {
+        "type": "string",
+        "enum": [
+          "riporter",
+          "operator"
+        ],
+        "defaultsTo": "riporter"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    }
+  },
+  "counters": {
+    "birthday": {
+      "id": 27
+    },
+    "user": {
+      "id": 3
+    }
+  }
+}

@@ -1,0 +1,170 @@
+@font-face {
+    font-family: "pipbox";
+    src: url("/assets/fonts/monofonto.ttf");
+}
+ 
+body {
+    background: black;
+    font-family: pipbox, Arial;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+ 
+body > div > div.container {
+    width: 600px;
+    padding: 10px;
+    margin: 40px auto;
+    background: #2c463c;
+    background: -moz-radial-gradient(center, ellipse cover, #2c463c 0%, #050706 100%);
+    background: -webkit-radial-gradient(center, ellipse cover, #2c463c 0%,#050706 100%);
+    background: radial-gradient(ellipse at center, #2c463c 0%,#050706 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2c463c', endColorstr='#050706',GradientType=1 );
+    box-shadow: inset 0 5px 15px rgba(255,255,255,0.2),
+                inset 0 0 2px black,
+                inset 0 0 2px black;
+    color: rgb(25, 255, 138);
+    border: solid #666 3px;
+    border-top-color: #444;
+    border-left-color: #444;
+}
+ 
+fieldset {
+    border-color: rgb(25, 255, 138);
+    position: relative;
+    height: 300px;
+}
+ 
+legend {
+    padding: 0 15px;
+}
+ 
+nav ul li {
+    display: inline-block;
+}
+ 
+nav ul li a {
+    box-sizing: border-box;
+    text-decoration: none;
+    color: rgb(25, 255, 138);
+    padding: 0 5px;
+    margin: 0 5px;
+    border: solid transparent 2px;
+}
+ 
+nav ul li a.active {
+    border: solid rgb(25, 255, 138) 2px;
+}
+ 
+.inventory {
+    width: 250px;
+    float: left;
+    list-style: none;
+    padding: 5px;
+    margin: 0;
+}
+ 
+.inventory li {
+    padding: 5px 5px 5px 25px;
+    margin: 5px 0;
+    border: solid transparent 2px;
+    cursor: pointer;
+    position: relative;
+}
+ 
+.inventory li.equip:before {
+    box-sizing: border-box;
+    content: '';
+    width: 9px;
+    height: 9px;
+    border: solid rgb(25, 255, 138) 2px;
+    background: transparent;
+    position: absolute;
+    left: 8px;
+    top: 10px;
+}
+
+.inventory li.equipped:before {
+    background: rgb(25, 255, 138);
+}
+ 
+.inventory a {
+    text-decoration: none;
+    color: rgb(25, 255, 138);
+}
+ 
+.inventory li:hover,
+.inventory a.active li {
+    border: solid rgb(25, 255, 138) 2px;
+}
+ 
+.inventory-details {
+    padding: 35px 10px;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    bottom: 5px;
+    width: 300px;
+}
+ 
+h1 {
+    font-size: 1em;
+    margin: 0 0 10px 0;
+    padding: 0 0 10px 0;
+    border-bottom: solid rgb(25, 255, 138) 2px;
+    font-weight: normal;
+}
+ 
+td {
+    padding: 5px 0;
+}
+ 
+td:last-child{
+    padding-left: 20px;
+}
+ 
+button,
+input,
+select {
+    box-sizing: border-box;
+    background: none;
+    border: solid rgb(25, 255, 138) 2px;
+    padding: 5px 10px;
+    font: inherit;
+    color: inherit;
+    text-transform: inherit;
+    outline: none;
+    cursor: pointer;
+}
+
+button {
+    display: block;
+    position: absolute;
+    bottom: 20px;
+    left: 5px;
+    right: 5px;
+    width: 98%;
+}
+
+select,
+input {
+    display: inline-block;
+    margin: 10px 0;
+}
+
+input[type=number] {
+    width: 80px;
+}
+
+label {
+    display: inline-block;
+    width: 80px;
+}
+
+option {
+    background: black;
+}
+ 
+button:hover {
+    color: black;
+    background: rgb(25, 255, 138);
+}

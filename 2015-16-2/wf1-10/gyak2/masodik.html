@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>HTML gyakorlás</title>
+    </head>
+    <body>
+        <h1>Első szintű címsor</h1>
+        <h2>Navigáció</h2>
+        <nav>
+            <ul>
+                <li><a href="#felsorolas">Felsorolások</a></li>
+                <li><a href="#kepek">Képek</a></li>
+                <li><a href="#hivatkozasok">Hivatkozások</a></li>
+                <li><a href="#abrak">Ábrák</a></li>
+            </ul>
+        </nav>
+        <h2 id="felsorolas">Felsorolások</h2>
+        <ul>
+            <li>Első elem</li>
+            <li>Második elem</li>
+            <li>Harmadik elem
+                <ul>
+                    <li>Második szint</li>
+                    <li>Második/második</li>
+                </ul>
+            </li>
+            <li>Negyedik elem</li>
+        </ul>
+        <ol>
+            <li>Első elem</li>
+            <li>Második elem</li>
+            <li>Harmadik elem
+                <ul>
+                    <li>Második szint</li>
+                    <li>Második/második</li>
+                </ul>
+            </li>
+            <li>Negyedik elem</li>
+        </ol>
+        <h2 id="kepek">Képek</h2>
+        <img src="http://lorempixum.com/200/200" 
+             alt="Valami random kép">
+        <img src="kep.jpg" alt="Nő ül a sarokban">
+        <h2 id="hivatkozasok">Hivatkozások</h2>
+        <a href="http://www.google.com">A Kereső</a>
+        <a href="../gyak1/elso.html">Az előző órai anyag</a>
+        <a href="#felsorolas">Felsorolásokról</a>
+        <!-- Komment -->
+        <h2 id="abrak">Ábrák</h2>
+        <figure>
+            <img src="http://lorempixum.com/300/300" 
+                 alt="Másik random kép">
+            <figcaption>Képaláírás</figcaption>
+        </figure>
+        <h3>Egyenletek</h3>
+        <figure>
+            <math>
+                <mfrac>
+                    <mrow> <mi>x</mi><mo>+</mo><mn>2</mn> </mrow>
+                    <mn>3</mn>
+                </mfrac>
+            </math>
+            <figcaption>Egyenlet MathML-ben (csak Firefox)</figcaption>
+        </figure>
+    </body>    
+</html>

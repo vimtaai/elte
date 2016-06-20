@@ -1,0 +1,30 @@
+{
+  "name": "gyak4",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules/mocha/bin/mocha **/*.test.js",
+    "watch-test": "node_modules/mocha/bin/mocha --watch **/*.test.js",
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.3.0",
+    "body-parser": "^1.14.1",
+    "connect-flash": "^0.1.1",
+    "express": "^4.13.3",
+    "express-session": "^1.11.3",
+    "express-validator": "^2.17.1",
+    "hbs": "^3.1.1",
+    "passport": "^0.3.0",
+    "passport-local": "^1.0.0",
+    "sails-disk": "^0.10.8",
+    "waterline": "^0.10.26"
+  },
+  "devDependencies": {
+    "chai": "^3.4.0",
+    "mocha": "^2.3.3"
+  }
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Térkép</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="http://bootswatch.com/superhero/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <figure class="col-md-8">
+           <canvas></canvas>
+        </figure>
+        <aside class="col-md-4 panel">
+            <form class="form-horizontal">
+            <fieldset>
+              <div class="form-group">
+                    <label class="col-lg-2 control-label">Nagyítás</label>
+                    <div class="col-lg-10">
+                        <div class="radio"><label><input type="number" id="ratio" min="1" max="4" step="0.5" value="2"> ×</label></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">Színek</label>
+                    <div class="col-lg-10">
+                        <div class="radio"><label><input type="color" id="water" value="#79c9e3"> Víz</label></div>
+                        <div class="radio"><label><input type="color" id="plains" value="#40f40b"> Síkság</label></div>
+                        <div class="radio"><label><input type="color" id="hills" value="#ebef3a"> Dombság</label></div>
+                        <div class="radio"><label><input type="color" id="mountains" value="#eda318"> Hegység</label></div>                       
+                        <div class="radio"><label><input type="color" id="high" value="#874518"> Magashegység</label></div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">Vízszint</label>
+                    <div class="col-lg-10">
+                        <div class="radio"><label><input type="number" id="waterlevel" value="0"> m</label></div>
+                    </div>
+                </div>
+            </form>
+        </aside>
+    </main>
+   
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

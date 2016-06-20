@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS gyakorlás</title>
+  <link rel="stylesheet" href="stilus.css">
+</head>
+<body>
+  <header>
+    <h1>
+      Gyak<span>orlás</span>
+    </h1>
+    <nav>
+      <ul>
+        <li><a href="#">Főoldal</a></li>
+        <li><a href="#">Információk</a>
+            <ul>
+                <li>Személyes adatok</li>
+                <li>Kijelentkezés</li>
+            </ul>
+        </li>
+        <li><a href="#">Elérhetőségek</a></li>
+        <li>
+          <label for="openmenu">
+              Kiss Elemér
+          </label>
+          <input type="checkbox" id="openmenu">
+          <ul>
+            <li>Személyes adatok</li>
+            <li>Kijelentkezés</li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <div>
+    <main>
+        <section>
+        <h1>Hírek</h1>
+        <article class="box">
+            <h2>Lorem ipsum</h2>
+            <time datetime="2016.03.30.">Ma</time>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo doloremque voluptas unde recusandae quis accusantium laboriosam velit, maxime perferendis, quae natus aliquam neque! Voluptates velit quae ad, consequatur nulla autem!</p>
+        </article>
+        <article class="box">
+            <h2>Lorem ipsum</h2>
+            <time datetime="2016.03.30.">Ma</time>
+            <p>Quidem veritatis officia tempore qui accusamus numquam eos possimus tenetur aliquid ducimus quo, explicabo eligendi iste natus nihil expedita in illum quas.</p>
+            <pre id="sourcecode">
+            <code>
+package Program;
+
+public class Program {
+  public static void Main(String[] args) {
+    System.out.println("Hello World");
+  }
+}
+            </code>
+            </pre>
+            <p>Eligendi deserunt impedit enim rerum, tenetur dolorum, accusamus modi eaque. Ea, vitae magni.</p>
+        </article>
+        </section>
+        <section>
+        <h1>Képek</h1>
+        <figure>
+            <img src="termeszet.jpg" alt="Természet">
+            <figcaption>A természet szépsége</figcaption>
+        </figure>
+        <figure>
+            <img src="ember.gif" alt="Emberek">
+            <figcaption>Az emberek sokfélesége</figcaption>
+        </figure>
+        </section>
+    </main>
+    <aside>
+        <form action="gyakorlas.html" class="box">
+            <label for="user">Felhasználónév:</label>
+            <input type="text" id="user" class="input">
+            <label for="pass">Jelszó:</label>
+            <input type="password" id="pass" class="input">
+            <button class="input">Bejelentkezés</button>
+        </form>         
+    </aside>
+  </div>
+  <footer>
+    &copy; Web1Gyak
+  </footer>
+</body>
+</html>

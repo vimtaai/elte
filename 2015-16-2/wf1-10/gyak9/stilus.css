@@ -1,0 +1,86 @@
+input[type=checkbox],
+input[type=radio],
+input[type=file] {
+    display: none;
+}
+
+input[type=radio] + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: seagreen;
+    border: solid rgba(0,0,0,0.3) 2px;
+    vertical-align: bottom;
+    margin-right: 5px;
+    color: white;
+    padding: 0 3px;
+    box-sizing: border-box;
+    font-family: monospace;
+    border-radius: 50%;
+}
+
+input[type=radio] + label:after {
+    content: '';
+    position: absolute;
+    left: 3px;
+    top: 3px;
+    display: inline-block;
+    width: 14px;
+    height: 13px;
+    background: transparent;
+    vertical-align: bottom;
+    margin-right: 5px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    transition: left 0.3s, color 0.3s;
+}
+
+
+input[type=radio]:checked + label:after {
+    background: rgba(255,255,255,0.5);
+}
+
+input[type=checkbox] + label,
+input[type=radio] + label {
+    position: relative;
+    padding-left: 45px;
+}
+
+input[type=checkbox] + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+    background: seagreen;
+    border: solid rgba(0,0,0,0.3) 2px;
+    vertical-align: bottom;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+input[type=checkbox] + label:after {
+    content: '';
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    display: inline-block;
+    width: 18px;
+    height: 16px;
+    background: gray;
+    vertical-align: bottom;
+    margin-right: 5px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    transition: left 0.3s, color 0.3s;
+}
+
+
+input[type=checkbox]:checked + label:after {
+    background: rgba(255,255,255,0.5);
+    left: 20px;
+}

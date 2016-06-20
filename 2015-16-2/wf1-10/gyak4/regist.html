@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reg</title>
+</head>
+<body>
+    <h1>Registration</h1>
+    <form action="regist.html">
+        <fieldset>
+            <legend>Personal</legend>
+            <label for="title">Title</label><br>
+            <select name="title" id="title">
+                <option value="1">Ms.</option>
+                <option value="2">Mrs.</option>
+                <option value="3" selected="selected">Mr.</option>
+                <option value="4">Dr.</option>
+                <option value="5">Prof.</option>
+            </select><br>
+            
+            <label for="name">Full name</label><br>
+            <input type="text" name="name" id="name"
+                   placeholder="e.g. John Smith"><br>
+                   
+            <label for="birthday">Birthday</label><br>
+            <input type="date" name="birthday" id="birthday"
+                   disabled="disabled"><br>
+                   
+            <label for="color">Pick your fav color</label><br>
+            <input type="color" name="color" id="color"><br>
+            
+            <label for="female">Nő</label>
+            <input type="radio" name="gender" id="female"
+                   checked="checked"><br>
+            <label for="male">Férfi</label>
+            <input type="radio" name="gender" id="male"><br>
+            
+            <label for="cv">CV</label><br>
+            <textarea name="cv" id="cv"
+                      cols="60" rows="10" 
+                      maxlength="10">Default text</textarea><br>
+        </fieldset>
+        <fieldset>
+            <legend>Contact</legend>
+            <label for="email">E-mail</label><br>
+            <input type="email" name="email" id="email">
+        </fieldset>
+        <input type="submit" value="Send">
+        <input type="reset" value="Clear">
+    </form>
+</body>
+</html>

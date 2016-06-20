@@ -1,0 +1,32 @@
+<h1>{{model.nev}}</h1>
+
+Név:
+{{input value=model.nev class="form-control"}}
+<button class="btn btn-success" 
+	{{action "saveEdit"}}>
+Mentés
+</button>
+
+<h2>Hozzávalók</h2>
+<table class="table table-striped">
+{{#each model.hozzavalok as |hozzavalo|}}
+<tr><th>{{hozzavalo.nev}}</th>
+<td>{{hozzavalo.mennyiseg}}</td></tr>
+<td><button class="btn btn-danger" 
+	    {{action "delete" hozzavalo.id}}>
+	X</button></td>
+{{/each}}
+</table>
+
+{{input value=ujHozzavaloNev class="form-control"}}
+{{input value=ujHozzavaloDarab class="form-control" type="number"}}
+<button class="btn btn-warning"
+	{{action "addNew"}}>
+Hozzáad
+</button>
+
+{{#link-to "index"}}
+  Vissza
+{{/link-to}}
+
+{{outlet}}

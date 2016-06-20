@@ -1,0 +1,42 @@
+body {
+  padding-top: 10px;
+}
+
+aside {
+  position: relative;
+}
+
+h1 {
+  margin: 0;
+  text-align: left;
+}
+
+section {
+  clear: both;
+  padding-top: 15px;
+}
+
+.table > tbody > tr  > td {
+  vertical-align: middle;
+}
+
+.btn-select {
+  display: block;
+  margin: 10px auto;
+  clear: both;
+  width: 50%;
+}
+
+.form-login {
+  width: 220px;
+  padding: 5px;
+  clear: both;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  z-index: 100000;
+}
+
+a:hover, button:hover {
+  text-decoration: none;
+}

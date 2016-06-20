@@ -1,0 +1,160 @@
+{
+  "data": {
+    "birthday": [
+      {
+        "nev": "Kiss Elemér",
+        "datum": "2015-10-21T00:00:00.000Z",
+        "user": 1,
+        "createdAt": "2015-10-22T13:10:28.629Z",
+        "updatedAt": "2015-10-22T13:10:28.629Z",
+        "id": 1
+      },
+      {
+        "nev": "Minta Béla",
+        "datum": "2015-10-21T00:00:00.000Z",
+        "user": 1,
+        "createdAt": "2015-10-22T13:11:22.796Z",
+        "updatedAt": "2015-10-22T13:11:22.796Z",
+        "id": 2
+      },
+      {
+        "nev": "Minta Béla",
+        "datum": "2015-10-21T00:00:00.000Z",
+        "user": 1,
+        "createdAt": "2015-10-22T13:11:45.978Z",
+        "updatedAt": "2015-10-22T13:11:45.978Z",
+        "id": 3
+      },
+      {
+        "nev": "Minta Béla",
+        "datum": "2015-10-21T00:00:00.000Z",
+        "user": 1,
+        "createdAt": "2015-10-22T13:12:15.357Z",
+        "updatedAt": "2015-10-22T13:12:15.357Z",
+        "id": 4
+      },
+      {
+        "nev": "Minta Béla",
+        "datum": "2015-10-21T00:00:00.000Z",
+        "user": 1,
+        "createdAt": "2015-10-22T13:12:22.842Z",
+        "updatedAt": "2015-10-22T13:12:22.842Z",
+        "id": 5
+      },
+      {
+        "nev": "a",
+        "datum": "2015-11-05T00:00:00.000Z",
+        "user": 2,
+        "createdAt": "2015-11-05T13:11:57.967Z",
+        "updatedAt": "2015-11-05T13:11:57.967Z",
+        "id": 6
+      },
+      {
+        "nev": "b",
+        "datum": "2015-12-03T00:00:00.000Z",
+        "user": 2,
+        "createdAt": "2015-11-05T13:12:04.777Z",
+        "updatedAt": "2015-11-05T13:12:04.777Z",
+        "id": 7
+      }
+    ],
+    "user": [
+      {
+        "surname": "w",
+        "forename": "w",
+        "neptun": "w",
+        "password": "$2a$10$76FCiUCXAp2YW5cVQ8KS5.MyUPPSuIxfN0BUzxbfK7bI5y9bbZoeq",
+        "avatar": "",
+        "role": "riporter",
+        "createdAt": "2015-10-22T13:10:28.369Z",
+        "updatedAt": "2015-10-22T13:10:28.369Z",
+        "id": 1
+      },
+      {
+        "surname": "a",
+        "forename": "a",
+        "neptun": "a",
+        "password": "$2a$10$1Sqe/6GlIycjJjKMpr.RlevMpoRceCvs8Dt5yWMYmr0pi9f.9Crti",
+        "avatar": "",
+        "role": "riporter",
+        "createdAt": "2015-11-05T13:11:52.232Z",
+        "updatedAt": "2015-11-05T13:11:52.232Z",
+        "id": 2
+      }
+    ]
+  },
+  "schema": {
+    "birthday": {
+      "nev": {
+        "type": "string"
+      },
+      "datum": {
+        "type": "date"
+      },
+      "user": {
+        "type": "integer",
+        "model": "user",
+        "foreignKey": true,
+        "alias": "user"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "user": {
+      "neptun": {
+        "type": "string",
+        "unique": true
+      },
+      "password": {
+        "type": "string"
+      },
+      "surname": {
+        "type": "string"
+      },
+      "forename": {
+        "type": "string"
+      },
+      "avatar": {
+        "type": "string"
+      },
+      "role": {
+        "type": "string",
+        "enum": [
+          "riporter",
+          "operator"
+        ],
+        "defaultsTo": "riporter"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    }
+  },
+  "counters": {
+    "birthday": {
+      "id": 7
+    },
+    "user": {
+      "id": 2
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "data": {
+    "birthday": [
+      {
+        "nev": "Közepes Jónás",
+        "datum": "2015-10-16T00:00:00.000Z",
+        "createdAt": "2015-10-08T13:21:13.546Z",
+        "updatedAt": "2015-10-08T13:21:13.546Z",
+        "id": 6
+      },
+      {
+        "nev": "",
+        "datum": "",
+        "createdAt": "2015-10-08T13:26:05.342Z",
+        "updatedAt": "2015-10-08T13:26:05.342Z",
+        "id": 8
+      },
+      {
+        "nev": "Minta Béla",
+        "datum": "",
+        "createdAt": "2015-10-08T13:27:00.439Z",
+        "updatedAt": "2015-10-08T13:27:00.439Z",
+        "id": 9
+      }
+    ]
+  },
+  "schema": {
+    "birthday": {
+      "nev": {
+        "type": "string"
+      },
+      "datum": {
+        "type": "date"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    }
+  },
+  "counters": {
+    "birthday": {
+      "id": 9
+    }
+  }
+}

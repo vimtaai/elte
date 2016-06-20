@@ -1,0 +1,12 @@
+<table>
+    {{#each hibak as |hiba|}}
+    <tr>
+        <td>{{hiba.datum}}</td>
+        <td>{{hiba.terem}}</td>
+        <td>{{hiba.leiras}}</td>
+        <td>
+            <a class="btn btn-sm btn-danger" href="/delete/{{hiba.id}}">X</a>
+        </td>
+    </tr>
+    {{/each}}
+</table>

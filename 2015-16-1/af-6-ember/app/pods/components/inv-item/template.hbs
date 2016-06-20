@@ -1,0 +1,11 @@
+{{#link-to "inventory.details" data.id}}
+{{#if data.equipable}}
+    {{#if data.equipped}}
+    <li class="equip equipped">{{data.name}} ({{data.count}})</li>
+    {{else}}
+    <li class="equip">{{data.name}} ({{data.count}})</li>
+    {{/if}}
+{{else}}
+<li>{{data.name}} ({{data.count}})</li>
+{{/if}}
+{{/link-to}}

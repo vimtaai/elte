@@ -1,0 +1,86 @@
+<form class="form-horizontal" method="post">
+    <fieldset>
+        <div class="form-group col-sm-12">
+            <label for="map">Map</label>
+            <input type="text" class="form-control" name="map" placeholder="Bel'shir Vestige" required="required">
+        </div>
+        <div class="form-group col-sm-12">
+            <label for="type">Game Type</label>
+            <input type="text" class="form-control"  name="type" placeholder="1v1" required="required">
+        </div>
+        <div class="form-group col-sm-12">
+            <label for="victor">Victor</label>
+            <select class="form-control" name="victor">
+                <option value="true">Team 1</option>
+                <option value="false">Team 2</option>
+            </select>
+        </div>
+        <div class="form-group col-sm-6">
+            <label for="team1_1" class="col-lg-2 control-label">Team 1</label>
+            <br><br>
+            <div class="team1">
+                <select class="form-control" name="team1_1">
+                    {{#each players as |player|}}
+                    <option value="{{player.id}}">{{player.name}}</option>
+                    {{/each}}
+                </select>
+                <br>
+                <select class="form-control" name="team1_2">
+                    <option value="null"></option>
+                    {{#each players as |player|}}
+                    <option value="{{player.id}}">{{player.name}}</option>
+                    {{/each}}
+                </select>
+                <br>
+                <select class="form-control" name="team1_3">
+                    <option value="null"></option>
+                    {{#each players as |player|}}
+                    <option value="{{player.id}}">{{player.name}}</option>
+                    {{/each}}
+                </select>
+                <br>
+                <select class="form-control" name="team1_4">
+                    <option value="null"></option>
+                    {{#each players as |player|}}
+                    <option value="{{player.id}}">{{player.name}}</option>
+                    {{/each}}
+                </select>
+            </div>
+        </div>
+        <div class="form-group col-sm-6">
+            <label for="team2_1" class="col-lg-2 control-label">Team 2</label>
+            <br><br>
+            <div class="team2">
+                <select class="form-control" name="team2_1">
+                    {{#each players as |player|}}
+                    <option value="{{player.id}}">{{player.name}}</option>
+                    {{/each}}
+                </select>
+                <br>
+                <select class="form-control" name="team2_2">
+                    <option value="null"></option>
+                    {{#each players as |player|}}
+                    <option value="{{player.id}}">{{player.name}}</option>
+                    {{/each}}
+                </select>
+                <br>
+                <select class="form-control" name="team2_3">
+                    <option value="null"></option>
+                    {{#each players as |player|}}
+                    <option value="{{player.id}}">{{player.name}}</option>
+                    {{/each}}
+                </select>
+                <br>
+                <select class="form-control" name="team2_4">
+                    <option value="null"></option>
+                    {{#each players as |player|}}
+                    <option value="{{player.id}}">{{player.name}}</option>
+                    {{/each}}
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <button {{action "onSubmit"}} class="btn btn-primary">Submit</button>
+        </div>
+    </fieldset>
+</form>

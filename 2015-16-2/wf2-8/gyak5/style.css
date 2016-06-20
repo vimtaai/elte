@@ -1,0 +1,45 @@
+body {
+  overflow-y: scroll;
+}
+
+main {
+    margin: 50px auto;
+    width: 800px;
+    height: 300px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td {
+    padding: 0;
+    margin: 0;
+    border-radius: 0;
+}
+
+.pixel {
+    width: 2px; 
+    height: 2px;
+}
+
+.pixel1  { background: #0000AA; }
+.pixel2  { background: #5555FF; }
+.pixel3  { background: #55AAFF; }
+.pixel4  { background: #55FFAA; }
+.pixel5  { background: #55AA55; }
+.pixel6  { background: #88AA55; }
+.pixel7  { background: #AAFF55; }
+.pixel8  { background: #FFFFAA; }
+.pixel9  { background: #FFFF88; }
+.pixel10 { background: #AAAA55; }
+.pixel11 { background: #887755; }
+.pixel12 { background: #AA5555; }
+.pixel13 { background: #883333; }
+.pixel14 { background: #550000; }
+.pixel15 { background: #222222; }
+.pixel16 { background: #111111; }
+.pixel17 { background: #000000; }
+.pixel18 { background: #AAAAAA; }
+.pixel19 { background: #DDDDDD; }
+.pixel20 { background: #FFFFFF; }

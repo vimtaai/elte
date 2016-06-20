@@ -1,0 +1,11 @@
+<legend>INVENTORY</legend>
+
+<ul class="inventory">
+    {{#each model as |item|}}
+        {{inv-item data=item myAction=(action "dropItem")}}
+    {{/each}}
+</ul>
+
+<div class="inventory-details">
+    {{outlet}}
+</div>

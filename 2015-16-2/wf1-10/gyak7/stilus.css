@@ -1,0 +1,232 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+header {
+    height: 50px;
+    background: #424242;
+    color: #FFFFFF;
+    font-size: 1.2em;
+}
+
+header h1 {
+    float: left;
+    font-size: 1em;
+}
+
+header h1 span {
+    text-transform: uppercase;
+}
+
+header h1,
+header ul li {
+    display: inline-block;
+}
+
+header ul ul {
+    display: none;
+    width: 200px;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    border-top: solid 10px white;
+    background: #323232;
+}
+
+header ul ul:before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border: solid 10px transparent;
+    border-bottom-color: #323232;
+    position: absolute;
+    top: -20px;
+    right: 10px;
+}
+
+header nav > ul > li:last-child {
+    float: right;
+}
+
+header h1,
+header nav > ul > li {
+    box-sizing: border-box;
+    height: 50px;
+    padding: 12px;
+    position: relative;
+}
+
+header a {
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: color 0.5s;
+}
+
+header a:hover {
+    color: darkturquoise;
+}
+
+header nav > ul > li:hover {
+    background: #323232
+}
+
+header nav > ul > li:hover ul {
+    display: block;
+}
+
+header nav > ul > li ul li {
+    display: block;
+    padding: 10px 15px;
+    text-align: left;
+}
+
+header input[type=checkbox] {
+    display: none;
+}
+
+header input[type=checkbox]:checked + ul {
+    display: block;
+}
+
+
+/*Oldalsó sáv*/
+body > div {
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap-reverse;
+}
+
+aside {
+    width: 400px;
+    background: #a0a0a0;
+}
+
+main {
+    width: 0;
+    min-width: 400px;
+    flex-grow: 1;
+    background: #DEDEDE;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+main h1 {
+    color: darkturquoise;
+    text-align: center;
+    font-weight: normal;
+    margin: 20px;
+    font-size: 2em;
+    text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.8);
+    /*text-shadow: 0 -1px 2px yellow,
+                 0 -3px 5px yellow,
+                 0 -8px 10px orangered,
+                 0 -10px 12px red;*/
+}
+
+main section {
+    width: 0;
+    min-width: 400px;
+    flex-grow: 1;
+}
+
+main section:first-child {
+    flex-grow: 2;
+}
+
+/* Komponensek */
+.box {
+    background: #FFFFFF;
+    padding: 15px;
+    margin: 20px;
+    border: solid rgba(0, 0, 0, 0.5) 1px;
+}
+
+.box h2 {
+    float: left;
+    font-weight: normal;
+    padding-bottom: 12pt;
+}
+
+.box time {
+    float: right;
+    font-weight: bold;
+}
+
+.box p {
+    clear: both;
+    margin-top: 8pt;  
+}
+
+.input:focus {
+    outline-color: #FF0000;
+}
+
+#sourcecode {
+    background: #EFEFEF;
+    border: dotted red 1px;
+    padding: 10px;
+    margin-top: 8pt;
+}
+
+@keyframes rotate {
+    from {
+        transform: rotateZ(0deg) rotateX(0deg);
+    }
+    
+    50% {
+        transform: rotateZ(180deg) rotateX(180deg);
+    }
+   
+    60% {
+        transform: rotateZ(160deg) rotateX(160deg);
+    }
+    
+    to {
+        transform: rotateZ(360deg) rotateX(360deg);
+    }
+}
+
+figure {
+    /*box-sizing: content-box;*/
+    display: inline-block;
+    border: solid 20px #000000;
+    background: #FFFFFF;
+    margin: 30px;
+    padding: 10px;
+    width: 200px;
+    animation: rotate 1s infinite ease-in-out;
+}
+
+figure img {
+    max-width: 200px;
+}
+
+figure figcaption {
+    text-align: center;
+    text-transform: uppercase;
+}
+
+form label {
+    display: inline-block;
+    width: 40%;
+    text-align: right;
+    overflow: hidden;
+}
+
+form input {
+    box-sizing: border-box;
+    width: 55%;
+}
+
+form input,
+form label {
+    vertical-align: bottom;
+    margin-bottom: 10px;
+}

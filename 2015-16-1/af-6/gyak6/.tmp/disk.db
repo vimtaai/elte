@@ -1,0 +1,146 @@
+{
+  "data": {
+    "birthday": [
+      {
+        "nev": "asdf",
+        "datum": "2015-10-15T00:00:00.000Z",
+        "createdAt": "2015-10-15T13:39:18.650Z",
+        "updatedAt": "2015-10-15T13:39:18.650Z",
+        "id": 10
+      },
+      {
+        "nev": "a",
+        "datum": "2015-10-15T00:00:00.000Z",
+        "user": 1,
+        "createdAt": "2015-10-15T13:40:30.188Z",
+        "updatedAt": "2015-10-15T13:40:30.188Z",
+        "id": 11
+      },
+      {
+        "nev": "b",
+        "datum": "2015-10-15T00:00:00.000Z",
+        "user": 1,
+        "createdAt": "2015-10-15T13:41:06.311Z",
+        "updatedAt": "2015-10-15T13:41:06.311Z",
+        "id": 12
+      },
+      {
+        "nev": "q",
+        "datum": "2015-10-15T00:00:00.000Z",
+        "user": 2,
+        "createdAt": "2015-10-15T13:41:27.395Z",
+        "updatedAt": "2015-10-15T13:41:27.395Z",
+        "id": 13
+      }
+    ],
+    "user": [
+      {
+        "surname": "a",
+        "forename": "a",
+        "neptun": "a",
+        "password": "a",
+        "avatar": "",
+        "role": "riporter",
+        "createdAt": "2015-10-15T13:20:14.129Z",
+        "updatedAt": "2015-10-15T13:20:14.129Z",
+        "id": 1
+      },
+      {
+        "surname": "b",
+        "forename": "b",
+        "neptun": "b",
+        "password": "b",
+        "avatar": "",
+        "role": "riporter",
+        "createdAt": "2015-10-15T13:21:35.375Z",
+        "updatedAt": "2015-10-15T13:21:35.375Z",
+        "id": 2
+      },
+      {
+        "surname": "c",
+        "forename": "c",
+        "neptun": "c",
+        "password": "$2a$10$dA9.tBvN0JkPXtlPH7evzu0J8tBojjfI2FFwdfTx5SMYcTQLkCvAC",
+        "avatar": "",
+        "role": "riporter",
+        "createdAt": "2015-10-15T13:46:02.796Z",
+        "updatedAt": "2015-10-15T13:46:02.796Z",
+        "id": 3
+      }
+    ]
+  },
+  "schema": {
+    "birthday": {
+      "nev": {
+        "type": "string"
+      },
+      "datum": {
+        "type": "date"
+      },
+      "user": {
+        "type": "integer",
+        "model": "user",
+        "foreignKey": true,
+        "alias": "user"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    },
+    "user": {
+      "neptun": {
+        "type": "string",
+        "unique": true
+      },
+      "password": {
+        "type": "string"
+      },
+      "surname": {
+        "type": "string"
+      },
+      "forename": {
+        "type": "string"
+      },
+      "avatar": {
+        "type": "string"
+      },
+      "role": {
+        "type": "string",
+        "enum": [
+          "riporter",
+          "operator"
+        ],
+        "defaultsTo": "riporter"
+      },
+      "id": {
+        "type": "integer",
+        "autoIncrement": true,
+        "primaryKey": true,
+        "unique": true
+      },
+      "createdAt": {
+        "type": "datetime"
+      },
+      "updatedAt": {
+        "type": "datetime"
+      }
+    }
+  },
+  "counters": {
+    "birthday": {
+      "id": 13
+    },
+    "user": {
+      "id": 3
+    }
+  }
+}
