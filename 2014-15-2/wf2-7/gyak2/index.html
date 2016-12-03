@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JavaScript basics</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <h1>JavaScript basics</h1>
+        <h2>Result</h2>
+        <output id="result"></output>
+        <div>
+            <input type="text" id="textbox">
+            <input type="button" value="Submit" id="button">
+            <!--<input type="button" value="Submit" id="button" onclick="alert('You pressed me')">-->
+        </div>
+		<script type="text/javascript">
+            var colors = {
+                red     : '#F00',
+                blue    : '#00F',
+                green   : '#0F0'
+            };
+
+            function clickEvent() {
+                var textbox = document.getElementById('textbox');
+                //console.log(textbox.value);
+                var text = textbox.value;
+                var newText = '';
+                var wordList = text.split(' ');
+
+                //console.log(wordList);
+                for (var index in wordList) {
+                    if (colors.hasOwnProperty(wordList[index])) {
+                        newText += '<span style="color: ' + colors[wordList[index]] + '">' +
+                        wordList[index] +
+                        '</span> ';
+                    } else {
+                        newText += wordList[index] + ' ';
+                    }
+                }
+
+                var output = document.getElementById('result');
+                output.innerHTML += '<p>' + newText + '</p>';
+            }
+
+            var button = document.getElementById('button');
+            //button.onclick = clickEvent;
+            button.addEventListener('click', clickEvent);
+        </script>
+    </body>
+</html>

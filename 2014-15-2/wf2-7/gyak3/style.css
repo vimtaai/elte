@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: normal;
+}
+
+body {
+    padding: 10px;
+    font-size: 14px;
+    font-family: "calibri", sans-serif;
+    color: #333;
+}
+
+h1 {
+    padding: 5px 0;
+    font-size: 1.8em;
+    border-bottom: solid #555 2px;
+}
+
+h2 {
+    padding: 40px 0 10px 0;
+    font-weight: bold;
+}
+
+output {
+    display: block;
+    width: 500px;
+    padding: 5px;
+    border: dotted #555 1px;
+    background: #222;
+    color: #EEE;
+    font-family: "fixedsys", monospace;
+}
+
+div {
+    padding: 10px 0;
+}
+
+input {
+    padding: 2px 8px;
+    border: solid #555 1px;
+}
+
+input[type="text"] {
+    display: block;
+    width: 495px;
+    margin-bottom: 10px;
+}

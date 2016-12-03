@@ -1,2 +1,3 @@
-# fluxbase-samples
-Sample projects for the Fluxbase library
+# ELTE anyagok
+
+Az ELTE-n tartott kurzusokhoz kapcsolódó segédanyagok gyűjteménye

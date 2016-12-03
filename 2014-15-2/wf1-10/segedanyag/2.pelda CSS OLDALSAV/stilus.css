@@ -1,0 +1,57 @@
+* {
+	/* nullázzuk az alapértelmezett értékeket */
+	margin: 0;
+	padding: 0;
+}
+
+#wrapper {
+	/* position: relative -> így tudunk benne abszolút pozicionálni*/
+	position: relative;
+	width: 100%;
+}
+
+header {
+	/* 50 pixeles fejléc */
+	height: 50px;
+	
+	background: yellow;
+}
+
+main {
+	/* csak a szemléltetés kedvéért adunk magasságot a tartalomnak */
+	height: 500px;
+	
+	margin-left: 300px;
+	margin-right: 200px;
+	
+	background: red;
+}
+
+aside#left {
+	/* bal oldali oldalsáv */
+	/* fix 300px széles oldalsáv */
+	width: 300px;
+	/* csak a szemléltetés kedvéért adunk magasságot a tartalomnak */
+	height: 200px;
+	float: left;
+	
+	background: green;
+}
+
+aside#right {
+	/* jobb oldali oldalsáv */
+	/* fix 200px széles oldalsáv */
+	width: 200px;
+	/* csak a szemléltetés kedvéért adunk magasságot a tartalomnak */
+	height: 100px;
+	float: right;
+	
+	background: blue;
+}
+
+footer {
+	/* 100px-es lábléc */
+	height: 100px;
+	
+	background: cyan;
+}

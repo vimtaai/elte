@@ -1,0 +1,54 @@
+body {
+	background: #F4F4F4;
+	color: #444444;
+	font-family: calibri, arial, helvetica, sans-serif;
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 30px;
+	margin-top: 0;
+	padding: 10px;
+	text-align: center;
+	background: #446644;
+	color: #FFFFFF;	
+	font-size: 24px;
+}
+
+form {
+	margin: 100px auto;
+	width: 500px;
+}
+
+input,
+select {
+	border-radius: 4px;
+	border: solid #888888 1px;
+	padding: 5px 8px;
+}
+
+input:focus,
+select:focus {
+	outline: none;
+	box-shadow: 0 0 2px #446644;
+}
+
+label {
+	display: block;
+	margin: 10px 0 5px 0;
+	font-weight: bold;
+}
+
+fieldset {
+	border: solid #444444 2px;
+}
+
+legend {
+	padding: 0 10px;
+	font-weight: bold;
+}

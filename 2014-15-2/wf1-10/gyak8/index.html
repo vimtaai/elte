@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!-- 2. példa: 2 fix méretű oldalsáv, nem méreteződik -->
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>CSS elrendezések 2.</title>
+		<link rel="stylesheet" type="text/css" href="stilus.css">
+		<!--[if IE]><script type="text/javascript" src="excanvas.js"></script><![endif]-->
+		<script type="text/javascript" src="coolclock.js"></script>
+		<script type="text/javascript" src="moreskins.js"></script>
+	</head>
+	<body onload="CoolClock.findAndCreateClocks()">
+		<header>
+			<nav>
+				<h1>Menü</h1>
+				<ul>
+					<li><a href="#">Első</a>
+					</li>
+					<li><a href="#">Második</a>
+					</li>
+					<li><a href="#">Harmadik</a>
+						<div class="submenu">
+							<ul>
+								<li><a href="#">Almenüpont 1</a></li>
+								<li><a href="#">Almenüpont 2</a></li>
+							</ul>
+						</div>
+					</li>
+					<li><a href="#">Negyedik</a></li>
+				</ul>
+			</nav>
+		</header>
+		<div id="wrapper">
+			<!-- az úsztatásos megoldásnál az oldalsávok mindig meg kell előzzék a tartalmat -->
+			<aside id="left"></aside>
+			<aside id="right">
+				<div class="box" id="kereses">
+					<form action="index.html" method="post">
+						<input type="text" name="kereses">
+						<input type="submit" value="Keresés">
+					</form>
+				</div>
+				<div class="box">
+					<canvas id="clockid" class="CoolClock:swissRail:100"></canvas>
+				</div>
+			</aside>
+			<main>
+				<h1>Lorem ipsum</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin egestas leo nulla, quis posuere erat commodo a. Sed sed finibus nunc. Etiam non tincidunt tortor, at cursus eros. Sed ac hendrerit sapien. Cras dui magna, vestibulum at enim sit amet, molestie imperdiet lectus. Nam risus velit, sagittis vel pulvinar eget, hendrerit et arcu. Vivamus finibus ullamcorper libero nec sollicitudin. Aenean orci est, maximus non efficitur quis, condimentum non ante. Donec elementum luctus dui ut finibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Integer ut lorem congue lacus ultricies interdum. Praesent semper ante erat, ac commodo erat volutpat ac. Quisque volutpat convallis urna, non maximus mi tempor nec. Suspendisse condimentum volutpat tortor, quis molestie lorem convallis at. Nam auctor magna sed dignissim varius. Suspendisse rutrum turpis sem, ac commodo lorem sollicitudin eget.</p>
+			</main>
+		</div>
+		<footer>&copy; Webfejlesztes 2015.</footer>
+	</body>
+</html>

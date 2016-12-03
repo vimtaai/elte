@@ -1,0 +1,46 @@
+body {
+    width: 300px;
+    margin: 0 auto;
+    font-family: "Segoe UI";
+}
+
+h1 {
+    font-size: 1.1em;
+    text-align: center;
+}
+
+li {
+    list-style: none;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 20px;
+}
+
+li:nth-child(odd) {
+    background: lightblue;
+    border-bottom-left-radius: 0;
+}
+
+li:nth-child(even) {
+    background: #E0E0E0;
+    border-bottom-right-radius: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    border-top: solid #E0E0E0 2px;
+}
+
+input {
+    padding: 12px 20px;
+    border: solid #E0E0E0 2px;
+    border-radius: 10px;
+    display: block;
+    margin: 10px auto;
+}
+
+input[type=button] {
+    border-width: 0;
+    background: lightblue;
+}
