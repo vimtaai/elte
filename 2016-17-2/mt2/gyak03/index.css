@@ -1,0 +1,20 @@
+#_editor {
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  border: none;
+  border-right: solid black 1px;
+}
+
+#_output {
+  box-sizing: border-box;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  border-left: solid black 1px;
+}
