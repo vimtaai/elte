@@ -5,8 +5,13 @@ button {
 }
 
 output {
+    display: block;
     box-sizing: border-box;
     border: solid black 1px;
     height: 50px;
-    width: 200px;
+    width: 210px;
+}
+
+table {
+    border-collapse: collapse;
 }
