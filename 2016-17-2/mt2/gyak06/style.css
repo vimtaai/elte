@@ -1,0 +1,57 @@
+body,
+button {
+  font-family: "Segoe UI", sans-serif;
+}
+
+div {
+  display: inline-block;
+  width: 100px;
+  text-align: right;
+}
+
+#_width,
+#_height,
+#_minecount {
+  background: paleturquoise;
+  border: solid rgba(0,0,0,0.2) 1px;
+  padding: 8px 10px;
+  margin: 5px;
+  width: 50px;
+  box-sizing: content-box;
+}
+
+#_start {
+  margin: 5px;
+  padding: 8px 10px;
+  background: lightblue;
+  border: solid rgba(0,0,0,0.4) 1px;
+  color: rgba(0,0,0,0.8);
+  box-sizing: content-box;
+}
+
+#_game {
+  border-collapse: collapse;
+  border-top: solid rgba(0,0,0,0.5) 2px;
+  border-left: solid rgba(0,0,0,0.5) 2px;
+  border-bottom: solid rgba(255,255,255,0.5) 2px;
+  border-right: solid rgba(255,255,255,0.5) 2px;
+}
+
+#_game tr,
+#_game td {
+  padding: 0;
+}
+
+#_game td button {
+  width: 30px;
+  height: 30px;
+  border-bottom: solid rgba(0,0,0,0.5) 2px;
+  border-right: solid rgba(0,0,0,0.5) 2px;
+  border-top: solid rgba(255,255,255,0.5) 2px;
+  border-left: solid rgba(255,255,255,0.5) 2px;
+  background: lightgray;
+}
+
+#_game td button.revealed {
+  border: transparent;
+}
