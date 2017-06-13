@@ -1,0 +1,52 @@
+#app {
+    width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 2;
+    font-family: 'Arial Narrow', Arial, Helvetica, sans-serif;
+    color: navy;
+    font-weight: bold;
+}
+
+#newgame {
+    border: solid navy 2px;
+    background: navy;
+    color: lavender;
+    padding: 10px 20px;
+    font-size: 18px;
+    width: 300px;
+}
+
+#stepcount {
+    display: block;
+}
+
+#stepcount,
+#gamestatus {
+    font-size: 18px;
+    display: block;
+}
+
+#gamestatus {
+    font-style: italic;
+}
+
+#game {
+    width: 300px;
+    margin: 0 auto;
+}
+
+#game td {
+    width: 100px;
+    height: 100px;
+    background: lavender;
+    border: solid navy 3px;
+    font-size: 30px;
+    color: navy;
+    cursor: pointer;
+}
+
+#game td.empty {
+    border: none;
+    background: none;
+}
