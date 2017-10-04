@@ -6,13 +6,14 @@
 // Segédfüggvények
 const $ = (selector) => document.querySelector(selector);
 const $$ = (selector) => document.querySelectorAll(selector);
-function delegate(pSelector, cSelector, eventType, eventHandler) {
-    const parent = $(pSelector);
+function delegate(parent, cSelector, eventType, eventHandler) {    
     function wrapper(event) {
+        console.log(parent);
         let currentTarget = event.target;
         while (currentTarget != parent && 
                !currentTarget.matches(cSelector)) {
             currentTarget = currentTarget.parentNode;
+            //console.log(currentTarget);
         }
         if (currentTarget != parent) {
             eventHandler.call(currentTarget, event);
@@ -52,6 +53,7 @@ function enterLenyom(event) {
 }
 
 function keszKattint(event) {
+    console.log('keszKattint');
     let ind = this.parentNode.parentNode.getAttribute('id');
     ind = ind.substring(4);
     //console.log(this);
@@ -61,10 +63,19 @@ function keszKattint(event) {
     $('ul').innerHTML = genLista(todok);
 }
 
+function torlesKattint(event) {
+    console.log('torlesKattint');
+    let ind = this.parentNode.parentNode.getAttribute('id');
+    ind = ind.substring(4);
+    todok[ind].allapot = "deleted";
+    $('ul').innerHTML = genLista(todok);
+}
+
 $('input[type=button]').addEventListener('click', todoHozzaad);
 $('input[type=text]').addEventListener('keypress', enterLenyom);
 //$('ul').addEventListener('click', keszKattint);
-delegate('ul', 'button.green', 'click', keszKattint);
+delegate($('ul'), 'button.green', 'click', keszKattint);
+delegate($('ul'), 'button.red', 'click', torlesKattint);
 
 // HTML generátorok
 function genLista(todok) {
