@@ -1,19 +1,13 @@
-// let elem = document.getElementById('input');
-// elem = document.querySelector('form input[type=button]');
-// elem = document.querySelectorAll('form input');
-// console.log(elem);
-
 // Segédfüggvények
 const $ = (selector) => document.querySelector(selector);
 const $$ = (selector) => document.querySelectorAll(selector);
-function delegate(parent, cSelector, eventType, eventHandler) {    
+function delegate(pSelector, cSelector, eventType, eventHandler) {    
+    const parent = $(pSelector);
     function wrapper(event) {
-        console.log(parent);
         let currentTarget = event.target;
         while (currentTarget != parent && 
                !currentTarget.matches(cSelector)) {
             currentTarget = currentTarget.parentNode;
-            //console.log(currentTarget);
         }
         if (currentTarget != parent) {
             eventHandler.call(currentTarget, event);
@@ -39,7 +33,6 @@ function todoHozzaad() {
         });
     }
     // Megjelenítés
-    //console.log(todok);
     $('ul').innerHTML = genLista(todok);
     $('input[type=text]').value = '';
 }
@@ -49,22 +42,22 @@ function enterLenyom(event) {
         event.preventDefault();
         todoHozzaad();
     }
-    //console.log(event);
 }
 
 function keszKattint(event) {
-    console.log('keszKattint');
+    // A probléma az volt, hogy az egyik eseménykezelő újragenerálta a listát
+    // és a másik már egy nem létező, virtuális listaelemmel dolgozott, aminek valóban 
+    // nem volt már szülője.
+    event.stopImmediatePropagation(); // Ez megakadályozza, hogy ha az egyik eseménykezetlő legfut, akkor a másik meghívódjon
     let ind = this.parentNode.parentNode.getAttribute('id');
     ind = ind.substring(4);
-    //console.log(this);
-    //console.log('ind: ', ind);
-    //console.log(event.target);
     todok[ind].allapot = "ready";
     $('ul').innerHTML = genLista(todok);
 }
 
 function torlesKattint(event) {
-    console.log('torlesKattint');
+    //console.log('torlesKattint called');
+    event.stopImmediatePropagation();
     let ind = this.parentNode.parentNode.getAttribute('id');
     ind = ind.substring(4);
     todok[ind].allapot = "deleted";
@@ -74,8 +67,8 @@ function torlesKattint(event) {
 $('input[type=button]').addEventListener('click', todoHozzaad);
 $('input[type=text]').addEventListener('keypress', enterLenyom);
 //$('ul').addEventListener('click', keszKattint);
-delegate($('ul'), 'button.green', 'click', keszKattint);
-delegate($('ul'), 'button.red', 'click', torlesKattint);
+delegate('ul', 'button.green', 'click', keszKattint);
+delegate('ul', 'button.red', 'click', torlesKattint);
 
 // HTML generátorok
 function genLista(todok) {
