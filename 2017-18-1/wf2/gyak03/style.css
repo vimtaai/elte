@@ -1,0 +1,162 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Arial Narrow", sans-serif;
+  font-size: 18px;
+  background: rgb(236, 240, 241);
+  color: rgb(52, 73, 94);
+}
+
+h1 {
+  padding: 15px;
+  margin: 0;
+  font-size: 2em;
+  text-align: center;
+}
+
+section {
+  width: 600px;
+  margin: 20px auto;
+  padding: 20px;
+  background: rgb(255, 255, 255);
+  border: solid rgba(0, 0, 0, 0.15) 1px;
+}
+
+input {
+  padding: 10px 25px;
+  border: none;
+  background: rgb(236, 240, 241);
+  border: solid rgba(0, 0, 0, 0.05) 1px;
+  font-size: inherit;
+  color: inherit;
+  font-family: inherit;
+}
+
+input:focus {
+  outline: none;
+}
+
+input[type=button] {
+  background: rgb(52, 152, 219);
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  cursor: pointer;
+  width: 130px;
+}
+
+input[type=button]:hover {
+  background: rgb(41, 128, 185);
+}
+
+input[type=text] {
+  width: 410px;
+}
+
+input[type=text]:focus {
+  border-color: rgb(41, 128, 185);
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  position: relative;
+  list-style: none;
+  padding: 15px 20px 15px 50px;
+  margin: 0;
+  background: #E4F1FE;
+  border: solid rgba(0, 0, 0, 0.05) 1px;
+  font-weight: bold;
+  margin-bottom: 5px;
+  transition: background-color 0.5s, color 0.5s;
+}
+
+li:last-of-type {
+  margin-bottom: 0;
+}
+
+li > .right {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding: 9px 10px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+li:hover > .right {
+  display: block;
+}
+
+li.ready {
+  background: #C8F7C5;
+  color: #26A65B;
+}
+
+li.deleted {
+  background: #EC644B;
+  color: #96281B;
+}
+
+li .todo {
+  position: relative;
+}
+
+li .todo:after {
+  content: "";
+  display: block;
+  height: 2px;
+  position: absolute;
+  background: transparent;
+  top: 50%;
+  left: -5px;
+  width: 0;
+  transition: background-color 0.5s, width 0.5s ease-in;
+}
+
+li .todo:before {
+  color: transparent;
+  display: block;
+  position: absolute;
+  left: -30px;
+  top: -3px;
+  bottom: 0;
+  font-size: 20px;
+  transition: color 0.5s;
+}
+
+li.deleted .todo:after {
+  background: #96281B;
+  width: calc(100% + 10px);
+}
+
+li.ready .todo:before {
+  content: "✔";
+  color: #26A65B;
+}
+
+li.deleted .todo:before {
+  content: "✘";
+  top: -4px;
+  color: #96281B;
+}
+
+button {
+  padding: 10px 15px;
+  vertical-align: middle;
+  border: none;
+  color: rgb(236, 240, 241);
+  font-weight: bold;
+}
+
+button.red {
+  background: rgb(192, 57, 43);
+}
+
+button.green {
+  background: rgb(39, 174, 96);
+}
