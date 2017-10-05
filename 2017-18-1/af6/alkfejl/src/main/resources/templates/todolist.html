@@ -6,8 +6,11 @@
     </head>
     <body>
         <h1>TodoList</h1>
-        <form th:action="@{/todo/add}">
-            <input type="text" />
+        <form method="post" 
+              th:action="@{/todo/add}"
+              th:object="${newTodo}">
+            <input type="text" 
+                   th:field="${newTodo.text}" />
             <input type="submit" />
         </form>
         <ul>
