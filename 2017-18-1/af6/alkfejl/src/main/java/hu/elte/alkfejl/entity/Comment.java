@@ -1,28 +1,25 @@
 package hu.elte.alkfejl.entity;
 
-import java.util.List;
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
+import javax.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 import lombok.NoArgsConstructor;
 
-
 @Entity
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 @EqualsAndHashCode(callSuper = true)
-public class Todo extends BaseEntity {
-    @Column(nullable = false)
+public class Comment extends BaseEntity{
+    @Column(nullable=false)
     private String text;
     
-    @OneToMany(targetEntity = Comment.class, 
-               cascade = CascadeType.ALL,
-               mappedBy = "todo")
-    private List<Comment> comments;
+    @JoinColumn
+    @ManyToOne(targetEntity = Todo.class)
+    private Todo todo;
 }

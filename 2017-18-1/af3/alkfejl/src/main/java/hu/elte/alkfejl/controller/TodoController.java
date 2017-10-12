@@ -1,6 +1,8 @@
 package hu.elte.alkfejl.controller;
 
+import hu.elte.alkfejl.annotation.Role;
 import hu.elte.alkfejl.entity.Todo;
+import hu.elte.alkfejl.entity.User;
 import hu.elte.alkfejl.repository.TodoRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -20,6 +22,7 @@ public class TodoController {
     @Autowired
     private TodoRepository todoRepository;
 
+    @Role({User.Role.ADMIN, User.Role.USER})
     @GetMapping("/todo")
     public String getTodos(Model model) {
         Iterable<Todo> t = todoRepository.findAll();
@@ -29,6 +32,7 @@ public class TodoController {
         return "todo";
     }
 
+    @Role({User.Role.ADMIN})
     @PostMapping("/addtodo")
     public String addTodo(@ModelAttribute Todo todo) {
         todoRepository.save(todo);

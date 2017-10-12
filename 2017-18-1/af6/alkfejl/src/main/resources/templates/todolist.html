@@ -18,6 +18,11 @@
                 <span th:text="${todo.id}"></span>
                 :
                 <span th:text="${todo.text}"></span>
+                <ul>
+                    <li th:each="comment : ${todo.comments}">
+                        <span th:text="${comment.text}"></span>
+                    </li>
+                </ul>
             </li>
         </ul>
     </body>
