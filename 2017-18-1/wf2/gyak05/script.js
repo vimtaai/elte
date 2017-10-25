@@ -48,7 +48,8 @@ function draw(state) {
 }
 
 function step(state, lastRun, now) {
-    requestAnimationFrame((nextRun) => step(draw(next(state, (now-lastRun) / 1000)), now, nextRun));
+    requestAnimationFrame((nextRun) => 
+        step(draw(next(state, (now-lastRun) / 1000)), now, nextRun));
 }
 
 step(initState, performance.now(), performance.now());
