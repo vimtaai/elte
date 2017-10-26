@@ -1,12 +1,18 @@
-Vedd fel a listára:
-<mat-form-field>
-    <input matInput #itemName type="text">
-</mat-form-field>
-<mat-form-field>
-    <input matInput #itemCount type="number">
-</mat-form-field> 
-db
-<button mat-button
-        (click)="clickButton(itemName.value, itemCount.value)">
-    Hozzáad
-</button>
+<mat-card class="addform">
+    <mat-card-content>
+        <h4>Vedd fel a listára:</h4>
+        <mat-form-field>
+            <input matInput #itemName type="text" placeholder="Mit kell venni?">
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+            <input matInput #itemCount type="number" placeholder="Hány darabot?">
+            <span matSuffix> darab</span>
+        </mat-form-field> 
+        <br>
+        <button mat-raised-button color="primary"
+            (click)="clickButton(itemName.value, itemCount.value)">
+            Hozzáad
+        </button>
+    </mat-card-content>
+</mat-card>

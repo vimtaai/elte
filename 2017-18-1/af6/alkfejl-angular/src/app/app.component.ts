@@ -9,7 +9,7 @@ import { Item } from './classes/Item';
 export class AppComponent {
   public _data: Item[] = [
     new Item('tej', 1),
-    new Item('kenyer', 2),
+    new Item('kenyér', 2),
     new Item('tejföl', 1)
   ];
 
