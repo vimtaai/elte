@@ -1,0 +1,12 @@
+Vedd fel a listára:
+<mat-form-field>
+    <input matInput #itemName type="text">
+</mat-form-field>
+<mat-form-field>
+    <input matInput #itemCount type="number">
+</mat-form-field> 
+db
+<button mat-button
+        (click)="clickButton(itemName.value, itemCount.value)">
+    Hozzáad
+</button>

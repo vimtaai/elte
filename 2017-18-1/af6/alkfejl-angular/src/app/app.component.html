@@ -1,13 +1,6 @@
 <h1>Shopping List</h1>
 
-Vedd fel a listára:
-<input #itemName type="text">
-<input #itemCount type="number"> db
-<input type="button" value="Hozzáad" 
-       (click)="clickAdd(itemName.value, itemCount.value)">
-
-<ul>
-  <li *ngFor="let item of _data">
-    {{item}}
-  </li>
-</ul>
+<app-addform (createItem)="addItem($event)"></app-addform>
+<app-shoplist [items]="_data" 
+              (countChange)="changeItemCount($event)">
+</app-shoplist>

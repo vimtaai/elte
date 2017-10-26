@@ -1,0 +1,6 @@
+<ul>
+  <li *ngFor="let item of items; let id = index">
+    <app-shopitem [item]="item" 
+                  (countChange)="countChange.emit({ id: id, amount: $event })"></app-shopitem>
+  </li>
+</ul>

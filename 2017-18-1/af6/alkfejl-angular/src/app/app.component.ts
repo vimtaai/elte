@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Item } from './classes/item';
+import { Item } from './classes/Item';
 
 @Component({
   selector: 'app-root',
@@ -7,13 +7,18 @@ import { Item } from './classes/item';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  public _data: any[] = [
+  public _data: Item[] = [
     new Item('tej', 1),
     new Item('kenyer', 2),
     new Item('tejföl', 1)
   ];
 
-  public clickAdd(itemName: string, itemCount: number): void {
-    this._data.push(new Item(itemName, itemCount));
+  public addItem(item: Item): void {
+    this._data.push(item);
+  }
+
+  public changeItemCount({id, amount}: any): void {
+    this._data[id].changeCount(amount);
+    console.log(this._data);
   }
 }
