@@ -1,0 +1,6 @@
+<ul>
+  <app-todo *ngFor="let todo of _data"
+            [todo]="todo"
+            (delTodo)="delTodo($event)">
+  </app-todo>
+</ul>

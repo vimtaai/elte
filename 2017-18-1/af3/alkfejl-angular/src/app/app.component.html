@@ -1,7 +1,2 @@
 <h1>{{title}}</h1>
-<ul>
-  <app-todo *ngFor="let todo of _data"
-            [todo]="todo"
-            [clickButton]="delTodo">
-  </app-todo>
-</ul>
+<router-outlet></router-outlet>
