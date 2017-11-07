@@ -8,40 +8,31 @@ canvas.height = 480;
 
 const fps = 60;
 const r = 5;
-const g = 1;
+const g = 10;
 
-// Kezdőállapot generálása
-function init() {
-    return {
-        labda: {
-            x: 100,
-            y: 100,
-            vx: 20,
-            vy: 0
-        }
-    };
+// Kezdőállapot
+const initState = {
+    labda: {
+        x: 100,
+        y: 100,
+        vx: 50,
+        vy: 0
+    }
 }
 
 // Léptetés (régi állapotból új állapot)
-function next(state) {
+function next(state, dt) {
     let newState = Object.assign({}, state);
-    const dt = (fps / 1000);
+    // Haladás
     newState.labda.x += newState.labda.vx * dt;
     newState.labda.y += newState.labda.vy * dt;
     newState.labda.y += g / 2 * dt * dt;
     newState.labda.vy += g;
-    if (newState.labda.x + r >= canvas.width) {
-        newState.labda.vx *= -1;
-    }
-    if (newState.labda.y + r >= canvas.height) {
-        newState.labda.vy *= -1;
-    }
-    if (newState.labda.x - r <= 0) {
-        newState.labda.vx *= -1;
-    }
-    if (newState.labda.y - r <= 0) {
-        newState.labda.vy *= -1;
-    }
+    // Visszapattanások
+    if (newState.labda.x + r >= canvas.width) newState.labda.vx *= -1;
+    if (newState.labda.y + r >= canvas.height) newState.labda.vy *= -1;
+    if (newState.labda.x - r <= 0) newState.labda.vx *= -1;
+    if (newState.labda.y - r <= 0) newState.labda.vy *= -1;
     return newState;
 }
 
@@ -56,12 +47,9 @@ function draw(state) {
     return state;
 }
 
-function step(state, lastRun) {
-    if (Date.now() - lastRun >= (1000 / fps)) {
-        state = draw(next(state));
-        lastRun = Date.now();
-    }
-    requestAnimationFrame(() => step(state, lastRun));
+function step(state, lastRun, now) {
+    requestAnimationFrame((nextRun) => 
+        step(draw(next(state, (now-lastRun) / 1000)), now, nextRun));
 }
 
-step(init(), Date.now());
+step(initState, performance.now(), performance.now());

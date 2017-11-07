@@ -1,0 +1,9 @@
+<mat-card class="shoplist">
+  <mat-card-content>
+    <h4>Bevásárlólista</h4>
+    <mat-list>
+        <app-shopitem *ngFor="let item of items; let id = index" [item]="item" 
+                      (countChange)="countChange.emit({ id: id, amount: $event })"></app-shopitem>
+    </mat-list>
+  </mat-card-content>
+</mat-card>
