@@ -1,6 +1,7 @@
-<mat-toolbar color="primary">Shopping List</mat-toolbar>
+<mat-toolbar color="primary">
+    Shopping List
+    <button mat-button routerLink="/">Bevásárló lista</button>
+    <button mat-button routerLink="/family">Családtagok</button>
+</mat-toolbar>
 
-<app-addform (createItem)="addItem($event)"></app-addform>
-<app-shoplist [items]="_data" 
-              (countChange)="changeItemCount($event)">
-</app-shoplist>
+<router-outlet></router-outlet>

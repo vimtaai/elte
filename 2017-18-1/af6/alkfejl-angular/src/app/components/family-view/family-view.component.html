@@ -1,0 +1,10 @@
+<mat-card class="familyview">
+  <mat-card-content>
+    <h4>Családtagok</h4>
+    <mat-list>
+        <mat-list-item *ngFor="let member of _family">
+          {{member.name}}
+        </mat-list-item>
+    </mat-list>
+  </mat-card-content>
+</mat-card>

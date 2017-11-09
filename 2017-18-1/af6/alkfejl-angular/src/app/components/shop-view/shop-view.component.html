@@ -1,0 +1,4 @@
+<app-addform (createItem)="addItem($event)"></app-addform>
+<app-shoplist [items]="_data" 
+              (countChange)="changeItemCount($event)">
+</app-shoplist>

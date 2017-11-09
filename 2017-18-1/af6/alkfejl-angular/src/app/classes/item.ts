@@ -1,11 +1,11 @@
-export class Item {
-    private name: string;
-    private count: number;
+import { FamilyMember } from './family-member';
 
-    public constructor(name: string, count: number) {
-        this.name = name;
-        this.count = count;
-    }
+export class Item {
+    public constructor(
+        private name: string,
+        private count: number,
+        private member: FamilyMember
+    ) {}
 
     public changeCount(amount: number) {
         this.count = Math.max(0, this.count + amount);
