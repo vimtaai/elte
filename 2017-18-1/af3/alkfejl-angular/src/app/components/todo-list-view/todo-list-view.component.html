@@ -1,6 +1,6 @@
 <ul>
-  <app-todo *ngFor="let todo of _data"
+  <app-todo *ngFor="let todo of todos"
             [todo]="todo"
-            (delTodo)="delTodo($event)">
+            (delTodo)="todoService.delTodoById($event)">
   </app-todo>
 </ul>
