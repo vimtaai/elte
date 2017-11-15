@@ -7,5 +7,5 @@ import { Todo } from './classes/todo';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  public title: string = 'AlmaKorte';
+  public title: string = 'My Todo App';
 }

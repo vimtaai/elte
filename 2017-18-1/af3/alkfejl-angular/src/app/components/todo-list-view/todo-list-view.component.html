@@ -1,6 +1,7 @@
-<ul>
+<h2 class="red-text text-lighten-2">Todo List</h2>
+<div class="collection">
   <app-todo *ngFor="let todo of todos"
             [todo]="todo"
             (delTodo)="todoService.delTodoById($event)">
   </app-todo>
-</ul>
+</div>

@@ -4,7 +4,7 @@ export class Item {
     public constructor(
         private name: string,
         private count: number,
-        private member: FamilyMember
+        private member: FamilyMember = null
     ) {}
 
     public changeCount(amount: number) {

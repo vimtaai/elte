@@ -13,7 +13,9 @@ export class TodoComponent implements OnInit {
   @Output()
   public delTodo: EventEmitter<number> = new EventEmitter();
 
-  public clickButton(): void {
+  public clickButton($event: Event): void {
+    $event.preventDefault();
+    $event.stopPropagation();
     this.delTodo.emit(this.todo.id);
   }
 

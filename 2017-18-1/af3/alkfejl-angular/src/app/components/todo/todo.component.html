@@ -1,4 +1,6 @@
-<li>
-  <button (click)="clickButton()">×</button>
-  <a routerLink="/todo/{{todo.id}}">{{todo.text}}</a>
-</li>
+<a routerLink="/todo/{{todo.id}}" class="collection-item">
+  <span class="right" (click)="clickButton($event)">
+    <i class="material-icons red-text">delete</i>
+  </span>
+  {{todo.text}}
+</a>
