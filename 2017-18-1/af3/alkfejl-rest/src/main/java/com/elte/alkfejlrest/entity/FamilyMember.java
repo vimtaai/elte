@@ -29,6 +29,7 @@ public class FamilyMember {
     @Column(nullable = false)
     private String name;
     
+    @JsonIgnore
     @OneToMany(targetEntity = ShopItem.class,
                cascade = CascadeType.ALL,
                mappedBy = "familyMember")
