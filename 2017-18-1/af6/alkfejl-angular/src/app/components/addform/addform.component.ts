@@ -1,5 +1,6 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Item } from '../../classes/Item';
+import { FamilyMember } from '../../classes/family-member';
 
 @Component({
   selector: 'app-addform',
@@ -10,8 +11,14 @@ export class AddformComponent implements OnInit {
   @Output()
   public createItem: EventEmitter<Item> = new EventEmitter();
 
-  public clickButton(name: string, count: number): void {
-    this.createItem.emit(new Item(name, count));
+  @Input()
+  public family: FamilyMember[];
+
+  public clickButton(name: string, 
+                     count: number, 
+                     memberId: number): void {
+    const member = this.family.find((f) => f.id == memberId);
+    this.createItem.emit(new Item(name, count, member));
   }
 
   constructor() { }

@@ -14,7 +14,10 @@ export class FamilyViewComponent implements OnInit {
   constructor(private FamilyService: FamilyService) { }
 
   ngOnInit() {
-    this._family = this.FamilyService.family;
+    this.FamilyService.getFamily()
+      .subscribe((family: FamilyMember[]) => {
+        this._family = family;
+      });
   }
 
 }

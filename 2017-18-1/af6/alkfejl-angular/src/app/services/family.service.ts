@@ -1,14 +1,17 @@
 import { Injectable } from '@angular/core';
 import { FamilyMember } from '../classes/family-member';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs/Observable';
+import { api } from '../config/api';
 
 @Injectable()
 export class FamilyService {
-  public _family: FamilyMember[] = [
-    new FamilyMember('Kata'),
-    new FamilyMember('Pisti')
-  ];
+  
+  public constructor(
+    private httpClient: HttpClient
+  ) {}
 
-  public get family(): FamilyMember[] {
-    return this._family;
+  public getFamily(): Observable<FamilyMember[]> {
+    return this.httpClient.get(api + 'family');
   }
 }

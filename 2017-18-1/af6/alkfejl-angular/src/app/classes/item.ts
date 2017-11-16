@@ -1,10 +1,12 @@
 import { FamilyMember } from './family-member';
 
 export class Item {
+    private id: number;
+    
     public constructor(
-        private name: string,
+        private text: string,
         private count: number,
-        private member: FamilyMember = null
+        private familyMember: FamilyMember = null
     ) {}
 
     public changeCount(amount: number) {
@@ -12,6 +14,6 @@ export class Item {
     }
 
     public toString(): string {
-        return this.count + ' db ' + this.name;
+        return this.count + ' db ' + this.text;
     }
 }

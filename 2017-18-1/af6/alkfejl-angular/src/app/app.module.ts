@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { UiModule } from './modules/ui/ui.module';
 import { AppRouterModule } from './modules/app-router/app-router.module';
+import { HttpClientModule } from '@angular/common/http'; 
 
 import { AppComponent } from './app.component';
 import { ShoplistComponent } from './components/shoplist/shoplist.component';
@@ -22,7 +23,8 @@ import { ShopViewComponent } from './components/shop-view/shop-view.component';
   imports: [
     BrowserModule, 
     UiModule,
-    AppRouterModule
+    AppRouterModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

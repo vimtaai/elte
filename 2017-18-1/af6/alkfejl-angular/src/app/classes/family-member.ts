@@ -1,4 +1,6 @@
 export class FamilyMember {
+    public id: number;
+
     constructor(
         private _name: string
     ) {}

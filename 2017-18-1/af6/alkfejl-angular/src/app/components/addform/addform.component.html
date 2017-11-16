@@ -10,8 +10,16 @@
             <span matSuffix> darab</span>
         </mat-form-field> 
         <br>
+        <select matInput #familyMember placeholder="Kinek a feladata?">
+            <option *ngFor="let member of family"
+                    [value]="member.id">
+                {{member.name}}
+            </option>
+        </select>
+        <span matSuffix> darab</span>
+        <br>
         <button mat-raised-button color="primary"
-            (click)="clickButton(itemName.value, itemCount.value)">
+            (click)="clickButton(itemName.value, itemCount.value, familyMember.value)">
             Hozzáad
         </button>
     </mat-card-content>
