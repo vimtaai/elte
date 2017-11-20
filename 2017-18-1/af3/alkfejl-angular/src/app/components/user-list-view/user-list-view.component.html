@@ -1,10 +1,12 @@
-<a class="btn-flat right" routerLink="/">Vissza a lista nézetbe</a>
-<div *ngIf="todo">
-    <h2 class="red-text text-lighten-2">Todo: {{todo.id}}</h2>
-    <p>{{todo.text}}</p>
-    <p><strong>Felelős:</strong> {{todo.user.name}}</p>
+<div *ngIf="users">
+  <h2 class="red-text text-lighten-2">Users</h2>
+  <div class="collection">
+    <a *ngFor="let user of users" routerLink="/user/{{user.id}}" class="collection-item">
+      {{user.name}} ({{user.email}})
+    </a>
+  </div>
 </div>
-<div *ngIf="!todo">
+<div *ngIf="!users">
     <div class="preloader-wrapper active">
     <div class="spinner-layer spinner-red-only">
       <div class="circle-clipper left">

@@ -1,7 +1,9 @@
 package com.elte.alkfejlrest.controller;
 
 import com.elte.alkfejlrest.entity.Todo;
+import com.elte.alkfejlrest.entity.User;
 import com.elte.alkfejlrest.repository.TodoRepository;
+import com.elte.alkfejlrest.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -18,6 +20,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class TodoController {
     @Autowired
     private TodoRepository todoRepository;
+    @Autowired
+    private UserRepository userRepository;
     
     @GetMapping("")
     public ResponseEntity<Iterable<Todo>> getAll() {
@@ -29,6 +33,13 @@ public class TodoController {
     public ResponseEntity<Todo> getOne(@PathVariable Integer id) {
         Todo todo = todoRepository.findOne(id);
         return ResponseEntity.ok(todo);
+    }
+
+    @GetMapping("/user/{userId}")
+    public ResponseEntity<Iterable<Todo>> getAllByUser(@PathVariable Integer userId) {
+        User user = userRepository.findOne(userId);
+        Iterable<Todo> todos = todoRepository.findAllByUser(user);
+        return ResponseEntity.ok(todos);
     }
     
     @PostMapping("")
@@ -48,6 +59,7 @@ public class TodoController {
     @DeleteMapping("/{id}")
     public ResponseEntity update(@PathVariable Integer id) {
         todoRepository.delete(id);
-        return ResponseEntity.ok().build();
+        Iterable<Todo> todos = todoRepository.findAll();
+        return ResponseEntity.ok(todos);
     }
 }

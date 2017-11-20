@@ -51,8 +51,9 @@ public class UserController {
     }
     
     @DeleteMapping("/{id}")
-    public ResponseEntity update(@PathVariable Integer id) {
+    public ResponseEntity delete(@PathVariable Integer id) {
         userRepository.delete(id);
-        return ResponseEntity.ok().build();
+        Iterable<User> users = userRepository.findAll();
+        return ResponseEntity.ok(users);
     }
 }

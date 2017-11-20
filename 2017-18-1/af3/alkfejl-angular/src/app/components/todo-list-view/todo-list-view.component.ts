@@ -20,4 +20,10 @@ export class TodoListViewComponent implements OnInit {
       this.todos = todos as Todo[];
     });
   }
+
+  private delTodo(id: number): void {
+    this.todoService.delTodoById(id).subscribe((todos) => {
+      this.todos = todos as Todo[];
+    });
+  }
 }

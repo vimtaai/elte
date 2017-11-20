@@ -20,7 +20,6 @@ export class TodoItemViewComponent implements OnInit {
 
   ngOnInit() {
     let id: number = parseInt(this.route.snapshot.paramMap.get('id'));
-    // console.log(id);
     this.todoService.getTodo(id).subscribe((todo) => {
       this.todo = todo as Todo
     });

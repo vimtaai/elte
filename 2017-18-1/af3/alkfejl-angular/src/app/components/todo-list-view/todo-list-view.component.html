@@ -2,6 +2,6 @@
 <div class="collection">
   <app-todo *ngFor="let todo of todos"
             [todo]="todo"
-            (delTodo)="todoService.delTodoById($event)">
+            (delTodo)="delTodo($event)">
   </app-todo>
 </div>

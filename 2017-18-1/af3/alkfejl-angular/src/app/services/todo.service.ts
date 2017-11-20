@@ -23,9 +23,10 @@ export class TodoService {
     return todoStream;
   }
 
-  public delTodoById(id: number) {
+  public delTodoById(id: number): Observable<any> {
     //let idx: number = TodoService._data.findIndex((todo) => todo.id === id);
     //TodoService._data.splice(idx, 1);
+    return this.http.delete(TodoService.api + '/' + id);
   }
 
   public delTodo(todo: Todo) {

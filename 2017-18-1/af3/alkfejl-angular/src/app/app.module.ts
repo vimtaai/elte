@@ -7,13 +7,17 @@ import { AppComponent } from './app.component';
 import { TodoComponent } from './components/todo/todo.component';
 import { TodoListViewComponent } from './components/todo-list-view/todo-list-view.component';
 import { TodoItemViewComponent } from './components/todo-item-view/todo-item-view.component';
+import { UserListViewComponent } from './components/user-list-view/user-list-view.component';
+import { UserItemViewComponent } from './components/user-item-view/user-item-view.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TodoComponent,
     TodoListViewComponent,
-    TodoItemViewComponent
+    TodoItemViewComponent,
+    UserListViewComponent,
+    UserItemViewComponent
   ],
   imports: [
     BrowserModule,
