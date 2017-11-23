@@ -10,6 +10,7 @@ import { AddformComponent } from './components/addform/addform.component';
 import { ShopitemComponent } from './components/shopitem/shopitem.component';
 import { FamilyViewComponent } from './components/family-view/family-view.component';
 import { ShopViewComponent } from './components/shop-view/shop-view.component';
+import { FamilyMemberViewComponent } from './components/family-member-view/family-member-view.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { ShopViewComponent } from './components/shop-view/shop-view.component';
     AddformComponent,
     ShopitemComponent,
     FamilyViewComponent,
-    ShopViewComponent
+    ShopViewComponent,
+    FamilyMemberViewComponent
   ],
   imports: [
     BrowserModule, 

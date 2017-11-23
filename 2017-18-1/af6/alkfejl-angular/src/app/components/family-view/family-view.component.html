@@ -2,7 +2,7 @@
   <mat-card-content>
     <h4>Családtagok</h4>
     <mat-list>
-        <mat-list-item *ngFor="let member of _family">
+        <mat-list-item *ngFor="let member of _family" routerLink="/family/{{member.id}}">
           {{member.name}}
         </mat-list-item>
     </mat-list>

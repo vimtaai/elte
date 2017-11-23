@@ -1,8 +1,8 @@
 <mat-list-item>
-  <button mat-icon-button color="primary" (click)="countChange.emit(-1)">
+  <button mat-icon-button color="primary" (click)="countChange(-1)">
     <mat-icon mat-list-icon>remove</mat-icon>
   </button>
-  <button mat-icon-button color="primary" (click)="countChange.emit(+1)">
+  <button mat-icon-button color="primary" (click)="countChange(+1)">
     <mat-icon mat-list-icon>add</mat-icon>
   </button>
   <mat-icon mat-list-icon>label_outline</mat-icon>

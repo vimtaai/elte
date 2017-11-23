@@ -1,6 +1,8 @@
 package com.elte.alkfejlrest.controller;
 
+import com.elte.alkfejlrest.entity.FamilyMember;
 import com.elte.alkfejlrest.entity.ShopItem;
+import com.elte.alkfejlrest.repository.FamilyMemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -18,6 +20,8 @@ import com.elte.alkfejlrest.repository.ShopItemRepository;
 public class ShopItemController {
     @Autowired
     private ShopItemRepository shopItemRepository;
+    @Autowired
+    private FamilyMemberRepository familyMemberRepository;
     
     @GetMapping("")
     public ResponseEntity<Iterable<ShopItem>> getAll() {
@@ -48,8 +52,14 @@ public class ShopItemController {
     }
     
     @DeleteMapping("/{id}")
-    public ResponseEntity update(@PathVariable Integer id) {
+    public ResponseEntity delete(@PathVariable Integer id) {
         shopItemRepository.delete(id);
         return ResponseEntity.ok().build();
+    }
+    
+    @GetMapping("/owner/{id}")
+    public ResponseEntity<Iterable<ShopItem>> getByFamilyMember(@PathVariable Integer id) {
+        FamilyMember fm = familyMemberRepository.findOne(id);
+        return ResponseEntity.ok(fm.getItems());
     }
 }

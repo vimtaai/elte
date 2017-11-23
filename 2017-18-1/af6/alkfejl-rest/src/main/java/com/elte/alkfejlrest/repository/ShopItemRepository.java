@@ -5,6 +5,7 @@
  */
 package com.elte.alkfejlrest.repository;
 
+import com.elte.alkfejlrest.entity.FamilyMember;
 import com.elte.alkfejlrest.entity.ShopItem;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
