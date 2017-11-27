@@ -5,6 +5,12 @@
       <ul class="right">
         <li><a routerLink="/">Teendők</a></li>
         <li><a routerLink="/users">Felhasználók</a></li>
+        <li *ngIf="this.authService.getUser()">
+          <a (click)="logout()">Kijelentkezés</a>
+        </li>
+        <li *ngIf="!this.authService.getUser()">
+          <a routerLink="/login">Bejelentkezés</a>
+        </li>
       </ul>
     </div>
   </div>

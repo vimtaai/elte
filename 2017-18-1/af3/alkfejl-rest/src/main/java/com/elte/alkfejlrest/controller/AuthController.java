@@ -40,13 +40,13 @@ public class AuthController {
     @RequestMapping("/logout")
     public ResponseEntity logout() {
         session.setUser(null);
-        return ResponseEntity.ok().build();
+        return ResponseEntity.ok(false);
     }
 
     @GetMapping("/user")
-    public ResponseEntity<User> getUser() {
+    public ResponseEntity getUser() {
         if (session.getUser() == null) {
-            return ResponseEntity.ok(null);
+            return ResponseEntity.ok(false);
         } else {
             return ResponseEntity.ok(session.getUser());
         }

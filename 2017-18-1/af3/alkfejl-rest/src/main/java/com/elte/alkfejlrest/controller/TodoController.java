@@ -1,5 +1,6 @@
 package com.elte.alkfejlrest.controller;
 
+import com.elte.alkfejlrest.annotation.Role;
 import com.elte.alkfejlrest.entity.Todo;
 import com.elte.alkfejlrest.entity.User;
 import com.elte.alkfejlrest.repository.TodoRepository;
@@ -55,7 +56,8 @@ public class TodoController {
         Todo saved = todoRepository.save(current);
         return ResponseEntity.ok(saved);
     }
-    
+
+    @Role({User.Role.ADMIN})
     @DeleteMapping("/{id}")
     public ResponseEntity update(@PathVariable Integer id) {
         todoRepository.delete(id);
