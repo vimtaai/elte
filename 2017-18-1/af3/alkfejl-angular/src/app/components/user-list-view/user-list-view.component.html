@@ -1,10 +1,19 @@
 <div *ngIf="users">
   <h2 class="red-text text-lighten-2">Users</h2>
-  <div class="collection">
-    <a *ngFor="let user of users" routerLink="/user/{{user.id}}" class="collection-item">
-      {{user.name}} ({{user.email}})
-    </a>
-  </div>
+  <table class="striped highlight">
+    <thead>
+      <th>Azonosító</th>
+      <th>Név</th>
+      <th>E-mail cím</th>
+    </thead>
+    <tbody>
+    <tr *ngFor="let user of users">
+      <th>{{user.id}}</th>
+      <th><a routerLink="/user/{{user.id}}">{{user.name}}</a></th>
+      <td>{{user.email}}</td>
+    </tr>
+    </tbody>
+  </table>
 </div>
 <div *ngIf="!users">
     <div class="preloader-wrapper active">

@@ -9,6 +9,7 @@ import { TodoListViewComponent } from './components/todo-list-view/todo-list-vie
 import { TodoItemViewComponent } from './components/todo-item-view/todo-item-view.component';
 import { UserListViewComponent } from './components/user-list-view/user-list-view.component';
 import { UserItemViewComponent } from './components/user-item-view/user-item-view.component';
+import { LoginViewComponent } from './components/login-view/login-view.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { UserItemViewComponent } from './components/user-item-view/user-item-vie
     TodoListViewComponent,
     TodoItemViewComponent,
     UserListViewComponent,
-    UserItemViewComponent
+    UserItemViewComponent,
+    LoginViewComponent
   ],
   imports: [
     BrowserModule,

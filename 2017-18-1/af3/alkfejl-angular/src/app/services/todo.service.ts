@@ -13,13 +13,13 @@ export class TodoService {
 
   public getTodos(): Observable<Todo[]> {
     //return TodoService._data;
-    let todoStream = this.http.get(TodoService.api);
+    let todoStream = this.http.get(TodoService.api) as Observable<Todo[]>;
     return todoStream;
   }
 
   public getTodo(id: number): Observable<Todo> {
     //return TodoService._data.find((todo) => todo.id === id);
-    let todoStream = this.http.get(TodoService.api + '/' + id);
+    let todoStream = this.http.get(TodoService.api + '/' + id) as Observable<Todo>;
     return todoStream;
   }
 

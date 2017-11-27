@@ -1,7 +1,7 @@
 <a class="btn-flat right" routerLink="/">Vissza a lista nézetbe</a>
 <div *ngIf="todo">
-    <h2 class="red-text text-lighten-2">Todo: {{todo.id}}</h2>
-    <p>{{todo.text}}</p>
+    <h2 class="red-text text-lighten-2">Todo №{{todo.id}}</h2>
+    <p><strong>Leírás: </strong> {{todo.text}}</p>
     <p><strong>Felelős:</strong> {{todo.user.name}}</p>
 </div>
 <div *ngIf="!todo">
