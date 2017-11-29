@@ -14,4 +14,8 @@ export class FamilyService {
   public getFamily(): Observable<FamilyMember[]> {
     return this.httpClient.get(api + 'family');
   }
+
+  public getFamilyMember(id: number): Observable<FamilyMember> {
+    return this.httpClient.get(api + 'family/' + id);
+  }
 }

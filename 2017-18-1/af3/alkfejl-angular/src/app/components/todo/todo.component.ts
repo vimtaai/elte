@@ -1,10 +1,12 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Todo } from '../../classes/todo';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-todo',
   templateUrl: './todo.component.html',
-  styleUrls: ['./todo.component.css']
+  styleUrls: ['./todo.component.css'],
+  providers: [AuthService]
 })
 export class TodoComponent implements OnInit {
   @Input()
@@ -19,7 +21,9 @@ export class TodoComponent implements OnInit {
     this.delTodo.emit(this.todo.id);
   }
 
-  constructor() { }
+  constructor(
+    private authService: AuthService
+  ) { }
 
   ngOnInit() {
   }

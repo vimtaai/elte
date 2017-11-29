@@ -10,9 +10,6 @@ export class ShoplistComponent implements OnInit {
   @Input()
   public items: Item[];
 
-  @Output()
-  public countChange: EventEmitter<any> = new EventEmitter();
-
   constructor() { }
 
   ngOnInit() {  }

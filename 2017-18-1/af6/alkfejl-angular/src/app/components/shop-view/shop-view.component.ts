@@ -15,27 +15,25 @@ export class ShopViewComponent implements OnInit {
   private _data: Item[];
 
   public addItem(item: Item): void {
-    this.itemService.addItem(item).subscribe();
+    this.itemService.addItem(item).subscribe(() => {
+      this.itemService.getItems().subscribe((items: Item[]) => {
+        this._data = items;
+      });
+    });
   }
 
-  public changeItemCount({id, amount}: any): void {
-    this._data[id].changeCount(amount);
-    console.log(this._data);
-  }
   constructor(
     private familyService: FamilyService,
     private itemService: ItemService
   ) { }
 
   ngOnInit() {
-    this.familyService.getFamily()
-      .subscribe((family: FamilyMember[]) => {
-        this._family = family;
-      });
-    this.itemService.getItems()
-      .subscribe((items: Item[]) => {
-        this._data = items;
-      });
+    this.familyService.getFamily().subscribe((family: FamilyMember[]) => {
+      this._family = family;
+    });
+    this.itemService.getItems().subscribe((items: Item[]) => {
+      this._data = items;
+    });
   }
 
 }

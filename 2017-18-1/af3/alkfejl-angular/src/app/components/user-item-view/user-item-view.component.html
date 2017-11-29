@@ -1,12 +1,23 @@
 <a class="btn-flat right" routerLink="/users">Vissza a lista nézetbe</a>
 <div *ngIf="user">
-    <h2 class="red-text text-lighten-2">{{user.name}}</h2>
-    <p>ID: {{user.id}}</p>
-    <p>Email: {{user.email}}</p>
-    <h3>Feldatok</h3>
-    <div *ngFor="let todo of user.todos">
-      {{todo.text}}
-    </div>
+  <h2 class="red-text text-lighten-2">{{user.name}}</h2>
+  <table>
+    <tbody>
+      <tr>
+        <th>Azonosító</th>
+        <td>{{user.id}}</td>
+      </tr>
+      <tr>
+        <th>E-mail cím</th>
+        <td>{{user.email}}</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3>Feldatok</h3>
+  <ul class="collection">
+    <app-todo *ngFor="let todo of user.todos" [todo]="todo"
+              (delTodo)="delTodo($event)"></app-todo>
+  </ul>
 </div>
 <div *ngIf="!user">
   <div class="preloader-wrapper active">

@@ -13,11 +13,11 @@ export class UserService {
   ) { }
 
   public getUsers(): Observable<User[]> {
-    return this.http.get(UserService.api);
+    return this.http.get(UserService.api) as Observable<User[]>;
   }
 
   public getUser(id: number): Observable<User> {
-    return this.http.get(UserService.api + '/' + id);
+    return this.http.get(UserService.api + '/' + id) as Observable<User>;
   }
 
   public delUserById(id: number): Observable<any> {
@@ -25,6 +25,6 @@ export class UserService {
   }
 
   public getTodosByUser(user: User): Observable<Todo[]> {
-    return this.http.get('http://localhost:4200/api/todos/user/' + user.id);
+    return this.http.get('http://localhost:4200/api/todos/user/' + user.id) as Observable<Todo[]>;
   }
 }

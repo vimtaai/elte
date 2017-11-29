@@ -1,7 +1,8 @@
 <a routerLink="/todo/{{todo.id}}" class="collection-item">
-  <span class="right" (click)="clickButton($event)">
+  <span *ngIf="authService.hasRole('ADMIN')"
+        class="right delete" (click)="clickButton($event)">
     <i class="material-icons red-text">delete</i>
   </span>
-  ({{todo.user.name}})
+  <span class="new badge" data-badge-caption="">{{todo.user.name}}</span>
   {{todo.text}}
 </a>

@@ -1,0 +1,8 @@
+.familymemberview {
+  margin: 20px auto;
+  width: 500px;
+}
+
+.familymemberview mat-spinner {
+  margin: 0 auto;
+}

@@ -1,15 +1,19 @@
 import { FamilyMember } from './family-member';
 
 export class Item {
-    private id: number;
+    public id: number;
     
     public constructor(
         private text: string,
-        private count: number,
+        public count: number,
         private familyMember: FamilyMember = null
     ) {}
 
-    public changeCount(amount: number) {
+    public getId(): number {
+        return this.id;
+    }
+
+    public changeCount(amount: number): void {
         this.count = Math.max(0, this.count + amount);
     }
 
