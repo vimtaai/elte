@@ -1,4 +1,5 @@
-<app-addform (createItem)="addItem($event)"
+<app-addform *ngIf="authService.userHasRole(['ADMIN'])"
+             (createItem)="addItem($event)"
              [family]="_family">
 </app-addform>
 <app-shoplist [items]="_data"></app-shoplist>

@@ -5,7 +5,13 @@
         <button mat-button routerLink="/family">Családtagok</button>
     </span>
     <span class="right">
-        <button mat-button routerLink="/login">Bejelentkezés</button>
+        <button *ngIf="!authService.isLoggedIn()" mat-button routerLink="/login">
+            Bejelentkezés
+        </button>
+        <button *ngIf="authService.isLoggedIn()" mat-button
+                (click)="authService.logout()">
+            Kijelentkezés
+        </button>
     </span>
 </mat-toolbar>
 

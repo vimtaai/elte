@@ -3,12 +3,13 @@ import { Item } from '../../classes/Item';
 import { FamilyMember } from '../../classes/family-member';
 import { FamilyService } from '../../services/family.service';
 import { ItemService } from '../../services/item.service';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-shop-view',
   templateUrl: './shop-view.component.html',
   styleUrls: ['./shop-view.component.css'],
-  providers: [FamilyService, ItemService]
+  providers: [FamilyService, ItemService, AuthService]
 })
 export class ShopViewComponent implements OnInit {
   private _family: FamilyMember[];
@@ -24,7 +25,8 @@ export class ShopViewComponent implements OnInit {
 
   constructor(
     private familyService: FamilyService,
-    private itemService: ItemService
+    private itemService: ItemService,
+    private authService: AuthService,
   ) { }
 
   ngOnInit() {

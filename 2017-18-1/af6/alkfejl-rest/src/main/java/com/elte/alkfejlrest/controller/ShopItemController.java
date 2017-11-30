@@ -1,7 +1,9 @@
 package com.elte.alkfejlrest.controller;
 
+import com.elte.alkfejlrest.annotation.Role;
 import com.elte.alkfejlrest.entity.FamilyMember;
 import com.elte.alkfejlrest.entity.ShopItem;
+import com.elte.alkfejlrest.entity.User;
 import com.elte.alkfejlrest.repository.FamilyMemberRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -35,6 +37,7 @@ public class ShopItemController {
         return ResponseEntity.ok(item);
     }
     
+    @Role({User.Role.ADMIN})
     @PostMapping("")
     public ResponseEntity<ShopItem> create(@RequestBody ShopItem item) {
         ShopItem saved = shopItemRepository.save(item);

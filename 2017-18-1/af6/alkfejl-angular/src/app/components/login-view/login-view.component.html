@@ -2,13 +2,17 @@
   <mat-card-content>
     <h3>Bejelentkezés</h3>
     <mat-form-field>
-      <input matInput placeholder="Felhasználónév" #username>
+      <input matInput type="email" placeholder="E-mail cím" #emailInput>
     </mat-form-field>
     <br>
     <mat-form-field>
-      <input matInput type="password" placeholder="Jelszó" #password>
+      <input matInput type="password" placeholder="Jelszó" #passwordInput>
     </mat-form-field>
     <br>
-    <button mat-raised-button color="primary">Bejelentkezés</button>
+    <button mat-raised-button color="primary" 
+            (click)="tryLogin(emailInput.value, passwordInput.value)">
+      Bejelentkezés
+    </button>
+    <div *ngIf="error">{{error}}</div>
   </mat-card-content>
 </mat-card>
