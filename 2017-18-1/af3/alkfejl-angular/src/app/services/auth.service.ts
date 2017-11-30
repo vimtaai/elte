@@ -12,15 +12,17 @@ export class AuthService {
     private http: HttpClient
   ) { }
 
-  public logout(): Observable<any> {
-    return this.http.get(AuthService.api + '/logout');
+  public logout(): void {    
+    this.http.get(AuthService.api + '/logout').subscribe(() => {
+      this.setUser(undefined);
+    });
   }
 
   public login(email: string, password: string): Observable<User> {
     return this.http.post(AuthService.api + '/login', {
       email,
       password
-    });
+    }) as Observable<User>;
   }
 
   public setUser(user: User) {

@@ -11,8 +11,6 @@ import { User } from './classes/user';
   providers: [AuthService]
 })
 export class AppComponent implements OnInit {
-  private user: User;
-
   public constructor(
     private authService: AuthService,
     private router: Router
@@ -23,7 +21,7 @@ export class AppComponent implements OnInit {
   }
 
   private logout() {
-    this.authService.logout().subscribe();
+    this.authService.logout();
   }
 
   public title: string = 'Todo Alkalmazás';
