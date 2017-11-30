@@ -11,6 +11,7 @@ import { ShopitemComponent } from './components/shopitem/shopitem.component';
 import { FamilyViewComponent } from './components/family-view/family-view.component';
 import { ShopViewComponent } from './components/shop-view/shop-view.component';
 import { FamilyMemberViewComponent } from './components/family-member-view/family-member-view.component';
+import { LoginViewComponent } from './components/login-view/login-view.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { FamilyMemberViewComponent } from './components/family-member-view/famil
     ShopitemComponent,
     FamilyViewComponent,
     ShopViewComponent,
-    FamilyMemberViewComponent
+    FamilyMemberViewComponent,
+    LoginViewComponent
   ],
   imports: [
     BrowserModule, 

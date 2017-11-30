@@ -1,0 +1,8 @@
+mat-toolbar .left {
+  flex: 1 1 auto;
+  margin-left: 40px;
+}
+
+mat-toolbar .right {
+
+}

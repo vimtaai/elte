@@ -1,7 +1,12 @@
 <mat-toolbar color="primary">
     Shopping List
-    <button mat-button routerLink="/">Bevásárló lista</button>
-    <button mat-button routerLink="/family">Családtagok</button>
+    <span class="left">
+        <button mat-button routerLink="/">Bevásárlólista</button>
+        <button mat-button routerLink="/family">Családtagok</button>
+    </span>
+    <span class="right">
+        <button mat-button routerLink="/login">Bejelentkezés</button>
+    </span>
 </mat-toolbar>
 
 <router-outlet></router-outlet>
