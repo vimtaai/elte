@@ -17,5 +17,11 @@
                  (click)="tryLogin(email.value, password.value)">
         </div>
       </div>
+      <div class="row">
+        <p *ngIf="this.from">
+          Az adott oldal megtekintéséhez nincs megfelelő jogosultsága.
+          A folytatáshoz jelentkezzen be.
+        </p>
+      </div>
     </form>
   </div>
