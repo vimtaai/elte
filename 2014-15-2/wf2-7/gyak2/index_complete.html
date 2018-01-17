@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JavaScript basics</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script type="text/javascript">
+            function $(id) {
+                return document.getElementById(id);
+            }
+
+            function myEvent() {
+                var colors = {
+                    red     : '#F00',
+                    blue    : '#00F',
+                    green   : '#0F0',
+                    yellow  : '#FF0',
+                    teal    : '#0FF',
+                    violet  : '#F0F',
+                    orange  : '#F80',
+                    grey    : '#888'
+                };
+
+                var text = $('textbox').value;
+                var answer = document.createElement('span');
+
+                text = text.split(' ');
+
+                for (var i in text) {
+                    if (colors.hasOwnProperty(text[i])) {
+                        var span = document.createElement('span');
+                        span.style.color = colors[text[i]];
+                        span.innerHTML = text[i];
+                        answer.appendChild(span);
+                        answer.innerHTML += ' ';
+                    } else {
+                        answer.innerHTML += text[i] + ' ';
+                    }
+                }
+
+                var result = $('result');
+
+                result.innerHTML += '&gt; ';
+                result.appendChild(answer);
+                result.innerHTML += '<br>';
+
+                $('textbox').value = '';
+                $('textbox').focus();
+            }
+
+            function init() {
+                $('button').addEventListener('click', myEvent);
+            }
+
+            window.addEventListener('load', init);
+        </script>
+    </head>
+    <body>
+        <h1>JavaScript basics</h1>
+        <h2>Result</h2>
+        <output id="result"></output>
+        <div>
+            <input type="text" id="textbox">
+            <input type="button" value="Submit" id="button">
+        </div>
+    </body>
+</html>

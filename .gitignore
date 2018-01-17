@@ -3,3 +3,5 @@
 **/Release
 **/*.depend
 **/*.layout
+**/*.phps
+**/*.swp
