@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Erdei iskola - jelentkezés</title>
+		<link rel="stylesheet" type="text/css" href="stilus.css">
+	</head>
+	<body>
+		<h1>Jelentkezés</h1>
+		<form action="index.html" method="get">
+			<!-- Blokk -->
+			<fieldset>
+				<!-- Blokkcím -->
+				<legend>Személyes adatok</legend>
+				<label for="nev">Neve: </label>
+				<input type="text" name="nev" id="nev">
+				<br>
+				<label for="email">E-mail cím:</label>
+				<input type="email" name="email" id="email">
+				<br>
+				<label for="kor">Életkor:</label>
+				<input type="number" name="kor" id="kor"
+					   min="0" max="100">
+			    <br>
+				<label for="telefon">Telefonszám:</label>
+				<input type="tel" name="telefon" id="telefon">
+				<br>
+				<label for="nem">Neme:</label>
+				<select name="nem" id="nem">
+					<option value="l">Lány</option>
+					<option value="f">Fiú</option>
+				</select>
+			</fieldset>
+			<br>
+			<fieldset>
+				<legend>Jelentkezési adatok</legend>
+				<label for="datum">Kérem válasszon dátumot: </label>
+				<input type="date" name="datum" id="datum">
+				<br>
+				<label for="reggeli">Válasszon étkezést: </label>
+				<input type="checkbox" name="reggeli" id="reggeli">
+				Reggeli<br>
+				<input type="checkbox" name="ebed" id="ebed">
+				Ebéd<br>
+				<input type="checkbox" name="vacsora" id="vacsora">
+				Vacsora<br>
+				<label for="szin">Kedvenc színe: </label>
+				<input type="color" name="szin" id="szin">
+				<br>
+				<label for="csapat1">Melyik csoportba szeretne tartozni? </label>
+				<input type="radio" name="csoport" id="csoport1"
+				       checked="checked">
+				1. csoport<br>
+				<input type="radio" name="csoport" id="csoport2">
+				2. csoport<br>
+				<input type="radio" name="csoport" id="csoport3">
+				3. csoport<br>
+				<br>
+				<label for="gyogyszer">Gyógyszerérzékenység: </label>
+				<textarea name="gyogyszer" id="gyogyszer">
+				</textarea>
+			</fieldset>
+			<br>
+			<fieldset>
+				<input type="submit" value="Jelentkezés">
+			</fieldset>
+		</form>
+	</body>
+</html>

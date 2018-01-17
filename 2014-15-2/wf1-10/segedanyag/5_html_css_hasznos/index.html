@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<!-- 5. példa: példa az eddig még nem használt HTML5 elemekre, CSS utasításokra -->
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>CSS elrendezések 1.</title>
+		<link rel="stylesheet" type="text/css" href="stilus.css">
+	</head>
+	<body>
+		<!-- az élményt javító javascriptet nektek kell kigúglizni -->
+		<!-- kép is lehet link -->
+		Kép is lehet link: 
+		<a href="http://www.google.com">
+			<img src="http://lorempixel.com/200/200" alt="random kép">
+		</a><br>
+		<!-- ábrát leíró html tag -->
+		<a href="http://webfejlesztes.elte.hu/tananyagok/html5css3/lecke5_lap3.html">
+			Részletes leírás az ábrák használatáról (felhasználó: wf1 jelszó: Wcag2)
+		</a><br>
+		<!-- képtérképek: a képek bizonyos részei kattinthatóak, linkekként működnek -->
+		<a href="http://webfejlesztes.elte.hu/tananyagok/html5css3/lecke6_lap2.html">
+			Részletes leírás a képtérképek használatáról (felhasználó: wf1 jelszó: Wcag2)
+		</a><br>
+		<!-- audió anyag beszúrása -->
+		<a href="http://webfejlesztes.elte.hu/tananyagok/html5css3/lecke6_lap3.html">
+			Részletes leírás az audióelemek használatáról (felhasználó: wf1 jelszó: Wcag2)
+		</a><br>
+		<!-- videó anyag beszúrása -->
+		<a href="http://webfejlesztes.elte.hu/tananyagok/html5css3/lecke6_lap4.html">
+			Részletes leírás a a videóelemek használatáról (felhasználó: wf1 jelszó: Wcag2)
+		</a><br>
+		<!-- kép beállítása háttérnek -->
+		<figure>
+			<figcaption>Kép beállítása háttérnek</figcaption>
+			<pre>
+				<code>
+div.hatteres {
+	background-image: url('kep/relativ/eleresi/utvonala.png');
+}
+				</code>
+			<pre>
+		</figure>
+		<!-- táblázat sorai váltottan színezve  -->
+		<figure>
+			<figcaption>Táblázat sorai váltottan színezve</figcaption>
+			<pre>
+				<code>
+tr:nth-child(odd) {
+	background: #555555;
+}
+tr:nth-child(even) {
+	background: #333333;
+}
+				</code>
+			<pre>
+		</figure>
+		<!-- betűméret megadása  -->
+		<figure>
+			<figcaption>Relatív betűméret megadása</figcaption>
+			<pre>
+				<code>
+h1 {
+	font-size: 150%;
+}
+small {
+	font-size: 90%;
+}
+				</code>
+			<pre>
+		</figure>
+		<!-- betűméret megadása  -->
+		<figure>
+			<figcaption>"Blokkok elkerülése"</figcaption>
+			<pre>
+				<code>
+HTML:
+&lt;a href="#tartalom" id="tartalomra">Ugrás a tartalomra&lt;/a&gt;
+&lt;nav> . . .&lt;/nav&gt;
+&lt;div id="tartalom"&gt;
+	.... 
+&lt;/div&gt;
+
+CSS:
+#tartalomra {
+	position: absolute;
+	left: -999999px;
+}
+				</code>
+			<pre>
+		</figure>
+	    Szöveget árnyékolni a <strong>text-shadow</strong> tulajdonsággal lehet.<br>
+		"Dobozt" árnyékolni (külső, belső árnyék) a <strong>box-shadow</strong> tulajdonsággal lehet.<br>
+		Alternatív stíluslapokról a <a href="http://webfejlesztes.elte.hu/moodle/file.php/11/wf_eloadas_stiluslapok_20140218_01_84.pdf">
+		CSS prezentáció 66. diáján</a> olvashattok.
+	</body>
+</html>

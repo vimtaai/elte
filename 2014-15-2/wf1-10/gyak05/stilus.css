@@ -1,0 +1,26 @@
+body {
+	background-color: darkblue;
+	color: white;
+	font-family: Arial, Helvetica,
+				 sans-serif;
+	font-size: 0.2in;
+}
+
+a {
+	color: yellow
+}
+
+/*table + table td {
+	background-color: white;
+}*/
+
+table:last-child td {
+	background-color: white;
+}
+
+table:last-child tr:first-child td {
+	background-color: transparent;
+}
+
+
+

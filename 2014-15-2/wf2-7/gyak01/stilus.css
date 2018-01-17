@@ -1,0 +1,118 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: normal;
+}
+
+body {
+	font-family: tahoma, arial, helvetica, sans-serif;
+	font-size: 14px;
+}
+
+h1 {
+	padding: 20px;
+	text-transform: uppercase;
+	background: #FF6600;
+	color: #FFFFFF;
+}
+
+h2 {
+	margin: 10px 30px;
+	width: 400px;
+	border-bottom: solid #FF6600 2px;
+}
+
+p {
+	padding: 10px 30px;
+}
+
+h1, h2, caption, th {
+	font-weight: bold;
+}
+
+h1,
+p,
+form {
+	padding-left: 30px;
+}
+
+p:first-letter {
+	font-size: 2em;
+	font-family: "Algerian";
+}
+
+table {
+	border-collapse: collapse;
+	margin: 10px auto;
+	width: 500px;
+}
+
+table, th, td {
+	border: solid #000000 1px;
+	padding: 5px;
+}
+
+caption {
+	padding: 10px;
+	font-style: italic;
+}
+
+thead th {
+	background: #FF6600;
+	color: #FFFFFF;
+}
+
+thead tr:first-child th {
+	background: #000000;
+}
+
+form {
+	width: 500px;
+	margin: 30px;
+	text-align: center;
+	padding: 20px;
+	border: solid #FF6600 1px;
+	border-top: solid #FF6600 20px;
+	float: left;
+}
+
+input {
+	display: block;
+	margin: 10px auto;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	display: inline-block;
+	margin-left: 10px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="submit"] {
+	padding: 5px 10px;
+	border: solid #AAAAAA 1px;
+}
+
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="submit"]:focus,
+select:focus {
+	outline: none;
+	box-shadow: 0 0 3px #FF6600;
+	border: solid #FF9933 1px;
+}
+
+fieldset {
+	border: solid #FF6600 2px;
+	margin-bottom: 28px;
+}
+
+legend {
+	padding: 0 10px;
+}
