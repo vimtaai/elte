@@ -1,0 +1,50 @@
+<!doctype html>
+
+<style>
+    h1 + p {
+        overflow: hidden;
+        height: 0;
+        transition: height 0.5s;
+    }
+    h1 + p.open {
+        height: 100px;
+    }
+</style>
+
+<h1>lorem ipsum</h1>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, eos. Amet sed voluptas, illo recusandae quia nobis vero doloribus eligendi quo? Excepturi ullam nobis nam voluptatibus? Quod inventore cum molestias!</p>
+<h1>lorem ipsum</h1>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, eos. Amet sed voluptas, illo recusandae quia nobis vero doloribus eligendi quo? Excepturi ullam nobis nam voluptatibus? Quod inventore cum molestias!</p>
+<h1>lorem ipsum</h1>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, eos. Amet sed voluptas, illo recusandae quia nobis vero doloribus eligendi quo? Excepturi ullam nobis nam voluptatibus? Quod inventore cum molestias!</p>
+<h1>lorem ipsum</h1>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, eos. Amet sed voluptas, illo recusandae quia nobis vero doloribus eligendi quo? Excepturi ullam nobis nam voluptatibus? Quod inventore cum molestias!</p>
+
+<script>
+    function $(selector) {
+        return document.querySelector(selector);
+    }
+
+    function delegate(parent, selector, type, handler) {
+        function delegatedFunction(event) {
+            let target = event.target;
+            if (target.matches(`${parent} ${selector}, ${parent} ${selector} *`)) {
+            while (!target.matches(selector)) {
+                target = target.parentNode;
+            }
+            handler.call(target, event);
+            }
+        }
+
+        $(parent).addEventListener(type, delegatedFunction);
+    }
+
+    function headingClick(e) {
+        const p = this.nextElementSibling;
+        if (p.matches('p')) {
+            p.classList.toggle('open');
+        }
+    }
+
+    delegate('body', 'h1', 'click', headingClick);
+</script>

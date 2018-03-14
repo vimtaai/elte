@@ -1,0 +1,58 @@
+<!doctype html>
+
+<style>
+    div {
+        position: absolute;
+        top: 100px;
+        left: 100px;
+        width: 50px;
+        height: 50px;
+        background: red;
+    }
+</style>
+
+<div></div>
+<button id="up">up</button>
+<button id="down">down</button>
+<button id="left">left</button>
+<button id="right">right</button>
+
+<script>
+    function $(selector) {
+        return document.querySelector(selector);
+    }
+
+    function move(direction) {
+        const div = $('div');
+        const top = parseInt(getComputedStyle(div).top);
+        const left = parseInt(getComputedStyle(div).left);
+
+        switch (direction) {
+            case ('up'): 
+                div.style.top = (top - 10) + 'px';
+                break;
+            case ('down'): 
+                div.style.top = (top + 10) + 'px';
+                break;
+            case ('left'): 
+                div.style.left = (left - 10) + 'px';
+                break;
+            case ('right'): 
+                div.style.left = (left + 10) + 'px';
+                break;
+        }
+    }
+
+    $('#up').addEventListener('click', function () {
+        move('up');
+    });
+    $('#down').addEventListener('click', function () {
+        move('down');
+    });
+    $('#left').addEventListener('click', function () {
+        move('left');
+    });
+    $('#right').addEventListener('click', function () {
+        move('right');
+    });
+</script>

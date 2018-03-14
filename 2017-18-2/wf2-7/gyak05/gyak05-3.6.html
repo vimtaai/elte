@@ -1,0 +1,93 @@
+<!doctype html>
+
+<input type="text">
+<section>
+
+</section>
+
+<script>
+    function $(selector) {
+        return document.querySelector(selector);
+    }
+
+    function delegate(parent, selector, type, handler) {
+        function delegatedFunction(event) {
+            let target = event.target;
+            if (target.matches(`${parent} ${selector}, ${parent} ${selector} *`)) {
+            while (!target.matches(selector)) {
+                target = target.parentNode;
+            }
+            handler.call(target, event);
+            }
+        }
+
+        $(parent).addEventListener(type, delegatedFunction);
+    }
+
+    const filmList = [
+        {
+            title: 'The Godfather',
+            director: 'Francis Ford Coppola',
+            year: 1972,
+            gross: '$626,025,500'
+        },
+        {
+            title: 'The Wizard of Oz',
+            director: 'Victor Fleming',
+            year: 1939,
+            gross: '$32,950,500'
+        },
+        {
+            title: 'Citizen Kane',
+            director: 'Orson Welles',
+            year: 1941,
+            gross: '$2,998,000'
+        },
+        {
+            title: 'The Shawshank Redemption',
+            director: 'Frank Darabont',
+            year: 1994,
+            gross: '$53,014,600'
+        },
+        {
+            title: 'Pulp Fiction',
+            director: 'Quentin Tarantino',
+            year: 1994,
+            gross: '$202,078,200'
+        },
+    ];
+
+    function inputInput(e) {
+        const search = $('input').value.toLowerCase();
+        const filteredList = filmList.filter(film => 
+            film.title.toLowerCase().indexOf(search) !== -1 ||
+            film.director.toLowerCase().indexOf(search) !== -1 ||
+            film.year == search
+        );
+        $('section').innerHTML = genList(filteredList);
+    }
+
+    $('input').addEventListener('input', inputInput);
+
+    function genList(filmList) {
+        return filmList.map(film => genFilm(film)).join('');
+    }
+
+    function genFilm(film) {
+        return `
+            <div>
+                <h2>${film.title}</h2>
+                <dl>
+                    <dt>Rendező</dt>
+                    <dd>${film.director}</dd>
+                    <dt>Megjelenési év</dt>
+                    <dd>${film.year}</dd>
+                    <dt>Bevétel</dt>
+                    <dd>${film.gross}</dd>
+                </dl>
+            </div>
+        `;
+    }
+
+    $('section').innerHTML = genList(filmList);
+</script>

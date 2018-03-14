@@ -1,0 +1,50 @@
+<!doctype html>
+
+<style>
+    div {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 10px;
+        background: red;
+        width: 100vw;
+    }
+    body {
+        padding-top: 40px;
+    }
+</style>
+
+<div></div>
+<button>start</button>
+<output></output>
+
+<script>
+    function $(selector) {
+        return document.querySelector(selector);
+    }
+
+    function startClick(e) {
+        const totalTime = 3000;
+        let elapsedTime = 0;
+
+        let line = setInterval(function () {
+            elapsedTime += 10;
+            $('div').style.width = (100 - elapsedTime / totalTime * 100) + 'vw'; 
+            if (elapsedTime >= totalTime) {
+                clearInterval(line);
+            }
+            const timeRemaining = totalTime - elapsedTime;
+            $('output').innerHTML = genTime(timeRemaining);
+        }, 10);
+
+        setTimeout(function () {
+            $('body').style.background = 'red';
+        }, totalTime);
+    }
+
+    $('button').addEventListener('click', startClick);
+
+    function genTime(time) {
+        return Math.ceil(time / 1000);
+    }
+</script>

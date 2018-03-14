@@ -1,0 +1,36 @@
+<!doctype html>
+
+<input type="text">
+<input type="text" class="szam">
+
+<script>
+    function $(selector) {
+        return document.querySelector(selector);
+    }
+
+    function delegate(parent, selector, type, handler) {
+        function delegatedFunction(event) {
+            let target = event.target;
+            if (target.matches(`${parent} ${selector}, ${parent} ${selector} *`)) {
+            while (!target.matches(selector)) {
+                target = target.parentNode;
+            }
+            handler.call(target, event);
+            }
+        }
+
+        $(parent).addEventListener(type, delegatedFunction);
+    }
+
+    function inputKeydown(e) {
+        if (isNaN(parseInt(event.key))) {
+            e.preventDefault();
+        }
+        // const newContent = this.value + event.key;
+        // if (!/^-?\d*\.?\d*$/.test(newContent)) {
+        //     e.preventDefault();
+        // }
+    }
+
+    delegate('body', '.szam', 'keypress', inputKeydown);
+</script>
