@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Source>C:\Users\Visnovitz Márton\Desktop\elte\2017-18-2\aat2\bitmap-to-pixel\bitmap-to-pixel\Assets\logo.png</Source>
+    <SmallTileSource>C:\Users\Visnovitz Márton\Desktop\elte\2017-18-2\aat2\bitmap-to-pixel\bitmap-to-pixel\Assets\logo.png</SmallTileSource>
+    <MediumTileSource>C:\Users\Visnovitz Márton\Desktop\elte\2017-18-2\aat2\bitmap-to-pixel\bitmap-to-pixel\Assets\logo.png</MediumTileSource>
+    <WideTileSource>C:\Users\Visnovitz Márton\Desktop\elte\2017-18-2\aat2\bitmap-to-pixel\bitmap-to-pixel\Assets\logo.png</WideTileSource>
+    <LargeTileSource>C:\Users\Visnovitz Márton\Desktop\elte\2017-18-2\aat2\bitmap-to-pixel\bitmap-to-pixel\Assets\logo.png</LargeTileSource>
+    <AppIconSource>C:\Users\Visnovitz Márton\Desktop\elte\2017-18-2\aat2\bitmap-to-pixel\bitmap-to-pixel\Assets\logo.png</AppIconSource>
+    <SplashScreenSource>C:\Users\Visnovitz Márton\Desktop\elte\2017-18-2\aat2\bitmap-to-pixel\bitmap-to-pixel\Assets\logo.png</SplashScreenSource>
+    <PackageLogoSource>C:\Users\Visnovitz Márton\Desktop\elte\2017-18-2\aat2\bitmap-to-pixel\bitmap-to-pixel\Assets\logo.png</PackageLogoSource>
+  </PropertyGroup>
+</Project>
