@@ -1,3 +1,40 @@
+<?php
+
+// kapcsolódás az adatbázishoz
+$db = new PDO('mysql:dbname=wf2_wp1c0x;host=localhost',
+              'wp1c0x', 'wp1c0x');
+
+if (isset($_GET['replyid'])) {
+  $replyid = $_GET['replyid'];
+}
+
+// bemenet feldolozása
+if (count($_POST) > 0) {
+  if ($_POST['text'] == '') {
+    // hiba
+  } else {
+    // beszúrás az adatbázis
+    $query = 'INSERT INTO `posts` (`text`) VALUES (:t)';
+    $stmt = $db->prepare($query);
+    // $stmt->bindParam(':t', $_POST['text']);
+    
+    // $stmt->execute();
+    // VAGY
+    $stmt->execute([
+      ':t' => $_POST['text'],
+    ]);
+  }
+}
+
+// lekérdezés előkészítése
+$stmt = $db->prepare('SELECT * FROM `posts`');
+$stmt->execute();
+// adatok kinyerése
+$posts = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+//var_dump($posts);
+
+?>
 <!doctype html>
 
 <meta charset="utf-8">
@@ -10,39 +47,51 @@
   </h1>
 
   <!-- ÜZENETKÜLDŐ ŰRLAP -->
-  <form class="ui form">
+  <form class="ui form" method="post">
     <div class="field">
       <div class="ui action input">
-        <input type="text" placeholder="Type your response here...">
-        <div class="ui button">Send</div>
+        <input type="text" name="text" placeholder="Type your response here...">
+        <button type="submit" class="ui button">Send</button>
       </div>
-      <div class="ui pointing label">You are responding to Joe's comment</div>
+      <?php if (isset($replyid)) : ?>
+        <div class="ui pointing label">
+          You are responding to post number <?= $replyid ?>
+        </div>
+      <?php endif; ?>
     </div>
   </form>
   <!-- ŰRLAP VÉGE -->
 
   <!-- ÜZENET -->
+  <?php foreach ($posts as $post) : ?>
+
   <div class="ui feed comments segment">
     <div class="event comment">
       <div class="content">
 
         <!-- KÜLDŐ ADATAI -->
         <div class="summary">
-          <strong>Joe Henderson</strong>
-          <div class="date">3 days ago</div>
+          <strong>Anonymus</strong>
+          <div class="date"><?= $post['date'] ?></div>
         </div>
         <!-- KÜLDŐ ADATAINAK VÉGE -->
 
         <!-- ÜZENET SZÖVEGE -->
         <div class="text">
-          Ours is a life of constant reruns. We're always circling back to where we'd we started, then starting all over again. Even if we don't run extra laps that day, we surely will come back for more of the same another day soon.
+          <?= $post['text'] ?>
         </div>
         <!-- ÜZENET SZÖVEGÉNEK VÉGE -->
 
         <!-- LÁJK ÉS KOMMENT -->
         <div class="meta">
-          <a class="like"><i class="like icon"></i> 5 Like</a>
-          <a class="reply"><i class="reply icon"></i> Reply</a>
+          <a class="like">
+            <i class="like icon"></i>
+            <?= $post['likes'] ?> 
+            like<?= $post['likes'] == 1 ? '' : 's' ?>
+          </a>
+          <a class="reply" href="?replyid=<?= $post['id'] ?>">
+            <i class="reply icon"></i> Reply
+          </a>
         </div>
         <!-- LÁJK ÉS KOMMENT VÉGE -->
 
@@ -71,5 +120,7 @@
       </div>
     </div>
   </div>
+
+  <?php endforeach; ?>
   <!-- ÜZENET VÉGE -->
 </main>
