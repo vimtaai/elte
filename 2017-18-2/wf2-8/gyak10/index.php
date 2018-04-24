@@ -1,7 +1,11 @@
 <?php
+require_once 'model/message.php';
+require_once 'helper/database.php';
+
+session_start();
 
 // kapcsolódás az adatbázishoz
-$db = new PDO('mysql:dbname=wf2_wp1c0x;host=localhost',
+$db = connect('mysql:dbname=wf2_wp1c0x;host=localhost',
               'wp1c0x', 'wp1c0x');
 
 // meghatározzuk, hogy melyik üzenetre válaszolunk
@@ -9,31 +13,8 @@ if (isset($_GET['replyid'])) {
   $replyid = $_GET['replyid'];
 }
 
-// bemenet feldolozása
-if (count($_POST) > 0) {
-  if ($_POST['text'] == '') {
-    // hiba
-  } else {
-    // beszúrás az adatbázis
-    $query = 'INSERT INTO `posts` (`text`) VALUES (:t)';
-    $stmt = $db->prepare($query);
-    // $stmt->bindParam(':t', $_POST['text']);
-    
-    // $stmt->execute();
-    // VAGY
-    $stmt->execute([
-      ':t' => $_POST['text'],
-    ]);
-  }
-}
-
-// lekérdezés előkészítése
-$stmt = $db->prepare('SELECT * FROM `posts`');
-$stmt->execute();
-// adatok kinyerése
-$posts = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-//var_dump($posts);
+// adatok lekérdezése
+$posts = select($db, 'SELECT * FROM `posts`');
 
 ?>
 <!doctype html>
@@ -48,7 +29,8 @@ $posts = $stmt->fetchAll(PDO::FETCH_ASSOC);
   </h1>
 
   <!-- ÜZENETKÜLDŐ ŰRLAP -->
-  <form class="ui form" method="post">
+  <form class="ui form" method="post" 
+        action="controller/insert-post.php">
     <div class="field">
       <div class="ui action input">
         <input type="text" name="text" placeholder="Type your response here...">
@@ -61,6 +43,9 @@ $posts = $stmt->fetchAll(PDO::FETCH_ASSOC);
         </div>
       <?php endif; ?>
     </div>
+    <?php foreach (Message::getMessages() as $message) : ?>
+      <?= $message ?>
+    <?php endforeach; ?>
   </form>
   <!-- ŰRLAP VÉGE -->
 
