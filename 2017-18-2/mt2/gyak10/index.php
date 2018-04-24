@@ -1,3 +1,24 @@
+<?php
+
+include 'adatbazis.php';
+
+$adatbazis = kapcsolodas('mysql:host=localhost;dbname=wf2_wp1c0x',
+                         'wp1c0x', 'wp1c0x');
+
+if (count($_POST) > 0) {
+  $sql = 'INSERT INTO `tranzakciok` (`osszeg`) VALUES (:osszeg)';
+  vegrehajtas($adatbazis, $sql, [
+    ':osszeg' => $_POST['amount']
+  ]);
+}
+
+$sql = 'SELECT * FROM `tranzakciok`';
+$tranzakciok = lekerdezes($adatbazis, $sql);
+
+$sql = 'SELECT SUM(`osszeg`) as `osszeg` FROM `tranzakciok`';
+$osszeg = lekerdezes($adatbazis, $sql)[0]['osszeg'];
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,23 +36,22 @@
         <input type="submit" value="Mentés">
     </form>
     <table>
-      <caption style="color: green">
-        5500 Ft
+      <caption style="color: <?= $osszeg < 0 ? 'red' : 'green' ?>">
+        <?= $osszeg ?>
       </caption>
       <tr>
         <th>Tranzakció azon.</th>
         <th>Dátum</th>
         <th>Összeg</th>
       </tr>
+      <?php foreach ($tranzakciok as $t) : ?>
       <tr>
-        <td>1</td>
-        <td>2018.04.23. 08:00:00</td>
-        <td style="color: green">+6500</td>
+        <td><?= $t['id'] ?></td>
+        <td><?= $t['datum'] ?></td>
+        <td style="color: <?= $t['osszeg'] < 0 ? 'red' : 'green' ?>">
+          <?= ($t['osszeg'] > 0 ? '+' : '') . $t['osszeg'] ?>
+        </td>
       </tr>
-      <tr>
-        <td>2</td>
-        <td>2018.04.23. 08:00:00</td>
-        <td style="color: red">-1000</td>
-      </tr>
+      <?php endforeach; ?>
     </table>
 </html>
