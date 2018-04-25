@@ -1,5 +1,6 @@
 <?php
 
+session_start();
 // létrehozom az adatbázis kapcsolatot
 $dbConn = new PDO('mysql:dbname=wf2_wp1c0x;host=localhost', 'wp1c0x', 'wp1c0x');
 
@@ -34,49 +35,33 @@ foreach ($transactions as $t) {
 
 
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Családi pénznyilvántartás</title>
-    <link rel="stylesheet" href="https://bit.do/wf2css">
-    <style>table td,table th{line-height: 1;height: initial;width: initial;padding: 10px;}</style>
-</head>
-<body>
-    <header>
-        <a href="index.php">Nyilvántartás</a>
-        <a href="login.php">Bejelentkezés</a>
-    </header>
+<?php include 'includes/header.php'; ?>
+<form method="post">
+    Összeg: 
+    <input type="number" name="amount">
     <br>
-    <form method="post">
-        Összeg: 
-        <input type="number" name="amount">
-        <br>
-        Kiadás: 
-        <input type="checkbox" name="isExpense">
-        <br>
-        <input type="submit" value="Mentés">
-    </form>
-    <table>
-        <caption style="color: <?= $t['expense'] == 1 ? 'red' : 'green' ?>">
-            <?= $balance ?> Ft
-        </caption>
-        <tr>
-            <th>Tranzakció azon.</th>
-            <th>Dátum</th>
-            <th>Összeg</th>
-        </tr>
-        <?php foreach ($transactions as $t) : ?>
-        <tr>
-            <td><?= $t['id'] ?></td>
-            <td><?= $t['date'] ?></td>
-            <td style="color: <?= $t['expense'] == 1 ? 'red' : 'green' ?>">
-                <?= $t['expense'] == 1 ? '-' : '' ?><?= $t['amount'] ?>&nbsp;Ft
-            </td>
-        </tr>
-        <?php endforeach; ?>
-    </table>
-</body>
-</html>
+    Kiadás: 
+    <input type="checkbox" name="isExpense">
+    <br>
+    <input type="submit" value="Mentés">
+</form>
+<table>
+    <caption style="color: <?= $t['expense'] == 1 ? 'red' : 'green' ?>">
+        <?= $balance ?> Ft
+    </caption>
+    <tr>
+        <th>Tranzakció azon.</th>
+        <th>Dátum</th>
+        <th>Összeg</th>
+    </tr>
+    <?php foreach ($transactions as $t) : ?>
+    <tr>
+        <td><?= $t['id'] ?></td>
+        <td><?= $t['date'] ?></td>
+        <td style="color: <?= $t['expense'] == 1 ? 'red' : 'green' ?>">
+            <?= $t['expense'] == 1 ? '-' : '' ?><?= $t['amount'] ?>&nbsp;Ft
+        </td>
+    </tr>
+    <?php endforeach; ?>
+</table>
+<?php include 'includes/footer.php'; ?>
