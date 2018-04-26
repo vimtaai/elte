@@ -40,7 +40,7 @@ namespace Tomorito
 
     class Program
     {
-        static string TomoritReszlet(Pixel elem, int db)
+        static string TomoritDarab(Pixel elem, int db)
         {
             if (db > 1)
             {
@@ -70,12 +70,12 @@ namespace Tomorito
                 }
                 else
                 {
-                    tomoritett += TomoritReszlet(elozo, db);
+                    tomoritett += TomoritDarab(elozo, db);
                     db = 1;
                     elozo = aktualis;
                 }
             }
-            tomoritett += TomoritReszlet(elozo, db);
+            tomoritett += TomoritDarab(elozo, db);
             return tomoritett;
         }
 
@@ -84,7 +84,7 @@ namespace Tomorito
             string tomoritett = "";
             foreach (List<Pixel> sor in matrix)
             {
-                tomoritett += TomoritSor(sor);
+                tomoritett += TomoritSor(sor) + "\n";
             }
             return tomoritett;
         }
@@ -142,14 +142,14 @@ namespace Tomorito
             StreamReader file = new StreamReader(kepFajl);
             while (!file.EndOfStream)
             {
-                List<Pixel> pixelsor = new List<Pixel>();
+                List<Pixel> pixelSor = new List<Pixel>();
                 string sor = file.ReadLine();
                 string[] pixelek = sor.Trim().Split(' ');
                 foreach (string pixel in pixelek)
                 {
-                    pixelsor.Add(Pixel.FromString(pixel));
+                    pixelSor.Add(Pixel.FromString(pixel));
                 }
-                kep.Add(pixelsor);
+                kep.Add(pixelSor);
             }
 
             Console.WriteLine("Betömörítés...");
@@ -166,6 +166,7 @@ namespace Tomorito
                 {
                     kitomoritett += elem + " ";
                 }
+                kitomoritett += "\n";
             }
             Console.WriteLine("A kitömörített kép:");
             Console.WriteLine(kitomoritett);
