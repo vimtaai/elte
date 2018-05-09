@@ -7,7 +7,7 @@ auth(USER_ONLY);
 $dbConn = new PDO('mysql:dbname=wf2_wp1c0x;host=localhost', 'wp1c0x', 'wp1c0x');
 
 if (count($_POST) > 0) {
-    $q = 'DELETE FROM `transactions` WHERE `id` = :id';
+    $q = 'DELETE FROM `7_transactions` WHERE `id` = :id';
     $stmt = $dbConn->prepare($q);
     $stmt->execute([
         ':id' => $_POST['id']

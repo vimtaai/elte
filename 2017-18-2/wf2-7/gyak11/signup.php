@@ -14,12 +14,13 @@ if (count($_POST) > 0) {
         $errors[] = 'A felhasználónév nem lehet üres!';
     } else {
         // lekérdezzük, hogy van-e ilyen felhasználó
-        $q = 'SELECT * FROM `8-users` WHERE `username` = :u';
+        $q = 'SELECT * FROM `7_users` WHERE `username` = :u';
         $stmt = $dbConn->prepare($q);
         $stmt->execute([
             ':u' => $_POST['username']
         ]);
-        if (count($stmt->rowCount()) !== 0) {
+
+        if ($stmt->rowCount() !== 0) {
             // hiba
             $errors[] = 'Az adott felhasználónév foglalt!';
         }
@@ -34,7 +35,7 @@ if (count($_POST) > 0) {
 
     // ha nem volt hiba, akkor beszúrás az adatbázisba
     if (count($errors) === 0) {
-        $q = 'INSERT INTO `8-users` (`username`, `password`) ' .
+        $q = 'INSERT INTO `7_users` (`username`, `password`) ' .
              'VALUES (:u, :p)';
         $stmt = $dbConn->prepare($q);
         $stmt->execute([

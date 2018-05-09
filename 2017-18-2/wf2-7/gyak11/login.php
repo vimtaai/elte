@@ -17,7 +17,7 @@ if (count($_POST) > 0) {
     // hibaellenőrzés a bemenetre
 
     // megkeresem a felhasználót
-    $q = 'SELECT * FROM `8-users` WHERE `username` = :u';
+    $q = 'SELECT * FROM `7_users` WHERE `username` = :u';
     $stmt = $dbConn->prepare($q);
     $stmt->execute([
         ':u' => $_POST['username']

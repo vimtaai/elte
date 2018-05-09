@@ -18,7 +18,7 @@ function delegate(parent, children, type, handler) {
 }
 
 function ajax(opts) { 
-  let mod    = opts.mod        || 'GET',
+  let mod      = opts.mod      || 'GET',
       url      = opts.url      || '',
       getadat  = opts.getadat  || '',
       postadat = opts.postadat || '',
@@ -72,11 +72,11 @@ function deleteTransaction(event) {
     })
     .then(function (response) {
         //alert('Siker: ' + json);
-        const tr = this.parentNode.parentNode;
+        const tr = that.parentNode.parentNode;
         tr.parentNode.removeChild(tr);
     })
-    .catch(function (response) {
-        alert('Hiba: ' + response.text());
+    .catch(function (error) {
+        alert('Hiba: ' + error);
     });
     // fetch-csel 2018-ban
     // const response = await fetch('api/delete-transaction.php', {

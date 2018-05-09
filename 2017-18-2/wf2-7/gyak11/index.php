@@ -14,7 +14,7 @@ if (count($_POST) > 0) {
         // hiba
     } else {
         // beszúrás az adatbázisba
-        $q = 'INSERT INTO `transactions` (`amount`, `expense`, `user_id`) VALUES (:a, :e, :u)';
+        $q = 'INSERT INTO `7_transactions` (`amount`, `expense`, `user_id`) VALUES (:a, :e, :u)';
         $stmt = $dbConn->prepare($q);
         // $stmt->bindParam(':a', $_POST['amount']);
         // $stmt->bindParam(':e', isset($_POST['isExpense']) ? true : false);
@@ -28,7 +28,7 @@ if (count($_POST) > 0) {
 }
 
 // lekérdezzük az adatokat
-$stmt = $dbConn->prepare('SELECT * FROM `transactions` WHERE `user_id` = :u');
+$stmt = $dbConn->prepare('SELECT * FROM `7_transactions` WHERE `user_id` = :u');
 $stmt->execute([
     ':u' => $_SESSION['user']['id']
 ]);
