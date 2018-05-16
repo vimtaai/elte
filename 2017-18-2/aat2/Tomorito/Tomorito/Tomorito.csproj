@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{90F4C8CD-BDDC-4794-BA21-D1C7325898F4}</ProjectGuid>
+    <ProjectGuid>{4E95DDC0-C607-40A6-B42E-234112C6D45E}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>Tomorito</RootNamespace>
     <AssemblyName>Tomorito</AssemblyName>

@@ -1,68 +1,40 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Tomorito
 {
-    class Pixel
-    {
-        public int R, G, B;
-
-        public static Pixel FromString(string s)
-        {
-            List<string> szinek = new List<string>(s.Split(':'));
-            return new Pixel
-            {
-                R = Convert.ToInt32(szinek[0]),
-                G = Convert.ToInt32(szinek[1]),
-                B = Convert.ToInt32(szinek[2])
-            };
-        }
-
-        public static bool operator ==(Pixel a, Pixel b)
-        {
-            return a.R == b.R && a.G == b.G && a.B == b.B;
-        }
-
-        public static bool operator !=(Pixel a, Pixel b)
-        {
-            return !(a == b);
-        }
-
-        public override string ToString()
-        {
-            return R + ":" + G + ":" + B;
-        }
-    }
-
     class Program
     {
-        static string TomoritDarab(Pixel elem, int db)
+        public static string TomoritDarab(int elem, int db)
         {
-            if (db > 1)
+            string tomoritettElem = "";
+
+            if (db > 4)
             {
-                return db + "#" + elem + " ";
+                tomoritettElem = "#" + db + "#" + elem;
             }
-            else if (db != 0)
+            else if (db > 0)
             {
-                return elem + " ";
+                for (int i = 0; i < db; i++)
+                {
+                    tomoritettElem += elem;
+                }
             }
-            else
-            {
-                return "";
-            }
+
+            return tomoritettElem;
         }
 
-        static string TomoritSor(List<Pixel> sor)
+        public static string TomoritSor(List<int> sor)
         {
-            string tomoritett = "";
+            string tomoritettSor = "";
             int db = 0;
-            Pixel elozo = new Pixel();
 
-            foreach (Pixel aktualis in sor)
+            int elozo = new int();
+
+            foreach (int aktualis in sor)
             {
                 if (aktualis == elozo)
                 {
@@ -70,106 +42,95 @@ namespace Tomorito
                 }
                 else
                 {
-                    tomoritett += TomoritDarab(elozo, db);
+                    tomoritettSor += TomoritDarab(elozo, db);
                     db = 1;
                     elozo = aktualis;
                 }
             }
-            tomoritett += TomoritDarab(elozo, db);
-            return tomoritett;
+            tomoritettSor += TomoritDarab(elozo, db);
+
+            return tomoritettSor;
         }
 
-        static string Tomorit(List<List<Pixel>> matrix)
+        public static string KitomoritDarab(int elem, int db)
         {
-            string tomoritett = "";
-            foreach (List<Pixel> sor in matrix)
-            {
-                tomoritett += TomoritSor(sor) + "\n";
-            }
-            return tomoritett;
-        }
+            string kitomoritettElem = "";
 
-        static string KitomoritDarab(Pixel elem, int db)
-        {
-            string reszlet = "";
             for (int i = 0; i < db; i++)
             {
-                reszlet += elem + " ";
+                kitomoritettElem += elem + " ";
             }
-            return reszlet;
+
+            return kitomoritettElem;
         }
 
-        static List<Pixel> KitomoritSor(string tomoritettSor)
+        public static List<int> KitomoritSor(string tomoritettSor)
         {
-            List<Pixel> kitomoritettSor = new List<Pixel>();
-            List<string> darabok = new List<string>(tomoritettSor.Trim().Split(' '));
-            foreach (string darab in darabok)
+            bool p = false, q = false;
+            string db = "";
+            List<int> kitomoritettSor = new List<int>();
+
+            for (int i = 0; i < tomoritettSor.Length; i++)
             {
-                if (darab.Contains("#"))
+                if (tomoritettSor[i] == '#')
                 {
-                    List<string> reszek = new List<string>(darab.Split('#'));
-                    int db = Convert.ToInt32(reszek[0]);
-                    Pixel elem = Pixel.FromString(reszek[1]);
-                    for (int i = 0; i < db; i++)
+                    if (!p)
                     {
-                        kitomoritettSor.Add(elem);
-                    } 
+                        p = true;
+                    }
+                    else
+                    {
+                        q = true;
+                    }
                 }
                 else
                 {
-                    kitomoritettSor.Add(Pixel.FromString(darab));
+                    string aktualis = tomoritettSor[i].ToString();
+
+                    if (!p && !q)
+                    {
+                        kitomoritettSor.Add(Convert.ToInt32(aktualis));
+                    }
+                    else if (p && !q)
+                    {
+                        db += aktualis;
+                    }
+                    else
+                    {
+                        for (int j = 0; j < Convert.ToInt32(db); j++)
+                        {
+                            kitomoritettSor.Add(Convert.ToInt32(aktualis));
+                        }
+                        p = q = false;
+                        db = "";
+                    }
                 }
             }
-            return kitomoritettSor;
-        }
 
-        static List<List<Pixel>> Kitomorit(string tomoritettMatrix)
-        {
-            List<List<Pixel>> kitomoritettMatrix = new List<List<Pixel>>();
-            List<string> sorok = new List<string>(tomoritettMatrix.Trim().Split('\n'));
-            foreach (string sor in sorok)
-            {
-                kitomoritettMatrix.Add(KitomoritSor(sor));
-            }
-            return kitomoritettMatrix;
+            return kitomoritettSor;
         }
 
         static void Main(string[] args)
         {
-            List<List<Pixel>> kep = new List<List<Pixel>>();
-            Console.Write("Add meg a képfájl nevét: ");
-            string kepFajl = Console.ReadLine().Trim();
-            StreamReader file = new StreamReader(kepFajl);
-            while (!file.EndOfStream)
-            {
-                List<Pixel> pixelSor = new List<Pixel>();
-                string sor = file.ReadLine();
-                string[] pixelek = sor.Trim().Split(' ');
-                foreach (string pixel in pixelek)
-                {
-                    pixelSor.Add(Pixel.FromString(pixel));
-                }
-                kep.Add(pixelSor);
-            }
+            Console.Write("Add meg a tömörítendő számsort: ");
+            string bemenet = Console.ReadLine();
 
-            Console.WriteLine("Betömörítés...");
-            string tomoritett = Tomorit(kep);
-            Console.WriteLine("A tömörített kép:");
+            List<int> szamsor = new List<int>();
+            for (int i = 0; i < bemenet.Length; i++)
+            {
+                szamsor.Add(Convert.ToInt32(bemenet[i].ToString()));
+            }
+            string tomoritett = TomoritSor(szamsor);
+
             Console.WriteLine(tomoritett);
-
-            Console.WriteLine("Kitömörítés...");
-            List<List<Pixel>> kitomoritettKep = Kitomorit(tomoritett);
-            string kitomoritett = "";
-            foreach (List<Pixel> sor in kitomoritettKep)
+            List<int> kitomoritett = KitomoritSor(tomoritett);
+            string eredmeny = "";
+            foreach (int szam in kitomoritett)
             {
-                foreach(Pixel elem in sor)
-                {
-                    kitomoritett += elem + " ";
-                }
-                kitomoritett += "\n";
+                eredmeny += szam;
             }
-            Console.WriteLine("A kitömörített kép:");
-            Console.WriteLine(kitomoritett);
+            Console.WriteLine(eredmeny);
+            Console.WriteLine("A tömörítés mértéke: " + ((float)tomoritett.Length / eredmeny.Length * 100) + "%");
         }
     }
 }

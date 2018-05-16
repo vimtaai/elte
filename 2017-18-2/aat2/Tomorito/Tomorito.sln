@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tomorito", "Tomorito\Tomorito.csproj", "{90F4C8CD-BDDC-4794-BA21-D1C7325898F4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tomorito", "Tomorito\Tomorito.csproj", "{4E95DDC0-C607-40A6-B42E-234112C6D45E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{90F4C8CD-BDDC-4794-BA21-D1C7325898F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{90F4C8CD-BDDC-4794-BA21-D1C7325898F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{90F4C8CD-BDDC-4794-BA21-D1C7325898F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{90F4C8CD-BDDC-4794-BA21-D1C7325898F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4E95DDC0-C607-40A6-B42E-234112C6D45E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4E95DDC0-C607-40A6-B42E-234112C6D45E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4E95DDC0-C607-40A6-B42E-234112C6D45E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4E95DDC0-C607-40A6-B42E-234112C6D45E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {308D118E-4F12-4FBA-A0D2-02B459622139}
+		SolutionGuid = {52F397EB-DF8E-4073-9F83-8DBE59559DA2}
 	EndGlobalSection
 EndGlobal
