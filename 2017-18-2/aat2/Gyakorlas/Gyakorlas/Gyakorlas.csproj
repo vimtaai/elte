@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{CDB89AF9-E556-4179-89D4-5ABBB73CB1BF}</ProjectGuid>
+    <ProjectGuid>{F629D366-DC4C-4D5E-8C37-89B13F21A285}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>csharp_gyakorlas</RootNamespace>
-    <AssemblyName>csharp-gyakorlas</AssemblyName>
+    <RootNamespace>Gyakorlas</RootNamespace>
+    <AssemblyName>Gyakorlas</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

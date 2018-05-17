@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("csharp-gyakorlas")]
+[assembly: AssemblyTitle("ZhFeladat")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("csharp-gyakorlas")]
+[assembly: AssemblyProduct("ZhFeladat")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("cdb89af9-e556-4179-89d4-5abbb73cb1bf")]
+[assembly: Guid("faa91e61-68db-44a3-b4b6-d74dde9b105c")]
 
 // Version information for an assembly consists of the following four values:
 //

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A7B16E97-0B22-4796-BCF5-43314439BFA9}</ProjectGuid>
+    <ProjectGuid>{FAA91E61-68DB-44A3-B4B6-D74DDE9B105C}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>zh_feladat</RootNamespace>
-    <AssemblyName>zh_feladat</AssemblyName>
+    <RootNamespace>ZhFeladat</RootNamespace>
+    <AssemblyName>ZhFeladat</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

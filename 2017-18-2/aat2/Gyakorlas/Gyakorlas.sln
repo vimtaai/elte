@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2027
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "csharp-gyakorlas", "csharp-gyakorlas\csharp-gyakorlas.csproj", "{CDB89AF9-E556-4179-89D4-5ABBB73CB1BF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Gyakorlas", "Gyakorlas\Gyakorlas.csproj", "{F629D366-DC4C-4D5E-8C37-89B13F21A285}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{CDB89AF9-E556-4179-89D4-5ABBB73CB1BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{CDB89AF9-E556-4179-89D4-5ABBB73CB1BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{CDB89AF9-E556-4179-89D4-5ABBB73CB1BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{CDB89AF9-E556-4179-89D4-5ABBB73CB1BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F629D366-DC4C-4D5E-8C37-89B13F21A285}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F629D366-DC4C-4D5E-8C37-89B13F21A285}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F629D366-DC4C-4D5E-8C37-89B13F21A285}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F629D366-DC4C-4D5E-8C37-89B13F21A285}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {58DDDA3A-4DA1-4797-8009-57225EC837AE}
+		SolutionGuid = {1BDA76FA-A7C2-40B4-8F99-CDCC953E0442}
 	EndGlobalSection
 EndGlobal
