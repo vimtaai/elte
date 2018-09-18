@@ -4,6 +4,14 @@ function $ (selector) {
   return document.querySelector(selector);
 }
 
+function getTodoList() {
+  return JSON.parse(localStorage.todoList || '[]');
+}
+
+function setTodoList(todoList) {
+  return localStorage.todoList = JSON.stringify(todoList);
+}
+
 // const $ = s => document.querySelector(s);
 
 /* ÁLLAPOTTÉR */
@@ -25,21 +33,25 @@ function genTodoList (todoList) {
 
 /* ESEMÉNYKEZELŐK */
 function buttonClick () {
-  const todoList = JSON.parse(localStorage.todoList || '[]');
+  const todoList = getTodoList();
+
   // console.log('rám kattintottak');
   const todo = $('input').value;
+
   if (todoList.includes(todo)) {
     alert('Ilyen már van!');
     return;
   }
+
   todoList.push(todo);
   console.log(todoList);
   $('ul').innerHTML = genTodoList(todoList);
   $('input').value = '';
   $('input').focus();
-  localStorage.todoList = JSON.stringify(todoList);
+
+  setTodoList(todoList);
 }
 $('button').addEventListener('click', buttonClick);
 
 /* PROGRAM INDUL */
-$('ul').innerHTML = genTodoList(JSON.parse(localStorage.todoList || '[]'));
+$('ul').innerHTML = genTodoList(getTodoList());
