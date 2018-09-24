@@ -26,41 +26,42 @@ public class WashingMachineController {
         return ResponseEntity.ok(machines);
     }
     
+    @PostMapping("")
+    public ResponseEntity<WashingMachine> post(@RequestBody WashingMachine machine) {
+        machine.setId(null);
+        return ResponseEntity.ok(machineRepository.save(machine));
+    }
+        
     @GetMapping("/{id}")
     public ResponseEntity<WashingMachine> get(@PathVariable Integer id) {
         Optional<WashingMachine> oMachine = machineRepository.findById(id);
-        if (oMachine.isPresent()) {
-            return ResponseEntity.ok(oMachine.get());
-        } else {
-            return ResponseEntity.notFound().build();
+        if (!oMachine.isPresent()) {
+            return ResponseEntity.notFound().build();   
         }
-    }
-    
-    @PostMapping("")
-    public ResponseEntity<WashingMachine> post(@RequestBody WashingMachine machine) {
-        return ResponseEntity.ok(machineRepository.save(machine));
+        
+        return ResponseEntity.ok(oMachine.get());
     }
     
     @DeleteMapping("/{id}")
     public ResponseEntity delete(@PathVariable Integer id) {
         Optional<WashingMachine> oMachine = machineRepository.findById(id);
-        if (oMachine.isPresent()) {
-            machineRepository.delete(oMachine.get());
-            return ResponseEntity.ok().build();
-        } else {
-            return ResponseEntity.notFound().build();
+        if (!oMachine.isPresent()) {
+            return ResponseEntity.notFound().build();   
         }
+            
+        machineRepository.delete(oMachine.get());
+        return ResponseEntity.ok().build();
     }
     
     @PutMapping("/{id}")
     public ResponseEntity<WashingMachine> put(@PathVariable Integer id,
                                               @RequestBody WashingMachine machine) {
         Optional<WashingMachine> oMachine = machineRepository.findById(id);
-        if (oMachine.isPresent()) {
-            machine.setId(id);
-            return ResponseEntity.ok(machineRepository.save(machine));
-        } else {
+        if (!oMachine.isPresent()) {
             return ResponseEntity.notFound().build();
         }
+        
+        machine.setId(id);
+        return ResponseEntity.ok(machineRepository.save(machine));
     }
 }
