@@ -1,7 +1,10 @@
 package hu.elte.WashingMachine.controllers;
 
+import hu.elte.WashingMachine.entities.Reservation;
 import hu.elte.WashingMachine.entities.WashingMachine;
+import hu.elte.WashingMachine.repositories.ReservationRepository;
 import hu.elte.WashingMachine.repositories.WashingMachineRepository;
+import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -19,6 +22,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class WashingMachineController {
     @Autowired
     private WashingMachineRepository machineRepository;
+    @Autowired
+    private ReservationRepository reservationRepository;
     
     @GetMapping("")
     public ResponseEntity<Iterable<WashingMachine>> getAll() {
@@ -63,5 +68,49 @@ public class WashingMachineController {
         
         machine.setId(id);
         return ResponseEntity.ok(machineRepository.save(machine));
+    }
+    
+    @GetMapping("/{id}/reservations")
+    public ResponseEntity<Iterable<Reservation>> getReservations(@PathVariable Integer id) {
+        Optional<WashingMachine> oMachine = machineRepository.findById(id);
+        if (!oMachine.isPresent()) {
+            return ResponseEntity.notFound().build();
+        }
+        
+        return ResponseEntity.ok(oMachine.get().getReservations());
+    }
+    
+    @PostMapping("/{id}/reservations")
+    public ResponseEntity<Reservation> postReservations(@PathVariable Integer id,
+                                                        @RequestBody Reservation reservation) {
+        Optional<WashingMachine> oMachine = machineRepository.findById(id);
+        if (!oMachine.isPresent()) {
+            return ResponseEntity.notFound().build();
+        }
+        
+        reservation.setId(null);
+        reservation.setMachine(oMachine.get());
+        return ResponseEntity.ok(reservationRepository.save(reservation));
+    }
+    
+    @PutMapping("/{id}/reservations")
+    public ResponseEntity<Iterable<Reservation>> putReservations(@PathVariable Integer id,
+                                                                 @RequestBody List<Reservation> reservations) {
+        Optional<WashingMachine> oMachine = machineRepository.findById(id);
+        if (!oMachine.isPresent()) {
+            return ResponseEntity.notFound().build();
+        }
+        
+        for (Reservation reservation: reservations) {
+            Optional<Reservation> oReservation  = reservationRepository.findById(reservation.getId());
+            if (!oReservation.isPresent()) {
+                continue;
+            }
+            
+            oReservation.get().setMachine(oMachine.get());
+            reservationRepository.save(oReservation.get());
+        }
+        
+        return ResponseEntity.ok(oMachine.get().getReservations());
     }
 }
