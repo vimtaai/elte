@@ -23,7 +23,10 @@ function setTodoList(todoList) {
 function genTodoList (todoList) {
   let html = '';
   for (const todo of todoList) {
-    html += `<li>${todo}</li>`;
+    html += `<li>
+      ${todo}
+      <button><img src="images/deletemark.png" alt="Törlés"></button>
+    </li>`;
     // html += '<li>' + todo + '</li>';
   }
   return html;
