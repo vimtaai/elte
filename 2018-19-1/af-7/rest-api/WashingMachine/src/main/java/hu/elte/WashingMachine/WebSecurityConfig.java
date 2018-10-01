@@ -25,25 +25,25 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
             .userDetailsService(userDetailsService)
             .passwordEncoder(passwordEncoder());
     }
-    
+
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http
-        .cors()
-            .and()
-        .csrf().disable()
-        .authorizeRequests()
-            .antMatchers("/h2/**", "/api/users/register").permitAll()   // important!
-            .antMatchers("/api/machines").permitAll()
-            .anyRequest().authenticated()
-            .and()
-        .httpBasic()
-            .and()
-        .headers()      // important!
-            .frameOptions().disable()
-            .and()
-        .sessionManagement()
-            .sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+            .cors()
+                .and()
+            .csrf().disable()
+            .authorizeRequests()
+                .antMatchers("/h2/**", "/api/users/register").permitAll()
+                //.antMatchers("/public/**").permitAll()
+                .anyRequest().authenticated()
+                .and()
+            .httpBasic()
+                .and()
+            .headers()      // important!
+                .frameOptions().disable()
+                .and()
+            .sessionManagement()
+                .sessionCreationPolicy(SessionCreationPolicy.STATELESS);
     }    
 
     @Autowired

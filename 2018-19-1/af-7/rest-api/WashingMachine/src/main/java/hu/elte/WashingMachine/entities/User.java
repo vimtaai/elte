@@ -5,6 +5,8 @@ import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -32,7 +34,6 @@ public class User implements Serializable {
     
     @Column
     @NotNull
-    @JsonIgnore
     private String password;
     
     @Column
@@ -44,4 +45,12 @@ public class User implements Serializable {
     @Column
     @Temporal(TemporalType.TIMESTAMP)
     private Date lastLogin;
+    
+    @Column
+    @Enumerated(EnumType.STRING)
+    private Role role;
+    
+    public enum Role {
+        ROLE_GUEST, ROLE_USER, ROLE_ADMIN
+    }
 }
