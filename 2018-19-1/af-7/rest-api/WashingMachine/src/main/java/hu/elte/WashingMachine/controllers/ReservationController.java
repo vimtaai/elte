@@ -1,8 +1,11 @@
 package hu.elte.WashingMachine.controllers;
 
 import hu.elte.WashingMachine.entities.Reservation;
+import hu.elte.WashingMachine.entities.Tag;
 import hu.elte.WashingMachine.entities.WashingMachine;
 import hu.elte.WashingMachine.repositories.ReservationRepository;
+import hu.elte.WashingMachine.repositories.TagRepository;
+import java.util.List;
 import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -20,6 +23,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class ReservationController {
     @Autowired
     private ReservationRepository reservationRepository;
+    @Autowired
+    private TagRepository tagRepository;
     
     @GetMapping("")
     public ResponseEntity<Iterable<Reservation>> getAll() {
@@ -73,5 +78,35 @@ public class ReservationController {
         }
         
         return ResponseEntity.ok(oReservation.get().getMachine());
+    }
+    
+    @GetMapping("/{id}/tags")
+    public ResponseEntity<Iterable<Tag>> getTags(@PathVariable Integer id) {
+        Optional<Reservation> oReservation = reservationRepository.findById(id);
+        if (!oReservation.isPresent()) {
+            return ResponseEntity.notFound().build();
+        }
+        
+        return ResponseEntity.ok(oReservation.get().getTags());
+    }
+    
+    @PutMapping("/{id}/tags")
+    public ResponseEntity<Iterable<Tag>> putTags(@PathVariable Integer id, @RequestBody List<Tag> tags) {
+        Optional<Reservation> oReservation = reservationRepository.findById(id);
+        if (!oReservation.isPresent()) {
+            return ResponseEntity.notFound().build();
+        }
+        
+        for (Tag tag: tags) {
+            Optional<Tag> oTag  = tagRepository.findById(tag.getId());
+            if (!oTag.isPresent()) {
+                continue;
+            }
+            
+            oReservation.get().getTags().add(oTag.get());
+            reservationRepository.save(oReservation.get());
+        }
+        
+        return ResponseEntity.ok(oReservation.get().getTags());
     }
 }
