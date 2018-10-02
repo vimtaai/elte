@@ -74,6 +74,7 @@ function buttonClick () {
 $('button').addEventListener('click', buttonClick);
 
 function deleteButtonClick (e) {
+  e.stopPropagation();
   const todoList = getTodoList();
 
   const button = e.delegatedTarget;
@@ -85,7 +86,7 @@ function deleteButtonClick (e) {
   $('ul').innerHTML = genTodoList(todoList);
   setTodoList(todoList);
 }
-delegate($('ul'), 'click', 'button', deleteButtonClick);
+delegate($('ul'), 'pointerdown', 'button', deleteButtonClick);
 
 function inputKeyPress (e) {
   const key = e.code;
@@ -115,49 +116,52 @@ function dragStart(e) {
   copy.style.width = li.getBoundingClientRect().width + 'px';
   copy.classList.add('dragging');
   $('#todolist').appendChild(copy);
-  console.log(copy);
+  // console.log(copy);
 }
-delegate($('ul'), 'pointerdown', 'li', dragStart);
+delegate($('#todolist'), 'pointerdown', 'li', dragStart);
 
 function dragMove(e) {
   e.preventDefault();
-  const copy = e.delegatedTarget;
-  const top = parseFloat(copy.style.top.substring(0, copy.style.top.length - 2));
-  const left = parseFloat(copy.style.left.substring(0, copy.style.left.length - 2));
-  copy.style.top = (top + e.movementY) + 'px';
-  copy.style.left = (left + e.movementX) + 'px';
+  const copy = $('.dragging');
+  if (copy !== null) {
+    const top = parseFloat(copy.style.top.substring(0, copy.style.top.length - 2));
+    const left = parseFloat(copy.style.left.substring(0, copy.style.left.length - 2));
+    copy.style.top = (top + e.movementY) + 'px';
+    copy.style.left = (left + e.movementX) + 'px';
+  }
   //console.log(copy);
 }
-delegate($('#todolist'), 'pointermove', 'li.dragging', dragMove);
+window.addEventListener('pointermove', dragMove);
 
 function dragEnd(e) {
-  const copy = e.delegatedTarget;
-  const top = parseFloat(copy.style.top.substring(0, copy.style.top.length - 2));
-  const left = parseFloat(copy.style.left.substring(0, copy.style.left.length - 2));
-  const liList = $('ul').childNodes;
+  const copy = $('li.dragging');
+  if (copy !== null) {
+    const top = parseFloat(copy.style.top.substring(0, copy.style.top.length - 2));
+    const left = parseFloat(copy.style.left.substring(0, copy.style.left.length - 2));
+    const liList = $('ul').childNodes;
+    //console.log(liList);
+    
+    let nextLi;
 
-  let nextLi;
-  for (const li of liList) {
-    if (li.id !== copy.id) {
-      const liTop = li.getBoundingClientRect().top;
-      if (liTop > top) {
-        nextLi = li;
-        break;
+    for (const li of liList) {
+      if (li.id !== copy.id) {
+        const liTop = li.getBoundingClientRect().top;
+        if (liTop > top) {
+          nextLi = li;
+          break;
+        }
       }
     }
+
+    const li = $('li.dragged');
+    $('#todolist').removeChild(copy);
+    if (nextLi !== undefined) { // Ha találtam nagyobbat
+      $('ul').insertBefore(li, nextLi);
+    } else {
+      $('ul').appendChild(li);
+    }
+
+    li.classList.remove('dragged');
   }
-
-  copy.classList.remove('dragging');
-  copy.style.position = 'relative';
-  copy.style.top = '';
-  copy.style.left = '';
-
-  $('ul').removeChild($('.dragged'));
-  if (nextLi !== undefined) { // Ha találtam nagyobbat
-    $('ul').insertBefore(copy, nextLi);
-  } else {
-    $('ul').appendChild(copy);
-  }
-
 }
-delegate($('#todolist'), 'pointerup', 'li.dragging', dragEnd);
+window.addEventListener('pointerup', dragEnd);
