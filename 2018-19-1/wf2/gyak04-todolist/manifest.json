@@ -1,0 +1,20 @@
+{
+  "name": "TodoApp",
+  "start_url": "index.html",
+  "scope": "/",
+  "icons": [
+    {
+      "src": "images/checkmark-medium.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "images/checkmark.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "display": "standalone",
+  "background_color": "#ccc",
+  "theme_color": "#00c484"
+}
