@@ -1,26 +1,13 @@
 <mat-grid-list cols="2" rowHeight="3:1">
-  <mat-grid-tile>
+  <mat-grid-tile *ngFor="let washingMachine of _washingMachines">
     <mat-card>
-      <mat-card-title>A4 jobb oldali</mat-card-title>
-      <mat-card-subtitle>Jelenleg működik</mat-card-subtitle>
-    </mat-card>
-  </mat-grid-tile>
-  <mat-grid-tile>
-    <mat-card>
-      <mat-card-title>A4 bal oldali</mat-card-title>
-      <mat-card-subtitle>Jelenleg működik</mat-card-subtitle>
-    </mat-card>
-  </mat-grid-tile>
-  <mat-grid-tile>
-    <mat-card>
-      <mat-card-title>A8 jobb oldali</mat-card-title>
-      <mat-card-subtitle>Jelenleg működik</mat-card-subtitle>
-    </mat-card>
-  </mat-grid-tile>
-  <mat-grid-tile>
-    <mat-card>
-      <mat-card-title>A8 bal oldali</mat-card-title>
-      <mat-card-subtitle>Jelenleg nem működik</mat-card-subtitle>
+      <mat-card-title>
+        {{ washingMachine.building }}{{ washingMachine.floor}}
+        {{ washingMachine.number }}. gép
+      </mat-card-title>
+      <mat-card-subtitle>
+        Jelenleg {{ washingMachine.outOfOrder ? "nem" : "" }} működik
+      </mat-card-subtitle>
     </mat-card>
   </mat-grid-tile>
 </mat-grid-list>
