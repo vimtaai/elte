@@ -4,7 +4,7 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatToolbarModule, MatButtonModule, MatCardModule, MatGridListModule } from '@angular/material';
+import { MatToolbarModule, MatButtonModule, MatCardModule, MatGridListModule, MatListModule, MatTableModule } from '@angular/material';
 import { RoutingModule } from './routing/routing.module';
 import { MachineListPageComponent } from './machine-list-page/machine-list-page.component';
 import { ReservationListPageComponent } from './reservation-list-page/reservation-list-page.component';
@@ -23,7 +23,9 @@ import { ReservationListPageComponent } from './reservation-list-page/reservatio
     MatToolbarModule,
     MatButtonModule,
     MatCardModule,
-    MatGridListModule
+    MatGridListModule,
+    MatListModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
