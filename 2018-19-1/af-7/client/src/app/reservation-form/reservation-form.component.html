@@ -1,0 +1,39 @@
+<form [formGroup]="reservationForm" (ngSubmit)="onSubmit()">
+  <mat-form-field>
+    <mat-select placeholder="Óra" formControlName="hours">
+      <!--(mat-option[value=$]>{$})*23-->
+      <mat-option value="0">0</mat-option>
+      <mat-option value="1">1</mat-option>
+      <mat-option value="2">2</mat-option>
+      <mat-option value="3">3</mat-option>
+      <mat-option value="4">4</mat-option>
+      <mat-option value="5">5</mat-option>
+      <mat-option value="6">6</mat-option>
+      <mat-option value="7">7</mat-option>
+      <mat-option value="8">8</mat-option>
+      <mat-option value="9">9</mat-option>
+      <mat-option value="10">10</mat-option>
+      <mat-option value="11">11</mat-option>
+      <mat-option value="12">12</mat-option>
+      <mat-option value="13">13</mat-option>
+      <mat-option value="14">14</mat-option>
+      <mat-option value="15">15</mat-option>
+      <mat-option value="16">16</mat-option>
+      <mat-option value="17">17</mat-option>
+      <mat-option value="18">18</mat-option>
+      <mat-option value="19">19</mat-option>
+      <mat-option value="20">20</mat-option>
+      <mat-option value="21">21</mat-option>
+      <mat-option value="22">22</mat-option>
+      <mat-option value="23">23</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-select placeholder="Perc" formControlName="minutes">
+      <mat-option value="0">00</mat-option>
+      <mat-option value="30">30</mat-option>
+    </mat-select>
+  </mat-form-field>
+  <br>
+  <button mat-flat-button type="submit" color="primary">Foglalás</button>
+</form>

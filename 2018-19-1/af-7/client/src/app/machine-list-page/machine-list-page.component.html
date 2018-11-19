@@ -11,7 +11,8 @@
         Jelenleg {{ washingMachine.outOfOrder ? "nem" : "" }} működik
       </mat-card-subtitle>
       <mat-card-actions align="right">
-        <button mat-flat-button color="primary" disabled="{{ washingMachine.outOfOrder }}">
+        <button mat-flat-button color="primary" disabled="{{ washingMachine.outOfOrder }}"
+                routerLink="new-reservation/{{ washingMachine.id }}">
           Foglalás
         </button>
       </mat-card-actions>

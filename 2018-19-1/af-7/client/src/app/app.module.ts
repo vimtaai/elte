@@ -4,28 +4,36 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatToolbarModule, MatButtonModule, MatCardModule, MatGridListModule, MatListModule, MatTableModule } from '@angular/material';
+import { MatToolbarModule, MatButtonModule, MatCardModule, MatGridListModule, MatListModule, MatTableModule, MatSelectModule, MatFormFieldModule } from '@angular/material';
 import { RoutingModule } from './routing/routing.module';
 import { MachineListPageComponent } from './machine-list-page/machine-list-page.component';
 import { ReservationListPageComponent } from './reservation-list-page/reservation-list-page.component';
+import { NewReservationPageComponent } from './new-reservation-page/new-reservation-page.component';
+import { ReservationFormComponent } from './reservation-form/reservation-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     MachineListPageComponent,
-    ReservationListPageComponent
+    ReservationListPageComponent,
+    NewReservationPageComponent,
+    ReservationFormComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     RoutingModule,
+    ReactiveFormsModule,
     MatToolbarModule,
     MatButtonModule,
     MatCardModule,
     MatGridListModule,
     MatListModule,
-    MatTableModule
+    MatTableModule,
+    MatSelectModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]

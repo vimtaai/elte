@@ -35,6 +35,10 @@ export class ReservationService {
    }
 
    public getReservations(): Reservation[] {
-    return this._RESERVATIONS;
+     return this._RESERVATIONS;
+   }
+
+   public addReservation(reservation: Reservation): void {
+     this._RESERVATIONS.push(reservation);
    }
 }

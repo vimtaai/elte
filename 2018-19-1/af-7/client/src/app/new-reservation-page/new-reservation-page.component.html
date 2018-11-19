@@ -1,0 +1,8 @@
+<h2>
+  Foglalás: {{ _washingMachine.building }}{{ _washingMachine.floor }}
+  {{ _washingMachine.number }}. gép
+</h2>
+
+<app-reservation-form washingMachine="{{ _washingMachine }}"
+                      (save)="onSave($event)">
+</app-reservation-form>
