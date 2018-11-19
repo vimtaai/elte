@@ -1,4 +1,6 @@
-<mat-grid-list cols="2" rowHeight="3:1">
+<h2>Mosógépek</h2>
+
+<mat-grid-list cols="2" rowHeight="180">
   <mat-grid-tile *ngFor="let washingMachine of _washingMachines">
     <mat-card>
       <mat-card-title>
@@ -8,6 +10,11 @@
       <mat-card-subtitle>
         Jelenleg {{ washingMachine.outOfOrder ? "nem" : "" }} működik
       </mat-card-subtitle>
+      <mat-card-actions align="right">
+        <button mat-flat-button color="primary" disabled="{{ washingMachine.outOfOrder }}">
+          Foglalás
+        </button>
+      </mat-card-actions>
     </mat-card>
   </mat-grid-tile>
 </mat-grid-list>
