@@ -1,5 +1,12 @@
 <form [formGroup]="reservationForm" (ngSubmit)="onSubmit()">
   <mat-form-field>
+    <input matInput [matDatepicker]="picker" placeholder="Válassz napot"
+           [min]="minDate" [max]="maxDate" formControlName="date">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+  <br>
+  <mat-form-field>
     <mat-select placeholder="Óra" formControlName="hours">
       <!--(mat-option[value=$]>{$})*23-->
       <mat-option value="0">0</mat-option>

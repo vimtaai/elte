@@ -19,14 +19,13 @@ export class NewReservationPageComponent implements OnInit {
     private reservationService: ReservationService
   ) { }
 
-  ngOnInit() {
+  async ngOnInit() {
     const id: number = parseInt(this.route.snapshot.paramMap.get('id'));
-    this._washingMachine = this.washingMachineService.getWashingMachine(id);
+    this._washingMachine = await this.washingMachineService.getWashingMachine(id);
   }
 
   private onSave(reservation: Reservation) {
     this.reservationService.addReservation(reservation);
-    console.log(this.reservationService.getReservations());
   }
 
 }

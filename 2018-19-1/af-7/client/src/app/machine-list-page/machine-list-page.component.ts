@@ -14,8 +14,8 @@ export class MachineListPageComponent implements OnInit {
     private _washingMachineService: WashingMachineService
   ) { }
 
-  ngOnInit() {
-    this._washingMachines = this._washingMachineService.getWashingMachines();
+  async ngOnInit() {
+    this._washingMachines = await this._washingMachineService.getWashingMachines();
   }
 
 }

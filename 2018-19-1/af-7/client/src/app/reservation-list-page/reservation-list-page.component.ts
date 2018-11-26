@@ -15,8 +15,9 @@ export class ReservationListPageComponent implements OnInit {
     private _reservationService: ReservationService
   ) { }
 
-  ngOnInit() {
-    this._reservations = this._reservationService.getReservations();
+  async ngOnInit() {
+    this._reservations = await this._reservationService.getReservations();
+    console.log(this._reservations[0]);
   }
 
 }
