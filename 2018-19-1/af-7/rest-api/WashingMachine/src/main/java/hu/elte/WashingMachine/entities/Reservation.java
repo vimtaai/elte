@@ -39,7 +39,6 @@ public class Reservation implements Serializable {
     @Temporal(TemporalType.TIMESTAMP)
     private Date reservedTo;
     
-    @JsonIgnore
     @JoinColumn
     @ManyToOne
     private WashingMachine machine;

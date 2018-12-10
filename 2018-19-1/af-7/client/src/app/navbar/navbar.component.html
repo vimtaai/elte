@@ -2,4 +2,14 @@
   <span>Mósógépfoglaló&trade;</span>
   <button mat-button routerLink="">Mosógépek</button>
   <button mat-button routerLink="my-reservations">Foglalásaim</button>
+
+  <div class="spacer">
+  </div>
+
+  <div *ngIf="true">
+    <button mat-button routerLink="/login">Login</button>
+  </div>
+  <div *ngIf="false">
+    <button mat-button>Logout</button>
+  </div>
 </mat-toolbar>

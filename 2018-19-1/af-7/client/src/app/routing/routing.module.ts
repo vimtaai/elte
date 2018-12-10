@@ -4,9 +4,11 @@ import { RouterModule, Route } from '@angular/router';
 import { MachineListPageComponent } from '../machine-list-page/machine-list-page.component';
 import { ReservationListPageComponent } from '../reservation-list-page/reservation-list-page.component';
 import { NewReservationPageComponent } from '../new-reservation-page/new-reservation-page.component';
+import { LoginPageComponent } from '../login-page/login-page.component';
 
 const routes: Route[] = [
   { path: '', component: MachineListPageComponent },
+  { path: 'login', component: LoginPageComponent },
   { path: 'my-reservations', component: ReservationListPageComponent },
   { path: 'new-reservation/:id', component: NewReservationPageComponent }
 ];

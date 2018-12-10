@@ -17,7 +17,7 @@ export class ReservationFormComponent implements OnInit {
     id: null,
     reservedFrom: null,
     reservedTo: null,
-    washingMachine: null
+    machine: null
   };
 
   private reservationForm = this.fb.group({
@@ -60,7 +60,7 @@ export class ReservationFormComponent implements OnInit {
 
     this._reservation.reservedFrom = new Date(year, month, day, hours, minutes);
     this._reservation.reservedTo = new Date(year, month, day, endHours, endMinutes);
-    this._reservation.washingMachine = this.washingMachine;
+    this._reservation.machine = this.washingMachine;
 
     this.save.emit(this._reservation);
 

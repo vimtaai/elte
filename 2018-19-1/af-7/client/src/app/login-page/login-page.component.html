@@ -1,0 +1,18 @@
+<h1>Bejelentkezés</h1>
+
+<form [formGroup]="loginForm" (onSubmit)="onSubmit()">
+  <mat-form-field>
+    <input matInput placeholder="Username" formControlName="username" required>
+    <mat-error *ngIf="loginForm.get('username').invalid">Username is required</mat-error>
+  </mat-form-field>
+  <br> 
+  <mat-form-field>
+    <input matInput placeholder="Password" formControlName="password" required [type]="hidePassword ? 'password' : 'text'">
+    <mat-icon matSuffix (click)="hidePassword = !hidePassword">{{hidePassword ? 'visibility_off' : 'visibility'}}</mat-icon>
+    <mat-error *ngIf="loginForm.get('password').invalid">Password is required</mat-error>
+  </mat-form-field>
+
+  <div>
+    <button mat-flat-button type="submit" color="primary" [disabled]="loginForm.invalid">Bejelentkezés</button>
+  </div>
+</form>
