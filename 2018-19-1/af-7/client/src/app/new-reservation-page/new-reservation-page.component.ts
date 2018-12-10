@@ -4,6 +4,7 @@ import { WashingMachineService } from '../services/washing-machine.service';
 import { WashingMachine } from '../classes/washing-machine';
 import { Reservation } from '../classes/reservation';
 import { ReservationService } from '../services/reservation.service';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-new-reservation-page',
@@ -16,7 +17,8 @@ export class NewReservationPageComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private washingMachineService: WashingMachineService,
-    private reservationService: ReservationService
+    private reservationService: ReservationService,
+    private authService: AuthService
   ) { }
 
   async ngOnInit() {
@@ -25,6 +27,7 @@ export class NewReservationPageComponent implements OnInit {
   }
 
   private onSave(reservation: Reservation) {
+    reservation.user = this.authService.user;
     this.reservationService.addReservation(reservation);
   }
 

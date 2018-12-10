@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ReservationService } from '../services/reservation.service';
 import { Reservation } from '../classes/reservation';
+import { AuthService } from '../services/auth.service';
 
 @Component({
   selector: 'app-reservation-list-page',
@@ -8,15 +9,17 @@ import { Reservation } from '../classes/reservation';
   styleUrls: ['./reservation-list-page.component.css']
 })
 export class ReservationListPageComponent implements OnInit {
-  private _reservations: Reservation[];
+  private reservations: Reservation[];
   private displayedColumns = ['from', 'to', 'machine'];
 
   constructor(
-    private _reservationService: ReservationService
+    private reservationService: ReservationService,
+    private authService: AuthService
   ) { }
 
   async ngOnInit() {
-    this._reservations = await this._reservationService.getReservations();
+    //this._reservations = await this._reservationService.getReservations();
+    this.reservations = await this.reservationService.getReservationsByUser(this.authService.user)
     // console.log(this._reservations[0]);
   }
 

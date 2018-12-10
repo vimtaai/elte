@@ -3,6 +3,7 @@ package hu.elte.WashingMachine.entities;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
@@ -10,6 +11,7 @@ import javax.persistence.Enumerated;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.NotNull;
@@ -49,6 +51,10 @@ public class User implements Serializable {
     @Column
     @Enumerated(EnumType.STRING)
     private Role role;
+    
+    @JsonIgnore
+    @OneToMany(mappedBy = "user")
+    private List<Reservation> reservations;
     
     public enum Role {
         ROLE_GUEST, ROLE_USER, ROLE_ADMIN

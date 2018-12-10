@@ -41,6 +41,10 @@ public class Reservation implements Serializable {
     
     @JoinColumn
     @ManyToOne
+    private User user;
+    
+    @JoinColumn
+    @ManyToOne
     private WashingMachine machine;
     
     @ManyToMany

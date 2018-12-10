@@ -11,7 +11,7 @@
 
 <h2>Foglalásaim</h2>
 
-<table mat-table [dataSource]="_reservations" class="mat-elevation-z1">
+<table mat-table [dataSource]="reservations" class="mat-elevation-z1">
   <ng-container matColumnDef="from">
     <th mat-header-cell *matHeaderCellDef> Ettől </th>
     <td mat-cell *matCellDef="let resetvation"> {{resetvation.reservedFrom.toLocaleString()}} </td>

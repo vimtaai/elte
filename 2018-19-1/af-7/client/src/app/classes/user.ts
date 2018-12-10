@@ -1,4 +1,5 @@
 import { Role } from "./role";
+import { Reservation } from "./reservation";
 
 export class User {
   public id: number;

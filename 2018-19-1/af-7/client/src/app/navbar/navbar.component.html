@@ -6,10 +6,11 @@
   <div class="spacer">
   </div>
 
-  <div *ngIf="true">
+  <div *ngIf="!authService.isLoggedIn">
     <button mat-button routerLink="/login">Login</button>
   </div>
-  <div *ngIf="false">
-    <button mat-button>Logout</button>
+  <div *ngIf="authService.isLoggedIn">
+    {{authService.user.username}}
+    <button mat-button (click)="authService.logout()">Logout</button>
   </div>
 </mat-toolbar>

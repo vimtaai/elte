@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.access.annotation.Secured;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/api/users")
 public class UserController {
@@ -29,6 +31,15 @@ public class UserController {
     public ResponseEntity<Iterable<User>> getAll() {
         Iterable<User> users = userRepository.findAll();
         return ResponseEntity.ok(users);
+    }
+    
+    @PostMapping("/login")
+    public ResponseEntity<User> login(@RequestBody String username) {
+        Optional<User> oUser = userRepository.findByUsername(username);
+        if (!oUser.isPresent()) {
+            return ResponseEntity.status(401).build();
+        }
+        return ResponseEntity.ok(oUser.get());
     }
     
     @PostMapping("/register")

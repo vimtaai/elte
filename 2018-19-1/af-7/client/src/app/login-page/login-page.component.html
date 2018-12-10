@@ -1,6 +1,6 @@
 <h1>Bejelentkezés</h1>
 
-<form [formGroup]="loginForm" (onSubmit)="onSubmit()">
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
   <mat-form-field>
     <input matInput placeholder="Username" formControlName="username" required>
     <mat-error *ngIf="loginForm.get('username').invalid">Username is required</mat-error>
@@ -14,5 +14,9 @@
 
   <div>
     <button mat-flat-button type="submit" color="primary" [disabled]="loginForm.invalid">Bejelentkezés</button>
+  </div>
+
+  <div>
+    {{message}}
   </div>
 </form>

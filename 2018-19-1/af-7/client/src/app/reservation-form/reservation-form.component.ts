@@ -17,7 +17,8 @@ export class ReservationFormComponent implements OnInit {
     id: null,
     reservedFrom: null,
     reservedTo: null,
-    machine: null
+    machine: null,
+    user: null
   };
 
   private reservationForm = this.fb.group({
