@@ -1,0 +1,19 @@
+div {
+  width: 500px;
+  height: 200px;
+  background: green;
+}
+
+/* desktop */
+@media screen and (min-width: 1025px) {
+  div {
+    background: red;
+  }
+}
+
+/* tablet */
+@media screen and (max-width: 1024px) and (min-width: 501px) {
+  div {
+    background: blue;
+  }
+}
