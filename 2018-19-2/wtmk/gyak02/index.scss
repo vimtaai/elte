@@ -1,0 +1,29 @@
+@import "_variables";
+@import "_functions";
+@import "_mixins";
+
+// div.columns div
+div.columns {
+  display: flex;
+  flex-wrap: wrap;
+
+  div {
+    display: inline-block;
+    width: column-width(1); // mobile-first
+    height: 150px;
+    background: #aa2222;
+    margin: 10px;
+  }
+
+  &.three {
+    div {
+      @include desktop {
+        width: column-width(3);
+      }
+
+      @include tablet {
+        width: column-width(2);
+      }
+    }
+  }
+}

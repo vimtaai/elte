@@ -1,0 +1,5 @@
+@import "_variables";
+
+@function column-width($column-count, $margin-between: $box-margin) {
+  @return calc(#{100% / $column-count} - #{2 * $margin-between});
+}
