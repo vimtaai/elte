@@ -1,0 +1,35 @@
+body {
+  font-family: "Arial", sans-serif;
+}
+
+h2 {
+  font-family: "Roboto", monospace;
+}
+
+header > div {
+  background: darkgray;
+  color: white;
+  padding: 10px;
+}
+
+header > div a {
+  color: white;
+}
+
+header > div nav:last-child {
+  float: right;
+}
+
+.mainmenu ul ul {
+  display: none;
+}
+
+.mainmenu ul li:hover ul {
+  display: block;
+}
+
+header > div li,
+header nav,
+header nav ul {
+  display: inline;
+}
