@@ -9,80 +9,90 @@
 </head>
 <body>
   <header>
-    <div>
-      <!-- nav>a*2 -->
-      <nav>
-        <a href="#">Magyar</a>
-        <a href="#">English</a>
-      </nav>
-      <!-- nav>ul>li*6>a -->
-      <nav>
+    <div id="topmenu">
+      <div class="maxwidth">
+        <!-- nav>a*2 -->
+        <nav>
+          <a href="#">Magyar</a>
+          <a href="#">English</a>
+        </nav>
+        <!-- nav>ul>li*6>a -->
+        <nav>
+          <ul>
+            <li><a href="https://www.inf.elte.hu/th">Tanulmányi Hivatal</a></li>
+            <li><a href="https://www.inf.elte.hu/konyvtar">Könyvtár</a></li>
+            <li><a href="https://mail.inf.elte.hu/">Webmail</a></li>
+            <li><a href="https://www.inf.elte.hu/munkatarsaknak">Munkatársaknak</a></li>
+            <li><a href="https://www.inf.elte.hu/alumni">Alumni</a></li>
+            <li><a href="https://www.inf.elte.hu/gyorslinkek">Gyorslinkek</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="maxwidth">
+      <img src="https://www.inf.elte.hu/images/department/ik/elte-logo-ik-big-hu.svg" alt="ELTE IK Logo">
+      <!-- nav>ul>li*4>a -->
+      <nav class="mainmenu">
         <ul>
-          <li><a href="https://www.inf.elte.hu/th">Tanulmányi Hivatal</a></li>
-          <li><a href="https://www.inf.elte.hu/konyvtar">Könyvtár</a></li>
-          <li><a href="https://mail.inf.elte.hu/">Webmail</a></li>
-          <li><a href="https://www.inf.elte.hu/munkatarsaknak">Munkatársaknak</a></li>
-          <li><a href="https://www.inf.elte.hu/alumni">Alumni</a></li>
-          <li><a href="https://www.inf.elte.hu/gyorslinkek">Gyorslinkek</a></li>
+          <li>
+            <a href="https://www.inf.elte.hu/karrol">A Karról</a>
+            <!-- ul>li*4 -->
+            <ul>
+              <li><a href="https://www.inf.elte.hu/content/hirek.t.1158?m=10">Hírek, események</a></li>
+              <li><a href="https://www.inf.elte.hu/content/kuldetesnyilatkozat.t.833?m=11">Küldetésnyilatkozat</a></li>
+              <li><a href="https://www.inf.elte.hu/content/szervezet.t.834?m=12">Szervezet</a></li>
+              <li><a href="https://www.inf.elte.hu/content/a-kar-tortenete.t.841?m=15">A Kar története</a></li>
+            </ul>
+          </li>
+          <li><a href="https://www.inf.elte.hu/tanuljnalunk">Tanulj nálunk</a></li>
+          <li><a href="https://www.inf.elte.hu/oktatas">Oktatás</a></li>
+          <li><a href="https://www.inf.elte.hu/kutatas">Kutatás</a></li>
+          <li><a href="https://www.inf.elte.hu/karielet">Kari élet</a></li>
         </ul>
       </nav>
     </div>
-    <img src="https://www.inf.elte.hu/images/department/ik/elte-logo-ik-big-hu.svg" alt="ELTE IK Logo">
-    <!-- nav>ul>li*4>a -->
-    <nav class="mainmenu">
-      <ul>
-        <li>
-          <a href="https://www.inf.elte.hu/karrol">A Karról</a>
-          <!-- ul>li*4 -->
-          <ul>
-            <li><a href="https://www.inf.elte.hu/content/hirek.t.1158?m=10">Hírek, események</a></li>
-            <li><a href="https://www.inf.elte.hu/content/kuldetesnyilatkozat.t.833?m=11">Küldetésnyilatkozat</a></li>
-            <li><a href="https://www.inf.elte.hu/content/szervezet.t.834?m=12">Szervezet</a></li>
-            <li><a href="https://www.inf.elte.hu/content/a-kar-tortenete.t.841?m=15">A Kar története</a></li>
-          </ul>
-        </li>
-        <li><a href="https://www.inf.elte.hu/tanuljnalunk">Tanulj nálunk</a></li>
-        <li><a href="https://www.inf.elte.hu/oktatas">Oktatás</a></li>
-        <li><a href="https://www.inf.elte.hu/kutatas">Kutatás</a></li>
-        <li><a href="https://www.inf.elte.hu/karielet">Kari élet</a></li>
-      </ul>
-    </nav>
   </header>
-  <section>
+  <section id="cover">
     <img src="images/banner.jpg" alt="ELTE IK">
   </section>
-  <section>
+  <section id="news" class="maxwidth">
     <h1>Hírek</h1>
-    <!-- figure*3>img+figcaption -->
-    <figure>
-      <img src="images/hirek1.jpg" alt="Első hír">
-      <figcaption>Abonyi-Tóth Andor Sulinetwork-díjat vehetett át a IV. Országos Szaktanácsadói konferencián</figcaption>
-    </figure>
-    <figure>
-      <img src="images/hirek2.jpg" alt="Második hír">
-      <figcaption>Innováció és mesterképzési ösztöndíjak az ELTE Informatikai Karán</figcaption>
-    </figure>
-    <figure>
-      <img src="images/hirek3.jpg" alt="Harmadik hír">
-      <figcaption>Open blockchain workshop series</figcaption>
-    </figure>
+    <div>
+      <!-- figure*3>img+figcaption -->
+      <figure>
+        <img src="images/hirek1.jpg" alt="Első hír">
+        <figcaption>Abonyi-Tóth Andor Sulinetwork-díjat vehetett át a IV. Országos Szaktanácsadói konferencián</figcaption>
+      </figure>
+      <figure>
+        <img src="images/hirek2.jpg" alt="Második hír">
+        <figcaption>Innováció és mesterképzési ösztöndíjak az ELTE Informatikai Karán</figcaption>
+      </figure>
+      <figure>
+        <img src="images/hirek3.jpg" alt="Harmadik hír">
+        <figcaption>Open blockchain workshop series</figcaption>
+      </figure>
+    </div>
   </section>
-  <section>
+  <section id="videos" class="maxwidth">
     <h1>Videók</h1>
     <figure>
-        <iframe width="550" height="300" src="https://www.youtube.com/embed/KZWcWsCYbr0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe width="550" height="300" src="https://www.youtube.com/embed/KZWcWsCYbr0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <figcaption>
         <h2>Pulmoment projekt ELTE IK-s fejlesztőkkel</h2>
         <p>A Pulmoment egy új egészségügyi alkalmazás asztmás betegek és orvosaik számára, a fejlesztőcsapat az ELTE Informatikai Karon állt össze és büszkék arra, hogy ELTE-s emberekkel együtt dolgoznak.</p>
+      </figcaption>
     </figure>
     <figure>
-        <iframe width="550" height="300" src="https://www.youtube.com/embed/opOlRSqGDEA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe width="550" height="300" src="https://www.youtube.com/embed/opOlRSqGDEA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <figcaption>
         <h2>Az ELTE Arcai: Lőrincz András számítástudomány kutató</h2>
         <p>A Pulmoment egy új egészségügyi alkalmazás asztmás betegek és orvosaik számára, a fejlesztőcsapat az ELTE Informatikai Karon állt össze és büszkék arra, hogy ELTE-s emberekkel együtt dolgoznak.</p>
+      </figcaption>
     </figure>
   </section>
   <!-- footer>nav>ul>li*3>a -->
   <footer>
-    <nav>
+    <nav class="maxwidth">
       <ul>
         <li><a href="https://www.elte.hu/kozerdeku">Közérdekű, nyilvános adatok</a></li>
         <li><a href="https://www.elte.hu/minosegpolitika">Minőségpolitika</a></li>

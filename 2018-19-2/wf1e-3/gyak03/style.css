@@ -1,35 +1,195 @@
+/* a roboto betűtípus betőltése a Google Fonts-ról (https://fonts.google.com) */
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,700");
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed:700");
+
 body {
-  font-family: "Arial", sans-serif;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  font-size: 14px;
 }
 
+h1,
 h2 {
-  font-family: "Roboto", monospace;
+  font-family: "Roboto Condensed", monospace;
 }
 
-header > div {
-  background: darkgray;
-  color: white;
+/* amire rárakjuk ezt a classt, annak van egy max szélessége és középen van */
+.maxwidth {
+  display: block; /* hogy tudjuk margin-nal középre igazítani */
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+header {
+  position: sticky; /* mindig az oldal tetején marad*/
+  top: 0; /* 0px-re a tetejétől */
+  background: #ffffff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+header #topmenu {
+  background: #646464;
+  color: #ffffff;
   padding: 10px;
 }
 
-header > div a {
-  color: white;
+header #topmenu a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0 5px;
 }
 
-header > div nav:last-child {
+header #topmenu nav:last-child {
   float: right;
 }
 
-.mainmenu ul ul {
+header #topmenu li,
+header nav,
+header nav ul {
+  display: inline;
+}
+
+header img {
+  padding: 15px 5px;
+}
+
+.mainmenu {
+  margin-top: 75px;
+  float: right;
+}
+
+.mainmenu ul > li {
+  display: inline-block;
+  /* azért kell, hogy ehhez képest lehessen abszolút pozicionálni */
+  position: relative;
+}
+
+.mainmenu ul li a {
+  display: inline-block;
+  padding: 10px 15px;
+  color: #000000;
+  text-decoration: none; /* nincs aláhúzás */
+}
+
+.mainmenu ul li ul a {
+  padding: 5px 0;
+  /* itt azért használok margin-t a padding helyett, mert az aláhúzás a padding-en kívül, de a margin-en belül van,
+  így csak maga a szöveg lesz aláhúzva kicsit távolabb, mintha sima text-decoration: underline; lenne */
+  margin: 10px 15px;
+  /* azért kell, hogy ha átrakom fehérre, akkor ne változzanak a magasságok*/
+  border-bottom: solid transparent 1px;
+}
+
+.mainmenu ul li ul a:hover {
+  border-bottom-color: #ffffff;
+}
+
+.mainmenu ul li:hover {
+  background: #517d81;
+  border-radius: 10px 10px 0 0;
+}
+
+.mainmenu ul li:hover a {
+  color: #ffffff;
+}
+
+.mainmenu ul li ul {
   display: none;
+  background: #517d81;
+  position: absolute;
+  top: 100%; /* az őt tartalmazó elem aljánál kezdődik */
+  padding: 5px;
+}
+
+.mainmenu ul li ul li {
+  margin: 5px;
 }
 
 .mainmenu ul li:hover ul {
   display: block;
 }
 
-header > div li,
-header nav,
-header nav ul {
-  display: inline;
+section {
+  padding: 10px;
+}
+
+#cover {
+  padding: 0;
+}
+
+#cover img {
+  width: 100%;
+}
+
+section h1 {
+  text-transform: uppercase;
+  color: #7a8074;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+#news div {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: space-between;
+}
+
+#news div figure {
+  width: 33%;
+  margin: 0;
+}
+
+#news figure img {
+  display: block;
+  width: 100%;
+}
+
+#news figure figcaption {
+  background: #517d81;
+  color: #ffffff;
+  padding: 10px 20px;
+  font-size: 1.1em;
+  margin: 0;
+  min-height: 60px;
+}
+
+#videos figure {
+  margin: 20px 0;
+  clear: both; /* mindig legyen a lebegtetett tartalom alatt */
+  overflow: auto; /* terjedjen ki a lebegetett tartalomra is */
+}
+
+#videos figure figcaption {
+  display: block;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+/* páros és páratlan cikkekre más-más lebegetetés */
+#videos figure:nth-child(even) iframe {
+  float: left;
+  margin-right: 20px;
+}
+
+#videos figure:nth-child(odd) iframe {
+  float: right;
+  margin-left: 20px;
+}
+
+footer {
+  clear: both;
+  background: #646464;
+  padding: 10px 10px 100px 10px;
+}
+
+footer ul {
+  padding: 0;
+  list-style: none;
+}
+
+footer ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  display: block;
+  padding: 10px;
 }

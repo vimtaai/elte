@@ -1,0 +1,44 @@
+.kipozicional {
+  position: fixed;
+  left: -99999px;
+}
+
+.kipozicional a:focus {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+}
+
+body {
+  /* background: #000000 url(../kepek/hatter_felso.jpg) no-repeat; */
+  background-color: #000000;
+  background-image: url(../kepek/hatter_felso.jpg);
+  background-repeat: no-repeat;
+}
+
+#wrapper {
+  width: 980px;
+  margin: 10px auto;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 15px;
+}
+
+header {
+  padding: 30px 5px 20px 5px; /*top right bottom left*/
+  position: relative;
+}
+
+header h1 {
+  font-size: 2rem;
+  font-family: "Impact", Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+header #gyengenlato {
+  /* float: right;
+  margin-top: -50px; */
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
