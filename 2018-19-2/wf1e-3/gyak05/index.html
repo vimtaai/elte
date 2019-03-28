@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="hu">
+  <head>
+    <title>Érdekességek a Rubik-kockáról</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/alapstilus.css" title="normal" />
+    <link
+      rel="alternate stylesheet"
+      href="css/nagybetus.css"
+      title="nagybetus"
+    />
+    <script src="scripts/styleswitcher.js"></script>
+  </head>
+  <body>
+    <nav class="kipozicional">
+      <a href="#tartalom">Ugrás a tartalomra</a>
+    </nav>
+
+	<div id="wrapper">
+    <header>
+      <h1>Rubik-kocka</h1>
+      <nav id="gyengenlato">
+        <a id="nagybetu" href="#"
+           onclick="setActiveStyleSheet('nagybetus'); return false;">
+          <span class="ikon"></span>Nagybetűs változat
+        </a>
+        <a id="normalbetu" href="#"
+           onclick="setActiveStyleSheet('normal'); return false;">
+          <span class="ikon"></span>Normál változat
+        </a>
+      </nav>
+      <nav id="oldalmenu">
+        <ul>
+          <li>
+            <a href="#leiras"><span class="ikon"></span>Leírása</a>
+          </li>
+          <li>
+            <a href="#kirakas"><span class="ikon"></span>Kirakása</a>
+          </li>
+          <li>
+            <a href="#valtozatai"><span class="ikon"></span>Változatai</a>
+          </li>
+          <li>
+            <a href="#dijak"><span class="ikon"></span>Díjak</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main id="tartalom">
+      <article id="leiras">
+        <h2>A Rubik-kocka leírása</h2>
+        <aside>
+          <q>
+						A találmány lényege abban van, hogy a nagy kockát alkotó 27 elem,
+            szétszedés, tehát a nagy kocka megbontása nélkül hozhatók új
+            helyzetbe, aminek eléréséhez, egyetlen homológ művelet: a nagy kocka
+            bármelyik lapját alkotó kilenc kis kockának elforgatása szükséges.
+          </q>
+          <p>Részlet a szabadalmi leírásból</p>
+        </aside>
+        <p>
+          A Rubik-kocka egy <strong>háromdimenziós logikai játék</strong>, amit
+          1974-ben talált fel ifjabb Rubik Ernő. Elődjének, pontosabban a
+          Rubik-kocka alapjának – bár az csupán csak 2 dimenziós – az 1878-ban
+          Sam Loyd által feltalált 15-ös tologatós rejtvényt tartják.
+          Valószínűleg azért, mert ez hasonlítható leginkább a kockához. A
+          Rubik-kocka eredeti neve <strong>bűvös kocka</strong> volt, a
+          szabadalmi leírásban, térbeli logikai játékként nevezte meg alkotója a
+          mechanikus, egyéni logikai játékot. A játék célja, hogy egy előzetesen
+          összekevert kockából forgatással visszaállítsuk az eredeti, rendezett
+          színösszeállítást, vagyis minden oldalon azonos színű lapocskák
+          legyenek.
+        </p>
+      </article>
+      <nav><a href="#oldalmenu">Ugrás a menühöz</a></nav>
+
+      <article id="kirakas">
+        <h2>Kirakása</h2>
+        <p>
+          Sokan úgy rakják ki, hogy választanak egy bizonyos színt (pl.: fehér),
+          és abból a színből indulnak ki. Kiraknak egy keresztet ebből a
+          színből, úgy hogy megkeresnek 4 egymásutáni olyan élkockát (élkocka
+          az, aminek csak két színe van), amiben van fehér szín. Ezeket egymás
+          után a fehér közép mellé juttatják, úgy hogy stimmeljen az alatta
+          levővel. Ha ez kész van, akkor a sarkokat is kirakják. Így meg lesz az
+          első sor (illetve egy sor és a közép). Majd azt a négy élkockát az
+          alsó sorból felhozzák a második sorba. Így már két sor van kirakva.
+          Ezután a maradék négy élkockát a nekik megfelelő helyre juttatják,
+          majd a tökéletes pozícióba forgatják. Illetve ugyanígy járnak el a
+          sarkokkal.
+        </p>
+        <p>
+          A legelterjedtebb profi kirakási módszer a
+          <strong>Fridich metódus</strong>. Ezt a metódust Jessica Fridich
+          találta ki, és ezzel tartják a világrekordot is. Ebben a metódusban a
+          kereszt után nem a sarkokat pakoljuk be, hanem él-sarok párokat
+          alkotunk, az úgynevezett easy case, és párosítás módszerekkel. Ezt
+          nevezzük f2l-nek. Erre nincs külön algoritmus. Az ember egy idő után
+          kitalál magának egyet minden állásra.Ezután a felső rétegen kijött
+          állást egy arra kitalált algoritmussal rendezzük össze, úgy, hogy az
+          összes olyan színű sarok, és él felfele nézzen. Ezt orientálásnak
+          nevezzük(oll). Összesen 57 orientáció létezik, tükörképekkel együtt.
+          Ezután, ha a sárga kockák, bár mind a felső réteg tetején vannak, de
+          még egymás mellé kell rendezni őket, egy permutációnak nevezett
+          algoritmussal hajtjuk ezt végre(pll). Ebből 21 van összesen. Ha valaki
+          gyorsan szeretné kirakni, meg kell tanulnia mind a 78 algoritmust, és
+          ki kell találnia magának f2l algoritmusokat.
+        </p>
+
+        <p>
+          Vannak kevésbé elterjedt módszerek is, mint például a roux metódus,
+          ahol nem kereszttel kezdenek, és nem a sorokra, hanem a blokkokra
+          építkeznek.
+        </p>
+
+        <p>
+          A web-en találhatunk egy
+          <a href="http://www.rubikkocka.hu">pontos kirakási útmutatót</a> is.
+        </p>
+      </article>
+      <nav><a href="#oldalmenu">Ugrás a menühöz</a></nav>
+
+      <article id="valtozatai">
+        <h2>Változatai</h2>
+        <p>
+          A kockának létrejött a 2×2×2-es, egy skewb, a 4×4×4-es (Rubik
+          bosszúja) és az 5×5×5-ös (A Professzor kockája) változata is. A
+          legnagyobb forgalomban lévő termék a 17x17×17-es rubik kocka.
+        </p>
+
+        <figure>
+          <img src="kepek/120px-Pocket_cube_scrambled.jpg" alt="2x2x2-es kocka" />
+          <figcaption>2x2x2-es kocka</figcaption>
+        </figure>
+
+        <figure>
+          <img src="kepek/120px-Skewb.jpg" alt="skewb változat" />
+          <figcaption>skewb</figcaption>
+        </figure>
+
+        <figure>
+          <img src="kepek/120px-Rubiks_revenge_scrambled.jpg" alt="4×4×4-es (Rubik bosszúja)" />
+          <figcaption>4×4×4-es (Rubik bosszúja)</figcaption>
+        </figure>
+
+        <figure>
+          <img src="kepek/120px-Professors_cube.jpg" alt="5×5×5-ös (A Professzor kockája)" />
+          <figcaption>5×5×5-ös (A Professzor kockája)</figcaption>
+        </figure>
+      </article>
+      <nav><a href="#oldalmenu">Ugrás a menühöz</a></nav>
+
+      <article id="dijak">
+        <h2>Díjak</h2>
+        <table>
+          <caption>
+            <strong>A Rubik-kocka díjai</strong>
+            <details>
+              <summary>Összefoglaló</summary>
+              <p>
+                A táblázat két oszlopból áll (évszám, díjak), az egyes sorokban
+                pedig az adott évben elnyert díjak olvashatóak.
+              </p>
+            </details>
+          </caption>
+
+          <tr>
+            <th scope="col">Évszám</th>
+            <th scope="col">Díj</th>
+          </tr>
+          <tr>
+            <th scope="row">1978</th>
+            <td>Magyar BNV díj</td>
+          </tr>
+          <tr>
+            <th scope="row">1979</th>
+            <td>Magyar Kulturális Minisztérium nívódíja</td>
+          </tr>
+          <tr>
+            <th scope="row">1980</th>
+            <td>Toy of the Year (Az év játéka) díj (Anglia)</td>
+          </tr>
+        </table>
+      </article>
+      <nav><a href="#oldalmenu">Ugrás a menühöz</a></nav>
+    </main>
+    <footer>
+      <p>
+        <a href="https://hu.wikipedia.org/wiki/Rubik-kocka"
+          >Forrás: Wikipedia
+        </a>
+      </p>
+		</footer>
+	</div>
+  </body>
+</html>

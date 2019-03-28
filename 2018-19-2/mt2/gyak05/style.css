@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css?family=Fjalla+One");
+
+body {
+  width: 500px;
+  margin: 10px auto;
+  font-family: "Fjalla One", sans-serif;
+  text-transform: uppercase;
+  color: #ffffff;
+  background: #000000;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 150px;
+}
+
+#size {
+  width: 100%;
+  margin: 10px 0;
+  padding: 2px;
+  font-family: "Fjalla One", sans-serif;
+  text-transform: uppercase;
+  background: none;
+  border: solid #298fbe 2px;
+  border-radius: 5px;
+  color: #298fbe;
+  font-weight: bold;
+  padding: 5px 20px;
+}
+
+#start {
+  display: block;
+  width: 100px;
+  margin: 0 auto;
+  font-family: "Fjalla One", sans-serif;
+  text-transform: uppercase;
+  background: none;
+  border: solid #298fbe 2px;
+  border-radius: 5px;
+  color: #298fbe;
+  font-weight: bold;
+  padding: 5px 20px;
+}
+
+#player1,
+#player2 {
+  float: left;
+  width: 50%;
+}
+
+#player2 {
+  text-align: right;
+}
+
+#board {
+  display: block;
+  position: relative;
+  margin: 50px auto;
+  clear: both;
+}
+
+.card {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  border: solid 2px #ffffff;
+  border-radius: 10px;
+  font-size: 40px;
+  text-align: center;
+}
+
+.card.starting {
+  background: #ffffff;
+}
+
+.card.revealed {
+  border-color: #29be8f;
+}
+
+.card.selected {
+  border-color: #298fbe;
+}

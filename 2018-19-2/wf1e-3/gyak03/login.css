@@ -1,0 +1,89 @@
+body {
+  background: #efeded;
+}
+
+form {
+  margin: 0 auto;
+  width: 500px;
+  border: solid 1px #333333;
+  padding: 20px;
+  border-radius: 5px;
+  font-family: "Segoe UI", sans-serif;
+  background: #ffffff;
+}
+
+h1 {
+  text-align: center;
+  margin: 10px 0;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+
+form > label {
+  display: block;
+  text-align: center;
+  font-weight: bold;
+  padding-top: 20px;
+  padding-bottom: 10px;
+}
+
+form > input,
+form > button {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+form > input {
+  padding: 5px 12px;
+  font-size: 1.2rem;
+}
+
+input[type="checkbox"] {
+  width: auto;
+  width: 18px;
+  height: 18px;
+  vertical-align: -4px;
+}
+
+input[type="checkbox"] + label {
+  display: inline-block;
+  margin: 5px 0 10px 0;
+}
+
+form button {
+  padding: 8px 0;
+  color: white;
+  border: none;
+  font-size: 1.1rem;
+  background: hsl(146, 50%, 36%);
+  cursor: pointer;
+}
+
+form button:hover {
+  background: hsl(146, 50%, 41%);
+}
+
+aside {
+  display: flex;
+  margin-top: 10px;
+}
+
+aside button {
+  flex: 1 auto;
+}
+
+aside button:nth-child(1) {
+  background: hsl(7, 71%, 55%);
+}
+
+aside button:nth-child(1):hover {
+  background: hsl(7, 71%, 60%);
+}
+
+aside button:nth-child(2) {
+  background: hsl(221, 44%, 41%);
+}
+
+aside button:nth-child(2):hover {
+  background: hsl(221, 44%, 46%);
+}
