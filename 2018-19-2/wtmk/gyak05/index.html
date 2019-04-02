@@ -1,0 +1,33 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<link rel="stylesheet" href="css/style.css">
+
+<button class="sidenav-trigger btn-flat" data-target="drawer">
+  <i class="material-icons">menu</i>
+</button>
+
+<ul class="sidenav" id="drawer">
+  <li>
+    <a class="subheader">
+      <i class="red-text material-icons">camera_enhance</i>
+      INSTAMILLIGRAM
+    </a>
+  </li>
+</ul>
+
+<div id="camera">
+  <video autoplay></video>
+  <canvas></canvas>
+</div>
+
+<div class="fixed-action-btn">
+  <button class="btn btn-floating btn-large red" id="capture">
+    <i class="material-icons">camera</i>
+  </button>
+</div>
+
+<span id="location"></span>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="script.js"></script>
