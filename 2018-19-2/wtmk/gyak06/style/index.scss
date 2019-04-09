@@ -1,0 +1,19 @@
+@import "./camera.scss";
+@import "./gallery.scss";
+
+.sidenav-trigger {
+  // bal felső sarok
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 10;
+}
+
+section[data-page] {
+  display: none;
+  margin: -27px 70px;
+
+  h1 {
+    font-size: 2rem;
+  }
+}

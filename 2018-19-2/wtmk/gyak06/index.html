@@ -1,0 +1,75 @@
+<!doctype html>
+
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+<link rel="stylesheet" href="style/index.scss">
+
+<title>Instamilligram</title>
+
+<!-- App drawer -->
+<button class="sidenav-trigger btn-flat" data-target="drawer">
+  <i class="material-icons">menu</i>
+</button>
+
+<ul class="sidenav" id="drawer">
+  <li>
+    <a class="subheader">
+      <i class="red-text material-icons">camera_enhance</i> INSTAMILLIGRAM
+    </a>
+  </li>
+  <li>
+    <a href="#" data-page="CAMERA">
+      <i class="material-icons">camera</i> Camera
+    </a>
+  </li>
+  <li>
+    <a href="#" data-page="GALLERY">
+      <i class="material-icons">image</i> Gallery
+    </a>
+  </li>
+</ul>
+<!-- End: App Drawer -->
+
+<!-- Camera Page -->
+<section data-page="camera">
+  <h1>Camera</h1>
+   
+  <div id="camera-camera">
+    <video id="camera-video" autoplay></video>
+    <canvas id="camera-canvas"></canvas>
+  </div>
+
+  <div class="fixed-action-btn toolbar" id="camera-actions">
+    <!-- Kép készítő gomb -->
+    <a id="camera-capture" class="btn-floating btn-large red">
+      <i class="large material-icons">camera</i>
+    </a>
+    <!-- Kész képet kezelő gombok -->
+    <ul>
+      <li>
+        <a id="camera-save" class="green"><i class="material-icons">save</i></a>
+      </li>
+      <li>
+        <a id="camera-discard" class="red"><i class="material-icons">delete</i></a>
+      </li>
+    </ul>
+  </div>
+
+  <span id="camera-location"></span>
+</section>
+<!-- End: Camera Page -->
+
+<!-- Gallery Page -->
+<section data-page="gallery">
+  <h1>Gallery</h1>
+
+  <div id="gallery-images">
+  </div>
+</section>
+<!-- End: Gallery Page -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+<script src="script/firebase.js"></script>
+<script src="script/index.js"></script>
