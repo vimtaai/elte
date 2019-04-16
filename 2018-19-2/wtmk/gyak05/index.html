@@ -14,20 +14,47 @@
       INSTAMILLIGRAM
     </a>
   </li>
+  <li>
+    <a href="#" data-page="camera">
+      <i class="material-icons">camera</i>
+      Camera
+    </a>
+  </li>
+  <li>
+    <a href="#" data-page="gallery">
+      <i class="material-icons">image</i>
+      Gallery
+    </a>
+  </li>
 </ul>
 
-<div id="camera">
-  <video autoplay></video>
-  <canvas></canvas>
-</div>
+<section data-page="camera">
+  <div id="camera">
+    <video autoplay></video>
+    <canvas></canvas>
+  </div>
 
-<div class="fixed-action-btn">
-  <button class="btn btn-floating btn-large red" id="capture">
-    <i class="material-icons">camera</i>
-  </button>
-</div>
+  <div class="fixed-action-btn">
+    <!-- Kép készítő gomb -->
+    <button class="btn btn-floating btn-large red" id="capture">
+      <i class="material-icons">camera</i>
+    </button>
+    <!-- Kész képet kezelő gombok -->
+    <button class="btn btn-large red" id="discard">
+      Discard
+    </button>
+    <button class="btn btn-large green" id="save">
+      Save
+    </button>
+  </div>
 
-<span id="location"></span>
+  <span id="location"></span>
+</section>
+
+<section data-page="gallery">
+  <h1>Gallery</h1>
+</section>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
 <script src="script.js"></script>

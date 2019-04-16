@@ -37,7 +37,8 @@ let player1;
 let player2;
 let currentPlayer;
 let state;
-let card1;
+let previousCard;
+let currentCard;
 
 function isWon() {
   return board.every(row => row.every(cell => cell.isRevealed));
@@ -69,10 +70,53 @@ function init() {
 
       board[y][x] = {
         number: i,
-        isRevealed: false
+        isRevealed: false,
+        isRevealing: false
       };
     }
   }
+}
+
+// Pontszám növelése
+function scorePoints() {
+  // az aktuális játékos pontot kap
+  if (currentPlayer === 1) {
+    player1++;
+  } else {
+    player2++;
+  }
+}
+
+// Győzelem kezelése
+function handleVictory() {
+  if (isWon()) {
+    state = "win";
+    if (player1 > player2) {
+      alert(`1. játékos nyert`);
+    } else if (player2 > player1) {
+      alert(`2. játékos nyert`);
+    } else {
+      alert(`Döntetlen`);
+    }
+  } else {
+    state = "card1";
+  }
+}
+
+// Ez a függvény fogja eltűntetni a kártyákat
+function hideCards() {
+  previousCard.isRevealed = false;
+  currentCard.isRevealed = false;
+
+  // elmentem, mi volt az előző kártya
+  previousCard = currentCard;
+  // most nincs "éppen kattintott" kártya
+  currentCard = null;
+
+  state = "card1";
+  currentPlayer = currentPlayer === 1 ? 2 : 1;
+
+  render();
 }
 
 // Eseménykezelő
@@ -82,73 +126,52 @@ function startClick() {
 }
 $("button").addEventListener("click", startClick);
 
-function cardClick(event) {
+function cardClick() {
   // console.log(event.delegatedTarget);
   // console.log(this);
   const { x, y } = xyCoords(this.parentNode);
   console.log(x, y);
-  const card = board[y][x];
+  currentCard = board[y][x];
 
   if (state !== "card1" && state !== "card2") {
-    // ne történjen semmi
     return;
   }
 
   // ha ez a kártya már fel volt fedve
-  if (card.isRevealed) {
+  if (currentCard.isRevealed) {
     // ne történjen semmi
     return;
   }
 
+  // felfedem
+  currentCard.isRevealed = true;
+
   // ha ez az első kártya
   if (state === "card1") {
-    // felfedem
-    card.isRevealed = true;
-    // elmentem
-    card1 = card;
     // következő állapot
     state = "card2";
-    // ha ez a második kártya
+    // elmentem, mi volt az előző kártya
+    previousCard = currentCard;
   } else if (state === "card2") {
-    // felfedem
-    card.isRevealed = true;
     // ha a két kártya megegyezik
-    if (card.number === card1.number) {
-      // az aktuális játékos pontot kap
-      if (currentPlayer === 1) {
-        player1++;
-      } else {
-        player2++;
-      }
-
-      if (isWon()) {
-        state = "win";
-        if (player1 > player2) {
-          alert(`1. játékos nyert`);
-        } else if (player2 > player1) {
-          alert(`2. játékos nyert`);
-        } else {
-          alert(`Döntetlen`);
-        }
-      } else {
-        state = "card1";
-      }
+    if (currentCard.number === previousCard.number) {
+      // pontot adok
+      scorePoints();
+      // megnézem, hogy győzött-e valaki
+      handleVictory();
+      // elmentem, mi volt az előző kártya
+      previousCard = currentCard;
     } else {
-      // ez a függvény fogja eltűntetni a kártyákat
-      function hide() {
-        card1.isRevealed = false;
-        card.isRevealed = false;
-        render();
-        state = "card1";
-        currentPlayer = currentPlayer === 1 ? 2 : 1;
-      }
+      // várakozó állapotba állítom a játékot
       state = "waiting";
-      // 1000 ms után fusson le a hide függvény
-      setTimeout(hide, 1000);
+      // 1000 ms után fusson le a hideCards függvény
+      setTimeout(hideCards, 1000);
     }
   }
+
   render();
 }
+
 delegate($("#board"), "click", ".card", cardClick);
 
 function render() {
@@ -163,9 +186,13 @@ function genBoard(board) {
   for (const row of board) {
     html += `<tr>`;
     for (const cell of row) {
+      let classes = "card";
+      if (cell.isRevealed) classes += " revealed";
+      if (cell === currentCard) classes += " revealing";
+
       html += `
         <td>
-          <div class="card">
+          <div class="${classes}">
             <span>${cell.isRevealed ? cell.number : ""}</span>
           </div>
         </td>

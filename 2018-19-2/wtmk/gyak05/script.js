@@ -1,5 +1,50 @@
+const config = {
+  apiKey: "AIzaSyDOETwM9xZB-ihii6EMSWRrXcLw53G9Mkw",
+  databaseURL: "https://mobilweb-speci-b0419.firebaseio.com",
+  projectId: "mobilweb-speci-b0419",
+  storageBucket: "mobilweb-speci-b0419.appspot.com"
+};
+firebase.initializeApp(config);
+
 const drawer = document.querySelector("#drawer");
 M.Sidenav.init(drawer);
+
+// Mi történjen amikor az adott oldalra navigálok
+const pageList = {
+  camera: function() {
+    setDisplayMode("CAPTURING");
+  },
+  gallery: function() {}
+};
+
+function navigate(newPage) {
+  if (!pageList.hasOwnProperty(newPage)) {
+    return;
+  }
+
+  // Kigíűjtöm az összes oldalt
+  const pages = document.querySelectorAll("section[data-page]");
+  for (const page of pages) {
+    if (page.getAttribute("data-page") === newPage) {
+      page.style.display = "block";
+    } else {
+      page.style.display = "none";
+    }
+  }
+
+  M.Sidenav.getInstance(drawer).close();
+  pageList[newPage]();
+}
+
+// At összes belső navigációs linket beállítjuk
+const pageLinks = document.querySelectorAll("a[data-page]");
+for (const link of pageLinks) {
+  link.addEventListener("click", function(event) {
+    event.preventDefault();
+    const page = link.getAttribute("data-page");
+    navigate(page);
+  });
+}
 
 const captureButton = document.querySelector("#capture");
 const loction = document.querySelector("#location");
@@ -12,12 +57,16 @@ const displayModes = {
     video: true,
     canvas: false,
     "#capture": true,
+    "#discard": false,
+    "#save": false,
     "#location": false
   },
   EDITING: {
     video: false,
     canvas: true,
     "#capture": false,
+    "#discard": true,
+    "#save": true,
     "#location": true
   }
 };
@@ -85,3 +134,40 @@ document.querySelector("#capture").addEventListener("click", function() {
       });
   });
 });
+
+document.querySelector("#discard").addEventListener("click", function() {
+  setDisplayMode("CAPTURING");
+});
+
+// Kép feltöltés
+document.querySelector("#save").addEventListener("click", function() {
+  // const image = new Image();
+  const imageData = canvas.toDataURL();
+  console.log(imageData);
+  // image.src = imageData;
+
+  const storage = firebase.storage().ref();
+  // generálunk egy fájlnevet
+  const filename =
+    Date.now() +
+    Math.random()
+      .toString()
+      .slice(2, 9) +
+    ".png";
+  const location = document.querySelector("#location").textContent;
+  storage
+    .child(filename)
+    .putString(imageData, "data_url", {
+      customMetadata: { location: location }
+    })
+    .then(function() {
+      console.log("Upload successful");
+      setDisplayMode("CAPTURING");
+    })
+    .catch(function() {
+      console.error("Upload failed");
+    });
+});
+
+// Alapértelmezett display mode
+navigate("camera");

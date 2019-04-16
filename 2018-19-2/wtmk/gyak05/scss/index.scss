@@ -1,3 +1,6 @@
+@import "./camera.scss";
+@import "./gallery.scss";
+
 .sidenav-trigger {
   // bal felső sarok
   position: fixed;
@@ -6,36 +9,6 @@
   z-index: 10;
 }
 
-#camera {
-  // fullscreen
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  // tartalom vízszintesen és függőlegesen középen
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  video,
-  canvas {
-    // ne lógjon ki a képernyőről
-    max-width: 100%;
-    max-height: 100%;
-  }
-
-  video {
-    display: block;
-  }
-
-  canvas {
-    display: none;
-  }
-}
-
-#location {
-  position: fixed;
-  left: 20px;
-  bottom: 20px;
+section[data-page] {
+  display: none;
 }

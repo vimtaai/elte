@@ -1,0 +1,43 @@
+.card {
+  width: 60px;
+  height: 80px;
+  border: solid 1px black;
+  font-size: 30pt;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: blue;
+  color: transparent;
+}
+
+.card.revealed {
+  background: white;
+  color: black;
+}
+
+.card.revealing {
+  animation: flip 0.5s forwards ease-in-out;
+}
+
+@keyframes flip {
+  0% {
+    color: transparent;
+    background: blue;
+    transform: rotateY(0deg);
+  }
+
+  50% {
+    color: transparent;
+    background: blue;
+    transform: rotateY(90deg);
+  }
+
+  51% {
+    color: black;
+    background: white;
+  }
+
+  100% {
+    transform: rotateY(0deg);
+  }
+}
