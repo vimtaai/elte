@@ -66,3 +66,6 @@ node_modules/
 
 # Parcel cache
 .cache/
+
+# Output files
+dist/
