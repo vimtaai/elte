@@ -117,14 +117,13 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"script/firebase.js":[function(require,module,exports) {
-var config = {
-  apiKey: "AIzaSyDOETwM9xZB-ihii6EMSWRrXcLw53G9Mkw",
-  databaseURL: "https://mobilweb-speci-b0419.firebaseio.com",
-  projectId: "mobilweb-speci-b0419",
-  storageBucket: "mobilweb-speci-b0419.appspot.com"
+})({"manifest.json":[function(require,module,exports) {
+module.exports = {
+  "name": "Instamilligram",
+  "short_name": "IM",
+  "version": 0.1,
+  "manifest_version": 0.1
 };
-firebase.initializeApp(config);
 },{}],"../../../../../AppData/Roaming/npm/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -153,7 +152,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51330" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "54060" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -328,5 +327,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../../../AppData/Roaming/npm/node_modules/parcel/src/builtins/hmr-runtime.js","script/firebase.js"], null)
-//# sourceMappingURL=/firebase.37cadfaa.js.map
+},{}]},{},["../../../../../AppData/Roaming/npm/node_modules/parcel/src/builtins/hmr-runtime.js","manifest.json"], null)
+//# sourceMappingURL=/manifest.js.map

@@ -18,6 +18,8 @@ export function setDisplayMode(mode) {
 
 // Oldal betöltése
 export function navigate(newPage) {
+  document.querySelector("main").innerHTML = newPage.html;
+
   // Megkeressük az új oldal gyökérelemét
   const newPageRoot = document.querySelector(
     `section[data-page=${newPage.name}]`

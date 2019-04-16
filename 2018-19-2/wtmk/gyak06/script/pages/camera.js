@@ -95,12 +95,20 @@ function init() {
         .slice(2, 9) +
       ".png";
     const storage = firebase.storage().ref(filename);
+    const database = firebase.firestore().collection("images");
 
     const location = document.querySelector("#camera-location").textContent;
 
     storage
       .putString(imageData, "data_url", {
         customMetadata: { location: location }
+      })
+      // Sikeres volt a fájl feltöltés
+      .then(function() {
+        // Beszúrok az adatbázisba
+        return database.add({
+          storagePath: filename
+        });
       })
       .then(function() {
         M.toast({ html: "Upload successful", classes: "green" });
@@ -112,4 +120,33 @@ function init() {
   });
 }
 
-export const CAMERA = { name, displayModes, init };
+const html = `
+<section data-page="camera">
+  <h1>Camera</h1>
+  
+  <div id="camera-camera">
+    <video id="camera-video" autoplay></video>
+    <canvas id="camera-canvas"></canvas>
+  </div>
+
+  <div class="fixed-action-btn toolbar" id="camera-actions">
+    <!-- Kép készítő gomb -->
+    <a id="camera-capture" class="btn-floating btn-large red">
+      <i class="large material-icons">camera</i>
+    </a>
+    <!-- Kész képet kezelő gombok -->
+    <ul>
+      <li>
+        <a id="camera-save" class="green"><i class="material-icons">save</i></a>
+      </li>
+      <li>
+        <a id="camera-discard" class="red"><i class="material-icons">delete</i></a>
+      </li>
+    </ul>
+  </div>
+
+  <span id="camera-location"></span>
+</section>
+`;
+
+export const CAMERA = { name, displayModes, init, html };

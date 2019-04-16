@@ -1,2 +1,18 @@
 section[data-page="gallery"] {
+  #gallery-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+
+    img {
+      max-width: 150px;
+      max-height: 150px;
+      margin: 20px;
+      transition: transform 0.5s;
+
+      &:hover {
+        transform: scale(2);
+      }
+    }
+  }
 }

@@ -216,11 +216,18 @@ function init() {
 
     var filename = Date.now() + Math.random().toString().slice(2, 9) + ".png";
     var storage = firebase.storage().ref(filename);
+    var database = firebase.firestore().collection("images");
     var location = document.querySelector("#camera-location").textContent;
     storage.putString(imageData, "data_url", {
       customMetadata: {
         location: location
       }
+    }) // Sikeres volt a fájl feltöltés
+    .then(function () {
+      // Beszúrok az adatbázisba
+      return database.add({
+        storagePath: filename
+      });
     }).then(function () {
       M.toast({
         html: "Upload successful",
@@ -236,10 +243,12 @@ function init() {
   });
 }
 
+var html = "\n<section data-page=\"camera\">\n  <h1>Camera</h1>\n  \n  <div id=\"camera-camera\">\n    <video id=\"camera-video\" autoplay></video>\n    <canvas id=\"camera-canvas\"></canvas>\n  </div>\n\n  <div class=\"fixed-action-btn toolbar\" id=\"camera-actions\">\n    <!-- K\xE9p k\xE9sz\xEDt\u0151 gomb -->\n    <a id=\"camera-capture\" class=\"btn-floating btn-large red\">\n      <i class=\"large material-icons\">camera</i>\n    </a>\n    <!-- K\xE9sz k\xE9pet kezel\u0151 gombok -->\n    <ul>\n      <li>\n        <a id=\"camera-save\" class=\"green\"><i class=\"material-icons\">save</i></a>\n      </li>\n      <li>\n        <a id=\"camera-discard\" class=\"red\"><i class=\"material-icons\">delete</i></a>\n      </li>\n    </ul>\n  </div>\n\n  <span id=\"camera-location\"></span>\n</section>\n";
 var CAMERA = {
   name: name,
   displayModes: displayModes,
-  init: init
+  init: init,
+  html: html
 };
 exports.CAMERA = CAMERA;
 },{"../navigation":"script/navigation.js"}],"script/pages/gallery.js":[function(require,module,exports) {
@@ -254,12 +263,57 @@ var displayModes = {
   default: {}
 };
 
-function init() {}
+function init() {
+  var imagesElem = document.querySelector("#gallery-images");
+  imagesElem.innerHTML = "";
+  var storage = firebase.storage().ref();
+  var database = firebase.firestore().collection("images"); // Valós idejű adatot kérek az adatbázisból
+
+  database.onSnapshot(function (snapshot) {
+    // Képek tömbje: snapshot.docs
+    // console.log(snapshot.docs);
+    var images = snapshot.docs;
+    var _iteratorNormalCompletion = true;
+    var _didIteratorError = false;
+    var _iteratorError = undefined;
+
+    try {
+      for (var _iterator = images[Symbol.iterator](), _step; !(_iteratorNormalCompletion = (_step = _iterator.next()).done); _iteratorNormalCompletion = true) {
+        var image = _step.value;
+        var imageRef = storage.child(image.data().storagePath);
+        imageRef.getDownloadURL().then(function (url) {
+          // console.log(genImage(url));
+          imagesElem.innerHTML += genImage(url);
+        });
+      }
+    } catch (err) {
+      _didIteratorError = true;
+      _iteratorError = err;
+    } finally {
+      try {
+        if (!_iteratorNormalCompletion && _iterator.return != null) {
+          _iterator.return();
+        }
+      } finally {
+        if (_didIteratorError) {
+          throw _iteratorError;
+        }
+      }
+    }
+  });
+}
+
+var html = "\n<section data-page=\"gallery\">\n  <h1>Gallery</h1>\n\n  <div id=\"gallery-images\">\n  </div>\n</section>\n";
+
+function genImage(url) {
+  return "<img src=\"".concat(url, "\">");
+}
 
 var GALLERY = {
   name: name,
   displayModes: displayModes,
-  init: init
+  init: init,
+  html: html
 };
 exports.GALLERY = GALLERY;
 },{}],"script/navigation.js":[function(require,module,exports) {
@@ -297,7 +351,8 @@ function setDisplayMode(mode) {
 
 
 function navigate(newPage) {
-  // Megkeressük az új oldal gyökérelemét
+  document.querySelector("main").innerHTML = newPage.html; // Megkeressük az új oldal gyökérelemét
+
   var newPageRoot = document.querySelector("section[data-page=".concat(newPage.name, "]")); // Minden oldalt elrejtek, kivéve azt, amire navigálok
 
   var pages = document.querySelectorAll("section[data-page]");
@@ -381,7 +436,7 @@ var _navigation = require("./navigation");
 
 (0, _navigation.initNavigation)(_drawer.drawerElement);
 (0, _navigation.navigate)(_navigation.Pages.CAMERA);
-},{"./drawer":"script/drawer.js","./navigation":"script/navigation.js"}],"../../../AppData/Roaming/npm/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"./drawer":"script/drawer.js","./navigation":"script/navigation.js"}],"../../../../../AppData/Roaming/npm/node_modules/parcel/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -409,7 +464,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53682" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51330" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
@@ -584,5 +639,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../../../AppData/Roaming/npm/node_modules/parcel/src/builtins/hmr-runtime.js","script/index.js"], null)
+},{}]},{},["../../../../../AppData/Roaming/npm/node_modules/parcel/src/builtins/hmr-runtime.js","script/index.js"], null)
 //# sourceMappingURL=/script.7c337ef3.js.map

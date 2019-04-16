@@ -1,6 +1,8 @@
 <!doctype html>
 
-<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="manifest" href="/manifest.webmanifest">
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 <link rel="stylesheet" href="/style.d9cbfdb6.css">
@@ -31,43 +33,7 @@
 </ul>
 <!-- End: App Drawer -->
 
-<!-- Camera Page -->
-<section data-page="camera">
-  <h1>Camera</h1>
-   
-  <div id="camera-camera">
-    <video id="camera-video" autoplay=""></video>
-    <canvas id="camera-canvas"></canvas>
-  </div>
-
-  <div class="fixed-action-btn toolbar" id="camera-actions">
-    <!-- Kép készítő gomb -->
-    <a id="camera-capture" class="btn-floating btn-large red">
-      <i class="large material-icons">camera</i>
-    </a>
-    <!-- Kész képet kezelő gombok -->
-    <ul>
-      <li>
-        <a id="camera-save" class="green"><i class="material-icons">save</i></a>
-      </li>
-      <li>
-        <a id="camera-discard" class="red"><i class="material-icons">delete</i></a>
-      </li>
-    </ul>
-  </div>
-
-  <span id="camera-location"></span>
-</section>
-<!-- End: Camera Page -->
-
-<!-- Gallery Page -->
-<section data-page="gallery">
-  <h1>Gallery</h1>
-
-  <div id="gallery-images">
-  </div>
-</section>
-<!-- End: Gallery Page -->
+<main></main>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
