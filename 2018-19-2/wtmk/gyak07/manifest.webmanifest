@@ -1,0 +1,21 @@
+{
+  "name": "Service worker demo",
+  "version": "1.0",
+  "manifest_version": "1.0",
+  "start_url": "/",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "/icon.png",
+      "sizes": "144x144"
+    },
+    {
+      "src": "/icon.png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/icon.png",
+      "sizes": "512x512"
+    }
+  ]
+}

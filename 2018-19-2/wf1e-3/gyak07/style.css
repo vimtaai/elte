@@ -1,0 +1,64 @@
+:root {
+  --column-margin: 10px;
+}
+
+#columns div {
+  box-sizing: border-box;
+  background: red;
+  padding: 10px;
+  width: calc(100% / 3 - 2 * var(--column-margin));
+  margin: var(--column-margin);
+}
+
+#columns {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+#nav ul li {
+  display: inline-block;
+  width: 150px;
+  background: yellow;
+}
+
+#nav label {
+  display: none;
+}
+
+#nav input {
+  display: none;
+}
+
+/* media query */
+@media screen and (max-width: 450px) {
+  #columns div {
+    background: blue;
+    width: calc(100% - 2 * var(--column-margin));
+  }
+
+  #nav label {
+    display: inline-block;
+  }
+
+  #nav ul {
+    display: none;
+    padding-left: 0;
+  }
+
+  #nav li {
+    width: 100%;
+    background: violet;
+  }
+
+  #nav input:checked + ul {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 800px) and (min-width: 451px) {
+  #columns div {
+    background: green;
+    width: calc(100% / 2 - 2 * var(--column-margin));
+  }
+}

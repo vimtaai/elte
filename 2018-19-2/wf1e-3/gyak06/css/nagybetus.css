@@ -1,0 +1,152 @@
+.kipozicional {
+  position: fixed;
+  left: -99999px;
+}
+
+.kipozicional a:focus {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+}
+
+html {
+  font-size: 24px;
+}
+
+body {
+  /* background: #000000 url(../kepek/hatter_felso.jpg) no-repeat; */
+  background-color: #000000;
+  background-image: url(../kepek/hatter_felso.jpg);
+  background-repeat: no-repeat;
+}
+
+#wrapper {
+  width: 980px;
+  margin: 10px auto;
+  background: black;
+  color: white;
+  border-radius: 15px;
+}
+
+header {
+  padding: 30px 5px 20px 5px; /*top right bottom left*/
+  position: relative;
+}
+
+header h1 {
+  font-size: 2rem;
+  font-family: "Impact", Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  text-shadow: 3px 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+header #gyengenlato {
+  /* float: right;
+  margin-top: -50px; */
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+header #gyengenlato a {
+  display: block;
+  background: #ddd;
+  border: solid 1px #000000;
+  padding: 5px;
+  border-radius: 0 15px 0 0;
+  font-size: 1.3rem;
+  color: #000000;
+  text-decoration: none;
+  font-family: Arial, Helvetica, sans-serif;
+  overflow: auto;
+  width: 170px;
+}
+
+header #gyengenlato a:hover {
+  text-decoration: underline;
+}
+
+header #gyengenlato .ikon {
+  width: 60px;
+  height: 60px;
+  float: left;
+  background-image: url("../kepek/ikonkeszlet.png");
+}
+
+header #gyengenlato #nagybetu .ikon {
+  background-position: -240px 0;
+}
+
+header #gyengenlato #normalbetu .ikon {
+  background-position: -330px 0;
+}
+
+header #gyengenlato #nagybetu {
+  display: none;
+}
+
+#oldalmenu {
+  background: rgba(0, 0, 0, 0.1);
+  border-top: solid 1px #000000;
+  border-bottom: solid 1px #000000;
+  margin: 0 -5px;
+}
+
+#oldalmenu li {
+  display: block;
+  list-style: none;
+}
+
+#oldalmenu li a {
+  color: #000000;
+  font-size: 1.3rem;
+  font-variant: small-caps;
+}
+
+#oldalmenu ul {
+  display: flex;
+  justify-content: space-around;
+  padding-left: 0;
+  flex-wrap: wrap;
+}
+
+article {
+  padding: 20px;
+}
+
+article aside {
+  float: right;
+  padding: 10px;
+  background: #22ffb5;
+  width: 200px;
+  border: solid 5px rgba(255, 255, 255, 0.5);
+  border-right-color: rgba(0, 0, 0, 0.1);
+  border-bottom-color: rgba(0, 0, 0, 0.1);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+}
+
+#valtozatai figure {
+  border: dotted gray 1px;
+  padding: 5px 8px;
+  background: peachpuff;
+  display: inline-block;
+  width: 120px;
+  box-sizing: content-box;
+  text-align: center;
+  border-radius: 15px;
+  transition: background 0.5s;
+}
+
+#valtozatai figure:nth-of-type(2) {
+  transform: rotateZ(-20deg) rotateY(30deg) translateX(-120px) translateY(-60px);
+  /* margin-left: -20px; */
+}
+
+#valtozatai figure:hover {
+  border: solid brown 3px;
+  background: white;
+}
+
+#valtozatai:hover figure {
+  font-weight: bold;
+}
