@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+  <nav class="navbar navbar-dark bg-primary mb-3 navbar-expand-md">
+    <span class="navbar-brand">Logo</span>
+    <button class="navbar-toggler" type="button" 
+            data-toggle="collapse" data-target="#navigation"
+            aria-controls="navigation"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <ul class="navbar-nav navbar-collapse collapse" id="navigation">
+      <li class="nav-item">
+        <a href="#" class="nav-link">Első link</a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link">Második link</a>
+      </li>
+      <li class="nav-item">
+        <a href="#" class="nav-link">Harmadik link</a>
+      </li>
+    </ul>
+  </nav>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-6 col-lg-4">
+        <div class="card mx-lg-2 my-sm-2 p-2 bg-danger text-white">1</div>
+      </div>
+      <div class="col-xs-12 col-md-6 col-lg-4">
+        <div class="card mx-lg-2 my-sm-2 p-2">2</div>
+      </div>
+      <div class="col-xs-12 col-md-6 col-lg-4">
+        <div class="card mx-lg-2 my-sm-2 p-2">3</div>
+      </div>
+    </div>
+    <form>
+      <div class="form-group">
+        <label>Név</label>
+        <input type="text" class="form-control">
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" class="form-control">
+      </div>
+      <button class="btn btn-success">Küldés</button>
+    </form>
+    <div class="py-2">
+      <div class="alert alert-success">
+        Sikeres küldés
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="alert alert-info">Ne aggódj, az adatokat bizalmasan kezeljük ;)</div>
+    </div>
+  </div>
+  
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>
