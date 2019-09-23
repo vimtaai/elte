@@ -1,0 +1,29 @@
+body {
+  background: black;
+  overflow: hidden;
+}
+
+#player1,
+#player2 {
+  width: 20%;
+  height: 20px;
+  background: white;
+  position: absolute;
+}
+
+#player1 {
+  bottom: 0;
+}
+
+#player2 {
+  top: 0;
+}
+
+#ball {
+  width: 3%;
+  height: 3%;
+  background: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+}
