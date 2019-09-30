@@ -1,4 +1,4 @@
-class Field {
+export class Field {
   isFlagged = false;
   isMine = false;
   neighborCount = 0;
