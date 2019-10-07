@@ -2,9 +2,13 @@ import { AppState, Status } from './state.js';
 import { render } from './render.js';
 import { delegate, getNeighbors, getCoords } from './utils.js';
 
-const state = new AppState(10, 10, 10);
+const width = 10;
+const height = 10;
+const mineCount = 20;
 
 const main = document.querySelector("main");
+
+let state = new AppState(width, height, mineCount);
 render(main, state);
 
 function handleLeftClick() {
@@ -61,6 +65,12 @@ function handleDoubleClick(event) {
   render(main, state);
 }
 delegate(main, "mousedown", "td", handleDoubleClick);
+
+function handleSmileyClick() {
+  state = new AppState(width, height, mineCount);
+  render(main, state);
+}
+delegate(main, "click", "caption", handleSmileyClick);
 
 // ! Globális névtérbe injenktálás
 window.state = state;

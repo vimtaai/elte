@@ -33,7 +33,7 @@ function renderRow(row) {
 function renderField(field) {
   let html = "<td>";
   if (field.isRevealed) {
-    html += field.isMine ? "💣" : field.neighborCount;
+    html += field.isMine ? "💣" : (field.neighborCount === 0 ? "" : field.neighborCount);
   } else {
     html += "<button>";
     if (field.isFlagged) {
