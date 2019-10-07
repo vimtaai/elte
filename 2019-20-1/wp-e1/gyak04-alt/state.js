@@ -83,8 +83,8 @@ export class State {
         while (block.dataset.x > 0 && !this.findBlock(block.dataset.x - 1, y)) {
           // ! 1-el eltolom
           block.dataset.x--;
-          this.updateBlock(block);
         }
+        this.updateBlock(block);
 
         // ! ha mellette ugyanolyan van
         const neighborBlock = this.findBlock(block.dataset.x - 1, y);
