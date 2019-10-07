@@ -1,0 +1,10 @@
+#game {
+  position: relative;
+}
+
+.player, .robot {
+  width: 30px;
+  height: 30px;
+
+  position: absolute;
+}
