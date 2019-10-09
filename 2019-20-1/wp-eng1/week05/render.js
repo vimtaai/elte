@@ -1,8 +1,24 @@
-import { snake, apples } from "./state.js";
+import { Status } from "./state.js";
 
-export function render(game) {
+export function render(state, game) {
   game.innerHTML = "";
   // Array.from(game.children).forEach(child => child.remove());
+
+  if (state.status === Status.PLAYING) {
+    game.append(...renderGame(state));
+  } else if (state.status === Status.LOSE) {
+    game.append(renderScoreScreen(state));
+  }
+}
+
+function renderScoreScreen({ snake }) {
+  const div = document.createElement("div");
+  div.innerText = "You LOSE. Your score is: " + snake.length;
+  return div;
+}
+
+function renderGame({ snake, apples }) {
+  const elements = [];
 
   // ! generate DOM
   for (const snakePart of snake) {
@@ -14,7 +30,7 @@ export function render(game) {
     }
     div.style.left = snakePart.x * 30 + "px";
     div.style.top = snakePart.y * 30 + "px";
-    game.append(div);
+    elements.push(div);
   }
 
   for (const apple of apples) {
@@ -22,6 +38,8 @@ export function render(game) {
     div.classList.add("apple");
     div.style.left = apple.x * 30 + "px";
     div.style.top = apple.y * 30 + "px";
-    game.append(div);
+    elements.push(div);
   }
+
+  return elements;
 }
