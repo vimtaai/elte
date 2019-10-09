@@ -6,6 +6,8 @@ const root = document.querySelector("ul");
 
 function handleLoad() {
   root.innerHTML = (new App(state.todos)).render();
+  // ? REACT CODE
+  // render(root, <App todos={state.todos} />)
 }
 window.addEventListener("load", handleLoad);
 
