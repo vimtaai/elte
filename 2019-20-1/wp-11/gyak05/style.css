@@ -1,0 +1,15 @@
+#game {
+  position: relative;
+}
+
+.player, .robot {
+  width: 30px;
+  height: 30px;
+
+  position: absolute;
+  transition: top 0.5s, left 0.5s;
+}
+
+.player {
+  z-index: 10;
+}
