@@ -1,10 +1,14 @@
 export class Field {
+  x = NaN;
+  y = NaN;
   isFlagged = false;
   isMine = false;
   neighborCount = 0;
   isRevealed = false;
 
-  constructor(isFlagged, isMine) {
+  constructor(x, y, isFlagged, isMine) {
+    this.x = x;
+    this.y = y;
     this.isFlagged = isFlagged;
     this.isMine = isMine;
   }
@@ -15,5 +19,9 @@ export class Field {
 
   get isGameOver() {
     return this.isMine && this.isRevealed;
+  }
+
+  get isOK() {
+    return (this.isRevealed && !this.isMine) || (!this.isRevealed && this.isMine)
   }
 }

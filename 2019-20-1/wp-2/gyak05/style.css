@@ -1,0 +1,13 @@
+td {
+  box-sizing: border-box;
+  width: 34px;
+  height: 34px;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+td button {
+  width: 30px;
+  height: 30px;
+}

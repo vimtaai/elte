@@ -1,0 +1,34 @@
+#game {
+  border: solid black 3px;
+  position: relative;
+}
+
+.snake, .apple {
+  width: 30px;
+  height: 30px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+
+.snake {
+  background: limegreen;
+}
+
+.snake.head {
+  background: green;
+}
+
+.snake.head::before {
+  content: "👀";
+}
+
+.apple {
+  background: orangered;
+}
+
+.apple::before {
+  content: "🍎";
+}
