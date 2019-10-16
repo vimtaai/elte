@@ -1,13 +1,13 @@
 import { Status } from "./state.js";
 
-export function render(state, game) {
-  game.innerHTML = "";
+export function render(state, root) {
+  root.innerHTML = "";
   // Array.from(game.children).forEach(child => child.remove());
 
   if (state.status === Status.PLAYING) {
-    game.append(...renderGame(state));
+    root.append(...renderGame(state));
   } else if (state.status === Status.LOSE) {
-    game.append(renderScoreScreen(state));
+    root.append(renderScoreScreen(state));
   }
 }
 
