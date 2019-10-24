@@ -1,0 +1,7 @@
+article {
+  display: none;
+}
+
+article.visible {
+  display: block;
+}
