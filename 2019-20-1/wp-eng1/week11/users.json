@@ -1,0 +1,14 @@
+[
+    {
+        "email": "someone@example.com",
+        "password": "$2y$10$EjVfn8qC7g4Tv3OJ.4YJJ.BpW.RW6x5owT.xh49V35xHYejZUOs6W",
+        "fullname": "Someone",
+        "role": "editor"
+    },
+    {
+        "email": "me@example.com",
+        "password": "$2y$10$e2opDevNOm5BUy\/mw3v6GOQXab3BUBEB6zO4PXRFLasEIFTyn27Ua",
+        "fullname": "Me",
+        "role": "reader"
+    }
+]
