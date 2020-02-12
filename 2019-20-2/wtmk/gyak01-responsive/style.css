@@ -1,0 +1,79 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav {
+  color: white;
+  background: #1a2b66;
+  height: 48px;
+}
+nav a {
+  color: white;
+  display: inline-block;
+  font-weight: bold;
+  padding: 10px 15px;
+  text-decoration: none;
+}
+nav a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+#menu {
+  background: #1a2b66;
+  bottom: 0;
+  display: none;
+  left: 0;
+  margin: 0;
+  min-width: 200px;
+  padding: 0;
+  position: fixed;
+  top: 48px;
+  width: 50%;
+}
+#menu.open {
+  display: block;
+}
+#menu li {
+  display: block;
+  list-style: none;
+}
+#menu li a {
+  display: block;
+}
+@media screen and (min-width: 400px) {
+  #menu {
+    display: inline-block;
+    position: static;
+    margin-top: 3px;
+  }
+  #menu li {
+    display: inline-block;
+  }
+}
+
+#menu-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-weight: bold;
+  height: 35px;
+  margin: 5px;
+  width: 35px;
+}
+@media screen and (min-width: 400px) {
+  #menu-toggle {
+    display: none;
+  }
+}
+
+main {
+  padding: 10px 15px;
+}
+main h1 {
+  margin: 0 0 15px 0;
+  font-size: 24px;
+}
+
+/*# sourceMappingURL=style.css.map */
