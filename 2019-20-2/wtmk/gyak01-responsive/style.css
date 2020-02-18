@@ -52,6 +52,9 @@ nav a:hover {
   #menu li {
     display: inline-block;
   }
+  #menu li:first-of-type {
+    margin-left: 5px;
+  }
 }
 
 #menu-toggle {
