@@ -1,0 +1,109 @@
+@import "variables"; // SCSS Import
+@import "helpers";
+@import "utilities";
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav {
+  color: $background-color;
+  background: $primary-color;
+  height: $navbar-height;
+
+  a {
+    color: $background-color;
+    display: inline-block;
+    font-weight: bold;
+    padding: 10px 15px;
+    text-decoration: none;
+
+    &:hover {
+      background: $highlight-color;
+    }
+  }
+}
+
+#menu {
+  background: $primary-color;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  min-width: 200px;
+  padding: 0;
+  position: fixed;
+  top: $navbar-height;
+  transform: translateX(-100%);
+  width: 50%;
+  z-index: $layer-overlay;
+  transition: transform 0.3s ease-in-out;
+  
+  &.open {
+    transform: translateX(0);
+  }
+
+  li {
+    display: block;
+    list-style: none;
+
+    a {
+      display: block;
+    }
+  }
+
+  @include desktop {
+    display: inline-block;
+    position: static;
+    margin-top: 3px;
+    transform: translateX(0);
+    width: 100%;
+
+    li {
+      display: inline-block;
+
+      &:first-of-type {
+        margin-left: 5px;
+      }
+    }
+  }
+}
+
+#menu-toggle {
+  background: none;
+  border: none;
+  color: $background-color;
+  font-weight: bold;
+  height: 35px;
+  margin: 5px;
+  width: 35px;
+
+  @include desktop {
+    display: none;
+  }
+}
+
+main {
+  padding: 10px 15px;
+
+  h1 {
+    margin: 0 0 15px 0;
+    font-size: 24px;
+  }
+}
+
+#backdrop {
+  background: rgba(0, 0, 0, 0.5);
+  bottom: 0;
+  display: none;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: $navbar-height;
+  z-index: $layer-backdrop;
+
+  &.visible {
+    display: block;
+  }
+}

@@ -1,0 +1,19 @@
+@import "variables";
+@import "helpers";
+
+.columns {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    .column {
+        width: 100%;
+
+        @include desktop {
+            flex-grow: 1;
+            flex-wrap: nowrap;
+            width: auto;
+        }
+    }
+}
