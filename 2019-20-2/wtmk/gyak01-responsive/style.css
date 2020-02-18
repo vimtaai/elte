@@ -47,6 +47,7 @@ nav a:hover {
     display: inline-block;
     position: static;
     margin-top: 3px;
+    width: 100%;
   }
   #menu li {
     display: inline-block;
