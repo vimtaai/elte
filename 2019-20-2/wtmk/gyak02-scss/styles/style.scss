@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700&display=swap&subset=latin-ext");
 @import "variables"; // SCSS Import
 @import "helpers";
 @import "utilities";
@@ -5,29 +6,37 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Roboto", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 nav {
   color: $background-color;
   background: $primary-color;
   height: $navbar-height;
+  display: flex;
+  align-items: center;
 
-  a {
-    color: $background-color;
-    display: inline-block;
-    font-weight: bold;
-    padding: 10px 15px;
-    text-decoration: none;
+  #menu-trigger {
+    order: 1;
+  }
 
-    &:hover {
-      background: $highlight-color;
+  #logo {
+    @include desktop {
+      justify-self: left;
+      order: 2;
+      padding: 0 10px;
+    }
+  }
+
+  #menu {
+    @include desktop {
+      order: 3;
     }
   }
 }
 
 #menu {
-  background: $primary-color;
+  background: $secondary-color;
   bottom: 0;
   left: 0;
   margin: 0;
@@ -39,9 +48,10 @@ nav {
   width: 50%;
   z-index: $layer-overlay;
   transition: transform 0.3s ease-in-out;
-  
+
   &.open {
     transform: translateX(0);
+    box-shadow: 0 15px 15px $shadow-color;
   }
 
   li {
@@ -49,11 +59,28 @@ nav {
     list-style: none;
 
     a {
-      display: block;
+      align-items: center;
+      color: $background-color;
+      display: flex;
+      padding: 10px 15px;
+      text-decoration: none;
+
+      &:hover {
+        background: $highlight-color;
+      }
+
+      span {
+        flex-grow: 1;
+      }
+
+      i {
+        padding-left: 10px;
+      }
     }
   }
 
-  @include desktop {
+  @include tablet {
+    background: none;
     display: inline-block;
     position: static;
     margin-top: 3px;
@@ -65,6 +92,27 @@ nav {
 
       &:first-of-type {
         margin-left: 5px;
+      }
+
+      a {
+        span {
+          display: none;
+        }
+
+        i {
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  @include desktop {
+    li a {
+      span {
+        display: inline-block;
+      }
+      i {
+        padding-left: 10px;
       }
     }
   }

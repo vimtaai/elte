@@ -2,18 +2,61 @@
 @import "helpers";
 
 .columns {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-wrap: wrap;
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  flex-wrap: wrap;
 
-    .column {
-        width: 100%;
+  .column {
+    margin-top: 15px;
+    width: 100%;
 
-        @include desktop {
-            flex-grow: 1;
-            flex-wrap: nowrap;
-            width: auto;
-        }
+    @include tablet {
+      flex-grow: 1;
+      flex-wrap: nowrap;
+      width: auto;
+      max-width: 50%;
     }
+
+    @include desktop {
+      max-width: 33.333%;
+    }
+
+    .card {
+      height: 100%;
+    }
+  }
+}
+
+.card {
+  border: solid $tag-background-color 1px;
+  border-radius: 3px;
+  box-shadow: 3px 3px 6px $shadow-color;
+  box-sizing: border-box;
+  margin: 0 10px 10px 10px;
+  padding: 10px;
+
+  h1 {
+    font-weight: 500;
+    font-size: 1.1em;
+    margin: 0;
+    padding: 0 0 10px 0;
+  }
+}
+
+.tag {
+  background: $tag-background-color;
+  border-radius: 3px;
+  color: $tag-text-color;
+  display: inline-block;
+  font-size: 0.9em;
+  font-weight: 500;
+  padding: 2px 5px;
+  white-space: nowrap;
+  margin: 2px;
+
+  i {
+    font-size: 0.9em;
+    padding-right: 2px;
+  }
 }
