@@ -1,0 +1,10 @@
+div {
+    display: inline-block;
+    position: relative;
+}
+
+div span {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+}
