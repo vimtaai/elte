@@ -1,0 +1,15 @@
+.circle {
+    border: solid red 2px;
+    border-radius: 50%;
+    height: 30px;
+    position: fixed;
+    transform: translateX(-50%) translateY(-50%);
+    width: 30px;
+}
+
+.keydisplay {
+    font-size: 40px;
+    color: white;
+    background: rgba(0, 0, 0, 0.8);
+    text-align: center;
+}
