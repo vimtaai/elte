@@ -1,0 +1,8 @@
+.circle {
+    border: solid 2px red;
+    border-radius: 50%;
+    height: 30px;
+    position: fixed;
+    transform: translateX(-50%) translateY(-50%);
+    width: 30px;
+}
