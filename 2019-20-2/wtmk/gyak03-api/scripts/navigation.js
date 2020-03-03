@@ -1,35 +1,23 @@
 const main = document.querySelector("main");
 
-function loadPage(page) {
-    // Lekérdezés
-    const pageContent = document.querySelector(`[data-page=${page}]`);
-    // Betöltés az adott helyre
-    main.innerHTML = pageContent.innerHTML;
-}
+async function loadPage(page) {
+    const response = await fetch(`pages/${page}.html`);
 
-function navigateTo(page) {
-    location.href = `#!/${page}`;
+    if (!response.ok) {
+        return;
+    }
+
+    const html = await response.text();
+
+    main.innerHTML = html;
+
+    await import(`../pages/${page}.js`);
 }
 
 function handleHashChange() {
-    const page = location.href.split("/").pop();
+    const page = location.href.split("#!/")[1] || "index";
     loadPage(page);
 }
 
 window.addEventListener("hashchange", handleHashChange);
 window.addEventListener("load", handleHashChange);
-
-function handleLinkClick(event) {
-    const a = event.target.closest("a");
-
-    if (!a || !a.dataset.href) {
-        return;
-    }
-
-    event.preventDefault();
-    navigateTo(a.dataset.href);
-}
-window.addEventListener("click", handleLinkClick);
-
-window.loadPage = loadPage;
-window.navigateTo = navigateTo;

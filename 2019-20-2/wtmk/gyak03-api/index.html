@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.12.1/css/fontawesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/FortAwesome/Font-Awesome@5.12.1/css/all.min.css">
-    <link rel="stylesheet" href="styles/style.scss" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <nav>
@@ -18,32 +18,32 @@
       <img src="assets/logo.png" alt="ELTE Logo" id="logo" />
       <ul id="menu">
         <li>
-          <a href="#" data-href="intro">
+          <a href="#!/index">
             <span>Köszöntő</span><i class="fas fa-quote-right"></i>
           </a>
         </li>
         <li>
-          <a href="#" data-href="presentations">
+          <a href="#">
             <span>Előadások</span><i class="fas fa-chalkboard-teacher"></i>
           </a>
         </li>
         <li>
-          <a href="#" data-href="">
+          <a href="#">
             <span>Standok</span><i class="fas fa-id-badge"></i>
           </a>
         </li>
         <li>
-          <a href="#" data-href="">
+          <a href="#!/map">
             <span>Térkép</span><i class="fas fa-map-marked-alt"></i>
           </a>
         </li>
         <li>
-          <a href="#" data-href="">
+          <a href="#">
             <span>Beszélgetés</span><i class="fas fa-comment-dots"></i>
           </a>
         </li>
         <li>
-          <a href="#" data-href="">
+          <a href="#">
             <span>Nyereményjáték</span><i class="fas fa-gift"></i>
           </a>
         </li>
@@ -92,15 +92,9 @@
       </div>
     </div>
 
-    <div class="page" data-page="intro">
-      <h1>Hello world</h1>
-      <div id="map"></div>
-    </div>
-
     <div id="backdrop"></div>
     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js"></script>
     <script src="scripts/script.js"></script>
     <script src="scripts/navigation.js"></script>
-    <script src="scripts/geolocation.js"></script>
   </body>
 </html>

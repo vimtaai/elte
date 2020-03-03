@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700&display=swap&subset=latin-ext");
+.columns {
+  display: flex;
+  align-items: stretch;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.columns .column {
+  margin-top: 15px;
+  width: 100%;
+}
+@media screen and (min-width: 400px) {
+  .columns .column {
+    flex-grow: 1;
+    flex-wrap: nowrap;
+    width: auto;
+    max-width: 50%;
+  }
+}
+@media screen and (min-width: 900px) {
+  .columns .column {
+    max-width: 33.333%;
+  }
+}
+.columns .column .card {
+  height: 100%;
+}
+
+.card {
+  border: solid #e0e4eb 1px;
+  border-radius: 3px;
+  box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.2);
+  box-sizing: border-box;
+  margin: 0 10px 10px 10px;
+  padding: 10px;
+}
+.card h1 {
+  font-weight: 500;
+  font-size: 1.1em;
+  margin: 0;
+  padding: 0 0 10px 0;
+}
+
+.tag {
+  background: #e0e4eb;
+  border-radius: 3px;
+  color: #3d475c;
+  display: inline-block;
+  font-size: 0.9em;
+  font-weight: 500;
+  padding: 2px 5px;
+  white-space: nowrap;
+  margin: 2px;
+}
+.tag i {
+  font-size: 0.9em;
+  padding-right: 2px;
+}
+
+.page {
+  display: none;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+nav {
+  color: white;
+  background: #517d81;
+  height: 48px;
+  display: flex;
+  align-items: center;
+}
+nav #menu-trigger {
+  order: 1;
+}
+@media screen and (min-width: 900px) {
+  nav #logo {
+    justify-self: left;
+    order: 2;
+    padding: 0 10px;
+  }
+}
+@media screen and (min-width: 900px) {
+  nav #menu {
+    order: 3;
+  }
+}
+
+#menu {
+  background: #7a8174;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  min-width: 200px;
+  padding: 0;
+  position: fixed;
+  top: 48px;
+  transform: translateX(-100%);
+  width: 50%;
+  z-index: 200;
+  transition: transform 0.3s ease-in-out;
+}
+#menu.open {
+  transform: translateX(0);
+  box-shadow: 0 15px 15px rgba(0, 0, 0, 0.2);
+}
+#menu li {
+  display: block;
+  list-style: none;
+}
+#menu li a {
+  align-items: center;
+  color: white;
+  display: flex;
+  padding: 10px 15px;
+  text-decoration: none;
+}
+#menu li a:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+#menu li a span {
+  flex-grow: 1;
+}
+#menu li a i {
+  padding-left: 10px;
+}
+@media screen and (min-width: 400px) {
+  #menu {
+    background: none;
+    display: inline-block;
+    position: static;
+    margin-top: 3px;
+    transform: translateX(0);
+    width: 100%;
+  }
+  #menu li {
+    display: inline-block;
+  }
+  #menu li:first-of-type {
+    margin-left: 5px;
+  }
+  #menu li a span {
+    display: none;
+  }
+  #menu li a i {
+    padding: 0;
+  }
+}
+@media screen and (min-width: 900px) {
+  #menu li a span {
+    display: inline-block;
+  }
+  #menu li a i {
+    padding-left: 10px;
+  }
+}
+
+#menu-toggle {
+  background: none;
+  border: none;
+  color: white;
+  font-weight: bold;
+  height: 35px;
+  margin: 5px;
+  width: 35px;
+}
+@media screen and (min-width: 900px) {
+  #menu-toggle {
+    display: none;
+  }
+}
+
+main {
+  padding: 10px 15px;
+}
+main h1 {
+  margin: 0 0 15px 0;
+  font-size: 24px;
+}
+
+#backdrop {
+  background: rgba(0, 0, 0, 0.5);
+  bottom: 0;
+  display: none;
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 48px;
+  z-index: 100;
+}
+#backdrop.visible {
+  display: block;
+}
+
+#map {
+  width: 300px;
+  height: 300px;
+}
+
+/*# sourceMappingURL=style.css.map */
