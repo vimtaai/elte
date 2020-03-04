@@ -1,0 +1,42 @@
+HTML: tag
+
+tag: <name> 
+
+node: <name>text</name>
+
+<name>
+  <name2></name2>
+  <br>
+</name>
+
+CONTENT:
+h1-h6: headings
+p: paragraphs
+a: hyperlinks
+img: images
+strong: heavily emphasised text
+em: emphasised text
+ul: unordered list
+ol: ordered list
+li: list item
+figure: figure
+
+STRUCTURE:
+header: a header
+footer: a footer
+section: some kind of independent block of content
+article: some kind of repeating kind of content
+aside: something that is not as important as the main
+       content OR that is visually intended to be at 
+       the left or right side
+main: the main block of content
+nav: navigation
+
+ENTITY CODES:
+&lt;    : <
+&gt;    : >
+&nbsp;  : non-breaking space
+&copy;  : copyright symbol
+&trade; : trademark symbol
+&rarr;  : right arrow
+&amp;   : &

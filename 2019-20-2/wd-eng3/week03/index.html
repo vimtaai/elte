@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Comment here -->
+    <meta charset="utf-8">
+    <title>My first HTML</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      My first website
+      <nav>
+        <ul>
+          <li><a href="http://google.com">Google</a></li>
+          <li><a href="http://facebook.com">Facebook</a></li>
+          <li>
+            <a href="http://microsoft.com">Microsoft</a>
+            <ul>
+              <li><a href="http://office.com">Office</a></li>
+              <li><a href="http://windows.com">Windows</a></li>
+              <li><a href="http://xbox.com">Xbox</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <aside>
+        <a href="login.html">Login</a>
+      </aside>
+    </header>
+    <aside>
+      Table of contents
+      <ol id="whatever">
+        <li>
+          Welcome to my website
+          <ol>
+            <li>Lists</li>
+            <li>Figures</li>
+          </ol>
+        </li>
+      </ol>
+    </aside>
+    <main>
+      <h1>Welcome to my website</h1>
+      <p class="blue bold">Hello, my name is 
+      <span lang="hu">Márton</span>. 
+      I'm from Budapest.</p>
+      <h2>Lists</h2>
+      <!-- Unordered list -->
+      <ul class="green">
+        <li>First&nbsp;&nbsp;&nbsp;<strong>list</strong>&nbsp;&nbsp;&nbsp;item</li>
+        <li>Second <em>list</em> item</li>
+      </ul>
+      <ol class="blue">
+        <li>First</li>
+        <li>Second</li>
+        <li>Third</li>
+      </ol>
+      <p class="green">
+        Take a look at the <a href="https://www.elte.hu">website of ELTE</a>.
+      </p>
+      <p>
+        Lorem ipsum <code>dolor sit</code> amet, consectetur adipisicing elit. 
+        <br>
+        <abbr title="Hypertext Markup Language">HTML</abbr>
+        Enim, quam quia illo dolor error 1&nbsp;000&nbsp;000&nbsp;000&nbsp;000&nbsp;000&nbsp;000&nbsp;000&nbsp;000&nbsp;000&nbsp;000&nbsp;000&nbsp;000&nbsp;000&nbsp;000 nam temporibus <del>consequatur architecto harum nobis, vitae</del>, fuga perferendis aspernatur quis suscipit repellat quasi incidunt sit!
+      </p>
+      <p>A useful symbol in HTML is &amp;amp;</p>
+      <h2>Figures</h2>
+      <figure>
+        <pre><code>
+#include &lt;iostream&gt;
+
+using namespace std;
+
+int main() {
+  cout << "Hello World" << endl;
+  return 0;
+}
+        </code></pre>
+        <caption>Some piece of C++ code</caption>
+      </figure>
+      <pre>
+Table
+Item1    Value1
+ItemABC  Value2
+C        Value3
+      </pre>
+      <figure>
+        <img src="https://picsum.photos/600/200" alt="Random photo">
+        <figcaption>Some random image from the Internet</figcaption>
+      </figure>
+    </main>
+  </body>
+</html>

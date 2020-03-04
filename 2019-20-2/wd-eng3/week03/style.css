@@ -1,0 +1,23 @@
+a {
+    color: #c96232;
+}
+
+#whatever {
+    color: red;
+}
+
+.blue {
+    color: blue;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+[lang="hu"] {
+    color: orange;
+}
+
+p.green {
+    color: green;
+}
