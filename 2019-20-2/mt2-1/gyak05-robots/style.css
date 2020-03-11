@@ -1,0 +1,7 @@
+#game {
+    position: relative;
+}
+
+#game div {
+    position: absolute;
+}
