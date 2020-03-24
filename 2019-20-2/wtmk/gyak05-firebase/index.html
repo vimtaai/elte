@@ -1,0 +1,43 @@
+<!doctype html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Firebase demo</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.css" />
+</head>
+
+<body>
+  <div class="container">
+    <div id="firebaseui-auth-container"></div>
+
+    <div class="card">
+      <div class="card-content">
+        <div class="card-title">New post</div>
+        <div class="input-field">
+          <label for="title">Post title</label>
+          <input type="text" id="title">
+        </div>
+
+        <div class="input-field">
+          <textarea id="text" class="materialize-textarea"></textarea>
+          <label for="text">Post text</label>
+        </div>
+        
+        <button class="btn waves-effect waves-light">Send</button>
+      </div>
+    </div>
+
+    <div id="root"></div>
+  </div>
+  <!-- TODO: Add SDKs for Firebase products that you want to use
+    https://firebase.google.com/docs/web/setup#available-libraries -->
+
+  <!-- Firebase modulok -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.12.0/firebase-auth.js"></script>
+  <script src="https://cdn.firebase.com/libs/firebaseui/3.5.2/firebaseui.js"></script>
+  <script type="module" src="index.js"></script>
+</body>
