@@ -1,0 +1,61 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i&display=swap&subset=latin-ext");
+
+body {
+  margin: 0;
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+}
+
+header {
+  background: url("cover.jpg");
+  background-size: cover;
+  height: 100vh; /* viewport height */
+}
+
+header ul {
+  margin: 0;
+  padding: 0;
+}
+
+header ul li {
+  display: inline-block;
+}
+
+header ul li a {
+  display: inline-block;
+  padding: 5px 15px;
+  color: rgb(240, 240, 240);
+}
+
+header h1 {
+  padding: 20% 15px 0 15px;
+  margin: 0;
+  text-align: center;
+  color: rgb(240, 240, 240);
+  text-shadow: 0 0 10px rgb(10, 10, 10);
+  /*
+               ^ x offset
+                 ^ y offset
+                   ^ blur
+                         ^ color
+  */
+}
+
+header h1 small {
+  display: block;
+  padding: 15px 0;
+}
+
+header button {
+  display: block;
+  margin: 20px auto;
+  background: rgb(74, 170, 74);
+  color: rgb(240, 240, 240);
+  font-size: 1.3rem;
+  padding: 10px 20px;
+  border: solid 1px rgb(10, 10, 10);
+  border-radius: 25px;
+}
+
+section {
+  padding: 20px 15px;
+}
