@@ -1,0 +1,106 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+}
+
+header {
+  background: rgb(12, 12, 24);
+  color: rgb(244, 244, 255);
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+header span {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+header nav {
+  flex-grow: 1;
+}
+
+header > nav > ul > li {
+  display: inline;
+  list-style: none;
+}
+
+header li a,
+header aside a {
+  display: inline-block;
+  font-weight: bold;
+  padding: 8px 15px;
+  text-decoration: none;
+  color: rgb(244, 244, 255);
+}
+
+/* :hover means when the mouse is over the element */
+header li a:hover,
+header aside a:hover {
+  /* rgba(255, 255, 255, 0.2): white with 20% opacity */
+  background: rgba(255, 255, 255, 0.2);
+}
+
+header nav > ul > li {
+  /* 
+    using position: relative here allows us
+    to use position absolute in the submenu
+   */
+  position: relative;
+  padding: 28px 0;
+}
+
+header li ul {
+  display: none;
+  /* 
+    position is determined relative to the li
+    element of the main menu (because it's
+    position: relative)
+   */
+  position: absolute;
+  /*
+    specify coordinates with the top, left, bottom
+    and right CSS properties
+  */
+  top: 76px;
+  left: 0;
+  width: 200px;
+  background: rgb(244, 244, 255);
+  border: solid rgb(12, 12, 24) 2px;
+  padding: 0;
+}
+
+header li:hover ul {
+  display: block;
+}
+
+header li ul li {
+  list-style: none;
+}
+
+header li ul li a {
+  /* this makes it full width */
+  display: block;
+  color: rgb(12, 12, 24);
+}
+
+header li ul li a:hover {
+  background: rgb(12, 12, 24);
+  color: rgb(244, 244, 255);
+}
+
+body > aside {
+  margin: 20px;
+  padding: 10px;
+  border: solid rgb(12, 12, 24) 2px;
+  font-weight: bold;
+}
+
+body > aside h1 {
+  margin: 0;
+}
+
+main {
+  padding: 20px;
+}

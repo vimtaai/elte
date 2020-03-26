@@ -1,0 +1,28 @@
+table {
+  border-collapse: collapse;
+}
+
+table td {
+  box-sizing: border-box;
+  width: 23px;
+  height: 23px;
+  padding: 0;
+  margin: 0;
+}
+
+table td,
+table button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+table button {
+  width: 100%;
+  height: 100%;
+}
+
+table tr {
+  padding: 0;
+  margin: 0;
+}
