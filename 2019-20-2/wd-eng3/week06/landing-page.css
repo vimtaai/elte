@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i&display=swap&subset=latin-ext");
+
+:root {
+  font-size: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Segoe UI", sans-serif;
+}
+
+.small-text {
+  font-size: 0.9em;
+}
+
+.big-text {
+  font-size: 1.1em;
+}
+
+body {
+  margin: 0;
+  font-family: "Lato", Arial, Helvetica, sans-serif;
+}
+
+header {
+  background: url("cover.jpg");
+  background-size: cover;
+  height: 100vh; /* viewport height */
+}
+
+header nav {
+  background: rgba(0, 0, 0, 0.3);
+}
+
+header ul {
+  margin: 0;
+  padding: 0;
+}
+
+header ul li {
+  display: inline-block;
+}
+
+header ul li img {
+  max-height: 40px;
+  vertical-align: -14px;
+  margin-left: 10px;
+}
+
+header ul li a {
+  display: inline-block;
+  padding: 15px 20px;
+  color: rgb(240, 240, 240);
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+header ul li a:hover,
+header ul li a.active {
+  color: #6EBA6F;
+  text-shadow: 0 0 2px rgb(10, 10, 10);
+}
+
+header h1 {
+  padding: 20% 15px 0 15px;
+  margin: 0;
+  text-align: center;
+  color: rgb(240, 240, 240);
+  text-shadow: 0 0 10px rgb(10, 10, 10);
+  /*
+               ^ x offset
+                 ^ y offset
+                   ^ blur
+                         ^ color
+  */
+  font-size: 2rem;
+}
+
+header h1 small {
+  display: block;
+  padding: 15px 0;
+}
+
+header button {
+  display: block;
+  margin: 20px auto;
+  background: #6EBA6F;
+  color: rgb(240, 240, 240);
+  font-size: 1.3rem;
+  padding: 10px 20px;
+  border: solid 1px rgb(10, 10, 10);
+  border-radius: 25px;
+}
+
+section {
+  padding: 20px 15px;
+}
+
+section h1 {
+  text-align: center;
+}
+
+#about {
+  background: #6EBA6F;
+}
+
+.row {
+  display: flex;
+  margin: 20px auto;
+  max-width: 1500px;
+}
+
+.col {
+  flex: 1 1 0;
+  padding: 0 10px;
+  margin: 0 20px;
+  background: #6EBA6F;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.col > img {
+  margin: 0 -10px;
+  max-width: calc(100% + 20px);
+}

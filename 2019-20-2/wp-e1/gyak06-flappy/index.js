@@ -53,6 +53,8 @@ function update(dt) {
 
 function render() {
   context.clearRect(0, 0, canvas.width, canvas.height);
+  context.fillStyle = "#70C5CE";
+  context.fillRect(0, 0, canvas.width, canvas.height);
 
   if (state.stage === Stage.PLAYING) {
     state.bird.render(context);
@@ -61,6 +63,7 @@ function render() {
       pipe.render(context);  
     }
   } else if (state.stage === Stage.GAMEOVER) {
+    context.fillStyle = "#000000";
     context.font = "32px Arial";
     context.textAlign = "center";
     context.fillText("Game Over", canvas.width / 2, canvas.height / 2);
