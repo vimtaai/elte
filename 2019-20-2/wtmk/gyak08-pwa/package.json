@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "description": "Webtech",
   "scripts": {
-    "build:css": "sass styles/index.scss style.css",
-    "watch:css": "sass styles/index.scss style.css --watch",
-    "serve": "serve"
+    "build:css": "sass styles/index.scss public/style.css",
+    "watch:css": "sass styles/index.scss public/style.css --watch",
+    "serve": "serve public"
   },
   "devDependencies": {
     "sass": "^1.25.0",

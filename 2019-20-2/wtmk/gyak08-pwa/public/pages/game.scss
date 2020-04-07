@@ -21,20 +21,22 @@
   }
 
   #capture {
+    $capture-button-size: 80px;
+
     position: absolute;
     border: solid $primary-color 5px;
     border-radius: 50%;
-    width: 80px;
-    height: 80px;
+    width: $capture-button-size;
+    height: $capture-button-size;
 
     @include landscape {
       right: 20px;
-      top: calc(50% - 40px);
+      top: calc(50% - #{$capture-button-size / 2});
     }
 
     @include portrait {
       bottom: 20px;
-      left: calc(50% - 40px);
+      left: calc(50% - #{$capture-button-size / 2});
     }
   }
 }

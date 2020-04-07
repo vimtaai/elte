@@ -10,6 +10,7 @@ export async function load() {
     const videoSettings = stream.getVideoTracks()[0].getSettings();
     const width = videoSettings.width;
     const height = videoSettings.height;
+    console.log(width, height);
 
     image.width = width;
     image.height = height;
