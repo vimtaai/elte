@@ -1,0 +1,22 @@
+// Breakpoints
+$breakpoint-tablet: 400px;
+$breakpoint-desktop: 900px;
+
+// Layout
+$navbar-height: 48px;
+
+$layer-backdrop: 100;
+$layer-overlay: 200;
+
+$main-padding-x: 15px;
+$main-padding-y: 10px;
+
+// Colors
+$primary-color: hsl(185, 23%, 41%);
+$secondary-color: hsl(92, 5%, 48%);
+$background-color: hsl(0, 0%, 100%);
+$text-color: hsl(203, 16%, 26%);
+$highlight-color: hsla(0, 0, 100%, 0.1);
+$shadow-color: hsla(0, 0%, 0%, 0.2);
+$tag-background-color: hsl(220, 20%, 90%);
+$tag-text-color: hsl(220, 20%, 30%);
