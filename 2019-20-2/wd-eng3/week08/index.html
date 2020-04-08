@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>HTML forms</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Tell me about yourself</h1>
+    <blockquote>Alea iacta est.</blockquote>
+    <!-- Login form -->
+    <form id="login">
+      <div>
+        <label for="mail">E-mail</label>
+        <input type="email" id="mail" name="email">
+      </div>
+      <div>
+        <label for="passwd">Password</label>
+        <input type="password" id="passwd" name="password" required>
+      </div>
+      <div>
+        <input type="checkbox" id="logged-in">
+        <label for="logged-in">Keep me logged in</label>
+      </div>
+      <button type="submit">Login</button>
+    </form>
+    <!-- Contact form -->
+    <form id="contact">
+      <div>
+        <label for="your-name">Your name</label>
+        <input type="text" id="your-name" name="your-name">
+      </div>
+      <div>
+        <label for="your-email">Your reply e-mail</label>
+        <input type="email" id="your-email" name="your-email">
+      </div>
+      <div>
+        <label>Type of query</label>
+        <input type="radio" id="query-product" name="query">
+        <label for="query-product">Ask about your product</label>
+        <input type="radio" id="query-complain" name="query">
+        <label for="query-complain">File a complaint</label>
+        <input type="radio" id="query-info" name="query">
+        <label for="query-info">Request information</label>
+      </div>
+      <div>
+        <label for="your-message">Message</label>
+        <textarea id="your-message" name="your-message"></textarea>
+      </div>
+      <button type="reset">Reset</button>
+      <button type="submit">Send</button>
+    </form>
+  </body>
+</html>
