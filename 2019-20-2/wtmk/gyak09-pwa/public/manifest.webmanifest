@@ -1,0 +1,20 @@
+{
+  "short_name": "Nyílt nap",
+  "name": "ELTE IK Nyílt nap alkalmazás",
+  "icons": [
+    {
+      "src": "/assets/logo-192.png",
+      "type": "image/png",
+      "sizes": "192×192"
+    },
+    {
+      "src": "/assets/logo-512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#517d81",
+  "background_color": "#517d81"
+}

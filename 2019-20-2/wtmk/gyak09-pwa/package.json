@@ -1,0 +1,17 @@
+{
+  "name": "wtmk",
+  "version": "0.1.0",
+  "description": "Webtech",
+  "scripts": {
+    "build:css": "sass styles/index.scss public/style.css",
+    "watch:css": "sass styles/index.scss public/style.css --watch",
+    "serve": "serve public"
+  },
+  "devDependencies": {
+    "sass": "^1.25.0",
+    "serve": "^11.3.0"
+  },
+  "browserslist": [
+    "last 1 Chrome version"
+  ]
+}
