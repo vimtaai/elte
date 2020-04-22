@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>HTML forms - Learning about HTML</title>
+  <link rel="stylesheet" href="style.css" />
+  <script type="text/javascript">
+    function changeStyle(url) {
+      document.querySelector('link[rel=stylesheet]').href = url;
+    }
+  </script>
+</head>
+
+<body>
+  <a href="#" onclick="changeStyle('style.css');return false;">black</a>
+  <a href="#" onclick="changeStyle('style2.css');return false;">white</a>
+
+  <nav>
+    <ul>
+      <li><a href="http://google.com">Link 1</a></li>
+      <li><a href="http://microsoft.com" class="active">Link 2</a></li>
+      <li><a href="http://sztaki.hu">Link 3</a></li>
+    </ul>
+  </nav>
+
+  <nav id="breadcrumbs">
+    <ul>
+      <li><a href="index.html">Home page</a></li>
+      <li><a href="link2.html">Link 2</a></li>
+    </ul>
+  </nav>
+
+  <h1>Tell me about yourself</h1>
+  <blockquote lang="la">Alea iacta est.</blockquote>
+  <!-- Login form -->
+  <form id="login">
+    <div>
+      <label for="mail">E-mail</label>
+      <input type="email" id="mail" name="email" />
+    </div>
+    <div>
+      <label for="passwd">Password</label>
+      <input type="password" id="passwd" name="password" required />
+    </div>
+    <div>
+      <input type="checkbox" id="logged-in" />
+      <label for="logged-in">Keep me logged in</label>
+    </div>
+    <button type="submit">Login</button>
+  </form>
+  <!-- Contact form -->
+  <form id="contact" action="mailto:me@example.com">
+    <h2>Contact us</h2>
+    <div>
+      <label for="your-name">Your name</label>
+      <input type="text" id="your-name" name="your-name" size="32" />
+    </div>
+    <div>
+      <label for="your-email">
+        Your reply e-mail <strong>(required)</strong>
+      </label>
+      <input type="email" id="your-email" name="your-email" required size="32" />
+    </div>
+    <div>
+      <label>Type of query</label>
+      <div>
+        <input type="radio" id="query-product" name="query" />
+        <label for="query-product">Ask about your product</label>
+      </div>
+      <div>
+        <input type="radio" id="query-complain" name="query" />
+        <label for="query-complain">File a complaint</label>
+      </div>
+      <div>
+        <input type="radio" id="query-info" name="query" />
+        <label for="query-info">Request information</label>
+      </div>
+    </div>
+    <div>
+      <label for="country">Your country of residence</label>
+      <input id="country" name="country-of-residence" list="datalist-country">
+      <datalist id="datalist-country">
+        <option>United States</option>
+        <option>Canada</option>
+        <option>Mexico</option>
+        <option>Hungary</option>
+      </datalist>
+    </div>
+    <div>
+      <input type="checkbox" name="agree" id="agree">
+      <label for="agree">I agree to provide you with my professional data</label>
+    </div>
+    <div>
+      <label for="your-message">Message <strong>(required)</strong></label>
+      <textarea id="your-message" name="your-message" required rows="20" cols="40"></textarea>
+    </div>
+    <button type="reset">Reset</button>
+    <button type="submit">Send</button>
+  </form>
+
+  <br>
+
+  <a href="image02.jpg"><img src="image02-thumb.jpg" alt="Cute cow"></a>
+  <a href="image03.jpg"><img src="image03-thumb.jpg" alt="Tower in the sky"></a>
+
+  <article>
+    <h2>New arrivals</h2>
+    <p>New computers arrived to our store. <a href="store.html">Go to the store</a> to see them.</p>
+  </article>
+
+  <br>
+
+  <table>
+    <caption>
+      <details>
+        <summary>Some data that I put here</summary>
+        Here I collected some useless data about nothing.
+      </details>
+    </caption>
+    <thead>
+      <tr>
+        <th>Column 1</th>
+        <th>Column 2</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Data 1</td>
+        <td>Data 2</td>
+      </tr>
+      <tr>
+        <td>Data 3</td>
+        <td>Data 4</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h1>Videos!!!</h1>
+
+  <video width="300" controls poster="poster.png">
+    <source src="video.webm" type="video/webm">
+    <source src="video.mp4" type="video/mp4">
+    Your browser does not support videos
+  </video>
+
+</body>
+
+</html>

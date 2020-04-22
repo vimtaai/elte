@@ -1,0 +1,151 @@
+/* #login label {
+  display: inline-block;
+  min-width: 100px;
+  text-align: right;
+} */
+
+:root {
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  font-size: 17px;
+}
+
+a {
+  color: rgb(185, 37, 37);
+}
+
+a:visited {
+  color: rgb(138, 36, 36);
+}
+
+#breadcrumbs li:not(:last-of-type)::after {
+  content: " >";
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  padding: 5px 20px;
+  margin: 0 20px;
+}
+
+nav a.active {
+  background: rgb(185, 37, 37);
+  color: white;
+}
+
+blockquote {
+  font-size: 1.2rem;
+}
+
+blockquote::before {
+  content: "˝";
+}
+
+blockquote::after {
+  content: "˝";
+}
+
+#login div {
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+/* Login form */
+
+#login input:not([type="checkbox"]) {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px 10px;
+  border: solid rgb(84, 71, 202) 1px;
+  border-radius: 10px;
+}
+
+#login label {
+  font-size: 1.1rem;
+  color: rgb(84, 71, 202);
+  font-weight: bold;
+}
+
+#login input[type="checkbox"] {
+  margin-right: 14px;
+}
+
+/* "Pseudo-element that appears after "#login input[type=checkbox]" */
+#login input[type="checkbox"]::after {
+  content: "";
+  display: inline-block;
+  background: rgb(84, 71, 202);
+  width: 28px;
+  height: 14px;
+  border-radius: 3px;
+}
+
+/* "Pseudo-element that appears before "#login input[type=checkbox]" */
+#login input[type="checkbox"]::before {
+  content: ""; /* REQUIRED for a ::before or ::after (text inside) */
+  display: inline-block;
+  background: rgb(180, 176, 212);
+  width: 12px;
+  height: 12px;
+  margin: 1px;
+  border-radius: 3px;
+  position: absolute;
+  transition: margin-left 0.3s;
+}
+
+/* "Pseudo-element that appears before checked checkbox */
+#login input[type="checkbox"]:checked::before {
+  margin-left: 15px;
+}
+
+#login button {
+  background-color: rgb(84, 71, 202);
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 5px 20px;
+  border-radius: 10px;
+}
+
+#login label,
+#login button {
+  display: block;
+  margin-top: 20px;
+}
+
+#login input[type="checkbox"] + label {
+  display: inline-block;
+}
+
+#login button {
+  margin: 20px auto;
+}
+
+/* Contact form */
+
+#contact {
+  background: url("background.jpg");
+  border: solid rgb(0, 0, 0) 1px;
+  padding: 10px;
+  display: inline-block;
+}
+
+#contact > div {
+  margin-top: 15px;
+}
+
+#contact label {
+  display: block;
+  font-weight: bold;
+}
+
+#contact input[type="radio"] + label,
+#contact input[type="checkbox"] + label {
+  display: inline-block;
+  font-weight: normal;
+}
+
+#contact label strong {
+  color: rgb(185, 37, 37);
+}
