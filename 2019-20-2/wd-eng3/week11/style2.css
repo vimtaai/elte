@@ -1,0 +1,144 @@
+:root {
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  font-size: 17px;
+}
+
+a {
+  color: rgb(255, 0, 0);
+}
+
+a:visited {
+  color: rgb(138, 36, 36);
+}
+
+#breadcrumbs li:not(:last-of-type)::after {
+  content: " >";
+}
+
+nav li {
+  display: inline-block;
+}
+
+nav a {
+  padding: 5px 20px;
+  margin: 0 20px;
+}
+
+nav a.active {
+  background: rgb(255, 0, 0);
+  color: white;
+}
+
+blockquote {
+  font-size: 1.2rem;
+}
+
+blockquote::before {
+  content: "˝";
+}
+
+blockquote::after {
+  content: "˝";
+}
+
+#login div {
+  max-width: 200px;
+  margin: 0 auto;
+}
+
+/* Login form */
+
+#login input:not([type="checkbox"]) {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 5px 10px;
+  border: solid rgb(186, 179, 255) 1px;
+  border-radius: 10px;
+}
+
+#login label {
+  font-size: 1.1rem;
+  color: rgb(210, 205, 255);
+  font-weight: bold;
+}
+
+#login input[type="checkbox"] {
+  margin-right: 14px;
+}
+
+#login button {
+  background-color: rgb(84, 71, 202);
+  color: rgb(255, 255, 255);
+  border: none;
+  padding: 5px 20px;
+  border-radius: 10px;
+}
+
+#login label,
+#login button {
+  display: block;
+  margin-top: 20px;
+}
+
+#login input[type="checkbox"] + label {
+  display: inline-block;
+}
+
+#login button {
+  margin: 20px auto;
+}
+
+/* Contact form */
+
+#contact {
+  border: solid rgb(0, 0, 0) 1px;
+  padding: 10px;
+  display: inline-block;
+}
+
+#contact > div {
+  margin-top: 15px;
+}
+
+#contact label {
+  display: block;
+  font-weight: bold;
+}
+
+#contact input[type="radio"] + label,
+#contact input[type="checkbox"] + label {
+  display: inline-block;
+  font-weight: normal;
+}
+
+#contact label strong {
+  color: rgb(255, 0, 0);
+}
+
+/* HIGH CONTRAST OVERRIDE */
+
+:root {
+  font-size: 24px;
+}
+
+body {
+  background: black;
+  color: white;
+}
+
+a {
+  color: yellow;
+}
+
+a:visited {
+  color: yellowgreen;
+}
+
+input,
+button,
+textarea {
+  font-size: 1rem;
+  background: black;
+  color: yellow;
+  border-color: white;
+}
