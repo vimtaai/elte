@@ -1,9 +1,8 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import { List, Icon, Button } from "semantic-ui-react";
+import { removeFromTracks } from "../../store/tracks/actions";
 import { AddToPlaylist } from "./Track/AddToPlaylist";
-import { deleteTrack } from "../../store/tracks/actions";
-import { removeTrack } from "../../store/playlists/actions";
 
 import classes from "./Track.module.css";
 
@@ -11,9 +10,8 @@ export function Track({ track }) {
   const { artist = "Unknown", title, length } = track;
   const dispatch = useDispatch();
 
-  function handleDeleteClick(trackId) {
-    dispatch(deleteTrack(trackId));
-    dispatch(removeTrack(trackId));
+  function handleDeleteClick(track) {
+    dispatch(removeFromTracks(track));
   }
 
   return (
@@ -23,7 +21,7 @@ export function Track({ track }) {
         <Button
           size="tiny"
           icon="trash"
-          onClick={() => handleDeleteClick(track._id)}
+          onClick={() => handleDeleteClick(track)}
         />
       </List.Content>
       <List.Icon verticalAlign="middle">

@@ -1,11 +1,17 @@
 import React from "react";
 import { useParams } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { Grid, Header } from "semantic-ui-react";
+import { getPlaylistById } from "../store/playlists/selectors";
+import { getPlaylistTracks } from "../store/tracks/selectors";
 import { PlaylistList } from "../components/PlaylistList";
 import { TrackList } from "../components/TrackList";
-import { Grid, Header } from "semantic-ui-react";
+import { DeletePlaylist } from "../components/DeletePlaylist";
 
 export function PlaylistsRoute() {
   const { playlistId } = useParams();
+  const playlist = useSelector(getPlaylistById(playlistId));
+  const tracks = useSelector(getPlaylistTracks(playlist || {}));
 
   return (
     <>
@@ -15,13 +21,38 @@ export function PlaylistsRoute() {
 
       <Grid.Row>
         <Grid.Column>
-          <Header as="h2">Playlists</Header>
-          <PlaylistList />
+          <Grid>
+            <Grid.Row>
+              <Grid.Column>
+                <Header dividing as="h2">
+                  Playlists
+                </Header>
+              </Grid.Column>
+            </Grid.Row>
+            <Grid.Row>
+              <Grid.Column>
+                <PlaylistList />
+              </Grid.Column>
+            </Grid.Row>
+          </Grid>
         </Grid.Column>
-        {playlistId ? (
+        {playlist ? (
           <Grid.Column>
-            <Header as="h2">Tracks</Header>
-            <TrackList playlistId={playlistId} />
+            <Grid>
+              <Grid.Row>
+                <Grid.Column width="16">
+                  <Header dividing as="h2">
+                    {playlist.name}
+                    <DeletePlaylist playlist={playlist} />
+                  </Header>
+                </Grid.Column>
+              </Grid.Row>
+              <Grid.Row>
+                <Grid.Column>
+                  <TrackList tracks={tracks} />
+                </Grid.Column>
+              </Grid.Row>
+            </Grid>
           </Grid.Column>
         ) : null}
       </Grid.Row>

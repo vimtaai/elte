@@ -1,28 +1,28 @@
-import { ADD_TRACK, DELETE_TRACK, UPDATE_TRACKS } from "./actions";
+import { SET_TRACKS, ADD_TRACK, UPDATE_TRACK, DELETE_TRACK } from "./actions";
 
-const initialState = [];
-
-export function tracksReducer(state = initialState, action) {
+export function tracksReducer(state = [], action) {
   const { type } = action;
 
-  if (type === UPDATE_TRACKS) {
+  if (type === SET_TRACKS) {
     const { tracks } = action;
-
     return tracks;
   }
 
   if (type === ADD_TRACK) {
-    const { title, artist, length } = action;
-    const newTrack = { _id: Date.now(), title, artist, length };
+    const { track } = action;
+    return [...state, track];
+  }
 
-    return [...state, newTrack];
+  if (type === UPDATE_TRACK) {
+    const { track: updatedTrack } = action;
+    return state.map((track) =>
+      track._id === updatedTrack._id ? updatedTrack : track
+    );
   }
 
   if (type === DELETE_TRACK) {
-    const { id } = action;
-
-    console.log(id, state);
-    return state.filter((track) => track._id !== id);
+    const { track: deletedTrack } = action;
+    return state.filter((track) => track._id !== deletedTrack._id);
   }
 
   return state;

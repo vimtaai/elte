@@ -1,10 +1,9 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { Modal, Button, Form } from "semantic-ui-react";
-import { addTrack } from "../store/tracks/actions";
+import { addToTracks } from "../../store/tracks/actions";
 
 export function NewTrackModal({ trigger }) {
-  // const { addTrack } = useContext(TrackContext);
   const dispatch = useDispatch();
   const [titleValue, setTitleValue] = useState("");
   const [artistValue, setArtistValue] = useState("");
@@ -24,7 +23,7 @@ export function NewTrackModal({ trigger }) {
   }
 
   function handleButtonClick() {
-    dispatch(addTrack(titleValue, artistValue, lengthValue));
+    dispatch(addToTracks(titleValue, artistValue, lengthValue));
     setTitleValue("");
     setArtistValue("");
     setLengthValue("");

@@ -4,14 +4,12 @@ import { Provider } from "react-redux";
 import { Grid, Loader } from "semantic-ui-react";
 import { PlaylistsRoute } from "../routes/PlaylistsRoute";
 import { TracksRoute } from "../routes/TracksRoute";
-import { TrackContextProvider } from "../contexts/TrackContext";
-import { PlaylistContextProvider } from "../contexts/PlaylistContext";
 import { NavBar } from "./NavBar";
 import { store } from "../store/store";
 import { trackService } from "../services/track-service";
 import { playlistService } from "../services/playlist-service";
-import { updateTracks } from "../store/tracks/actions";
-import { updatePlaylists } from "../store/playlists/actions";
+import { setTracks } from "../store/tracks/actions";
+import { setPlaylists } from "../store/playlists/actions";
 
 function App() {
   const [isLoading, setLoading] = useState(true);
@@ -21,8 +19,8 @@ function App() {
       const tracks = await trackService.find();
       const playlists = await playlistService.find();
 
-      store.dispatch(updateTracks(tracks));
-      store.dispatch(updatePlaylists(playlists));
+      store.dispatch(setTracks(tracks));
+      store.dispatch(setPlaylists(playlists));
 
       setLoading(false);
     }
@@ -32,27 +30,23 @@ function App() {
 
   return (
     <Provider store={store}>
-      <TrackContextProvider>
-        <PlaylistContextProvider>
-          <BrowserRouter>
-            <NavBar />
-            <Grid container columns="equal">
-              {isLoading ? (
-                <Loader />
-              ) : (
-                <Switch>
-                  <Route path="/playlists/:playlistId?">
-                    <PlaylistsRoute />
-                  </Route>
-                  <Route path="/tracks">
-                    <TracksRoute />
-                  </Route>
-                </Switch>
-              )}
-            </Grid>
-          </BrowserRouter>
-        </PlaylistContextProvider>
-      </TrackContextProvider>
+      <BrowserRouter>
+        <NavBar />
+        <Grid container columns="equal">
+          {isLoading ? (
+            <Loader />
+          ) : (
+            <Switch>
+              <Route path="/playlists/:playlistId?">
+                <PlaylistsRoute />
+              </Route>
+              <Route path="/tracks">
+                <TracksRoute />
+              </Route>
+            </Switch>
+          )}
+        </Grid>
+      </BrowserRouter>
     </Provider>
   );
 }

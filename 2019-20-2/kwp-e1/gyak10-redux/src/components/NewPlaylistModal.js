@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { Modal, Button, Form } from "semantic-ui-react";
-import { addPlaylist } from "../store/playlists/actions";
+import { addToPlaylists } from "../store/playlists/actions";
 
 export function NewPlaylistModal({ trigger }) {
   const dispatch = useDispatch();
@@ -13,7 +13,7 @@ export function NewPlaylistModal({ trigger }) {
   }
 
   function handleButtonClick() {
-    dispatch(addPlaylist(inputValue));
+    dispatch(addToPlaylists(inputValue));
     setInputValue("");
     setOpen(false);
   }

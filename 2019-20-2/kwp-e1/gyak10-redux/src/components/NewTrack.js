@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from "semantic-ui-react";
-import { NewTrackModal } from "../NewTrackModal";
+import { NewTrackModal } from "./NewTrack/NewTrackModal";
 
 export function NewTrack() {
   const trigger = (

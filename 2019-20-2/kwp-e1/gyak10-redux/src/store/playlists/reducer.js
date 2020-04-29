@@ -1,64 +1,33 @@
 import {
+  SET_PLAYLISTS,
   ADD_PLAYLIST,
-  ADD_TRACK_TO_PLAYLIST,
-  REMOVE_TRACK_FROM_PLAYLIST,
-  REMOVE_TRACK,
-  UPDATE_PLAYLISTS,
+  UPDATE_PLAYLIST,
+  DELETE_PLAYLIST,
 } from "./actions";
 
-const intitialState = [];
-
-export function playlistsReducer(state = intitialState, action) {
+export function playlistsReducer(state = [], action) {
   const { type } = action;
 
-  if (type === UPDATE_PLAYLISTS) {
+  if (type === SET_PLAYLISTS) {
     const { playlists } = action;
-
     return playlists;
   }
 
   if (type === ADD_PLAYLIST) {
     const { playlist } = action;
-
     return [...state, playlist];
   }
 
-  if (type === ADD_TRACK_TO_PLAYLIST) {
-    const { playlistId, trackId } = action;
-
-    const newState = [...state];
-    const playlist = newState.find((playlist) => playlist._id === playlistId);
-
-    if (!playlist.tracks.includes(trackId)) {
-      playlist.tracks.push(trackId);
-    }
-
-    return newState;
+  if (type === UPDATE_PLAYLIST) {
+    const { playlist: updatedPlaylist } = action;
+    return state.map((playlist) =>
+      playlist._id === updatedPlaylist._id ? updatedPlaylist : playlist
+    );
   }
 
-  if (type === REMOVE_TRACK_FROM_PLAYLIST) {
-    const { playlistId, trackId } = action;
-
-    const newState = [...state];
-    const playlist = newState.find((playlist) => playlist._id === playlistId);
-    const trackIdIdx = playlist.tracks.indexOf(trackId);
-
-    if (trackIdIdx !== -1) {
-      playlist.tracks.splice(trackIdIdx, 1);
-    }
-
-    return newState;
-  }
-
-  if (type === REMOVE_TRACK) {
-    const { trackId } = action;
-
-    const newState = state.map((playlist) => ({
-      ...playlist,
-      tracks: playlist.tracks.filter((track) => track !== trackId),
-    }));
-
-    return newState;
+  if (type === DELETE_PLAYLIST) {
+    const { playlist: deletedPlaylist } = action;
+    return state.filter((playlist) => playlist._id !== deletedPlaylist._id);
   }
 
   return state;
