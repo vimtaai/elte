@@ -1,0 +1,7 @@
+.track .actions {
+  display: none;
+}
+
+.track:hover .actions {
+  display: block;
+}
