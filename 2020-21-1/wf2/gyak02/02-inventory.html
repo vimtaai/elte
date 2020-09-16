@@ -1,0 +1,37 @@
+<script>
+let inventory = [
+  {
+    id: "001-SM",
+    name: "surgical mask",
+    amountInStore: 145,
+    amountInStorage: 12432,
+  },
+  {
+    id: "002-FFP3",
+    name: "FFP3 facemask",
+    amountInStore: 142,
+    amountInStorage: 50,
+  },
+  {
+    id: "003-HS200",
+    name: "Hand sanitizer (200ml)",
+    amountInStore: 2,
+    amountInStorage: 242,
+  },
+  {
+    id: "004-HS1000",
+    name: "Hand sanitizer (1000ml)",
+    amountInStore: 150,
+    amountInStorage: 0,
+  },
+];
+
+function hasToOrder(item) {
+  return item.amountInStorage < 100 || 
+         (item.amountInStorage + item.amountInStore) < 200;
+}
+
+let itemsToOrder = inventory.filter(hasToOrder).map(item => item.id);
+console.log(itemsToOrder);
+
+</script>

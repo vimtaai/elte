@@ -1,0 +1,54 @@
+ <script>
+
+let ranks = [
+  { name: "captain", clearance: 10 },
+  { name: "commander", clearance: 8 },
+  { name: "lt. commander", clearance: 6 },
+  { name: "lieutenant", clearance: 4 },
+  { name: "lieutenant j.g.", clearance: 3 },
+  { name: "ensign", clearance: 2 },
+];
+
+let starship = {
+  name: "U.S.S. Enterprise",
+  registration: "NCC-1707-D",
+  class: "Galaxy",
+  crew: [
+    { name: "Jean-Luc Picard", rank: "captain", division: "command", spieces: "human" },
+    { name: "William T. Riker", rank: "commander", division: "command", spieces: "human" },
+    { name: "Data", rank: "lt. commander", division: "operations", spieces: "android" },
+    { name: "Geordi LaForge", rank: "lieutenant", division: "operations", spieces: "human" },
+    { name: "Beverly Crusher", rank: "commander", division: "sciences", spieces: "human" },
+    { name: "Worf", rank: "lieutenant", division: "operations", spieces: "klingon" },
+    { name: "Deanna Troi", rank: "lt. commander", division: "sciences", spieces: "human/betazoid" },
+  ]
+};
+
+// Kik az emberi génekkel nem rendelkező legénységi tagok
+
+function rangJoE(rangja){
+  return rangja.clearance >= 6;
+}
+let joRangok = ranks.filter(rangJoE).map(r => r.name);
+
+function nemEmberE(crewMember) {
+  return crewMember.spieces !== "human";
+}
+function megfeleloRang(legenysegiTag) {
+  return joRangok.includes(legenysegiTag.rank);
+}
+
+let nemEmberek = starship.crew.filter(nemEmberE);
+let joLegenysegiTagok = nemEmberek.filter(megfeleloRang);
+let joLegenysegiTagok2 = starship.crew.filter(nemEmberE).filter(rangJoE);
+
+console.log(starship.crew
+  .filter(c => c.spieces !== "human")
+  .filter(c => ranks
+    .filter(r => r.clearance >= 6)
+    .map(r => r.name)
+    .includes(c.rank)
+  )
+);
+
+</script>
