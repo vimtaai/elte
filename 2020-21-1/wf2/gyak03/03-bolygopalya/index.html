@@ -1,0 +1,62 @@
+<canvas></canvas>
+<script>
+// Canvas elem elkérése
+const canvas = document.querySelector("canvas");
+// A 2D-s rajzfelület elkérése a canvastől
+const context = canvas.getContext("2d");
+
+canvas.width = 500;
+canvas.height = 400;
+
+function degToRad(deg) {
+  return deg / 180 * Math.PI;
+}
+
+context.rect(0, 0, canvas.width, canvas.height);
+context.fill();
+
+// Napocska
+context.beginPath();
+context.fillStyle = "Yellow";
+context.arc(canvas.width/2, canvas.height/2, 10, 0, degToRad(360));
+context.fill();
+context.closePath();
+
+const speedVenus = 360 / 225;
+const speedEarth = 360 / 365;
+const distVenus = 108;
+const distEarth = 149;
+
+context.translate(canvas.width / 2, canvas.height / 2);
+context.strokeStyle = "White";
+
+for (let i = 0; i < 365 * 10; i += 10) {
+  // Vénusz
+  context.save();
+  context.rotate(degToRad(i * speedVenus));
+  context.fillStyle = "White";
+  context.beginPath();
+  context.arc(-distVenus, 0, 2, 0, degToRad(360));
+  context.fill();
+  context.closePath();
+
+  // Vonal
+  context.beginPath();
+  context.moveTo(-distVenus, 0);
+  context.restore();
+  context.save();
+  context.rotate(degToRad(i * speedEarth));
+  context.lineTo(-distEarth, 0);
+  context.stroke();
+
+  // Föld
+  context.fillStyle = "Lightblue";
+  context.beginPath();
+  context.arc(-distEarth, 0, 4, 0, degToRad(360));
+  context.fill();
+  context.closePath();
+  context.restore();
+}
+
+
+</script>

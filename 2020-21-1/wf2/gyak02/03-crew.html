@@ -26,21 +26,23 @@ let starship = {
 
 // Kik az emberi génekkel nem rendelkező legénységi tagok
 
-function rangJoE(rangja){
-  return rangja.clearance >= 6;
+function isClearanceOK(rank){
+  return rank.clearance >= 6;
 }
-let joRangok = ranks.filter(rangJoE).map(r => r.name);
 
-function nemEmberE(crewMember) {
+function isNotHuman(crewMember) {
   return crewMember.spieces !== "human";
 }
-function megfeleloRang(legenysegiTag) {
-  return joRangok.includes(legenysegiTag.rank);
+
+function isRankOK(crewMember) {
+  let okRanks = ranks.filter(isClearanceOK).map(r => r.name);
+
+  return okRanks.includes(crewMember.rank);
 }
 
-let nemEmberek = starship.crew.filter(nemEmberE);
-let joLegenysegiTagok = nemEmberek.filter(megfeleloRang);
-let joLegenysegiTagok2 = starship.crew.filter(nemEmberE).filter(rangJoE);
+let nonHumans = starship.crew.filter(isNotHuman);
+let goodCrewMembers = nonHumans.filter(isRankOK);
+let goodCrewMembers2 = starship.crew.filter(isNotHuman).filter(isClearanceOK);
 
 console.log(starship.crew
   .filter(c => c.spieces !== "human")

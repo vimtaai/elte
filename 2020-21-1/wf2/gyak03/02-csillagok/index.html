@@ -1,0 +1,45 @@
+<canvas></canvas>
+<script>
+// Canvas elem elkérése
+const canvas = document.querySelector("canvas");
+// A 2D-s rajzfelület elkérése a canvastől
+const context = canvas.getContext("2d");
+
+canvas.width = 500;
+canvas.height = 400;
+
+function degToRad(deg) {
+  return deg / 180 * Math.PI;
+}
+
+function randomBetween(a, b) {
+  return Math.floor(Math.random() * (b - a + 1)) + a;
+}
+
+// canvas.style.background = "black";
+// context.fillRect(0, 0, canvas.width, canvas.height);
+
+context.rect(0, 0, canvas.width, canvas.height);
+context.fill();
+
+const MIN_RADIUS = 10;
+const MAX_RADIUS = 150;
+const MIN_COLOR = 0;
+const MAX_COLOR = 200;
+const MIN_BRIGHTNESS = 70;
+const MAX_BRIGHTNESS = 100;
+
+for (let i = 0; i < 200; i++) {
+  context.fillStyle = 
+    `hsl(${randomBetween(MIN_COLOR, MAX_COLOR)}, 100%, ${randomBetween(MIN_BRIGHTNESS, MAX_BRIGHTNESS)}%)`;
+  context.beginPath();
+  context.arc(
+    randomBetween(0, canvas.width), 
+    randomBetween(0, canvas.height), 
+    randomBetween(MIN_RADIUS, MAX_RADIUS) / 100, 
+    0, degToRad(360)
+  );
+  context.fill();
+}
+
+</script>
