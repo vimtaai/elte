@@ -1,0 +1,19 @@
+<style>
+  output { background: lightgray; }
+  #task span { display: block; position: absolute; }
+  #task span input, #task span output { border: solid black 1px; width: 50px; display: inline-block; height: 20px; position: absolute; }
+  #task { position: relative; width: 1000px; height: 300px; }
+  #a { left: 30px; top: 170px;}
+  #b { left: 140px; top: 260px;}
+  #c { left: 170px; top: 150px;}
+  #x { left: 150px; top: 220px; color: white;}
+  #triangle { width: 0; height: 0; position: absolute; top: 150px; left: 0; border: solid transparent 100px; border-top-color: black; transform: rotate(45deg)}
+</style>
+<div id="task">
+  <div id="triangle"></div>
+  <span id="x">α: <input></span>
+  <span id="c">c: <input></span>
+  <span id="a">a: <output></output></span>
+  <span id="b">b: <output></output></span>
+</div>
+<script src="task1.js"></script>
