@@ -15,5 +15,9 @@ struct Tanora
 };
 
 ostream& operator<<(ostream &os, const Tanora &ora);
+istream& operator>>(istream &is, Tanora &ora);
+
+Tanora string_to_tanora(const string &str);
+string tanora_to_string(const Tanora &ora);
 
 #endif // TANORA_HPP_INCLUDED

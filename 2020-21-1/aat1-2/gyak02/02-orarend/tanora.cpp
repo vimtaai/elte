@@ -1,6 +1,6 @@
 #include "tanora.hpp"
 
-ostream& operator<<(ostream &os, const Tanora ora)
+ostream& operator<<(ostream &os, const Tanora &ora)
 {
     int kezdes_ora = ora.kezdes / 60;
     int kezdes_perc = ora.kezdes % 60;
