@@ -1,0 +1,28 @@
+body {
+  text-align: center;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 10px auto;
+}
+
+td {
+  box-sizing: border-box;
+  width: 25px;
+  height: 25px;
+  padding: 0;
+  text-align: center;
+  font-family: monospace;
+  border: solid 1px black;
+}
+
+td button {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+
+input {
+  width: 40px;
+}
