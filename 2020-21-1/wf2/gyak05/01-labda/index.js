@@ -9,7 +9,7 @@ let balls = [];
 let player1 = undefined;
 let player2 = undefined;
 
-// Kezdpállapot
+// Kezdőállapot
 function init() {
   player1 = new Player(canvas.width / 2, 0);
   player2 = new Player(canvas.width / 2, canvas.height);

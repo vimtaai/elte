@@ -32,7 +32,7 @@ Tanora string_to_tanora(const string &str)
     ora.kezdes = atoi(bemenet.c_str()); // Régi
 
     getline(iss, bemenet); // sor végéig olvasunk
-    ora.hossz = stoi(bemenet); // Új
+    ora.hossz = stof(bemenet); // Új
 
     return ora;
 }
