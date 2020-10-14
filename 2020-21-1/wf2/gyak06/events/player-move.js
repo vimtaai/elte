@@ -35,3 +35,4 @@ export function handlePlayerStop(event) {
     state.player.vx = 0;
   }
 }
+
