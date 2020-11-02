@@ -19,5 +19,22 @@ int main()
     mh1.Mulithalmazbol(7, 5);
     cout << mh1 << endl;
 
+    Multihalmaz m2, m3, m4;
+
+    m2.Multihalmazba(1, 3);
+    m2.Multihalmazba(2, 2);
+
+    m3.Multihalmazba(1, 2);
+    m3.Multihalmazba(3, 5);
+
+    m4.Multihalmazba(1, 2);
+    m4.Multihalmazba(2, 2);
+
+    cout << m2.Metszet(m3) << endl;
+    cout << m2.Unio(m3) << endl;
+    cout << m2.Kulonbseg(m3) << endl;
+    cout << m2.ReszeE(m3) << endl;
+    cout << m4.ReszeE(m2) << endl;
+
     return 0;
 }

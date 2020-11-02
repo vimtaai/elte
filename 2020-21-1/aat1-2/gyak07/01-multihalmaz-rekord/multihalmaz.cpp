@@ -10,14 +10,14 @@ Multihalmaz::~Multihalmaz()
   //dtor
 }
 
-/** \brief Meghat�rozza, hogy egy �rt�k hanyadik helyen szerepel az elemek vektorban
+/** \brief Meghatározza, hogy egy érték hanyadik helyen szerepel az elemek vektorban
  *
- * \param int elem a keresett �rt�k
- * \return int az adott elem sorsz�ma az elemek vektorban, ha nem szerepel, akkor -1
+ * \param int elem a keresett érték
+ * \return int az adott elem sorszáma az elemek vektorban, ha nem szerepel, akkor -1
  */
 int Multihalmaz::Hanyadik(const int elem)
 {
-  // Keres�s
+  // Keresés
   int i = 0;
   while (i < elemek.size() && elemek.at(i).elem != elem)
   {
@@ -42,6 +42,9 @@ bool Multihalmaz::TartalmazE(const int elem)
 
 void Multihalmaz::Multihalmazba(const int elem, const int db)
 {
+  // Előfeltétel
+  if (db <= 0) return;
+
   int index = Hanyadik(elem);
 
   if (index != -1)
@@ -59,21 +62,24 @@ void Multihalmaz::Multihalmazba(const int elem, const int db)
 
 void Multihalmaz::Mulithalmazbol(const int elem, const int db)
 {
+  // Előfeltétel
+  if (db <= 0) return;
+
   int index = Hanyadik(elem);
 
   if (index != -1)
   {
-    // Ha van benne el�g darab, akkor cs�kkentj�k a dbsz�mot
+    // Ha van benne elég darab, akkor csökkentjük a dbszámot
     if (elemek.at(index).db > db)
     {
       elemek.at(index).db -= db;
     }
-    // Ha nincs, akkor kivessz�k az elemet
+    // Ha nincs, akkor kivesszük az elemet
     else
     {
-      // Az utols� helyen l�v� rekordot �trakjuk a t�rlend� hely�re
+      // Az utolsó helyen lévõ rekordot átrakjuk a törlendõ helyére
       elemek.at(index) = elemek.at(elemek.size() - 1);
-      // Az utols� rekordot t�r�lj�k
+      // Az utolsó rekordot töröljük
       elemek.pop_back();
     }
   }
@@ -105,22 +111,79 @@ void Multihalmaz::Ures()
 
 Multihalmaz Multihalmaz::Metszet(Multihalmaz &masik)
 {
+  Multihalmaz uj;
 
+  for (int i = 0; i < elemek.size(); ++i)
+  {
+    int db = masik.Multiplicitas(elemek.at(i).elem);
+    // Beszúrjuk az új multihalmazba a kisebb darabszámot
+    if (elemek.at(i).db < db)
+    {
+      uj.Multihalmazba(elemek.at(i).elem, elemek.at(i).db);
+    }
+    else
+    {
+      uj.Multihalmazba(elemek.at(i).elem, db);
+    }
+  }
+
+  return uj;
 }
 
 Multihalmaz Multihalmaz::Unio(Multihalmaz &masik)
 {
+  Multihalmaz uj;
 
+  // Az aktuálisból minden elemet átmásolunk
+  for (int i = 0; i < elemek.size(); ++i)
+  {
+    uj.Multihalmazba(elemek.at(i).elem, elemek.at(i).db);
+  }
+
+  // Végigmegyünkl a másik multihalmazon
+  for (int i = 0; i < masik.elemek.size(); ++i)
+  {
+    // Megnézzük, hogy az eredetiben hány darab volt az aktuális elemből
+    int db = Multiplicitas(masik.elemek.at(i).elem);
+    // Hozzáadjuk a különbséget, ha a másikban több van
+    if (masik.elemek.at(i).db > db)
+    {
+      uj.Multihalmazba(masik.elemek.at(i).elem, masik.elemek.at(i).db - db);
+    }
+  }
+
+  return uj;
 }
 
 Multihalmaz Multihalmaz::Kulonbseg(Multihalmaz &masik)
 {
+  Multihalmaz uj;
 
+  // Az aktuálisból minden elemet átmásolunk
+  for (int i = 0; i < elemek.size(); ++i)
+  {
+    uj.Multihalmazba(elemek.at(i).elem, elemek.at(i).db);
+  }
+
+  // A másik listából minden elemet kiveszünk a multihalmazból
+  for (int i = 0; i < masik.elemek.size(); ++i)
+  {
+    uj.Mulithalmazbol(masik.elemek.at(i).elem, masik.elemek.at(i).db);
+  }
+
+  return uj;
 }
 
 bool Multihalmaz::ReszeE(Multihalmaz &masik)
 {
+  // Eldöntés tétel (felt: az db legalább annyi, mint a másikban a db minden elemre)
+  int i = 0;
+  while (i < elemek.size() && masik.Multiplicitas(elemek.at(i).elem) >= elemek.at(i).db)
+  {
+    ++i;
+  }
 
+  return i == elemek.size();
 }
 
 ostream& operator<<(ostream &os, const Multihalmaz &h)
