@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Haiku</title>
+  <style>
+    #haiku-editor + button {
+      display: none;
+    }
+    p.haiku #haiku-editor {
+      background-color: hsl(100, 40%, 80%);
+      border: 3px solid darkgreen;
+    }
+    p.haiku #haiku-editor + button {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <h1>Haiku editor</h1>
+  <p>Write your poem here:</p>
+  <p>
+    <textarea id="haiku-editor" cols="30" rows="5"></textarea>
+    <button id="btn-copy-haiku">Add haiku to the list</button>
+  </p>
+  <p>Number of characters: <span id="number-of-characters">0</span></p>
+  <p>Number of rows: <span id="number-of-rows">0</span></p>
+  <p>Number of vowels per row:</p>
+  <ol id="vowels-per-row">
+    <li>12</li>
+    <li>1</li>
+    <li>5</li>
+  </ol>
+
+  <hr>
+  <h3>Haikus</h3>
+  <div id="haikus">
+    <pre>hűs hajnal ölel
+már halkulnak a tücskök
+légy türelemmel</pre>
+
+    <pre>Fölhívtál reggel...
+azóta a mosolyod
+bennem mosolyog...</pre>
+    <pre>nézlek én Téged
+ahogy az ágyon fekszel
+szerelmes vagyok</pre>
+  </div>
+
+  <script src="index.js"></script>
+</body>
+</html>
