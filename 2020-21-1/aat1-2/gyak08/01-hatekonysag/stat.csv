@@ -1,0 +1,8 @@
+Név;Elemek száma;Eltelt idõ;Összehasonlítások száma;Mozgatások száma;Mozgatások aránya;Mozgatások négyzetes aránya
+Maximum kiválasztásos rendezés;100;0;4950;285;2.85;0.0285
+Maximum kiválasztásos rendezés;250;0.001;31125;732;2.928;0.011712
+Maximum kiválasztásos rendezés;500;0.002;124750;1488;2.976;0.005952
+Maximum kiválasztásos rendezés;1000;0.009;499500;2982;2.982;0.002982
+Maximum kiválasztásos rendezés;2500;0.054;3123750;7482;2.9928;0.00119712
+Maximum kiválasztásos rendezés;5000;0.333;12497500;14961;2.9922;0.00059844
+Maximum kiválasztásos rendezés;10000;0.821;49995000;29982;2.9982;0.00029982
