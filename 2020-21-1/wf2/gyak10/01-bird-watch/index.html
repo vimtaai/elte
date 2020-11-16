@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bird watch</title>
+  <style>
+    table {
+      border-collapse: collapse;
+    }
+    table td {
+      width: 20px;
+      height: 20px;
+      border: 1px solid black;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <h1>Bird watch</h1>
+  <div>
+    Places: <input type="number" value="3" id="places"> <br>
+    Species: <input type="number" value="4" id="species"> <br>
+    <button id="btn-generate">Generate table</button>
+  </div>
+  <h3>Bird counts</h3>
+  <div id="table-container">
+
+  </div>
+  <h3>Questions</h3>
+  <dl>
+    <dt>Is there any bird in the first place?</dt>
+    <dd id="task-1">(Yes)</dd>
+
+    <dt>In how many places have they seen more than 10 birds from any of the bird species?</dt>
+    <dd id="task-2">(1)</dd>
+    
+    <dt>Give one place where no birds have been seen! (row number indexed from 1, -1 if there is no such place)</dt>
+    <dd id="task-3">(2)</dd>
+  </dl>
+
+  <script src="index.js"></script>
+</body>
+</html>

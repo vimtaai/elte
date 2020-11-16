@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Progress manager</title>
+  <style>
+    li.done {
+      text-decoration: line-through;
+    }
+    li.done::before {
+      content: "✔";
+    }
+  </style>
+</head>
+<body>
+  <h1>Progress manager</h1>
+  <ol id="todos">
+    <li class="step">Todo 1
+      <ul>
+        <li>Step 1</li>
+        <li>Step 2</li>
+        <li>Step 3</li>
+        <li>Step 4</li>
+        <li>Step 5</li>
+      </ul>
+    </li>
+    <li class="step">Todo 2
+      <ul>
+        <li>Step 1</li>
+        <li>Step 2</li>
+        <li>Step 3</li>
+        <li>Step 4</li>
+        <li>Step 5</li>
+        <li>Step 6</li>
+        <li>Step 7</li>
+      </ul>
+    </li>
+    <li class="step">Todo 3
+      <ul>
+        <li>Step 1</li>
+        <li>Step 2</li>
+        <li>Step 3</li>
+        <li>Step 4</li>
+        <li>Step 5</li>
+        <li>Step 6</li>
+      </ul>
+    </li>
+    <li class="step">Todo 4
+      <ul>
+        <li>Step 1</li>
+        <li>Step 2</li>
+        <li>Step 3</li>
+      </ul>
+    </li>
+  </ol>
+
+  <script src="index.js"></script>
+</body>
+</html>
