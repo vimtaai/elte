@@ -1,0 +1,20 @@
+table {
+  border: solid lightblue 1px;
+  background: darkblue;
+}
+
+td {
+  width: 50px;
+  height: 50px;
+  border: solid #333 1px;
+  font-size: 30px;
+  text-align: center;
+  background: lightblue;
+  color: darkblue;
+}
+
+td.ok {
+  border-color: green;
+  background: lightgreen;
+  color: green;
+}
