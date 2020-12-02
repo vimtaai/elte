@@ -1,0 +1,32 @@
+{
+    "1": {
+        "title": "JavaScript",
+        "description": "All things about JavaScript",
+        "lastUpdate": "2020-11-04 10:15:00",
+        "id": "1"
+    },
+    "2": {
+        "title": "PHP",
+        "description": "All things about PHP",
+        "lastUpdate": "2020-11-18 09:12:57",
+        "id": "2"
+    },
+    "5fb4e1e8ba66b": {
+        "title": "Test",
+        "description": "Test",
+        "lastUpdate": "2020-11-18 09:57:12",
+        "id": "5fb4e1e8ba66b"
+    },
+    "5fb4e2fad8373": {
+        "title": "Test 2",
+        "description": "Description of test",
+        "lastUpdate": "2020-11-18 10:01:46",
+        "id": "5fb4e2fad8373"
+    },
+    "5fbd4686368bb": {
+        "title": "smth",
+        "description": "anyth",
+        "lastUpdate": "2020-11-24 18:44:38",
+        "id": "5fbd4686368bb"
+    }
+}
