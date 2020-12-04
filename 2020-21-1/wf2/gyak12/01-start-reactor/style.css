@@ -1,0 +1,42 @@
+table {
+  display: inline-table;
+}
+
+td {
+  box-sizing: border-box;
+  width: 30px;
+  height: 30px;
+}
+
+.progress {
+  display: inline-block;
+  border-radius: 50%;
+  margin: 0 2px;
+  width: 10px;
+  height: 10px;
+  background: gray;
+  border: solid black 1px;
+}
+
+.progress.done {
+  background: limegreen;
+}
+
+#lights {
+  border: solid darkblue 1px;
+  background: lightblue;
+}
+
+#lights td.active {
+  background: darkblue;
+}
+
+#buttons {
+  border: solid darkblue 1px;
+  background: lightblue;
+}
+
+#buttons td {
+  border: outset gray 2px;
+  background: lightgray;
+}
