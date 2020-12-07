@@ -1,0 +1,54 @@
+<button>Generál</button>
+<div id="menu"></div>
+
+<script>
+  const data = [
+    [ 
+      { icon: "⏪", color: "orange" }, 
+      { icon: "⏩", color: "orange" }
+    ],
+    [
+      { icon: "📠", color: "salmon" },
+      { icon: "💾", color: "salmon" },
+      { icon: "📈", color: "salmon" },
+      { icon: "📊", color: "salmon" }
+    ],
+    [
+      { icon: "🔎", color: "yellow" },
+      { icon: "📆", color: "yellow" },
+      { icon: "👤", color: "yellow" }
+    ]
+  ];
+
+  const button = document.querySelector("button");
+  const menu = document.querySelector("#menu");
+
+  // function renderMenu(data) {
+  //   let html = ``;
+  //   for (let panel of data) {
+  //     html += `<span class="panel">\n`;
+  //     for (let button of panel) {
+  //       html += `<button style="background: ${button.color}">${button.icon}</button>\n`;
+  //     }
+  //     html += `</span>\n`;
+  //   }
+  //   return html;
+  // }
+
+  function renderMenu(data) {
+    return data.map(renderPanel).join("\n");
+  }
+
+  function renderPanel(panel) {
+    return `<span class="panel">${panel.map(renderButton).join("\n")}</span>`;
+  }
+
+  function renderButton(button) {
+    return `<button style="background: ${button.color}">${button.icon}</button>`;
+  }
+
+  function handleButtonClick() {
+    menu.innerHTML = renderMenu(data);
+  }
+  button.addEventListener("click", handleButtonClick);
+</script>

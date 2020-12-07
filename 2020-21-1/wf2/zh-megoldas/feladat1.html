@@ -1,0 +1,20 @@
+<input type="text" value="10">
+<button>÷</button>
+<button>×</button>
+<script>
+  const input = document.querySelector("input");
+  const buttonDivide = document.querySelector("button");
+  const buttonMultiply = document.querySelector("button + button");
+
+  function handleDivideClick() {
+    let value = parseFloat(input.value);
+    input.value = value / 2;
+  }
+  buttonDivide.addEventListener("click", handleDivideClick);
+
+  function handleMuliplyClick() {
+    let value = parseFloat(input.value);
+    input.value = value * 2;
+  }
+  buttonMultiply.addEventListener("click", handleMuliplyClick);
+</script>

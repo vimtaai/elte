@@ -1,0 +1,25 @@
+<style>td {width:30px;height:30px;}</style>
+<input type="color" value="#FF8800">
+<table border="1">
+  <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+  <tr><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+</table>
+<script>
+  const input = document.querySelector("input");
+  const table = document.querySelector("table");
+
+  function handleCellClick(event) {
+    if (!event.target.matches("td")) {
+      return;
+    }
+
+    const td = event.target;
+    const color = input.value;
+    td.style.backgroundColor = color;
+  }
+  table.addEventListener("click", handleCellClick);
+</script>
