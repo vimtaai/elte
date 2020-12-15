@@ -1,0 +1,30 @@
+{
+    "5fc74c669b1aa": {
+        "username": "admin",
+        "password": "$2y$10$QltyIhxaixW3iOERYZsx4OPy0IXEcWAPKiLtksvvIWfuf2gctSRWy",
+        "fullname": "Admin",
+        "roles": [
+            "user",
+            "admin"
+        ],
+        "id": "5fc74c669b1aa"
+    },
+    "5fc75160a3f43": {
+        "username": "user",
+        "password": "$2y$10$RExjAiZS9OiHhSD\/kQ\/DD.SBWaZbP5IRQgDuFYvZpbziu9wdIboaS",
+        "fullname": "User",
+        "roles": [
+            "user"
+        ],
+        "id": "5fc75160a3f43"
+    },
+    "5fc7576986c9f": {
+        "username": "user2",
+        "password": "$2y$10$NJ8hA3X1P05sC0h2K1RF.u1sRnBK7rAKW4mDC\/HnTXvOokBnVgSj2",
+        "fullname": "User 2",
+        "roles": [
+            "user"
+        ],
+        "id": "5fc7576986c9f"
+    }
+}

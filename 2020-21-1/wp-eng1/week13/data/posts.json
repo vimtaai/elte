@@ -1,0 +1,58 @@
+{
+    "1": {
+        "id": "1",
+        "topicId": "1",
+        "userId": "5fc74c669b1aa",
+        "date": "2020-12-09 8:52:34",
+        "text": "This is the first post in this topic"
+    },
+    "5fd0911fca2ca": {
+        "userId": null,
+        "topicId": null,
+        "date": "2020-12-09 09:55:59",
+        "text": null,
+        "id": "5fd0911fca2ca"
+    },
+    "5fd0912b7ca3b": {
+        "userId": "5fc74c669b1aa",
+        "topicId": null,
+        "date": "2020-12-09 09:56:11",
+        "text": null,
+        "id": "5fd0912b7ca3b"
+    },
+    "5fd09152e10ba": {
+        "userId": "5fc74c669b1aa",
+        "topicId": null,
+        "date": "2020-12-09 09:56:50",
+        "text": null,
+        "id": "5fd09152e10ba"
+    },
+    "5fd0916b7bc54": {
+        "userId": "5fc74c669b1aa",
+        "topicId": "1",
+        "date": "2020-12-09 09:57:15",
+        "text": "Next post",
+        "id": "5fd0916b7bc54"
+    },
+    "5fd09184d9c90": {
+        "userId": "5fc74c669b1aa",
+        "topicId": "1",
+        "date": "2020-12-09 09:57:40",
+        "text": "Next next post",
+        "id": "5fd09184d9c90"
+    },
+    "5fd091b66eefe": {
+        "userId": "5fc74c669b1aa",
+        "topicId": "1",
+        "date": "2020-12-09 09:58:30",
+        "text": "I post something new",
+        "id": "5fd091b66eefe"
+    },
+    "5fd091d67b91f": {
+        "userId": "5fc74c669b1aa",
+        "topicId": "1",
+        "date": "2020-12-09 09:59:02",
+        "text": "New account, who this?",
+        "id": "5fd091d67b91f"
+    }
+}

@@ -4,13 +4,16 @@
 
 using namespace std;
 
+
+int c = 0;
+
 // Minden oszlop egy vektor, ahol alulról fölfelé a korongok mérete szerepel
 // Az állapot oszlopok vektora (3 darab oszloppal)
 typedef vector<vector<int>> Allapot;
 
 void allapot_kiir(const Allapot &allapot)
 {
-  Sleep(1000);   // Csak windowson működik, más oprendszeren kommenteld ki
+  Sleep(300);   // Csak windowson működik, más oprendszeren kommenteld ki
   system("cls"); // Csak windowson működik, más oprendszeren kommenteld ki
   for (int i = 0; i < allapot.size(); ++i)
   {
@@ -27,6 +30,7 @@ void allapot_kiir(const Allapot &allapot)
 // Egy korong egyik helyrõl a másikra
 void lepes(Allapot &allapot, int honnan, int hova)
 {
+  c++;
   int honnan_db = allapot.at(honnan).size();
   // Megnézem mi a mozgatandó elem
   int elem = allapot.at(honnan).at(honnan_db - 1);
@@ -56,7 +60,7 @@ void mozgat(Allapot &allapot, int honnan, int hova, int seged, int db) {
 
 int main()
 {
-  Sleep(3000);
+  Sleep(1000);
   Allapot hanoi(3, vector<int>());
   const int KORONG_SZAM = 5;
   for (int i = 0; i < KORONG_SZAM; ++i) {
@@ -65,6 +69,7 @@ int main()
 
   allapot_kiir(hanoi);
   mozgat(hanoi, 0, 2, 1, KORONG_SZAM);
+  cout << c << endl;
 
   return 0;
 }
