@@ -1,0 +1,24 @@
+#color-mixer {
+  align-items: center;
+  display: flex;
+  font-size: 16px;
+  font-weight: bold;
+  gap: 8px;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+input,
+button,
+output {
+  border: solid #000 2px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 4px 8px;
+  height: 40px;
+  width: 80px;
+}

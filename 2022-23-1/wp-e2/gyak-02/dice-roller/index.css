@@ -1,0 +1,23 @@
+#dice-roller {
+  align-items: center;
+  display: flex;
+  gap: 8px;
+}
+
+input,
+select,
+button {
+  border: solid #000 2px;
+  border-radius: 8px;
+  box-sizing: border-box;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 4px 8px;
+  height: 40px;
+  width: 80px;
+}
+
+output {
+  font-size: 24px;
+  font-weight: bold;
+}
