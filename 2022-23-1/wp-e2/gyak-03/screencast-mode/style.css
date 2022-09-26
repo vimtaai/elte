@@ -1,0 +1,14 @@
+#pressed-key-display {
+  background: rgba(0, 0, 0, 0.5);
+  border: solid rgba(255, 255, 255, 0.5) 2px;
+  border-radius: 8px;
+  color: rgb(255, 255, 255);
+  font-family: "Courier New", Courier, monospace;
+  font-size: 40px;
+  height: 50px;
+  left: 50%;
+  padding: 8px 16px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}

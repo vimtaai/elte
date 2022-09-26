@@ -1,0 +1,20 @@
+#multiselect-move {
+  display: flex;
+  gap: 50px;
+  left: 50%;
+  padding: 20px;
+  position: absolute;
+  top: 20%;
+  transform: translate(-50%, 60px);
+}
+
+select {
+  border: solid #000 2px;
+  height: 400px;
+  width: 300px;
+}
+
+option {
+  font-size: 30px;
+  height: 40px;
+}

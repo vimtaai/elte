@@ -1,0 +1,20 @@
+#tic-tac-toe {
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#tic-tac-toe table {
+  border-collapse: collapse;
+}
+
+#tic-tac-toe table td {
+  border: solid #000 2px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 80px;
+  font-weight: bold;
+  text-align: center;
+  height: 100px;
+  width: 100px;
+}

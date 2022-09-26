@@ -1,0 +1,33 @@
+#input {
+  border: solid #000 2px;
+  font-size: 40px;
+  height: 50px;
+  left: 50%;
+  position: absolute;
+  top: 20%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+}
+
+#popup {
+  background-color: #eee;
+  border: solid #555 2px;
+  box-shadow: 0 0 10px #888;
+  left: 50%;
+  min-height: 50px;
+  position: absolute;
+  top: 20%;
+  transform: translate(-50%, 60px);
+  width: 500px;
+}
+
+#popup .word-option {
+  display: block;
+  font-size: 30px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+#popup .word-option:hover {
+  background-color: #ddd;
+}
