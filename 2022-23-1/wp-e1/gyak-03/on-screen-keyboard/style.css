@@ -1,0 +1,36 @@
+#input {
+  border: solid #000 2px;
+  font-size: 40px;
+  height: 50px;
+  left: 50%;
+  position: absolute;
+  top: 20%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+}
+
+#keyboard {
+  left: 50%;
+  position: absolute;
+  bottom: 10%;
+  transform: translate(-50%, 0);
+}
+
+#keyboard table {
+  border-collapse: collapse;
+}
+
+#keyboard table td {
+  border: solid #000 2px;
+  cursor: pointer;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  height: 50px;
+  width: 50px;
+}
+
+#keyboard table td:hover {
+  background: #ccc;
+}

@@ -1,0 +1,22 @@
+menu {
+  background-color: #eee;
+  border: solid #555 2px;
+  box-shadow: 0 0 10px #888;
+  margin: 0;
+  min-height: 50px;
+  padding: 0;
+  position: absolute;
+  width: 200px;
+}
+
+menu li {
+  display: block;
+  font-size: 30px;
+  margin: 0;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+menu li:hover {
+  background-color: #ddd;
+}

@@ -1,0 +1,22 @@
+#compass {
+  border: solid #000 2px;
+  border-radius: 50%;
+  height: 200px;
+  left: 50%;
+  margin: -100px 0 0 -100px;
+  overflow: hidden;
+  top: 50%;
+  position: absolute;
+  width: 200px;
+}
+
+#compass::after {
+  content: "";
+  border: solid 30px transparent;
+  border-bottom: solid 100px #f00;
+  border-top: 0;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
