@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<meta charset="utf-8" />
+<title>Markdown document</title>
+
+<style>
+  .page { font: 18px Arial; display: flex; margin: 40px; }
+  section { flex: 1 1; text-align: center; }
+  label { display: block; margin: 20px 0; }
+  select { font-size: 18px; min-width: 200px; }
+  img { border-radius: 999px; }
+  strong { display: block; margin: 20px 0; }
+</style>
+<div class="page">
+  <section>
+    <button id="random">Random person</button>
+    <button id="getList">Get list</button>
+    <label for="list">Select a person</label>
+    <select id="list"></select>
+  </section>
+  <section>
+    <img id="profile" src="https://randomuser.me/api/portraits/men/59.jpg" alt="Profile picture">
+    <strong id="name">Dhiraj Thampy</strong>
+    <p id="dateOfBirth">1987. 08. 06.</p>
+    <a id="map" target="_blank" href="https://www.google.com/maps/search/?api=1&query=6432+Rani+No+Hajiro+Navi+Mumbai+India">View Address</a>
+  </section>
+</div>
+
+<script src="index.js" type="module"></script>
