@@ -1,0 +1,54 @@
+#app,
+#saved-drawings,
+#toolbar,
+#wrapper,
+#colors,
+#current-color,
+#color-history {
+  display: flex;
+  gap: 8px;
+}
+
+#app,
+#colors,
+#color-history {
+  flex-direction: column;
+}
+
+.saved-drawing {
+  background-color: #dddddd;
+  height: 100px;
+  width: 100px;
+}
+
+.saved-drawing-add {
+  align-items: center;
+  display: flex;
+  font-size: 75px;
+  justify-content: center;
+}
+
+#width,
+#height {
+  width: 64px;
+}
+
+#drawing table {
+  border-collapse: collapse;
+}
+
+#drawing td {
+  border: solid 1px #000000;
+  height: 16px;
+  width: 16px;
+}
+
+.saved-color {
+  border: solid 1px #000000;
+  height: 32px;
+  width: 32px;
+}
+
+#drawing {
+  flex-grow: 1;
+}
