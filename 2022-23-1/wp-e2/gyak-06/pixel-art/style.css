@@ -1,0 +1,53 @@
+#saved-drawings {
+  display: flex;
+  gap: 16px;
+  margin: 16px 0;
+}
+
+.drawing-thumbnail {
+  background-color: #888888;
+  height: 100px;
+  width: 100px;
+}
+
+#toolbar input {
+  width: 64px;
+}
+
+#wrapper {
+  display: flex;
+  margin-top: 16px;
+}
+
+#drawing {
+  flex: 1 1;
+}
+
+#drawing table {
+  border-collapse: collapse;
+}
+
+#drawing td {
+  border: solid 1px #000000;
+  height: 16px;
+  width: 16px;
+}
+
+#colors {
+  display: flex;
+  flex: 1 1;
+  flex-direction: column;
+  gap: 16px;
+}
+
+#color-history {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.saved-color {
+  border: solid 1px #000000;
+  height: 32px;
+  width: 32px;
+}
