@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pixel Art</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div id="app">
+      <div id="saved-drawings">
+        <div id="saved-drawings-list"></div>
+        <div id="save-drawing" class="saved-drawing saved-drawing-add">+</div>
+      </div>
+      <div id="toolbar">
+        <label for="width">New Drawing: </label>
+        <input type="number" id="width" />
+        ×
+        <input type="number" id="height" />
+        <button id="start">Start</button>
+      </div>
+      <div id="wrapper">
+        <div id="drawing"></div>
+        <div id="colors">
+          <div id="current-color">
+            <input type="color" id="color-picker" />
+          </div>
+          <div id="color-history"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="index.js" type="module"></script>
+  </body>
+</html>
