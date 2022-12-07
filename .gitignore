@@ -10,4 +10,5 @@
 **/.cache
 **/dist
 **/storage
+**/data
 **/debug.log
