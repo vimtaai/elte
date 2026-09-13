@@ -1,3 +1,6 @@
+// https://webprogramozas.inf.elte.hu/#!/subjects/webprog-pti/gyak/01
+
+// 7. Adott két szám. Írj függvényt, amely visszaadja legnagyobb közös osztójukat!
 /**
   Függvény lnko(a, b: Egész): Egész 
     Ha a < b akkor csere(a, b)
@@ -32,6 +35,7 @@ function greatestCommonDivisor(numberA, numberB) {
 let divisor = greatestCommonDivisor(42, 12);
 console.log(divisor);
 
+// 16. Döntsd el egy mátrxiról, hogy minden eleme páros-e!
 let matrix = [
   [2, 4, 6],
   [4, 6, 8],
