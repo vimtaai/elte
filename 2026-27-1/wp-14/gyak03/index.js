@@ -39,7 +39,7 @@ function renderTodoList(state) {
 function onAddButtonClick(event) {
   console.log(event);
   const newTodoItem = inputElement.value;
-  todoList.push(newTodoItem);
+  state.todoList.push(newTodoItem);
   todoListElement.innerHTML = renderTodoList(state);
   inputElement.value = "";
 }
