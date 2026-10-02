@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tower Defense</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bungee&display=swap">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Tower Defense</h1>
+  <p class="stats">
+    <span>🪙 <span id="gold">30</span></span>
+    <span>❤️ <span id="lives">10</span></span>
+  </p>
+  <button type="button" id="start">Start</button>
+  <p id="game-over" hidden>Game over!</p>
+  <main>
+    <div id="board">
+      <div class="cell"></div>
+      <div class="cell path"></div>
+      <div class="cell tower"></div>
+      <div class="cell path enemy" data-hp="3"></div>
+      <div class="cell tower" data-damage="2"></div>
+    </div>
+  </main>
+  <script src="index.js" type="module"></script>
+</body>
+</html>
