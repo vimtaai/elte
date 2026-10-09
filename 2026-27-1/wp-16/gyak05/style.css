@@ -1,0 +1,41 @@
+body {
+  font-family: "Lobster", cursive;
+  color: #3b2410;
+  text-align: center;
+  background-color: #8fbc5a;
+}
+
+h1 {
+  font-size: 56px;
+  font-weight: normal;
+  letter-spacing: 1px;
+  margin: 24px 0 8px;
+}
+
+.score-label {
+  font-size: 28px;
+  letter-spacing: 0.5px;
+  margin: 0 0 16px;
+}
+
+#board {
+  margin: 0 auto;
+  border-spacing: 8px;
+}
+
+#board td {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #5c3d1e;
+  box-shadow: inset 0 6px 10px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  font-size: 48px;
+  text-align: center;
+  vertical-align: middle;
+  user-select: none;
+}
+
+#board td.mole::after {
+  content: "🐹";
+}
