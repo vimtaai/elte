@@ -1,0 +1,35 @@
+@import url("https://cdn.jsdelivr.net/gh/elte-fi/www-assets@19.10.16/styles/mdss.min.css");
+
+path{
+    fill: none;
+    stroke: #000;
+}
+
+text{
+    text-anchor: middle;
+    text-transform: capitalize;
+    font-family: "Roboto Condensed","Arial Narrow","HelveticaNeue",sans-serif;
+    fill: #517d81;
+}
+
+ellipse{
+    cursor: pointer !important;
+    fill:#fff;
+    stroke: #000000;
+}
+
+p{
+    font-weight: 500;
+    color: hsl(0,50%,50%);
+}
+
+.aktualis {
+    fill: hsl(180,70%,70%)
+}
+
+.elerheto {
+    fill: hsl(70,70%,70%)
+}
+
+
+
