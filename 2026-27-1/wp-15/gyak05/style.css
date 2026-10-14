@@ -1,0 +1,145 @@
+[hidden] {
+  display: none !important;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Bungee", sans-serif;
+  color: #f4f1de;
+  text-align: center;
+  background: linear-gradient(160deg, #2d4a22, #1b2e14);
+}
+
+h1 {
+  font-size: 48px;
+  font-weight: normal;
+  letter-spacing: 2px;
+  margin: 24px 0 8px;
+  text-shadow: 0 4px 0 rgba(0, 0, 0, 0.4);
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 32px;
+  font-size: 24px;
+  margin: 0 0 16px;
+}
+
+#game-over {
+  font-size: 40px;
+  color: #ef476f;
+  margin: 16px 0 0;
+  text-shadow: 0 3px 0 rgba(0, 0, 0, 0.5);
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 24px;
+  margin: 24px 16px;
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(6, 72px);
+  grid-auto-rows: 72px;
+  gap: 4px;
+  padding: 8px;
+  background-color: #1b2e14;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.cell {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  background-color: #6a994e;
+  border-radius: 8px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.cell:not(.path, .tower):hover {
+  background-color: #8bbf6a;
+  box-shadow: inset 0 0 0 3px rgba(255, 255, 255, 0.4);
+}
+
+.cell.path {
+  background-color: #d9b779;
+  box-shadow: inset 0 0 8px rgba(92, 61, 30, 0.5);
+  cursor: default;
+}
+
+.cell.tower::after {
+  content: "🏰";
+}
+
+.cell.tower:hover {
+  filter: brightness(1.15);
+}
+
+.cell.enemy::after {
+  content: "👾";
+}
+
+.cell.enemy::before,
+.cell.tower[data-damage]::before {
+  position: absolute;
+  top: 4px;
+  right: 4px;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 4px;
+  font-family: sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 20px;
+  color: #fff;
+  border-radius: 999px;
+}
+
+.cell.enemy::before {
+  content: attr(data-hp);
+  background-color: #c1121f;
+}
+
+.cell.tower[data-damage]::before {
+  content: "⚔ " attr(data-damage);
+  background-color: #3a86ff;
+}
+
+#start {
+  padding: 8px 24px;
+  font-family: inherit;
+  font-size: 18px;
+  color: #3b2410;
+  background: linear-gradient(#ffd166, #e09f3e);
+  border: none;
+  border-radius: 999px;
+  box-shadow: inset 0 -3px 0 rgba(0, 0, 0, 0.2), 0 2px 6px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transition: transform 0.1s, filter 0.1s;
+}
+
+#start:enabled:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.1);
+}
+
+#start:enabled:active {
+  transform: translateY(1px);
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.4);
+}
+
+#start:disabled {
+  filter: grayscale(1);
+  opacity: 0.6;
+  box-shadow: none;
+  cursor: not-allowed;
+}
