@@ -1,0 +1,29 @@
+@import url("https://cdn.jsdelivr.net/gh/elte-fi/www-assets@19.10.16/styles/mdss.min.css");
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap");
+
+#postcard {
+  border: 20px solid gray;
+  padding: 30px;
+  font-family: "Dancing Script", cursive;
+  font-size: xx-large;
+  background-image: url("https://img.freepik.com/free-vector/hand-painted-watercolor-abstract-background_23-2148998534.jpg?t=st=1653474348~exp=1653474948~hmac=cffc3c03934033b5c3be480f164aff87f6b6bf1ec54c1eb0f4d747981b02980e&w=1380");
+  /* background-position: center center; */
+  background-size: cover;
+}
+#postcard h1 {
+  font-family: "Dancing Script", cursive;
+  text-transform: none;
+  font-size: larger;
+}
+#postcard footer {
+  text-align: right;
+}
+#postcard .left {
+  text-align: left;
+}
+#postcard .right {
+  text-align: right;
+}
+#postcard .center {
+  text-align: center;
+}

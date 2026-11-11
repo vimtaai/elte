@@ -1,0 +1,23 @@
+html {
+  background: url("https://blenderartists.org/uploads/default/original/4X/7/e/2/7e2d7bea4ac21388c4a96e1371f375c4ce00094b.jpg")
+    no-repeat center center fixed !important;
+}
+body {
+  color: #aaa;
+  font-family: "Roboto", "Arial", "HelveticaNeue", sans-serif;
+  font-size: 15px;
+  line-height: 1.43;
+  text-align: center;
+  margin: 0 auto;
+}
+
+h1 {
+  text-transform: uppercase;
+}
+
+canvas {
+  background-image: url("https://img.wallpapersafari.com/desktop/728/410/88/66/Uowyg0.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0 auto;
+}

@@ -1,0 +1,53 @@
+html {
+  background-image: url(bg2.jpg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+body {
+  color: #1d2530;
+  font-family: "Roboto", "Arial", "HelveticaNeue", sans-serif;
+  font-size: 15px;
+  line-height: 1.43;
+  padding: 10.5px calc(50% - 505px + 15px);
+}
+h1 {
+  text-transform: uppercase;
+}
+.background-filter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -100;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(2px);
+  background-color: #fffa;
+}
+table {
+  border: 3px solid #888;
+  border-collapse: separate;
+  border-spacing: 0;
+  border-radius: 10px;
+  margin: 0 auto;
+  background-image: url("bg.webp");
+  background-size: cover;
+}
+table td {
+  border-left: 3px solid #888;
+  border-top: 3px solid #888;
+  width: 50px;
+  height: 50px;
+}
+table td:first-child {
+  border-left: none;
+}
+table tr:first-child td {
+  border-top: none;
+}
+td.treasure {
+  background-color: #fff0 !important;
+  background-image: url("chest.png");
+  background-size: contain;
+}

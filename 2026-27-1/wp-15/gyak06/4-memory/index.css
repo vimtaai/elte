@@ -1,0 +1,52 @@
+@import url("https://cdn.jsdelivr.net/gh/elte-fi/www-assets@19.10.16/styles/mdss.min.css");
+
+#container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.circle {
+  min-width: 100px;
+  min-height: 100px;
+  border: 10px solid gray;
+  border-radius: 100px;
+  margin: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 50px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 700;
+  background-color: lightgray;
+}
+
+.circle.highlight {
+  /* background-color: orange; */
+  animation-duration: 0.9s;
+  animation-name: fade-in-out;
+}
+
+@keyframes fade-in-out {
+  10% {
+    background-color: orange;
+  }
+  to {
+    background-color: lightgray;
+  }
+}
+
+.circle:active {
+  background-color: hsla(119, 100%, 50%, 0.979);
+}
+
+progress {
+  width: 100%;
+}
+
+#output {
+  text-align: center;
+  font-size: 50px;
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 700;
+  color: darkred;
+}

@@ -1,0 +1,25 @@
+@import url("https://cdn.jsdelivr.net/gh/elte-fi/www-assets@19.10.16/styles/mdss.min.css");
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  border: 3px solid darkgray;
+  height: 100px;
+  display: flex;
+  background: linear-gradient(to right, hsla(90, 50%, 50%, 1), hsla(30, 100%, 50%, 1) 75%, red 75%, red 100%);
+}
+.container label {
+  display: inline-flex;
+  height: 100%;
+  border: 1px solid lightgray;
+  /* width: 1%; */
+  overflow: hidden;
+  justify-content: center;
+  align-items: center;
+  background-color: hsla(200, 50%, 50%, .8);
+}
+.container.hidden {
+  display: none;
+}

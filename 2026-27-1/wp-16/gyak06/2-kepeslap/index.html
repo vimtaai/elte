@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Képeslap</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <h1>Képeslap</h1>
+
+    <h2>Szerkesztő</h2>
+    <form>
+      <fieldset>
+        <legend>Alapadatok</legend>
+        <div>
+          <label for="background-image">Háttérkép:</label>
+          <input type="url" id="background-image" />
+        </div>
+        <div>
+          <label for="addressee">Címzett:</label>
+          <input type="text" id="addressee" />
+        </div>
+        <div>
+          <label for="sender">Küldő:</label>
+          <input type="text" id="sender" />
+        </div>
+      </fieldset>
+      <fieldset class="contents">
+        <legend>Tartalom</legend>
+        <div>
+          <textarea cols="30" rows="3"></textarea>
+          <input type="radio" name="align1" value="left" /> Bal
+          <input type="radio" name="align1" value="center" checked /> Közép
+          <input type="radio" name="align1" value="right" /> Jobb
+        </div>
+      </fieldset>
+    </form>
+    
+    <h2>Minta</h2>
+    <section id="postcard">
+      <h1>Kedves Címzett!</h1>
+      <div class="contents">
+        <p class="left">Ez lesz itt az üzenetem.</p>
+      </div>
+      <footer>Tisztelettel, Küldő</footer>
+    </section>
+
+    <script src="index.js"></script>
+  </body>
+</html>
