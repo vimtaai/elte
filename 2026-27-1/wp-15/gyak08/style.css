@@ -1,0 +1,97 @@
+:root {
+  --primary: #1f4e79;
+  --primary-light: #2e6da4;
+  --accent: #f0a500;
+  --bg: #eef2f6;
+  --surface: #ffffff;
+  --text: #1c2833;
+  --muted: #5d6d7e;
+  --border: #d5dde5;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  padding: 0 1rem 2rem;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+h1 {
+  margin: 0 -1rem 2rem;
+  padding: 1.25rem 2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(90deg, var(--primary), var(--primary-light));
+  border-bottom: 4px solid var(--accent);
+}
+
+/* Cards: course table and new course form */
+table, form {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto 2rem;
+  background: var(--surface);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+table { border-collapse: collapse; overflow: hidden; }
+th, td { padding: 0.75rem 1rem; text-align: left; border-bottom: 1px solid var(--border); }
+th {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+  background: #f7f9fb;
+}
+tr:last-child td { border-bottom: none; }
+tr:hover td { background: #f4f8fc; }
+
+button {
+  padding: 0.45rem 1rem;
+  font: inherit;
+  font-size: 0.85rem;
+  color: #fff;
+  background: var(--primary-light);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+button:hover { background: var(--primary); }
+
+/* Course status badges */
+.complete, .enrolled, .not-eligible {
+  display: inline-block;
+  padding: 0.25rem 0.7rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 999px;
+}
+.complete { color: #2e7d32; background: #e8f5e9; }
+.enrolled { color: var(--primary-light); background: #e3eefa; }
+.not-eligible { color: #c62828; background: #fdecea; }
+tr:has(.not-eligible) td:not(:last-child) { color: var(--muted); }
+
+/* New course form */
+form {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  align-items: end;
+  padding: 1.5rem;
+}
+form h2 { grid-column: 1 / -1; margin: 0; font-size: 1.1rem; color: var(--primary); }
+label { display: flex; flex-direction: column; gap: 0.3rem; font-size: 0.85rem; color: var(--muted); }
+label:has([type="checkbox"]) { flex-direction: row; align-items: center; padding-bottom: 0.5rem; }
+input, select {
+  padding: 0.45rem 0.6rem;
+  font: inherit;
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+input:focus, select:focus { outline: 2px solid var(--primary-light); border-color: transparent; }

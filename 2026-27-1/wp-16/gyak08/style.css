@@ -1,0 +1,167 @@
+:root {
+  --primary: #1f4e79;
+  --primary-light: #2e6da4;
+  --accent: #f0a500;
+  --warning-bg: #fff4d6;
+  --bg: #eef2f6;
+  --surface: #ffffff;
+  --text: #1c2833;
+  --muted: #5d6d7e;
+  --border: #d5dde5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0 1rem 2rem;
+  font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  background: var(--bg);
+  color: var(--text);
+}
+
+h1 {
+  margin: 0 -1rem 2rem;
+  padding: 1.25rem 2rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #fff;
+  background: linear-gradient(90deg, var(--primary), var(--primary-light));
+  border-bottom: 4px solid var(--accent);
+}
+
+/* The "why are you unhappy" callout */
+strong {
+  display: block;
+  max-width: 700px;
+  margin: 0 auto 1.5rem;
+  padding: 0.75rem 1rem;
+  font-weight: 600;
+  background: var(--warning-bg);
+  border-left: 4px solid var(--accent);
+  border-radius: 4px;
+}
+
+/* Bulletin board posts */
+article {
+  max-width: 700px;
+  margin: 0 auto 1rem;
+  padding: 1rem 1.5rem;
+  background: var(--surface);
+  border-left: 4px solid var(--primary-light);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+article:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+/* Newest post (first after array_reverse) stands out */
+article:first-of-type {
+  border-left-color: var(--accent);
+}
+
+article h2 {
+  margin: 0 0 0.5rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+
+article p {
+  margin: 0;
+  color: var(--muted);
+}
+
+/* New post form */
+form {
+  max-width: 700px;
+  margin: 0 auto 2rem;
+  padding: 1.25rem 1.5rem;
+  background: var(--surface);
+  border-top: 4px solid var(--primary);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+label {
+  display: block;
+  margin-bottom: 0.25rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+
+input,
+textarea {
+  display: block;
+  width: 100%;
+  margin-bottom: 1rem;
+  padding: 0.5rem 0.75rem;
+  font: inherit;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+}
+
+textarea {
+  min-height: 5rem;
+  resize: vertical;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--primary-light);
+  box-shadow: 0 0 0 3px rgba(46, 109, 164, 0.2);
+}
+
+form button {
+  padding: 0.5rem 1.25rem;
+  font: inherit;
+  font-weight: 600;
+  color: #fff;
+  background: var(--primary-light);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background: var(--primary);
+}
+
+/* Reactions under a post */
+.reactions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.reactions button {
+  padding: 0.2rem 0.6rem;
+  font: inherit;
+  font-size: 0.85rem;
+  color: var(--muted);
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.reactions button:hover {
+  border-color: var(--primary-light);
+}
+
+.reactions button.reacted {
+  color: var(--primary);
+  background: #e3eef8;
+  border-color: var(--primary-light);
+}
