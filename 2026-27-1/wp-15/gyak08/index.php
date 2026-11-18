@@ -1,61 +1,60 @@
 <?php
+include("data.php");
 
-$name = "Joe";
+$inputs = [];
 
-class Course {
-  public $name;
-  public $semester;
-  public $credits;
-  public $isCompleted;
-
-  function __construct(string $name, int $semester, int $credits, bool $isCompleted = false) {
-    $this->name = $name;
-    $this->semester = $semester;
-    $this->credits = $credits;
-    $this->isCompleted = $isCompleted;
-  }
+if (isset($_GET["search"])) {
+  $inputs["search"] = htmlspecialchars($_GET["search"]);
 }
 
-$courses = [
-  new Course("Web development", 1, 5, true),
-  new Course("Web programming", 2, 4),
-  new Course("Front-end web development", 2, 4),
-  new Course("Calculus", 2, 4),
-  new Course("Discrete Mathematics", 1, 4, true)
-];
+const ALLOWED_TYPES = ["completed", "not-completed"];
+if (isset($_GET["type"])) {
+  $inputs["type"] = in_array($_GET["type"], ALLOWED_TYPES) 
+    ? $_GET["type"]
+    : NULL;
+}
+
+if (isset($inputs["search"]) || isset($inputs["type"])) {
+  $filteredCourses = array_filter($courses, function ($course) use ($inputs) {
+    $completedMatch = $course->isCompleted === ($inputs["type"] === "completed");
+    $searchMatch = strstr($course->name, $inputs["search"]) !== FALSE;
+    return $completedMatch && $searchMatch;
+  });
+} else {
+  $filteredCourses = $courses;
+}
 
 ?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Document</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <h1>Hello <?= $name ?></h1>
+<?php include("header.php"); ?>
+<form action="index.php" method="get">
+  <input type="search" name="search">
+  <select name="type">
+    <option value="completed">Completed</option>
+    <option value="not-completed">Not completed</option>
+  </select>
+  <button type="submit">Search</button>
+</form>
 
-  <table>
+<table>
+  <tr>
+    <th>Course Name</th>
+    <th>Semester</th>
+    <th>Credits</th>
+    <th>&nbsp;</th>
+  </tr>
+  <?php foreach ($filteredCourses as $course): ?>
     <tr>
-      <th>Course Name</th>
-      <th>Semester</th>
-      <th>Credits</th>
-      <th>&nbsp;</th>
+      <td><?= $course->name ?></td>
+      <td><?= $course->semester ?></td>
+      <td><?= $course->credits ?></td>
+      <td>
+        <?php if ($course->isCompleted): ?>
+          <span class="complete">completed</span>
+        <?php else: ?>
+          <button>Sign up</button>
+        <?php endif; ?>
+      </td>
     </tr>
-    <?php foreach ($courses as $course): ?>
-      <tr>
-        <td><?= $course->name ?></td>
-        <td><?= $course->semester ?></td>
-        <td><?= $course->credits ?></td>
-        <td>
-          <?php if ($course->isCompleted): ?>
-            <span class="complete">completed</span>
-          <?php else: ?>
-            <button>Sign up</button>
-          <?php endif; ?>
-        </td>
-      </tr>
-    <?php endforeach; ?>
-  </table>
-</body>
-</html>
+  <?php endforeach; ?>
+</table>
+<?php include("footer.php"); ?>
