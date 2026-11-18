@@ -1,0 +1,149 @@
+body {
+  font-family: system-ui, sans-serif;
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 0 16px;
+  background-color: #f4f6f8;
+  color: #222;
+}
+
+h1 {
+  color: #1a3a5c;
+}
+
+h2 {
+  margin-top: 32px;
+  font-size: 1.2em;
+}
+
+/* Forms */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding: 16px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.9em;
+  font-weight: bold;
+  color: #444;
+}
+
+input,
+select {
+  flex: 1;
+  padding: 8px;
+  font-family: inherit;
+  font-size: 1em;
+  border: 1px solid #c8ced4;
+  border-radius: 4px;
+  background-color: white;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #1a3a5c;
+  box-shadow: 0 0 0 2px rgba(26, 58, 92, 0.2);
+}
+
+/* Credit card numbers read better in monospace */
+select[name="creditcard"] {
+  font-family: monospace;
+}
+
+button {
+  padding: 8px 16px;
+  font-size: 1em;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background-color: #1a3a5c;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2b5a8a;
+}
+
+/* Messages */
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+.error,
+.success {
+  margin-top: 16px;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+.error {
+  color: #a01010;
+  background-color: #fde8e8;
+  border-left: 4px solid #a01010;
+}
+
+.success {
+  color: #106020;
+  background-color: #e6f6ea;
+  border-left: 4px solid #106020;
+}
+
+/* Transactions table */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+  padding: 10px 12px;
+  text-align: left;
+  border-bottom: 1px solid #e2e6ea;
+}
+
+th {
+  background-color: #1a3a5c;
+  color: white;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tr:hover td {
+  background-color: #f0f4f8;
+}
+
+/* Amount column */
+td:last-child,
+th:last-child {
+  text-align: right;
+  font-family: monospace;
+}
+
+/* Amount colors */
+td.income {
+  color: #106020;
+  font-weight: bold;
+}
+
+td.expense {
+  color: #a01010;
+}
