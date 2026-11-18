@@ -1,29 +1,31 @@
 <?php
+ini_set("display_errors", "on");
+error_reporting(E_ALL);
+
+$dbConnection = new PDO("sqlite:./database.sqlite");
+
+class CreditCard {
+  public $id;
+  public $cardnumber;
+  public $name;
+}
+
 class Transaction {
+  public $id;
   public $vendor;
   public $amount;
-  private $currency;
-
-  public function __construct(string $vendor, int $amount, string $currency) {
-    $this->vendor = $vendor;
-    $this->amount = $amount;
-    $this->currency = $currency;
-  }
+  public $currency;
 
   public function getAmount(): string {
     return $this->amount . " " . $this->currency;
   }
 }
 
-$creditCards = [
-  "1234-1234-1234-1234",
-  "2345-2345-2345-2345"
-];
+$dbStatement = $dbConnection->query("SELECT * FROM `creditcards`;");
+$creditCards = $dbStatement->fetchAll(PDO::FETCH_CLASS, "CreditCard");
 
-$transactions = [
-  new Transaction("Gyros Master", "-42353", "HUF"),
-  new Transaction("CBA", "-1234", "USD")
-];
+$dbStatement = $dbConnection->query("SELECT `id`, `vendor`, `amount`, `currency` FROM `transactions`;");
+$transactions = $dbStatement->fetchAll(PDO::FETCH_CLASS, "Transaction");
 
 // Input
 $inputs = [];
@@ -58,8 +60,8 @@ if (isset($inputs["creditCardNumber"])) {
   <form action="index.php" method="get">
     <select name="creditcard">
       <?php foreach ($creditCards as $creditCard): ?>
-        <option <?= ($inputs["creditCardNumber"] ?? "") === $creditCard ? "selected" : "" ?>>
-          <?= $creditCard ?>
+        <option <?= ($inputs["creditCardNumber"] ?? "") === $creditCard->cardnumber ? "selected" : "" ?>>
+          <?= $creditCard->cardnumber ?>
         </option>
       <?php endforeach; ?>
     </select>
