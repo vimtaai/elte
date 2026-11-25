@@ -7,8 +7,12 @@ const ROOT = __DIR__ . "/..";
 
 include(ROOT . "/model/creditcard.php");
 include(ROOT . "/model/transaction.php");
+include(ROOT . "/utils/helpers.php");
 include(ROOT . "/utils/database.php");
 
 // Input and message variables
 $inputs = [];
 $errors = [];
+$messages = [];
+
+$page = basename($_SERVER["SCRIPT_FILENAME"]);
