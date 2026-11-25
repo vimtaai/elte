@@ -79,8 +79,19 @@ form {
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* A group of fields that always sits on its own line */
+.form-row {
+  display: flex;
+  flex: 1 1 100%;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 12px;
+}
+
 label {
-  flex: 1;
+  /* Wrap onto a new line instead of squeezing below ~160px (zoom-friendly) */
+  flex: 1 1 160px;
+  min-width: 0;
   display: flex;
   flex-direction: column;
   gap: 4px;
@@ -91,13 +102,22 @@ label {
 
 input,
 select {
-  flex: 1;
+  flex: 1 1 160px;
+  min-width: 0;
+  box-sizing: border-box;
   padding: 8px;
   font-family: inherit;
   font-size: 1em;
   border: 1px solid #c8ced4;
   border-radius: 4px;
   background-color: white;
+}
+
+/* Inside a label the column layout is vertical: fill the width, don't grow tall */
+label input,
+label select {
+  flex: none;
+  width: 100%;
 }
 
 input:focus,
@@ -215,4 +235,15 @@ td.income {
 
 td.expense {
   color: #a01010;
+}
+
+/* Narrow screens / high zoom: stack everything, full-width buttons */
+@media (max-width: 600px) {
+  form button {
+    flex: 1 1 100%;
+  }
+
+  .menubar {
+    flex-wrap: wrap;
+  }
 }

@@ -38,7 +38,7 @@ if (isset($inputs["creditCardNumber"])) {
 <body>
   <nav class="menubar">
     <a href="index.php" class="active">Transactions</a>
-    <a href="new-transaction.php">New transaction</a>
+    <a href="data-entry.php">Data entry</a>
 
     <!--
     <div class="user-menu">
